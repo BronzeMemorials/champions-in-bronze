@@ -34,7 +34,7 @@ export default function Footer() {
             <nav className="space-y-3">
               <Link to="/bronze-player-statues" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze Player Statues</Link>
               <Link to="/championship-bronze-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Championship Plaques</Link>
-              <Link to="/hall-of-fame-bronze-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
+              <Link to="/hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
               <Link to="/stadium-donor-walls" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Stadium Donor Walls</Link>
               <Link to="/dimensional-metal-letters" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Dimensional Letters</Link>
             </nav>
@@ -71,8 +71,8 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link to="/portfolio" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Portfolio</Link>
-            <Link to="/materials-finishes" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Materials</Link>
-            <Link to="/production-process" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Process</Link>
+            <Link to="/materials" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Materials</Link>
+            <Link to="/process" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Process</Link>
           </div>
         </div>
       </div>

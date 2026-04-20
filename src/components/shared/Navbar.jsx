@@ -11,6 +11,8 @@ const navLinks = [
   { label: "Collegiate", to: "/collegiate" },
   { label: "Shop", to: "/shop" },
   { label: "Portfolio", to: "/portfolio" },
+  { label: "Process", to: "/process" },
+  { label: "Materials", to: "/materials" },
 ];
 
 export default function Navbar() {
