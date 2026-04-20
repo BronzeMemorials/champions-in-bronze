@@ -1,78 +1,149 @@
 import { Link } from "react-router-dom";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
-import SectionHeading from "../components/shared/SectionHeading";
-import FeatureList from "../components/shared/FeatureList";
 import FAQSection from "../components/shared/FAQSection";
-import RelatedProducts from "../components/shared/RelatedProducts";
 import QuoteForm from "../components/shared/QuoteForm";
+import ProductGallerySection from "../components/shared/ProductGallerySection";
 import FadeIn from "../components/shared/FadeIn";
 
-const jerseyImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
-const paperweightImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/8f84177a0_generated_c8d564f9.png";
-const plaqueImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
+const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
+const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
+const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
+const img4 = "https://media.base44.com/images/public/69e6638934292a547ec97753/502c0767b_generated_e375b9ec.png";
+const img5 = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
+const img6 = "https://media.base44.com/images/public/69e6638934292a547ec97753/8f84177a0_generated_c8d564f9.png";
 
 const faqs = [
-  { question: "What makes 3D relief different from standard plaques?", answer: "3D relief plaques feature a fully three-dimensional jersey raised 1/2 to 1 inch from the surface, with incredible fabric texture, fold details, and shadow depth. It looks like a real jersey was pressed into bronze." },
-  { question: "What is the price range?", answer: "3D relief jersey plaques start at $895 for standard sizes (11×14). Larger formats and custom configurations range up to $2,500. Volume discounts available for team orders." },
-  { question: "Can I order multiple for a team?", answer: "Absolutely. We offer volume pricing for team orders of 5 or more. Each plaque is individually customized with the player's name, number, and stats." },
+  {
+    question: "What makes 3D bas relief different from a flat plaque?",
+    answer: "A 3D bas relief is a fully sculpted, three-dimensional work of art. Figures, portraits, and action poses rise up to 1 inch from the surface with incredible detail — jersey fabric texture, facial expression, muscle definition. It's the difference between a photo and a sculpture.",
+  },
+  {
+    question: "Do you need the athlete present for sculpting?",
+    answer: "No. We create every relief entirely from photographs you provide. Upload high-resolution photos from multiple angles and our sculptors handle everything digitally and by hand — no in-person sessions required.",
+  },
+  {
+    question: "What materials are available?",
+    answer: "We cast in traditional silicon bronze (warm amber patina, the gold standard for outdoor installations) and in aluminum (lighter weight, lower cost, excellent for indoor applications). Both are rated for 100+ year outdoor durability.",
+  },
+  {
+    question: "What is the price range?",
+    answer: "3D bas relief plaques start at $895 for 12×18 inch single-portrait format. Championship scene plaques, multi-figure compositions, and large-format installations are quoted individually. Volume pricing available for series orders (Hall of Fame, donor walls, etc.).",
+  },
+  {
+    question: "How fast is turnaround?",
+    answer: "Artwork proof within 48 hours of order. Production is 15–30 days depending on complexity. Rush 5-day service available on standard sizes. We don't miss deadlines.",
+  },
+  {
+    question: "Can sport-specific shapes be used?",
+    answer: "Absolutely. We cast plaques in home plate shape, pennant shape, jersey outline, basketball, football, and any custom shape. The shape itself becomes part of the design.",
+  },
 ];
 
-const relatedProducts = [
-  { to: "/custom-jersey-plaques", image: jerseyImg, title: "Standard Jersey Plaques", desc: "Cast bronze jersey plaques from $495." },
-  { to: "/bronze-paperweights", image: paperweightImg, title: "Bronze Paperweights", desc: "Executive desk pieces from $150." },
-  { to: "/request-quote", image: plaqueImg, title: "Custom Commission", desc: "Unique projects and bulk orders." },
+// Repeating gallery data — swap images for real product photos
+const gallerySections = [
+  {
+    label: "Football",
+    title: "NFL & College Football 3D Bas Relief Plaques",
+    items: [
+      { image: img1, title: "Championship Action Relief", caption: "Full-figure quarterback sculpt | Custom border | Bronze patina", badge: "NFL" },
+      { image: img2, title: "Hall of Fame Portrait Plaque", caption: "3D portrait bust | Career stats panel | Dark bronze finish", badge: "Hall of Fame" },
+      { image: img3, title: "Super Bowl Championship Plaque", caption: "Trophy & scene relief | Team crest embossed | 18×24 inch", badge: "Championship" },
+    ],
+  },
+  {
+    label: "Basketball",
+    title: "NBA & College Basketball 3D Relief Plaques",
+    items: [
+      { image: img4, title: "MVP Dunk Relief Plaque", caption: "Action pose | Jersey number raised | Custom border", badge: "NBA" },
+      { image: img5, title: "Championship Ring Plaque", caption: "Championship scene | Gold inlay letters | Velvet-backed", badge: "Champions" },
+      { image: img6, title: "Retirement Number Plaque", caption: "Jersey #  relief | Career highlights | Mounted on hardwood", badge: "Retired" },
+    ],
+  },
+  {
+    label: "Hockey",
+    title: "NHL & College Hockey 3D Relief Plaques",
+    items: [
+      { image: img2, title: "Stanley Cup Champions Plaque", caption: "Celebration pose | Cup relief | Dark patina finish", badge: "NHL" },
+      { image: img1, title: "Goalie Mask Portrait Relief", caption: "Custom shaped plaque | Equipment detail sculpt | Bronze", badge: "Hall of Fame" },
+      { image: img3, title: "College Hockey Trophy Plaque", caption: "University seal | Player action relief | Alumni display", badge: "NCAA" },
+    ],
+  },
+  {
+    label: "Baseball",
+    title: "MLB & College Baseball 3D Relief Plaques",
+    items: [
+      { image: img5, title: "Home Plate Shaped Plaque", caption: "Home plate cast bronze form | Full-figure relief | Any size", badge: "MLB" },
+      { image: img4, title: "Hall of Fame Portrait Plaque", caption: "Portrait bust | Raised name & years | Classic patina", badge: "Hall of Fame" },
+      { image: img6, title: "World Series Champions Plaque", caption: "Trophy & team relief | Custom inscription | 24×30 inch", badge: "Champions" },
+    ],
+  },
+  {
+    label: "Collegiate",
+    title: "College Athletic Hall of Fame & Campus Plaques",
+    items: [
+      { image: img3, title: "Athletic Hall of Fame Inductee", caption: "3D portrait | University seal | Modular wall system", badge: "NCAA" },
+      { image: img2, title: "Campus Legacy Monument Plaque", caption: "Architectural scale | Donor recognition | Outdoor rated", badge: "Legacy" },
+      { image: img1, title: "Championship Banner Plaque", caption: "Season championship | Coach & player relief | Lobby display", badge: "Championship" },
+    ],
+  },
 ];
 
 export default function ReliefJerseyPlaques() {
   return (
     <div className="bg-obsidian text-parchment">
       <ProductHero
-        image={jerseyImg}
-        label="Museum Quality"
-        title="3D Relief Jersey Plaques"
-        subtitle="The pinnacle of jersey commemoration. Three-dimensional fabric texture, hand-sculpted details, and museum-quality casting that stops people in their tracks."
-        cta1="Order Now"
+        image={img1}
+        label="Museum Quality · Sports Division"
+        title="3D Bas Relief Bronze Plaques"
+        subtitle="Hand-sculpted, three-dimensional bronze and aluminum plaques for every major sport. NFL, NBA, NHL, MLB, NCAA — we cast your championship history in permanent bronze."
+        cta1="Get Instant Price"
         cta1Link="/request-quote"
-        cta2="See Standard Plaques"
-        cta2Link="/custom-jersey-plaques"
+        cta2="View Portfolio"
+        cta2Link="/portfolio"
       />
+
       <TrustBadges />
 
-      <section className="py-28">
+      {/* Intro feature row */}
+      <section className="py-20 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeIn delay={0.1}>
-              <SectionHeading label="From $895" title="You Can Feel the Fabric" />
-              <p className="text-parchment/60 text-lg leading-relaxed -mt-8">
-                Our 3D relief process creates a fully three-dimensional jersey that rises from the plaque surface 
-                with extraordinary detail — every stitch, every fold, every wrinkle captured in permanent bronze. 
-                It's the closest thing to touching history.
-              </p>
-              <FeatureList features={[
-                "1/2\" to 1\" Relief Depth",
-                "Fabric Texture Detail",
-                "Hand-Sculpted Folds & Wrinkles",
-                "Custom Patina Finish",
-                "Premium Wood or Metal Backing",
-                "Individually Numbered Edition",
-              ]} />
-              <Link to="/request-quote" className="inline-flex mt-10 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
-                Order Your Relief Plaque
-              </Link>
-            </FadeIn>
-            <FadeIn>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-                <img src={jerseyImg} alt="3D relief jersey plaque" className="w-full h-full object-cover" />
-              </div>
-            </FadeIn>
-          </div>
+          <FadeIn>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              {[
+                { stat: "48 hrs", label: "Artwork Proof Delivered", sub: "Upload photos — we sculpt the rest" },
+                { stat: "100+", label: "Years Outdoor Durability", sub: "Silicon bronze or aluminum" },
+                { stat: "Any Sport", label: "Any League · Any Size", sub: "NFL · NBA · NHL · MLB · NCAA · PGA" },
+              ].map((item) => (
+                <div key={item.label} className="border border-bronze/20 bg-secondary/30 p-8 rounded-sm">
+                  <p className="font-serif text-4xl text-gold">{item.stat}</p>
+                  <p className="text-parchment font-sans text-sm uppercase tracking-[0.15em] mt-3 font-semibold">{item.label}</p>
+                  <p className="text-parchment/50 text-sm mt-2">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      <RelatedProducts products={relatedProducts} />
+      {/* Repeating gallery sections — 3 images + CTA bar */}
+      {gallerySections.map((section, i) => (
+        <ProductGallerySection
+          key={section.label}
+          label={section.label}
+          title={section.title}
+          items={section.items}
+          source="pro"
+        />
+      ))}
+
       <FAQSection faqs={faqs} />
-      <QuoteForm title="Commission Your 3D Relief" subtitle="Upload photos of the jersey. Detailed proof within 48 hours." source="shop" />
+
+      <QuoteForm
+        title="Get Your Instant Price"
+        subtitle="Upload your photos or project brief. Artwork proof within 48 hours. We don't miss deadlines."
+        source="pro"
+      />
     </div>
   );
 }
