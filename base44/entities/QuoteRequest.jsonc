@@ -1,0 +1,97 @@
+{
+  "name": "QuoteRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the contact"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "organization": {
+      "type": "string",
+      "description": "Team, university, or organization name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Job title or role"
+    },
+    "project_type": {
+      "type": "string",
+      "enum": [
+        "bronze_statue",
+        "championship_plaque",
+        "hall_of_fame",
+        "donor_wall",
+        "dimensional_letters",
+        "jersey_display",
+        "capital_campaign",
+        "custom_jersey_plaque",
+        "relief_plaque",
+        "paperweight",
+        "other"
+      ],
+      "description": "Type of project"
+    },
+    "budget_range": {
+      "type": "string",
+      "enum": [
+        "under_5k",
+        "5k_15k",
+        "15k_50k",
+        "50k_100k",
+        "100k_250k",
+        "over_250k"
+      ],
+      "description": "Approximate budget range"
+    },
+    "timeline": {
+      "type": "string",
+      "description": "Desired completion timeline"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project details and requirements"
+    },
+    "file_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Uploaded reference files (logos, photos, briefs)"
+    },
+    "source_domain": {
+      "type": "string",
+      "enum": [
+        "pro",
+        "edu",
+        "shop"
+      ],
+      "description": "Which site the request came from"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "proposal_sent",
+        "in_progress",
+        "completed",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Quote request status"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "project_type"
+  ]
+}
