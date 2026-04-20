@@ -32,11 +32,11 @@ export default function Footer() {
           <div>
             <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">Professional</h4>
             <nav className="space-y-3">
-              <Link to="/bronze-player-statues" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze Player Statues</Link>
+              <Link to="/3d-relief-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">3D Bas Relief Plaques</Link>
+              <Link to="/bronze-player-statues" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze & Aluminum Statues</Link>
               <Link to="/championship-bronze-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Championship Plaques</Link>
               <Link to="/hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
               <Link to="/stadium-donor-walls" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Stadium Donor Walls</Link>
-              <Link to="/dimensional-metal-letters" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Dimensional Letters</Link>
             </nav>
           </div>
 

@@ -4,15 +4,13 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
+  { label: "3D Relief Plaques", to: "/3d-relief-jersey-plaques" },
   { label: "Statues", to: "/bronze-player-statues" },
   { label: "Plaques", to: "/championship-bronze-plaques" },
   { label: "Donor Walls", to: "/stadium-donor-walls" },
-  { label: "Letters", to: "/dimensional-metal-letters" },
   { label: "Collegiate", to: "/collegiate" },
   { label: "Shop", to: "/shop" },
   { label: "Portfolio", to: "/portfolio" },
-  { label: "Process", to: "/process" },
-  { label: "Materials", to: "/materials" },
 ];
 
 export default function Navbar() {

@@ -12,44 +12,50 @@ const hallImg = "https://media.base44.com/images/public/69e6638934292a547ec97753
 const donorImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 const plaqueImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
 const jerseyImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
+const statueImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 
-const collegiateServices = [
+const collegiateProducts = [
   {
-    image: donorImg,
-    title: "Athletic Donor Recognition Walls",
-    desc: "Inspire alumni giving with permanent bronze recognition displays in your athletic facilities.",
-    to: "/athletic-donor-walls",
-  },
-  {
-    image: hallImg,
-    title: "College Hall of Fame Plaques",
-    desc: "Hand-sculpted portrait plaques that honor your institution's greatest athletes and coaches.",
+    image: jerseyImg,
+    label: "Most Requested",
+    title: "3D Bas Relief Hall of Fame Plaques",
+    desc: "Hand-sculpted portrait reliefs of your inductees. Created from photos — no in-person sessions needed. The definitive standard for collegiate Halls of Fame.",
     to: "/college-hall-of-fame-plaques",
   },
   {
-    image: jerseyImg,
-    title: "Retired Jersey Displays",
-    desc: "Transform retired numbers into stunning bronze relief displays for arenas and corridors.",
-    to: "/retired-jersey-displays",
+    image: statueImg,
+    label: "Landmark Pieces",
+    title: "Campus & Facility Statues",
+    desc: "Life-size and heroic-scale bronze or aluminum statues for stadium entrances, athletic centers, and campus landmarks that define program identity.",
+    to: "/bronze-player-statues",
+  },
+  {
+    image: donorImg,
+    label: "Fundraising Driver",
+    title: "Athletic Donor Recognition Walls",
+    desc: "Modular bronze donor displays that inspire alumni giving. Facilities report 40%+ increases in donations after installation.",
+    to: "/athletic-donor-walls",
   },
   {
     image: plaqueImg,
+    label: "Campaigns",
     title: "Capital Campaign Recognition",
-    desc: "Naming-rights displays, building plaques, and campaign milestone markers in cast bronze.",
+    desc: "Naming-rights plaques, building dedications, and campaign milestone markers — designed to close major gifts.",
     to: "/capital-campaign-recognition",
   },
 ];
 
 const collegiateTestimonials = [
-  { quote: "The donor wall in our new football complex has been the single greatest fundraising tool we've ever had. Alumni see their names in bronze and they want to be part of it.", name: "Dr. Michael Torres", title: "Athletic Director, Division I University" },
-  { quote: "Our Hall of Fame ceremony went from a nice dinner to a truly emotional event once inductees could see their portrait permanently cast in bronze. The quality is extraordinary.", name: "Patricia Lawson", title: "Associate AD, Power 5 Conference" },
-  { quote: "Champions in Bronze understood the weight of our capital campaign. The recognition wall they designed has driven $12M in additional naming-rights commitments.", name: "Thomas Reeves", title: "VP of University Advancement" },
-  { quote: "We commissioned retired jersey displays for our arena. The 3D bronze reliefs are absolutely stunning — they've become a destination stop on every campus tour.", name: "Jennifer Huang", title: "Facilities Director, Big East University" },
+  { quote: "The 3D bas relief portraits in our Hall of Fame are extraordinary. Inductees and their families are moved to tears when they see themselves immortalized in bronze.", name: "Dr. Michael Torres", title: "Athletic Director, Division I University" },
+  { quote: "Our donor wall has been the single greatest fundraising tool we've ever installed. Alumni see their names in bronze and want to be part of it.", name: "Patricia Lawson", title: "Associate AD, Power 5 Conference" },
+  { quote: "Champions in Bronze delivered our campus statue on time for homecoming. The quality is on par with any monument I've seen at a professional stadium.", name: "Thomas Reeves", title: "VP of University Advancement" },
+  { quote: "Artwork proof in 48 hours — as promised. The entire process from quote to installation was professional and seamless.", name: "Jennifer Huang", title: "Facilities Director, Big East University" },
 ];
 
 export default function CollegiateHome() {
   return (
     <div className="bg-obsidian text-parchment">
+
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -67,12 +73,12 @@ export default function CollegiateHome() {
               <span className="text-bronze-light italic">Student-Athlete Legacy.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">
-              Donor recognition walls, hall of fame displays, retired jersey plaques, and capital campaign 
-              monuments — designed for NCAA institutions that honor athletic excellence permanently.
+              3D bas relief Hall of Fame plaques, campus statues, donor recognition walls, and capital campaign 
+              monuments — built in bronze and aluminum for NCAA programs that honor excellence permanently.
             </p>
             <div className="mt-12 flex flex-wrap gap-5">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
-                Request a Proposal
+                Get Instant Price
               </Link>
               <Link to="/portfolio" className="border border-parchment/20 hover:border-gold text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
                 View College Portfolio
@@ -89,24 +95,27 @@ export default function CollegiateHome() {
 
       <TrustBadges />
 
-      {/* Services */}
+      {/* Products Grid */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             label="For Your Institution"
-            title="Recognition Programs Built for Collegiate Athletics"
-            subtitle="Every piece strengthens your brand, honors your history, and drives future giving."
+            title="Bronze & Aluminum Recognition for Collegiate Athletics"
+            subtitle="Every piece is individually cast, hand-finished, and rated for outdoor installation — built to honor your program for 100+ years."
             align="center"
           />
           <div className="grid md:grid-cols-2 gap-6">
-            {collegiateServices.map((service, i) => (
-              <FadeIn key={service.to} delay={i * 0.1}>
-                <Link to={service.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            {collegiateProducts.map((p, i) => (
+              <FadeIn key={p.to} delay={i * 0.1}>
+                <Link to={p.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{p.label}</span>
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h3 className="font-serif text-2xl text-parchment group-hover:text-gold transition-colors">{service.title}</h3>
-                    <p className="text-parchment/50 mt-2 text-sm">{service.desc}</p>
+                    <h3 className="font-serif text-2xl text-parchment group-hover:text-gold transition-colors">{p.title}</h3>
+                    <p className="text-parchment/50 mt-2 text-sm">{p.desc}</p>
                     <div className="flex items-center gap-2 mt-4 text-gold text-sm font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>Learn More</span> <ArrowRight className="w-4 h-4" />
                     </div>
@@ -118,21 +127,59 @@ export default function CollegiateHome() {
         </div>
       </section>
 
-      {/* Impact Section */}
+      {/* 3D Relief Feature */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                <img src={jerseyImg} alt="3D bas relief Hall of Fame plaque" className="w-full h-full object-cover" />
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">The Difference Is Clear</span>
+              <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
+                3D Relief Portraits —<br />Not Just a Photo.
+              </h2>
+              <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
+                Most Hall of Fame displays use a framed photograph. Ours are hand-sculpted, three-dimensional 
+                bronze portraits — a tactile, permanent work of art that honors the athlete's entire career, 
+                not just a moment. Created entirely from photos, delivered in 48 hours.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-6">
+                {[
+                  { stat: "48 hrs", label: "Artwork Proof" },
+                  { stat: "100+", label: "Years Outdoor" },
+                  { stat: "Bronze\nor Aluminum", label: "Material Options" },
+                  { stat: "Any Size", label: "Any Shape" },
+                ].map((item) => (
+                  <div key={item.label} className="border border-bronze/20 p-4 rounded-sm text-center">
+                    <p className="font-serif text-2xl text-gold">{item.stat}</p>
+                    <p className="text-parchment/50 text-xs uppercase tracking-wider mt-1 font-sans">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+              <Link to="/college-hall-of-fame-plaques" className="inline-flex items-center gap-2 mt-10 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                See Hall of Fame Options <ArrowRight className="w-4 h-4" />
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Stats */}
+      <section className="py-20 bg-secondary/20 border-y border-bronze/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-3 gap-12 text-center">
             {[
-              { stat: "40%", label: "Increase in Donor Participation", desc: "Athletic departments report significant alumni giving increases after installing bronze recognition." },
-              { stat: "200+", label: "Collegiate Installations", desc: "Halls of fame, donor walls, and recognition displays at universities across all 50 states." },
-              { stat: "25+", label: "Years of Expansion", desc: "Our modular systems are designed to grow with your program for decades." },
+              { stat: "40%", label: "Increase in Donor Participation", desc: "Athletic departments report significant alumni giving increases after bronze recognition installation." },
+              { stat: "200+", label: "Collegiate Installations", desc: "Halls of Fame, donor walls, and campus statues at universities across all 50 states." },
+              { stat: "48 hrs", label: "Artwork Guarantee", desc: "Every project receives professional drawings and a proof within 48 hours. We don't miss deadlines." },
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.1}>
-                <div className="text-center">
-                  <span className="font-serif text-5xl md:text-6xl text-gold">{item.stat}</span>
-                  <h3 className="font-sans text-sm uppercase tracking-[0.2em] text-parchment mt-4 font-semibold">{item.label}</h3>
-                  <p className="text-parchment/50 mt-3 text-sm">{item.desc}</p>
-                </div>
+                <span className="font-serif text-5xl md:text-6xl text-gold">{item.stat}</span>
+                <h3 className="font-sans text-sm uppercase tracking-[0.2em] text-parchment mt-4 font-semibold">{item.label}</h3>
+                <p className="text-parchment/50 mt-3 text-sm">{item.desc}</p>
               </FadeIn>
             ))}
           </div>
@@ -141,7 +188,11 @@ export default function CollegiateHome() {
 
       <ProcessTimeline />
       <TestimonialCarousel testimonials={collegiateTestimonials} />
-      <QuoteForm title="Start Your College Commission" subtitle="Tell us about your athletic program. Receive designs and pricing within 48 hours." source="edu" />
+      <QuoteForm
+        title="Start Your College Commission"
+        subtitle="Tell us about your program. Receive artwork and pricing within 48 hours. We don't miss deadlines."
+        source="edu"
+      />
     </div>
   );
 }

@@ -15,7 +15,6 @@ import BronzePlayerStatues from './pages/BronzePlayerStatues';
 import ChampionshipBronzePlaques from './pages/ChampionshipBronzePlaques';
 import HallOfFamePlaques from './pages/HallOfFamePlaques';
 import StadiumDonorWalls from './pages/StadiumDonorWalls';
-import DimensionalMetalLetters from './pages/DimensionalMetalLetters';
 import AthleticDonorWalls from './pages/AthleticDonorWalls';
 import CollegeHallOfFame from './pages/CollegeHallOfFame';
 import RetiredJerseyDisplays from './pages/RetiredJerseyDisplays';
@@ -61,7 +60,6 @@ const AuthenticatedApp = () => {
         <Route path="/championship-bronze-plaques" element={<ChampionshipBronzePlaques />} />
         <Route path="/hall-of-fame-plaques" element={<HallOfFamePlaques />} />
         <Route path="/stadium-donor-walls" element={<StadiumDonorWalls />} />
-        <Route path="/dimensional-metal-letters" element={<DimensionalMetalLetters />} />
 
         {/* Collegiate products */}
         <Route path="/athletic-donor-walls" element={<AthleticDonorWalls />} />
