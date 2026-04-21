@@ -28,12 +28,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`font-sans text-xs uppercase tracking-[0.15em] transition-colors duration-300 ${
+                className={`font-sans text-xs uppercase tracking-[0.08em] whitespace-nowrap transition-colors duration-300 ${
                   location.pathname === link.to
                     ? "text-gold"
                     : "text-parchment/60 hover:text-parchment"
@@ -48,13 +48,13 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/request-quote"
-              className="hidden md:inline-flex bg-bronze hover:bg-gold text-parchment px-6 py-2.5 font-sans text-xs uppercase tracking-[0.15em] font-semibold transition-all duration-300 rounded-sm"
+              className="hidden lg:inline-flex bg-bronze hover:bg-gold text-parchment px-5 py-2.5 font-sans text-xs uppercase tracking-[0.08em] font-semibold transition-all duration-300 rounded-sm whitespace-nowrap"
             >
               Request Quote
             </Link>
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden text-parchment/60 hover:text-parchment"
+              className="xl:hidden text-parchment/60 hover:text-parchment"
             >
               {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
