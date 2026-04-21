@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-obsidian/80 backdrop-blur-xl border-b border-bronze/10">
+      <div className="bg-obsidian/95 backdrop-blur-xl border-b border-bronze/20 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
@@ -70,7 +70,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-obsidian/95 backdrop-blur-xl border-b border-bronze/10 overflow-hidden"
+            className="lg:hidden bg-obsidian backdrop-blur-xl border-b border-bronze/20 shadow-md overflow-hidden"
           >
             <nav className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (

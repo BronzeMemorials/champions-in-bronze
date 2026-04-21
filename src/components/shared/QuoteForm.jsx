@@ -71,7 +71,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
 
   if (submitted) {
     return (
-      <section className="py-28 bg-gradient-to-b from-obsidian to-bronze-dark/20" id="quote">
+      <section className="py-28 bg-gradient-to-b from-obsidian to-bronze/5" id="quote">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
             <CheckCircle className="w-16 h-16 text-gold mx-auto mb-6" />
@@ -86,7 +86,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
   }
 
   return (
-    <section className="py-28 bg-gradient-to-b from-obsidian to-bronze-dark/20" id="quote">
+    <section className="py-28 bg-gradient-to-b from-obsidian to-bronze/5" id="quote">
       <div className="max-w-3xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
@@ -99,13 +99,13 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/30 border border-bronze/15 p-8 md:p-12 rounded-sm">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-obsidian border border-bronze/20 p-8 md:p-12 rounded-sm shadow-sm">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Full Name *</label>
                 <Input
                   required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                  className="bg-obsidian border-bronze/20 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-background border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-gold h-12"
                   placeholder="John Mitchell"
                 />
               </div>
@@ -113,7 +113,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Email *</label>
                 <Input
                   required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                  className="bg-obsidian border-bronze/20 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-background border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-gold h-12"
                   placeholder="john@organization.com"
                 />
               </div>
@@ -121,7 +121,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Phone</label>
                 <Input
                   value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                  className="bg-obsidian border-bronze/20 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-background border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-gold h-12"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -129,7 +129,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Organization</label>
                 <Input
                   value={form.organization} onChange={(e) => handleChange("organization", e.target.value)}
-                  className="bg-obsidian border-bronze/20 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-background border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-gold h-12"
                   placeholder="Team / University / Company"
                 />
               </div>
@@ -139,7 +139,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
               <div>
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Project Type *</label>
                 <Select value={form.project_type} onValueChange={(v) => handleChange("project_type", v)}>
-                  <SelectTrigger className="bg-obsidian border-bronze/20 text-parchment h-12">
+                  <SelectTrigger className="bg-background border-bronze/30 text-parchment h-12">
                     <SelectValue placeholder="Select project type" />
                   </SelectTrigger>
                   <SelectContent className="bg-obsidian border-bronze/20">
@@ -152,7 +152,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
               <div>
                 <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Budget Range</label>
                 <Select value={form.budget_range} onValueChange={(v) => handleChange("budget_range", v)}>
-                  <SelectTrigger className="bg-obsidian border-bronze/20 text-parchment h-12">
+                  <SelectTrigger className="bg-background border-bronze/30 text-parchment h-12">
                     <SelectValue placeholder="Select budget range" />
                   </SelectTrigger>
                   <SelectContent className="bg-obsidian border-bronze/20">
@@ -177,7 +177,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
               <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Project Details</label>
               <Textarea
                 value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                className="bg-obsidian border-bronze/20 text-parchment placeholder:text-parchment/25 focus:border-gold min-h-[140px]"
+                className="bg-background border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-gold min-h-[140px]"
                 placeholder="Describe your vision — dimensions, subject, installation location, number of pieces, any reference images..."
               />
             </div>
@@ -186,7 +186,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
               <label className="text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block">Upload Files</label>
               <div
                 onClick={() => fileRef.current?.click()}
-                className="border-2 border-dashed border-bronze/20 hover:border-gold/40 transition-colors rounded-sm p-8 text-center cursor-pointer"
+                className="border-2 border-dashed border-bronze/30 hover:border-gold/60 transition-colors rounded-sm p-8 text-center cursor-pointer bg-background"
               >
                 <Upload className="w-8 h-8 text-bronze/40 mx-auto mb-3" />
                 <p className="text-parchment/40 text-sm">Click to upload logos, photos, or project briefs</p>
@@ -196,7 +196,7 @@ export default function QuoteForm({ title = "Request a Quote", subtitle, source 
               {files.length > 0 && (
                 <div className="mt-4 space-y-2">
                   {files.map((file, i) => (
-                    <div key={i} className="flex items-center justify-between bg-obsidian/50 border border-bronze/10 px-4 py-2 rounded-sm">
+                    <div key={i} className="flex items-center justify-between bg-background border border-bronze/20 px-4 py-2 rounded-sm">
                       <span className="text-parchment/60 text-sm truncate">{file.name}</span>
                       <button type="button" onClick={() => removeFile(i)} className="text-parchment/30 hover:text-destructive text-xs ml-4">Remove</button>
                     </div>

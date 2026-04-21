@@ -9,74 +9,74 @@
     --font-cinzel: 'Cinzel', serif;
     --font-inter: 'Inter', sans-serif;
 
-    --background: 20 5% 4%;
-    --foreground: 36 33% 93%;
-    --card: 20 5% 7%;
-    --card-foreground: 36 33% 93%;
-    --popover: 20 5% 7%;
-    --popover-foreground: 36 33% 93%;
-    --primary: 20 50% 36%;
-    --primary-foreground: 36 33% 93%;
-    --secondary: 20 8% 12%;
-    --secondary-foreground: 36 33% 93%;
-    --muted: 20 5% 14%;
-    --muted-foreground: 36 15% 55%;
-    --accent: 43 79% 46%;
-    --accent-foreground: 20 5% 4%;
+    --background: 36 33% 97%;
+    --foreground: 20 40% 12%;
+    --card: 36 20% 94%;
+    --card-foreground: 20 40% 12%;
+    --popover: 36 20% 94%;
+    --popover-foreground: 20 40% 12%;
+    --primary: 20 55% 30%;
+    --primary-foreground: 36 33% 97%;
+    --secondary: 36 20% 90%;
+    --secondary-foreground: 20 40% 12%;
+    --muted: 36 15% 88%;
+    --muted-foreground: 20 20% 40%;
+    --accent: 43 70% 38%;
+    --accent-foreground: 36 33% 97%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 20 10% 18%;
-    --input: 20 10% 18%;
-    --ring: 43 79% 46%;
-    --chart-1: 20 50% 36%;
-    --chart-2: 43 79% 46%;
-    --chart-3: 20 8% 50%;
-    --chart-4: 36 33% 70%;
-    --chart-5: 20 30% 50%;
+    --border: 36 15% 82%;
+    --input: 36 15% 82%;
+    --ring: 43 70% 38%;
+    --chart-1: 20 55% 30%;
+    --chart-2: 43 70% 38%;
+    --chart-3: 20 20% 50%;
+    --chart-4: 36 30% 55%;
+    --chart-5: 20 30% 45%;
     --radius: 0.25rem;
-    --sidebar-background: 20 5% 6%;
-    --sidebar-foreground: 36 33% 93%;
-    --sidebar-primary: 20 50% 36%;
-    --sidebar-primary-foreground: 36 33% 93%;
-    --sidebar-accent: 20 8% 12%;
-    --sidebar-accent-foreground: 36 33% 93%;
-    --sidebar-border: 20 10% 18%;
-    --sidebar-ring: 43 79% 46%;
+    --sidebar-background: 36 20% 94%;
+    --sidebar-foreground: 20 40% 12%;
+    --sidebar-primary: 20 55% 30%;
+    --sidebar-primary-foreground: 36 33% 97%;
+    --sidebar-accent: 36 20% 90%;
+    --sidebar-accent-foreground: 20 40% 12%;
+    --sidebar-border: 36 15% 82%;
+    --sidebar-ring: 43 70% 38%;
   }
 
   .dark {
-    --background: 20 5% 4%;
-    --foreground: 36 33% 93%;
-    --card: 20 5% 7%;
-    --card-foreground: 36 33% 93%;
-    --popover: 20 5% 7%;
-    --popover-foreground: 36 33% 93%;
-    --primary: 20 50% 36%;
-    --primary-foreground: 36 33% 93%;
-    --secondary: 20 8% 12%;
-    --secondary-foreground: 36 33% 93%;
-    --muted: 20 5% 14%;
-    --muted-foreground: 36 15% 55%;
-    --accent: 43 79% 46%;
-    --accent-foreground: 20 5% 4%;
+    --background: 36 33% 97%;
+    --foreground: 20 40% 12%;
+    --card: 36 20% 94%;
+    --card-foreground: 20 40% 12%;
+    --popover: 36 20% 94%;
+    --popover-foreground: 20 40% 12%;
+    --primary: 20 55% 30%;
+    --primary-foreground: 36 33% 97%;
+    --secondary: 36 20% 90%;
+    --secondary-foreground: 20 40% 12%;
+    --muted: 36 15% 88%;
+    --muted-foreground: 20 20% 40%;
+    --accent: 43 70% 38%;
+    --accent-foreground: 36 33% 97%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 20 10% 18%;
-    --input: 20 10% 18%;
-    --ring: 43 79% 46%;
-    --chart-1: 20 50% 36%;
-    --chart-2: 43 79% 46%;
-    --chart-3: 20 8% 50%;
-    --chart-4: 36 33% 70%;
-    --chart-5: 20 30% 50%;
-    --sidebar-background: 20 5% 6%;
-    --sidebar-foreground: 36 33% 93%;
-    --sidebar-primary: 20 50% 36%;
-    --sidebar-primary-foreground: 36 33% 93%;
-    --sidebar-accent: 20 8% 12%;
-    --sidebar-accent-foreground: 36 33% 93%;
-    --sidebar-border: 20 10% 18%;
-    --sidebar-ring: 43 79% 46%;
+    --border: 36 15% 82%;
+    --input: 36 15% 82%;
+    --ring: 43 70% 38%;
+    --chart-1: 20 55% 30%;
+    --chart-2: 43 70% 38%;
+    --chart-3: 20 20% 50%;
+    --chart-4: 36 30% 55%;
+    --chart-5: 20 30% 45%;
+    --sidebar-background: 36 20% 94%;
+    --sidebar-foreground: 20 40% 12%;
+    --sidebar-primary: 20 55% 30%;
+    --sidebar-primary-foreground: 36 33% 97%;
+    --sidebar-accent: 36 20% 90%;
+    --sidebar-accent-foreground: 20 40% 12%;
+    --sidebar-border: 36 15% 82%;
+    --sidebar-ring: 43 70% 38%;
   }
 }
 
@@ -94,10 +94,10 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F0F0F;
+  background: #F0EAE0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8C4B2E;
+  background: #7A3B1E;
   border-radius: 3px;
 }
 
