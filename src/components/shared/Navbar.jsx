@@ -6,10 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "3D Relief Plaques", to: "/3d-relief-jersey-plaques" },
   { label: "Statues", to: "/bronze-player-statues" },
-  { label: "Plaques", to: "/championship-bronze-plaques" },
+  { label: "Championship Plaques", to: "/championship-bronze-plaques" },
   { label: "Donor Walls", to: "/stadium-donor-walls" },
   { label: "Collegiate", to: "/collegiate" },
-  { label: "Shop", to: "/shop" },
   { label: "Portfolio", to: "/portfolio" },
 ];
 

@@ -52,14 +52,14 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Shop */}
+          {/* More Products */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">Collector's Shop</h4>
+            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">More Products</h4>
             <nav className="space-y-3">
-              <Link to="/shop" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Shop Home</Link>
               <Link to="/custom-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Custom Jersey Plaques</Link>
               <Link to="/3d-relief-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">3D Relief Plaques</Link>
               <Link to="/bronze-paperweights" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze Paperweights</Link>
+              <Link to="/hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
               <Link to="/request-quote" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Request a Quote</Link>
             </nav>
           </div>

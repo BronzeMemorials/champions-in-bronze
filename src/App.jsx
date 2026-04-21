@@ -10,7 +10,6 @@ import Layout from './components/Layout';
 // Pages
 import ProHome from './pages/ProHome';
 import CollegiateHome from './pages/CollegiateHome';
-import ShopHome from './pages/ShopHome';
 import BronzePlayerStatues from './pages/BronzePlayerStatues';
 import ChampionshipBronzePlaques from './pages/ChampionshipBronzePlaques';
 import HallOfFamePlaques from './pages/HallOfFamePlaques';
@@ -53,7 +52,6 @@ const AuthenticatedApp = () => {
         {/* Main homepages */}
         <Route path="/" element={<ProHome />} />
         <Route path="/collegiate" element={<CollegiateHome />} />
-        <Route path="/shop" element={<ShopHome />} />
 
         {/* Professional products */}
         <Route path="/bronze-player-statues" element={<BronzePlayerStatues />} />
