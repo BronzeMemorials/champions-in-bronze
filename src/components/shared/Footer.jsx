@@ -5,15 +5,14 @@ export default function Footer() {
   return (
     <footer className="bg-obsidian border-t border-bronze/10">
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <h3 className="font-serif text-2xl text-parchment">
-              Champions<br />
-              <span className="text-bronze">in Bronze</span>
+              Champions<br /><span className="text-bronze">in Bronze</span>
             </h3>
-            <p className="text-parchment/40 text-sm mt-4 leading-relaxed">
-              America's premier manufacturer of custom cast bronze plaques, statues, and recognition displays.
+            <p className="text-parchment/40 text-sm mt-4 leading-relaxed max-w-xs">
+              America's premier manufacturer of custom bronze and aluminum recognition monuments. Busts, statues, 3D relief plaques, Photo ImageCast plaques, Hall of Fame displays, and donor walls.
             </p>
             <div className="mt-6 space-y-3">
               <a href="tel:+15551234567" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
@@ -28,51 +27,70 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Pro */}
+          {/* Products */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">Professional</h4>
-            <nav className="space-y-3">
-              <Link to="/3d-relief-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">3D Bas Relief Plaques</Link>
-              <Link to="/bronze-player-statues" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze & Aluminum Statues</Link>
-              <Link to="/championship-bronze-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Championship Plaques</Link>
-              <Link to="/hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
-              <Link to="/stadium-donor-walls" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Stadium Donor Walls</Link>
+            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold">Products</h4>
+            <nav className="space-y-2.5">
+              {[
+                { label: "3D Relief Plaques", to: "/3d-relief-plaques" },
+                { label: "Busts & Statues", to: "/busts-and-statues" },
+                { label: "Photo ImageCast", to: "/photo-imagecast-plaques" },
+                { label: "Hall of Fame", to: "/hall-of-fame" },
+                { label: "Donor Walls", to: "/donor-recognition" },
+                { label: "Dedication Plaques", to: "/dedication-plaques" },
+                { label: "Bronze Memorials", to: "/bronze-memorials" },
+                { label: "Alumni Memorials", to: "/alumni-memorials" },
+              ].map((l) => (
+                <Link key={l.to} to={l.to} className="block text-parchment/50 hover:text-parchment transition-colors text-sm">{l.label}</Link>
+              ))}
             </nav>
           </div>
 
-          {/* College */}
+          {/* Sports */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">Collegiate</h4>
-            <nav className="space-y-3">
-              <Link to="/collegiate" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">College Programs</Link>
-              <Link to="/athletic-donor-walls" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Athletic Donor Walls</Link>
-              <Link to="/college-hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">College Hall of Fame</Link>
-              <Link to="/retired-jersey-displays" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Retired Jersey Displays</Link>
-              <Link to="/capital-campaign-recognition" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Capital Campaigns</Link>
+            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold">Sports</h4>
+            <nav className="space-y-2.5">
+              {[
+                { label: "Football", to: "/football" },
+                { label: "Basketball", to: "/basketball" },
+                { label: "Baseball", to: "/baseball" },
+                { label: "Hockey", to: "/hockey" },
+                { label: "Soccer", to: "/soccer" },
+                { label: "Lacrosse", to: "/lacrosse" },
+                { label: "Golf", to: "/golf" },
+                { label: "All Sports", to: "/all-sports" },
+              ].map((l) => (
+                <Link key={l.to} to={l.to} className="block text-parchment/50 hover:text-parchment transition-colors text-sm">{l.label}</Link>
+              ))}
             </nav>
           </div>
 
-          {/* More Products */}
+          {/* Company */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-6 font-semibold">More Products</h4>
-            <nav className="space-y-3">
-              <Link to="/custom-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Custom Jersey Plaques</Link>
-              <Link to="/3d-relief-jersey-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">3D Relief Plaques</Link>
-              <Link to="/bronze-paperweights" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Bronze Paperweights</Link>
-              <Link to="/hall-of-fame-plaques" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Hall of Fame Plaques</Link>
-              <Link to="/request-quote" className="block text-parchment/50 hover:text-parchment transition-colors text-sm">Request a Quote</Link>
+            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold">Company</h4>
+            <nav className="space-y-2.5">
+              {[
+                { label: "Collegiate", to: "/collegiate" },
+                { label: "Portfolio", to: "/portfolio" },
+                { label: "Our Process", to: "/process" },
+                { label: "Materials & Finishes", to: "/materials" },
+                { label: "Request a Quote", to: "/request-quote" },
+              ].map((l) => (
+                <Link key={l.to} to={l.to} className="block text-parchment/50 hover:text-parchment transition-colors text-sm">{l.label}</Link>
+              ))}
             </nav>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-bronze/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-parchment/30 text-xs font-sans">
-            © {new Date().getFullYear()} Champions in Bronze. All rights reserved. Built to last generations.
+            © {new Date().getFullYear()} Champions in Bronze. All rights reserved. Made in USA.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/portfolio" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Portfolio</Link>
             <Link to="/materials" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Materials</Link>
             <Link to="/process" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Process</Link>
+            <Link to="/request-quote" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Request Quote</Link>
           </div>
         </div>
       </div>
