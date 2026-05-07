@@ -54,6 +54,7 @@ import CustomJerseyPlaques from './pages/CustomJerseyPlaques';
 import ReliefJerseyPlaques from './pages/ReliefJerseyPlaques';
 import BronzePaperweights from './pages/BronzePaperweights';
 import HallOfFamePlaques from './pages/HallOfFamePlaques';
+import ModelViewer from './pages/ModelViewer';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -125,6 +126,7 @@ const AuthenticatedApp = () => {
         <Route path="/custom-jersey-plaques" element={<CustomJerseyPlaques />} />
         <Route path="/3d-relief-jersey-plaques" element={<ReliefJerseyPlaques />} />
         <Route path="/bronze-paperweights" element={<BronzePaperweights />} />
+        <Route path="/model-viewer" element={<ModelViewer />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
