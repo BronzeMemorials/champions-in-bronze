@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Camera, Shield, Award, Star, Zap, Flag } from "lucide-react";
+import { lazy, Suspense } from "react";
+import { ArrowRight, Camera } from "lucide-react";
 import FadeIn from "../components/shared/FadeIn";
 import SocialProofBar from "../components/shared/SocialProofBar";
 import TrustBadges from "../components/shared/TrustBadges";
-import ProcessTimeline from "../components/shared/ProcessTimeline";
-import TestimonialCarousel from "../components/shared/TestimonialCarousel";
-import QuoteForm from "../components/shared/QuoteForm";
 import SectionHeading from "../components/shared/SectionHeading";
+
+const ProcessTimeline = lazy(() => import("../components/shared/ProcessTimeline"));
+const TestimonialCarousel = lazy(() => import("../components/shared/TestimonialCarousel"));
+const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
 const statueImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const plaqueImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
@@ -77,7 +79,7 @@ export default function ProHome() {
             {products.map((p, i) => (
               <FadeIn key={p.to} delay={i * 0.1}>
                 <Link to={p.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{p.label}</span>
@@ -102,7 +104,7 @@ export default function ProHome() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm group">
-                <img src={imageCastImg} alt="Photo ImageCasting bronze plaque" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={imageCastImg} alt="Photo ImageCasting bronze plaque" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-bronze/5 mix-blend-overlay" />
                 <div className="absolute bottom-6 left-6">
                   <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">Photo ImageCasting™</span>
@@ -176,7 +178,7 @@ export default function ProHome() {
             </FadeIn>
             <FadeIn>
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm group">
-                <img src={reliefImg} alt="3D bas relief plaque" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={reliefImg} alt="3D bas relief plaque" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-bronze/5 mix-blend-overlay" />
               </div>
             </FadeIn>
@@ -213,7 +215,7 @@ export default function ProHome() {
       {/* Foundry Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={foundryImg} alt="Bronze foundry process" className="w-full h-full object-cover opacity-20" />
+          <img src={foundryImg} alt="Bronze foundry process" loading="lazy" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/80 to-obsidian" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -232,13 +234,19 @@ export default function ProHome() {
         </div>
       </section>
 
-      <ProcessTimeline />
-      <TestimonialCarousel />
+      <Suspense fallback={<div className="h-40" />}>
+        <ProcessTimeline />
+      </Suspense>
+      <Suspense fallback={<div className="h-40" />}>
+        <TestimonialCarousel />
+      </Suspense>
+      <Suspense fallback={<div className="h-40" />}>
       <QuoteForm
         title="Get Your Instant Price"
         subtitle="Upload your photos and project brief. Artwork and pricing within 48 hours. We don't miss deadlines."
         source="pro"
       />
+      </Suspense>
     </div>
   );
 }
