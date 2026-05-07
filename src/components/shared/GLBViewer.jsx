@@ -145,7 +145,7 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     const h = height;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0f0c09);
+    scene.background = new THREE.Color(0xe8e0d5);
 
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.001, 1000);
     camera.position.set(0, 0.5, 3.5);
