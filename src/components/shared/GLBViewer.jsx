@@ -90,18 +90,11 @@ function loadGLBFromUrl(url, scene) {
             }
             geo.computeVertexNormals();
 
-            const mat3 = new THREE.MeshStandardMaterial({ color: 0xb0a090, roughness: 0.6, metalness: 0.1 });
-
-            // Apply glTF material if present
-            if (prim.material !== undefined && gltf.materials) {
-              const m = gltf.materials[prim.material];
-              if (m.pbrMetallicRoughness) {
-                const pbr = m.pbrMetallicRoughness;
-                if (pbr.baseColorFactor) mat3.color.setRGB(pbr.baseColorFactor[0], pbr.baseColorFactor[1], pbr.baseColorFactor[2]);
-                if (pbr.metallicFactor !== undefined) mat3.metalness = pbr.metallicFactor;
-                if (pbr.roughnessFactor !== undefined) mat3.roughness = pbr.roughnessFactor;
-              }
-            }
+            const mat3 = new THREE.MeshStandardMaterial({
+              color: 0x7A4A1E,
+              roughness: 0.3,
+              metalness: 0.85,
+            });
 
             const threeMesh = new THREE.Mesh(geo, mat3);
             threeMesh.applyMatrix4(matrix);
@@ -166,15 +159,15 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     el.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
-    // Lighting
-    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
-    const key = new THREE.DirectionalLight(0xffd090, 2.0);
+    // Lighting — warm bronze foundry look
+    scene.add(new THREE.AmbientLight(0x4a3010, 0.5));
+    const key = new THREE.DirectionalLight(0xffd090, 3.5);
     key.position.set(3, 5, 4);
     scene.add(key);
-    const fill = new THREE.DirectionalLight(0x9ab0d0, 0.8);
+    const fill = new THREE.DirectionalLight(0xb87333, 1.2);
     fill.position.set(-4, 2, -3);
     scene.add(fill);
-    const rim = new THREE.DirectionalLight(0xffcc77, 1.0);
+    const rim = new THREE.DirectionalLight(0xffaa44, 1.8);
     rim.position.set(0, -3, -5);
     scene.add(rim);
 
