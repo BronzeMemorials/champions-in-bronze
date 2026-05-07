@@ -159,17 +159,17 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     el.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
-    // Lighting — warm studio bronze look
-    scene.add(new THREE.AmbientLight(0x6b4c2a, 0.6));
-    const key = new THREE.DirectionalLight(0xffdda0, 3.0);
-    key.position.set(3, 5, 4);
+    // Lighting — front-facing studio bronze, face clearly lit
+    scene.add(new THREE.AmbientLight(0x9a7a50, 1.2));
+    const key = new THREE.DirectionalLight(0xffdda0, 3.5);
+    key.position.set(1, 2, 5);
     scene.add(key);
-    const fill = new THREE.DirectionalLight(0xc8914a, 1.0);
-    fill.position.set(-4, 2, -3);
+    const fill = new THREE.DirectionalLight(0xffe0b0, 2.0);
+    fill.position.set(-3, 1, 4);
     scene.add(fill);
-    const rim = new THREE.DirectionalLight(0xffc87a, 1.4);
-    rim.position.set(0, -3, -5);
-    scene.add(rim);
+    const top = new THREE.DirectionalLight(0xfff0d0, 1.5);
+    top.position.set(0, 5, 2);
+    scene.add(top);
 
     const pivot = new THREE.Group();
     scene.add(pivot);
