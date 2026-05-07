@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
-import FAQSection from "../components/shared/FAQSection";
-import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
 import GLBViewer from "../components/shared/GLBViewer";
 import { base44 } from "@/api/base44Client";
+
+const FAQSection = lazy(() => import("../components/shared/FAQSection"));
+const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -52,7 +53,7 @@ export default function BustsAndStatues() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={img1} alt="Bronze bust from photo" className="w-full h-full object-cover" />
+                <img src={img1} alt="Bronze bust from photo" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -123,7 +124,7 @@ export default function BustsAndStatues() {
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>
@@ -167,8 +168,12 @@ export default function BustsAndStatues() {
         </div>
       </section>
 
-      <FAQSection faqs={faqs} />
-      <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
+      <Suspense fallback={<div className="h-40" />}>
+        <FAQSection faqs={faqs} />
+      </Suspense>
+      <Suspense fallback={<div className="h-40" />}>
+        <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
+      </Suspense>
     </div>
   );
 }
