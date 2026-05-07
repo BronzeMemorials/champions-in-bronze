@@ -10,9 +10,7 @@ function clamp(val, min, max) {
 }
 
 async function loadGLB(url) {
-  const { GLTFLoader } = await import(
-    "https://unpkg.com/three@0.171.0/examples/jsm/loaders/GLTFLoader.js"
-  );
+  const { GLTFLoader } = await import("three/examples/jsm/loaders/GLTFLoader.js");
   return new Promise((resolve, reject) => {
     new GLTFLoader().load(url, resolve, undefined, reject);
   });
