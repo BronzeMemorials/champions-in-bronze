@@ -1,19 +1,14 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { ChevronLeft, ChevronRight, RotateCcw, Play, Pause, Upload } from "lucide-react";
 
-const MIN_Y = -Math.PI; // -180°
-const MAX_Y = Math.PI;  // +180°
+const MIN_Y = -Math.PI;
+const MAX_Y = Math.PI;
 
 function clamp(val, min, max) {
   return Math.min(Math.max(val, min), max);
-}
-
-async function loadGLB(url) {
-  const { GLTFLoader } = await import("three/examples/jsm/loaders/GLTFLoader.js");
-  return new Promise((resolve, reject) => {
-    new GLTFLoader().load(url, resolve, undefined, reject);
-  });
 }
 
 export default function GLBViewer({ height = 500 }) {
@@ -35,13 +30,25 @@ export default function GLBViewer({ height = 500 }) {
   const [error, setError] = useState(null);
   const [autoRotate, setAutoRotate] = useState(true);
 
-  // Sync state → ref
   useEffect(() => { autoRotateRef.current = autoRotate; }, [autoRotate]);
 
-  // Init Three.js once on mount
+  // Init Three.js only after fileUrl is set (so mount div has real dimensions)
   useEffect(() => {
+    if (!fileUrl) return;
     const el = mountRef.current;
-    const w = el.clientWidth;
+    if (!el) return;
+
+    // Cleanup previous renderer if any
+    if (rendererRef.current) {
+      cancelAnimationFrame(animRef.current);
+      rendererRef.current.dispose();
+      if (el.contains(rendererRef.current.domElement)) {
+        el.removeChild(rendererRef.current.domElement);
+      }
+      rendererRef.current = null;
+    }
+
+    const w = el.clientWidth || 800;
     const h = height;
 
     const scene = new THREE.Scene();
@@ -49,7 +56,7 @@ export default function GLBViewer({ height = 500 }) {
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.001, 1000);
-    camera.position.set(0, 0, 3.5);
+    camera.position.set(0, 0.5, 3.5);
     cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -62,7 +69,7 @@ export default function GLBViewer({ height = 500 }) {
     rendererRef.current = renderer;
 
     // Lighting
-    scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
     const key = new THREE.DirectionalLight(0xffd090, 2.0);
     key.position.set(3, 5, 4);
     scene.add(key);
@@ -77,7 +84,7 @@ export default function GLBViewer({ height = 500 }) {
     scene.add(pivot);
     pivotRef.current = pivot;
 
-    // Animate
+    // Animation loop
     const animate = () => {
       animRef.current = requestAnimationFrame(animate);
       if (autoRotateRef.current) {
@@ -98,7 +105,7 @@ export default function GLBViewer({ height = 500 }) {
     };
     window.addEventListener("resize", onResize);
 
-    // Mouse drag — horizontal only, clamped ±180°
+    // Drag — horizontal only, clamped ±180°
     const onMouseDown = (e) => {
       dragging.current = true;
       lastX.current = e.clientX;
@@ -114,7 +121,6 @@ export default function GLBViewer({ height = 500 }) {
     };
     const onMouseUp = () => { dragging.current = false; };
 
-    // Touch drag
     const onTouchStart = (e) => {
       dragging.current = true;
       lastX.current = e.touches[0].clientX;
@@ -137,6 +143,36 @@ export default function GLBViewer({ height = 500 }) {
     renderer.domElement.addEventListener("touchmove", onTouchMove, { passive: true });
     renderer.domElement.addEventListener("touchend", onTouchEnd);
 
+    // Load the GLB
+    setLoading(true);
+    setModelLoaded(false);
+    setError(null);
+    rotYRef.current = 0;
+    pivot.rotation.y = 0;
+
+    const loader = new GLTFLoader();
+    loader.load(
+      fileUrl,
+      (gltf) => {
+        const model = gltf.scene;
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        model.position.sub(center);
+        model.scale.setScalar(2 / maxDim);
+        pivot.add(model);
+        setModelLoaded(true);
+        setLoading(false);
+      },
+      undefined,
+      (err) => {
+        console.error("GLB load error:", err);
+        setError("Failed to load GLB file.");
+        setLoading(false);
+      }
+    );
+
     return () => {
       cancelAnimationFrame(animRef.current);
       window.removeEventListener("resize", onResize);
@@ -145,47 +181,7 @@ export default function GLBViewer({ height = 500 }) {
       renderer.dispose();
       if (el.contains(renderer.domElement)) el.removeChild(renderer.domElement);
     };
-  }, [height]);
-
-  // Load GLB when fileUrl changes
-  useEffect(() => {
-    if (!fileUrl || !pivotRef.current) return;
-    setLoading(true);
-    setError(null);
-    setModelLoaded(false);
-
-    const pivot = pivotRef.current;
-    // Clear existing model
-    while (pivot.children.length) {
-      const child = pivot.children[0];
-      pivot.remove(child);
-    }
-
-    loadGLB(fileUrl)
-      .then((gltf) => {
-        const model = gltf.scene;
-        // Center & scale
-        const box = new THREE.Box3().setFromObject(model);
-        const center = box.getCenter(new THREE.Vector3());
-        const size = box.getSize(new THREE.Vector3());
-        const maxDim = Math.max(size.x, size.y, size.z);
-        model.position.sub(center);
-        model.scale.setScalar(2 / maxDim);
-
-        pivot.add(model);
-
-        // Reset rotation
-        rotYRef.current = 0;
-        pivot.rotation.y = 0;
-
-        setModelLoaded(true);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError("Failed to load GLB. Make sure it's a valid .glb file.");
-        setLoading(false);
-      });
-  }, [fileUrl]);
+  }, [fileUrl, height]);
 
   const handleFileChange = useCallback((e) => {
     const file = e.target.files?.[0];
@@ -233,14 +229,8 @@ export default function GLBViewer({ height = 500 }) {
   const triggerUpload = () => document.getElementById("glb-upload-input").click();
 
   return (
-    <div className="w-full rounded-sm overflow-hidden border border-bronze/20" style={{ position: "relative" }}>
-      {/* Three.js mount — always in DOM */}
-      <div
-        ref={mountRef}
-        style={{ width: "100%", height, display: fileUrl ? "block" : "none", cursor: "grab" }}
-      />
-
-      {/* Upload zone — shown when no file */}
+    <div className="w-full rounded-sm overflow-hidden border border-bronze/20">
+      {/* Upload zone */}
       {!fileUrl && (
         <div
           className="flex flex-col items-center justify-center gap-4 cursor-pointer border-2 border-dashed border-bronze/30 hover:border-gold/60 transition-colors rounded-sm bg-obsidian"
@@ -257,9 +247,11 @@ export default function GLBViewer({ height = 500 }) {
         </div>
       )}
 
-      {/* Overlays — only shown when viewport is active */}
+      {/* Three.js viewport */}
       {fileUrl && (
-        <>
+        <div className="relative" style={{ height }}>
+          <div ref={mountRef} className="w-full h-full" style={{ cursor: "grab" }} />
+
           {loading && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-obsidian/80 z-10">
               <div className="w-10 h-10 border-4 border-bronze/30 border-t-gold rounded-full animate-spin mb-3" />
@@ -281,14 +273,12 @@ export default function GLBViewer({ height = 500 }) {
 
           {modelLoaded && !loading && !error && (
             <>
-              {/* File name badge */}
               <div className="absolute top-3 left-3 z-10">
                 <span className="bg-bronze/70 text-parchment text-xs font-sans px-3 py-1 rounded-sm max-w-[180px] truncate block">
                   {fileName}
                 </span>
               </div>
 
-              {/* Replace button */}
               <button
                 onClick={triggerUpload}
                 className="absolute top-3 right-3 z-10 bg-obsidian/70 border border-bronze/30 text-parchment/50 hover:text-gold hover:border-gold text-xs font-sans uppercase tracking-widest px-3 py-1.5 rounded-sm transition-colors flex items-center gap-1.5"
@@ -296,30 +286,27 @@ export default function GLBViewer({ height = 500 }) {
                 <Upload className="w-3 h-3" /> Replace
               </button>
 
-              {/* Rotation controls */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
-                <button onClick={rotateLeft} title="Rotate left" className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+                <button onClick={rotateLeft} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                <button onClick={() => setAutoRotate((v) => !v)} title={autoRotate ? "Pause" : "Auto-rotate"} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+                <button onClick={() => setAutoRotate((v) => !v)} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
                   {autoRotate ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                 </button>
-                <button onClick={resetView} title="Reset" className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+                <button onClick={resetView} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
                   <RotateCcw className="w-4 h-4" />
                 </button>
-                <button onClick={rotateRight} title="Rotate right" className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+                <button onClick={rotateRight} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Hint */}
               <p className="absolute bottom-4 right-4 z-10 text-parchment/20 text-xs font-sans">Drag · ±180°</p>
             </>
           )}
-        </>
+        </div>
       )}
 
-      {/* Hidden file input */}
       <input
         id="glb-upload-input"
         type="file"
