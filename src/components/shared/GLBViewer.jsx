@@ -108,7 +108,7 @@ function loadGLBFromUrl(url, scene) {
   });
 }
 
-export default function GLBViewer({ height = 500, initialUrl = null, onModelLoaded = null }) {
+export default function GLBViewer({ height = 500, initialUrl = null, onModelLoaded = null, readOnly = false }) {
   const mountRef = useRef(null);
   const rendererRef = useRef(null);
   const animRef = useRef(null);
@@ -182,7 +182,7 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     const animate = () => {
       animRef.current = requestAnimationFrame(animate);
       if (autoRotateRef.current) {
-        rotYRef.current += 0.005;
+        rotYRef.current += 0.01;
         if (rotYRef.current > Math.PI) rotYRef.current = -Math.PI;
         pivot.rotation.y = rotYRef.current;
       }
@@ -346,13 +346,17 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
 
           {modelLoaded && !loading && !error && (
             <>
-              <div className="absolute top-3 left-3 z-10">
-                <span className="bg-bronze/70 text-parchment text-xs font-sans px-3 py-1 rounded-sm max-w-[180px] truncate block">{fileName}</span>
-              </div>
-              <button onClick={triggerUpload}
-                className="absolute top-3 right-3 z-10 bg-obsidian/70 border border-bronze/30 text-parchment/50 hover:text-gold hover:border-gold text-xs font-sans uppercase tracking-widest px-3 py-1.5 rounded-sm transition-colors flex items-center gap-1.5">
-                <Upload className="w-3 h-3" /> Replace
-              </button>
+              {!readOnly && (
+                <>
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="bg-bronze/70 text-parchment text-xs font-sans px-3 py-1 rounded-sm max-w-[180px] truncate block">{fileName}</span>
+                  </div>
+                  <button onClick={triggerUpload}
+                    className="absolute top-3 right-3 z-10 bg-obsidian/70 border border-bronze/30 text-parchment/50 hover:text-gold hover:border-gold text-xs font-sans uppercase tracking-widest px-3 py-1.5 rounded-sm transition-colors flex items-center gap-1.5">
+                    <Upload className="w-3 h-3" /> Replace
+                  </button>
+                </>
+              )}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
                 <button onClick={rotateLeft} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm"><ChevronLeft className="w-5 h-5" /></button>
                 <button onClick={() => setAutoRotate(v => !v)} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">

@@ -100,7 +100,7 @@ export default function BustsAndStatues() {
               </div>
             </FadeIn>
             <FadeIn delay={0.15}>
-              <GLBViewer height={560} initialUrl={model.file_url} />
+              <GLBViewer height={560} initialUrl={model.file_url} readOnly={true} />
             </FadeIn>
           </div>
         </section>
