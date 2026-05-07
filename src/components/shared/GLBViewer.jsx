@@ -148,7 +148,7 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     scene.background = new THREE.Color(0xe8e0d5);
 
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.001, 1000);
-    camera.position.set(0, 1, 4.5);
+    camera.position.set(0, 2.5, 5.5);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -182,7 +182,7 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     const animate = () => {
       animRef.current = requestAnimationFrame(animate);
       if (autoRotateRef.current) {
-        rotYRef.current += 0.01;
+        rotYRef.current += 0.025;
         if (rotYRef.current > Math.PI) rotYRef.current = -Math.PI;
         pivot.rotation.y = rotYRef.current;
       }

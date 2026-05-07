@@ -9,6 +9,7 @@ import { base44 } from "@/api/base44Client";
 
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
+const GLBViewerLazy = lazy(() => import("../components/shared/GLBViewer"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -91,20 +92,22 @@ export default function BustsAndStatues() {
 
       {/* 3D Viewer Demo */}
       {model && (
-        <section className="py-20 border-t border-bronze/10 bg-secondary/10">
-          <div className="max-w-5xl mx-auto px-6">
-            <FadeIn>
-              <div className="text-center mb-10">
-                <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Interactive 3D Preview</span>
-                <h2 className="font-serif text-3xl md:text-4xl mt-3 text-parchment">Explore a Bronze Bust in 3D</h2>
-                <p className="mt-3 text-parchment/50 text-sm">Drag left or right to rotate. Use arrows below for precise control.</p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.15}>
-              <GLBViewer height={560} initialUrl={model.file_url} readOnly={true} />
-            </FadeIn>
-          </div>
-        </section>
+        <Suspense fallback={<div className="py-20 h-[600px]" />}>
+          <section className="py-20 border-t border-bronze/10 bg-secondary/10">
+            <div className="max-w-5xl mx-auto px-6">
+              <FadeIn>
+                <div className="text-center mb-10">
+                  <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Interactive 3D Preview</span>
+                  <h2 className="font-serif text-3xl md:text-4xl mt-3 text-parchment">Explore a Bronze Bust in 3D</h2>
+                  <p className="mt-3 text-parchment/50 text-sm">Drag left or right to rotate. Use arrows below for precise control.</p>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.15}>
+                <GLBViewerLazy height={560} initialUrl={model.file_url} readOnly={true} />
+              </FadeIn>
+            </div>
+          </section>
+        </Suspense>
       )}
 
       {/* Gallery */}
