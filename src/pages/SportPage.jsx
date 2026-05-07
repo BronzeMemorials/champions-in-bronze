@@ -17,7 +17,7 @@ const imgs = [
 
 const sharedFaqs = [
   { question: "Is the athlete's exact likeness captured?", answer: "Yes. We sculpt every relief and bust from the photographs you submit — not a generic athlete figure. Your player's actual face, build, and expression are captured feature by feature. No in-person sessions needed." },
-  { question: "What products are available for this sport?", answer: "3D bas relief action plaques, portrait busts, championship plaques, Hall of Fame inductee displays, Photo ImageCast multi-photo collages, donor recognition plaques, and retired jersey/number displays." },
+  { question: "What products are available for this sport?", answer: "3D bas relief action plaques, portrait busts, championship plaques, Hall of Fame inductee displays, Photo ImageCasting multi-photo collages, donor recognition plaques, and retired jersey/number displays." },
   { question: "How fast is turnaround?", answer: "Artwork proof within 48 hours. Standard plaques ship in 15–30 days. Busts and statues take 16–24 weeks depending on size." },
   { question: "What materials do you recommend for outdoor installation?", answer: "Silicon bronze is the traditional standard — warm amber patina, museum quality, rated 200+ years outdoors. Aluminum is lighter and lower cost, ideal for indoor applications." },
 ];
@@ -32,7 +32,7 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
     { img: imgs[0], title: `${sport} 3D Bas Relief Plaque`, desc: "Sculpted from your actual player photographs. Single portrait or action scene.", to: "/3d-relief-plaques" },
     { img: imgs[1], title: `${sport} Portrait Bust`, desc: "Life-size or heroic-scale bronze or aluminum bust from photos.", to: "/busts-and-statues" },
     { img: imgs[2], title: `${sport} Hall of Fame Display`, desc: "Complete inductee plaque system — individual or full wall installation.", to: "/hall-of-fame" },
-    { img: imgs[3], title: `${sport} Photo ImageCast Plaque`, desc: "Career-spanning photo collage permanently cast in bronze.", to: "/photo-imagecast-plaques" },
+    { img: imgs[3], title: `${sport} Photo ImageCasting Plaque`, desc: "Career-spanning photo collage permanently cast in bronze.", to: "/photo-imagecast-plaques" },
     { img: imgs[4], title: `${sport} Championship Plaque`, desc: "Season championship commemorative in bronze or aluminum.", to: "/3d-relief-plaques" },
     { img: imgs[5], title: `${sport} Donor Recognition Wall`, desc: "Fundraising recognition wall for your athletic program.", to: "/donor-recognition" },
   ];
@@ -45,7 +45,7 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
         image={img}
         label={`${league ? league + " · " : ""}${sport} Recognition`}
         title={`${sport} Bronze Plaques, Busts & Statues`}
-        subtitle={heroSubtitle || `Custom 3D bas relief plaques, portrait busts, Hall of Fame displays, and Photo ImageCast career retrospectives for ${sport}. Every piece sculpted from your actual photographs — exact likeness guaranteed.`}
+        subtitle={heroSubtitle || `Custom 3D bas relief plaques, portrait busts, Hall of Fame displays, and Photo ImageCasting career retrospectives for ${sport}. Every piece sculpted from your actual photographs — exact likeness guaranteed.`}
         cta1="Get Instant Price"
         cta1Link="/request-quote"
         cta2="View All Products"

@@ -10,7 +10,7 @@ const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b
 const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 
 const faqs = [
-  { question: "Can alumni portraits be included?", answer: "Yes. Alumni recognition plaques can incorporate actual photographs of the honoree using our Photo ImageCast process — their real image permanently cast alongside their name, years, and tribute text." },
+  { question: "Can alumni portraits be included?", answer: "Yes. Alumni recognition plaques can incorporate actual photographs of the honoree using our Photo ImageCasting process — their real image permanently cast alongside their name, years, and tribute text." },
   { question: "Can this be a complete alumni recognition wall?", answer: "Absolutely. We design and fabricate complete alumni recognition systems — individual plaques, multi-decade recognition walls, distinguished alumni galleries, and legacy corridors." },
   { question: "Do you serve secondary schools as well as universities?", answer: "Yes. We serve K-12 schools, community colleges, four-year universities, professional programs, and military academies — any institution that wants to honor its alumni permanently." },
   { question: "What is the starting cost?", answer: "Individual alumni recognition plaques start at $495. Complete alumni recognition wall systems are quoted based on scope and inductee count." },
@@ -42,7 +42,7 @@ export default function AlumniMemorials() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "Distinguished Alumni Plaque", desc: "Individual plaque with Photo ImageCast portrait, name, graduation year, career achievements, and tribute text." },
+              { img: img1, title: "Distinguished Alumni Plaque", desc: "Individual plaque with Photo ImageCasting portrait, name, graduation year, career achievements, and tribute text." },
               { img: img2, title: "Alumni Legacy Wall", desc: "Complete multi-inductee recognition wall with unified aesthetic and modular design for ongoing addition of honorees." },
               { img: img3, title: "In Memoriam Display", desc: "Memorial recognition for deceased alumni, honoring their life and contribution with bronze permanence." },
             ].map((item, i) => (

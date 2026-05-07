@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const productLinks = [
   { label: "3D Relief Plaques", to: "/3d-relief-plaques" },
   { label: "Busts & Statues", to: "/busts-and-statues" },
-  { label: "Photo ImageCast Plaques", to: "/photo-imagecast-plaques" },
+  { label: "Photo ImageCasting Plaques", to: "/photo-imagecast-plaques" },
   { label: "Hall of Fame Displays", to: "/hall-of-fame" },
   { label: "Donor Recognition Walls", to: "/donor-recognition" },
   { label: "Dedication Plaques", to: "/dedication-plaques" },

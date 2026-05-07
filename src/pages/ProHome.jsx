@@ -18,8 +18,8 @@ const foundryImg = "https://media.base44.com/images/public/69e6638934292a547ec97
 const products = [
   { image: reliefImg, label: "Most Popular", title: "3D Bas Relief Plaques", desc: "Sculpted from your actual photographs — exact likeness, not an interpretation. Every face, action pose, and expression captured in dimensional bronze.", to: "/3d-relief-plaques", cta: "See Relief Plaques" },
   { image: statueImg, label: "Signature Work", title: "Bronze & Aluminum Busts & Statues", desc: "Life-size and heroic-scale figures — portrait busts through full statues — created from your photos. Exact likeness of coaches, athletes, and legends.", to: "/busts-and-statues", cta: "See Statues & Busts" },
-  { image: imageCastImg, label: "Proprietary", title: "Photo ImageCast Plaques", desc: "Multiple photographs permanently cast into bronze. Career retrospectives, team history, championship moments — your real images, not drawings, cast forever.", to: "/photo-imagecast-plaques", cta: "See Photo ImageCast" },
-  { image: donorImg, label: "Major Installations", title: "Donor Recognition Walls", desc: "Transform capital campaigns into permanent bronze landmarks. Includes donor portrait Photo ImageCast — a real photo of your donor, cast in bronze.", to: "/donor-recognition", cta: "See Donor Walls" },
+  { image: imageCastImg, label: "Proprietary", title: "Photo ImageCasting Plaques", desc: "Multiple photographs permanently cast into bronze. Career retrospectives, team history, championship moments — your real images, not drawings, cast forever.", to: "/photo-imagecast-plaques", cta: "See Photo ImageCasting" },
+  { image: donorImg, label: "Major Installations", title: "Donor Recognition Walls", desc: "Transform capital campaigns into permanent bronze landmarks. Includes donor portrait Photo ImageCasting — a real photo of your donor, cast in bronze.", to: "/donor-recognition", cta: "See Donor Walls" },
 ];
 
 export default function ProHome() {
@@ -43,7 +43,7 @@ export default function ProHome() {
               <span className="text-bronze-light italic">Champions.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-xl md:text-2xl text-parchment/70 leading-relaxed font-sans font-light">
-              3D bas relief plaques, busts, statues, and Photo ImageCast bronze — created from your actual photographs. Exact likeness. Museum quality. American made.
+              3D bas relief plaques, busts, statues, and Photo ImageCasting bronze — created from your actual photographs. Exact likeness. Museum quality. American made.
             </p>
             <div className="mt-12 flex flex-wrap gap-5">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -96,16 +96,16 @@ export default function ProHome() {
         </div>
       </section>
 
-      {/* Photo ImageCast Feature */}
+      {/* Photo ImageCasting Feature */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm group">
-                <img src={imageCastImg} alt="Photo ImageCast bronze plaque" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={imageCastImg} alt="Photo ImageCasting bronze plaque" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-bronze/5 mix-blend-overlay" />
                 <div className="absolute bottom-6 left-6">
-                  <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">Photo ImageCast™</span>
+                  <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">Photo ImageCasting™</span>
                 </div>
               </div>
             </FadeIn>
@@ -118,7 +118,7 @@ export default function ProHome() {
                 Your Real Photos.<br />Cast Into Bronze.<br />Forever.
               </h2>
               <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
-                Photo ImageCast is our proprietary process for permanently casting high-resolution photographs — including multi-photo collages — directly into bronze or aluminum. Career retrospectives, championship moments, team history.
+                Photo ImageCasting is our proprietary process for permanently casting high-resolution photographs — including multi-photo collages — directly into bronze or aluminum. Career retrospectives, championship moments, team history.
               </p>
               <p className="mt-4 text-parchment/60 text-lg leading-relaxed font-medium text-parchment/80">
                 Not an artist's interpretation. Your exact photographic image. Cast forever.
@@ -138,7 +138,7 @@ export default function ProHome() {
                 ))}
               </ul>
               <Link to="/photo-imagecast-plaques" className="inline-flex items-center gap-2 mt-10 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
-                See Photo ImageCast <ArrowRight className="w-4 h-4" />
+                See Photo ImageCasting <ArrowRight className="w-4 h-4" />
               </Link>
             </FadeIn>
           </div>

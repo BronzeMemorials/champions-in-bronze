@@ -13,7 +13,7 @@ const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab
 
 const faqs = [
   { question: "Can you build a complete Hall of Fame wall system?", answer: "Yes. We design and fabricate complete Hall of Fame installations from concept to installation — individual inductee plaques, connecting wall panels, name bars, sport-themed borders, and modular systems that expand year after year as new inductees are added." },
-  { question: "How are inductee likenesses captured?", answer: "From photographs you provide. Every inductee portrait — whether 3D relief bust or Photo ImageCast — is created from your actual submitted photographs. No generic likenesses. No artist's interpretations. We capture the real person." },
+  { question: "How are inductee likenesses captured?", answer: "From photographs you provide. Every inductee portrait — whether 3D relief bust or Photo ImageCasting — is created from your actual submitted photographs. No generic likenesses. No artist's interpretations. We capture the real person." },
   { question: "What is the cost of a full Hall of Fame installation?", answer: "Individual inductee plaques start at $895. Complete wall system installations — including architectural framework, lighting design consultation, and multiple inductee plaques — typically range from $25,000 to $250,000+ depending on scope." },
   { question: "Can new inductees be added over time?", answer: "Yes — and we design for it. Our modular Hall of Fame systems have defined space and connection points for future inductees. Simply call us when you have a new class and we'll match the existing style exactly." },
   { question: "Do you handle installation?", answer: "We coordinate professional installation. Our installation teams have placed Hall of Fame walls in stadiums, arenas, university athletic facilities, and high school gymnasiums across the country." },
@@ -21,7 +21,7 @@ const faqs = [
 
 const formats = [
   { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years, stats, and achievement text. Available in bronze or aluminum. The foundation of every Hall of Fame.", img: img1 },
-  { title: "Photo ImageCast Career Retrospective", desc: "Multiple photographs from the inductee's career permanently cast into bronze alongside their portrait relief and career statistics.", img: img2 },
+  { title: "Photo ImageCasting Career Retrospective", desc: "Multiple photographs from the inductee's career permanently cast into bronze alongside their portrait relief and career statistics.", img: img2 },
   { title: "Full Wall Installation", desc: "Complete Hall of Fame wall system with architectural framework, unified aesthetic, sport-themed borders, and modular expansion design.", img: img3 },
 ];
 

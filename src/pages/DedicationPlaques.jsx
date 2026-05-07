@@ -11,7 +11,7 @@ const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/d7
 
 const faqs = [
   { question: "What occasions do dedication plaques cover?", answer: "Building dedications, room naming, scholarship endowments, event sponsorship, anniversary commemorations, field and court naming, locker room dedications, and any occasion where permanent recognition is desired." },
-  { question: "Can donor portraits be included on dedication plaques?", answer: "Yes. We frequently incorporate Photo ImageCast portraits of the honoree or donor alongside dedication text — a truly personal and prestigious recognition piece." },
+  { question: "Can donor portraits be included on dedication plaques?", answer: "Yes. We frequently incorporate Photo ImageCasting portraits of the honoree or donor alongside dedication text — a truly personal and prestigious recognition piece." },
   { question: "What is the minimum order size?", answer: "A single plaque. We produce individual dedication plaques from $395. Volume pricing for multiple plaques (e.g., series of scholarship rooms)." },
   { question: "How long does production take?", answer: "Standard dedication plaques ship in 15–21 days after artwork approval. Rush service available. Artwork proof within 48 hours of order." },
 ];
@@ -42,7 +42,7 @@ export default function DedicationPlaques() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "Building & Facility Dedication", desc: "Architecture-scale plaques for main entrances, lobbies, and building cornerstones. Includes Photo ImageCast portrait of naming donor or honoree." },
+              { img: img1, title: "Building & Facility Dedication", desc: "Architecture-scale plaques for main entrances, lobbies, and building cornerstones. Includes Photo ImageCasting portrait of naming donor or honoree." },
               { img: img2, title: "Room & Scholarship Naming", desc: "Smaller format plaques for named rooms, labs, suites, and scholarship endowments. Clear donor recognition at the point of impact." },
               { img: img3, title: "Event & Anniversary Plaques", desc: "Commemorative plaques for program anniversaries, championship years, groundbreaking ceremonies, and institutional milestones." },
             ].map((item, i) => (

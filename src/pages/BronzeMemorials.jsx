@@ -10,7 +10,7 @@ const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/42
 const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 
 const faqs = [
-  { question: "Can a memorial include the person's actual photograph?", answer: "Yes — and we strongly recommend it. Our Photo ImageCast process permanently casts your loved one's or honoree's actual photograph into the bronze memorial plaque. Their real face, their real expression — not a drawing or generic image. Cast forever." },
+  { question: "Can a memorial include the person's actual photograph?", answer: "Yes — and we strongly recommend it. Our Photo ImageCasting process permanently casts your loved one's or honoree's actual photograph into the bronze memorial plaque. Their real face, their real expression — not a drawing or generic image. Cast forever." },
   { question: "What types of memorials do you produce?", answer: "Memorial plaques for walls and buildings, headstone plaques, commemorative tablets, in memoriam displays, eternal flame dedications, and complete memorial installations." },
   { question: "Are memorials outdoor-rated?", answer: "Yes. Silicon bronze is the material of choice for permanent outdoor memorials — rated for 200+ years of weather exposure. We use the same alloys as major public monuments." },
   { question: "How sensitive is the process?", answer: "Extremely. We have a dedicated memorial team that treats every commission with care and respect. We understand the weight of this work and we take it seriously." },
@@ -39,7 +39,7 @@ export default function BronzeMemorials() {
             <div>
               <h3 className="font-serif text-2xl md:text-3xl text-parchment">Their Actual Photograph. Cast in Bronze. Forever.</h3>
               <p className="mt-3 text-parchment/60 leading-relaxed">
-                Using our Photo ImageCast process, your loved one's or honoree's actual photograph is permanently cast into the bronze memorial — not engraved, not printed, not interpreted. Their real face and expression, preserved with the permanence of bronze, for generations to come.
+                Using our Photo ImageCasting process, your loved one's or honoree's actual photograph is permanently cast into the bronze memorial — not engraved, not printed, not interpreted. Their real face and expression, preserved with the permanence of bronze, for generations to come.
               </p>
             </div>
           </div>

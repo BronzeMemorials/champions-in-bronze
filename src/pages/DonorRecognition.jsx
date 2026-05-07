@@ -13,7 +13,7 @@ const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b
 const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/502c0767b_generated_e375b9ec.png";
 
 const faqs = [
-  { question: "Can donor portraits be included?", answer: "Yes. Major donor plaques can include a Photo ImageCast portrait of the donor — their actual photograph permanently cast in bronze alongside their name and giving level. This is one of the most powerful donor recognition tools available." },
+  { question: "Can donor portraits be included?", answer: "Yes. Major donor plaques can include a Photo ImageCasting portrait of the donor — their actual photograph permanently cast in bronze alongside their name and giving level. This is one of the most powerful donor recognition tools available." },
   { question: "Can the donor wall grow over time?", answer: "Absolutely. Every donor wall we design includes a modular expansion system. New donor names, new giving levels, and new campaign phases can be added seamlessly as your program grows." },
   { question: "What giving tiers and recognition levels do you support?", answer: "Any structure you define. We fabricate recognition systems with unlimited naming tiers — Founding Patron, Gold, Silver, Bronze, Friends level — each with distinct visual treatment in the bronze." },
   { question: "What is the ROI on a donor recognition wall?", answer: "Athletic departments consistently report 30–50% increases in alumni donor participation after installing a visible, prestigious recognition wall. Prospective donors want to see their name in bronze alongside past supporters." },

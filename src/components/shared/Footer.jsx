@@ -34,7 +34,7 @@ export default function Footer() {
               {[
                 { label: "3D Relief Plaques", to: "/3d-relief-plaques" },
                 { label: "Busts & Statues", to: "/busts-and-statues" },
-                { label: "Photo ImageCast", to: "/photo-imagecast-plaques" },
+                { label: "Photo ImageCasting", to: "/photo-imagecast-plaques" },
                 { label: "Hall of Fame", to: "/hall-of-fame" },
                 { label: "Donor Walls", to: "/donor-recognition" },
                 { label: "Dedication Plaques", to: "/dedication-plaques" },
