@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
@@ -5,7 +6,8 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
-import STLViewer from "../components/shared/STLViewer";
+import GLBViewer from "../components/shared/GLBViewer";
+import { base44 } from "@/api/base44Client";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -22,6 +24,13 @@ const faqs = [
 ];
 
 export default function BustsAndStatues() {
+  const [model, setModel] = useState(null);
+
+  useEffect(() => {
+    base44.entities.Product3DModel.filter({ page: "busts_and_statues", is_active: true })
+      .then((results) => { if (results.length > 0) setModel(results[0]); });
+  }, []);
+
   return (
     <div className="bg-obsidian text-parchment">
       <ProductHero
@@ -80,25 +89,22 @@ export default function BustsAndStatues() {
       </section>
 
       {/* 3D Viewer Demo */}
-      <section className="py-20 border-t border-bronze/10 bg-secondary/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <FadeIn>
-            <div className="text-center mb-10">
-              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Interactive 3D Preview</span>
-              <h2 className="font-serif text-3xl md:text-4xl mt-3 text-parchment">Explore a Bronze Bust in 3D</h2>
-              <p className="mt-3 text-parchment/50 text-sm">Drag left or right to rotate. Use arrows below for precise control.</p>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.15}>
-            <div className="bg-parchment/5 border border-bronze/20 rounded-sm p-4">
-              <p className="text-center text-parchment/40 text-sm py-20 font-sans">
-                Upload an STL file to display an interactive 3D preview here.<br />
-                <span className="text-xs text-parchment/25 block mt-2">Contact us to add your model files — they'll appear with full horizontal-rotation controls.</span>
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      {model && (
+        <section className="py-20 border-t border-bronze/10 bg-secondary/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center mb-10">
+                <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Interactive 3D Preview</span>
+                <h2 className="font-serif text-3xl md:text-4xl mt-3 text-parchment">Explore a Bronze Bust in 3D</h2>
+                <p className="mt-3 text-parchment/50 text-sm">Drag left or right to rotate. Use arrows below for precise control.</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <GLBViewer height={560} initialUrl={model.file_url} />
+            </FadeIn>
+          </div>
+        </section>
+      )}
 
       {/* Gallery */}
       <section className="py-28">

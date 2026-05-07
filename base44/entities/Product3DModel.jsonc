@@ -1,0 +1,39 @@
+{
+  "name": "Product3DModel",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Display name for this 3D model"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded GLB file"
+    },
+    "page": {
+      "type": "string",
+      "enum": [
+        "busts_and_statues",
+        "relief_plaques",
+        "photo_imagecast",
+        "hall_of_fame",
+        "donor_recognition"
+      ],
+      "description": "Which page this model is featured on"
+    },
+    "label": {
+      "type": "string",
+      "description": "Optional label shown on the viewer (e.g. 'Full-Size Bronze Bust')"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this model is currently displayed"
+    }
+  },
+  "required": [
+    "name",
+    "file_url",
+    "page"
+  ]
+}

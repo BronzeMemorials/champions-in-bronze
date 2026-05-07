@@ -115,7 +115,7 @@ function loadGLBFromUrl(url, scene) {
   });
 }
 
-export default function GLBViewer({ height = 500 }) {
+export default function GLBViewer({ height = 500, initialUrl = null, onModelLoaded = null }) {
   const mountRef = useRef(null);
   const rendererRef = useRef(null);
   const animRef = useRef(null);
@@ -125,10 +125,10 @@ export default function GLBViewer({ height = 500 }) {
   const dragging = useRef(false);
   const lastX = useRef(0);
 
-  const [fileUrl, setFileUrl] = useState(null);
-  const [fileName, setFileName] = useState(null);
+  const [fileUrl, setFileUrl] = useState(initialUrl);
+  const [fileName, setFileName] = useState(initialUrl ? "model.glb" : null);
   const [modelLoaded, setModelLoaded] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(!!initialUrl);
   const [error, setError] = useState(null);
   const [autoRotate, setAutoRotate] = useState(true);
 
@@ -270,12 +270,14 @@ export default function GLBViewer({ height = 500 }) {
   const handleFileChange = useCallback((e) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    if (fileUrl) URL.revokeObjectURL(fileUrl);
-    setFileUrl(URL.createObjectURL(file));
+    if (fileUrl && !initialUrl) URL.revokeObjectURL(fileUrl);
+    const url = URL.createObjectURL(file);
+    setFileUrl(url);
     setFileName(file.name);
     setError(null);
+    if (onModelLoaded) onModelLoaded(url, file.name);
     e.target.value = "";
-  }, [fileUrl]);
+  }, [fileUrl, initialUrl, onModelLoaded]);
 
   const handleDrop = useCallback((e) => {
     e.preventDefault();
@@ -284,11 +286,13 @@ export default function GLBViewer({ height = 500 }) {
       setError("Please drop a .glb file.");
       return;
     }
-    if (fileUrl) URL.revokeObjectURL(fileUrl);
-    setFileUrl(URL.createObjectURL(file));
+    if (fileUrl && !initialUrl) URL.revokeObjectURL(fileUrl);
+    const url = URL.createObjectURL(file);
+    setFileUrl(url);
     setFileName(file.name);
     setError(null);
-  }, [fileUrl]);
+    if (onModelLoaded) onModelLoaded(url, file.name);
+  }, [fileUrl, initialUrl, onModelLoaded]);
 
   const rotateLeft = () => {
     setAutoRotate(false); autoRotateRef.current = false;
