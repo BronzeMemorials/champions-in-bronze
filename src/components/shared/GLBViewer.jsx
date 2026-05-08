@@ -148,7 +148,8 @@ export default function GLBViewer({ height = 500, initialUrl = null, onModelLoad
     scene.background = new THREE.Color(0xe8e0d5);
 
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.001, 1000);
-    camera.position.set(0, 1.2, 2.8);
+    camera.position.set(0, 0.2, 3.5);
+    camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
