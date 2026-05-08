@@ -28,12 +28,6 @@ export default function ModelViewer() {
     const file = new File([blob], fileName, { type: "model/gltf-binary" });
     const { file_url } = await base44.integrations.Core.UploadFile({ file });
 
-    // Check if an existing model exists for this page, delete it first
-    const existing = await base44.entities.Product3DModel.filter({ page: savePage, is_active: true });
-    for (const m of existing) {
-      await base44.entities.Product3DModel.update(m.id, { is_active: false });
-    }
-
     // Save new model record
     await base44.entities.Product3DModel.create({
       name: saveLabel || fileName.replace(".glb", ""),
