@@ -4,15 +4,14 @@ import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
-import GLBViewer from "../components/shared/GLBViewer";
+import GLBGallery from "../components/shared/GLBGallery";
 import { base44 } from "@/api/base44Client";
 
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
-const GLBViewerLazy = lazy(() => import("../components/shared/GLBViewer"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
-const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
+const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
 const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 
@@ -26,11 +25,11 @@ const faqs = [
 ];
 
 export default function BustsAndStatues() {
-  const [model, setModel] = useState(null);
+  const [models, setModels] = useState([]);
 
   useEffect(() => {
     base44.entities.Product3DModel.filter({ page: "busts_and_statues", is_active: true })
-      .then((results) => { if (results.length > 0) setModel(results[0]); });
+      .then((results) => setModels(results));
   }, []);
 
   return (
@@ -90,25 +89,8 @@ export default function BustsAndStatues() {
         </div>
       </section>
 
-      {/* 3D Viewer Demo */}
-      {model && (
-        <Suspense fallback={<div className="py-20 h-[600px]" />}>
-          <section className="py-20 border-t border-bronze/10 bg-secondary/10">
-            <div className="max-w-5xl mx-auto px-6">
-              <FadeIn>
-                <div className="text-center mb-10">
-                  <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Interactive 3D Preview</span>
-                  <h2 className="font-serif text-3xl md:text-4xl mt-3 text-parchment">Explore a Bronze Bust in 3D</h2>
-                  <p className="mt-3 text-parchment/50 text-sm">Drag left or right to rotate. Use arrows below for precise control.</p>
-                </div>
-              </FadeIn>
-              <FadeIn delay={0.15}>
-                <GLBViewerLazy height={560} initialUrl={model.file_url} readOnly={true} />
-              </FadeIn>
-            </div>
-          </section>
-        </Suspense>
-      )}
+      {/* 3D Gallery */}
+      {models.length > 0 && <GLBGallery models={models} />}
 
       {/* Gallery */}
       <section className="py-28">
