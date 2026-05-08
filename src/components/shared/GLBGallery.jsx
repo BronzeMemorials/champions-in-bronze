@@ -1,20 +1,20 @@
 import { useState, lazy, Suspense } from "react";
-import { X, Box } from "lucide-react";
+import { X, Maximize2 } from "lucide-react";
 import FadeIn from "./FadeIn";
+import GLBThumbnail from "./GLBThumbnail";
 
 const GLBViewerLazy = lazy(() => import("./GLBViewer"));
 
 function ModelCard({ model, onView }) {
   return (
-    <div className="border border-bronze/20 bg-obsidian rounded-sm overflow-hidden group hover:border-gold/50 transition-colors duration-300">
-      <div
-        className="aspect-square flex flex-col items-center justify-center gap-3 cursor-pointer bg-secondary/20 hover:bg-secondary/40 transition-colors"
-        onClick={() => onView(model)}
-      >
-        <Box className="w-10 h-10 text-bronze/50 group-hover:text-gold transition-colors" />
-        <span className="text-parchment/40 text-xs font-sans uppercase tracking-widest group-hover:text-parchment/70 transition-colors">
-          View in 3D
-        </span>
+    <div className="border border-bronze/20 bg-obsidian rounded-sm overflow-hidden group hover:border-gold/50 transition-colors duration-300 cursor-pointer" onClick={() => onView(model)}>
+      <div className="relative">
+        <GLBThumbnail url={model.file_url} />
+        <div className="absolute inset-0 flex items-center justify-center bg-obsidian/0 group-hover:bg-obsidian/40 transition-all duration-300">
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 bg-bronze/80 text-parchment px-4 py-2 rounded-sm text-xs font-sans uppercase tracking-widest">
+            <Maximize2 className="w-3.5 h-3.5" /> Expand
+          </div>
+        </div>
       </div>
       <div className="p-4 border-t border-bronze/10">
         <p className="font-serif text-parchment text-sm truncate">{model.label || model.name}</p>
