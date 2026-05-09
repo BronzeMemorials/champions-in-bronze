@@ -85,11 +85,23 @@ const products = [
   },
 ];
 
-const positions = [
-  { sport: "Football", positions: ["Quarterback", "Wide Receiver", "Lineman", "Running Back"] },
-  { sport: "Basketball", positions: ["Point Guard", "Forward", "Center", "Shooting Guard"] },
-  { sport: "Baseball", positions: ["Pitcher", "Batter", "Catcher", "Fielder"] },
-  { sport: "Hockey", positions: ["Goalie", "Defenseman", "Center", "Wing"] },
+const footballPositions = [
+  {
+    position: "Quarterback",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png",
+  },
+  {
+    position: "Receiver",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9b8441874_FCBF2923-CF61-4AE0-B720-2DF6F527DF5E.png",
+  },
+  {
+    position: "Lineman",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png",
+  },
+  {
+    position: "Running Back",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png",
+  },
 ];
 
 const faqs = [
@@ -313,25 +325,27 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <SectionHeading
-              label="Sport Positions"
-              title="Every Athlete. Every Position."
-              subtitle="We sculpt any athletic position with precision — from a quarterback's release to a goalie's save. Tell us the athlete, the sport, the moment."
+              label="Football · Sport Position Statues"
+              title="Every Position. Exact Likeness."
+              subtitle="We sculpt any athletic position with precision — from a quarterback's release to a lineman's stance. Tell us the athlete, the position, the moment."
               align="center"
             />
           </FadeIn>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
-            {positions.map((sport, i) => (
-              <FadeIn key={sport.sport} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-white p-6 rounded-sm hover:border-bronze/60 transition-colors duration-300 shadow-sm">
-                  <p className="font-serif text-xl text-gold mb-4">{sport.sport}</p>
-                  <ul className="space-y-2">
-                    {sport.positions.map((pos) => (
-                      <li key={pos} className="flex items-center gap-3">
-                        <span className="w-1 h-1 bg-bronze rounded-full flex-shrink-0" />
-                        <span className="font-sans text-sm text-parchment/60">{pos}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {footballPositions.map((item, i) => (
+              <FadeIn key={item.position} delay={i * 0.1}>
+                <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                  <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                    <img
+                      src={item.img}
+                      alt={`Bronze ${item.position} statue`}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4 text-center border-t border-bronze/10">
+                    <p className="font-serif text-lg text-parchment">{item.position}</p>
+                    <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Football</p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
