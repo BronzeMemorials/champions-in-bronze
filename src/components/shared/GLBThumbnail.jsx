@@ -76,14 +76,18 @@ function loadGLBFromUrl(url) {
   });
 }
 
-export default function GLBThumbnail({ url, size = 260 }) {
+export default function GLBThumbnail({ url }) {
   const mountRef = useRef(null);
+  const wrapRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     const el = mountRef.current;
-    if (!el || !url) return;
+    const wrap = wrapRef.current;
+    if (!el || !wrap || !url) return;
+
+    const w = wrap.clientWidth || 300;
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xe8e0d5);
@@ -94,7 +98,9 @@ export default function GLBThumbnail({ url, size = 260 }) {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "low-power" });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-    renderer.setSize(size, size);
+    renderer.setSize(w, w);
+    renderer.domElement.style.width = "100%";
+    renderer.domElement.style.height = "100%";
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
@@ -140,11 +146,11 @@ export default function GLBThumbnail({ url, size = 260 }) {
       renderer.dispose();
       while (el.firstChild) el.removeChild(el.firstChild);
     };
-  }, [url, size]);
+  }, [url]);
 
   return (
-    <div className="relative w-full" style={{ aspectRatio: "1/1" }}>
-      <div ref={mountRef} className="w-full h-full" />
+    <div ref={wrapRef} className="relative w-full" style={{ aspectRatio: "1/1" }}>
+      <div ref={mountRef} className="absolute inset-0" />
       {loading && !error && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#e8e0d5]">
           <div className="w-7 h-7 border-4 border-bronze/30 border-t-gold rounded-full animate-spin" />
