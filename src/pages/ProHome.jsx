@@ -85,6 +85,33 @@ const products = [
   },
 ];
 
+const bustTypes = [
+  {
+    label: "Standard Hall of Fame Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png",
+  },
+  {
+    label: "Athlete Portrait Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png",
+  },
+  {
+    label: "Coach Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png",
+  },
+  {
+    label: "Championship Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png",
+  },
+  {
+    label: "Stadium Donor Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png",
+  },
+  {
+    label: "Historic Athlete Bust",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png",
+  },
+];
+
 const soccerPositions = [
   {
     position: "Forward Kick Pose",
@@ -373,6 +400,42 @@ export default function ProHome() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* BUSTS */}
+      <section className="py-28 border-t border-bronze/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <SectionHeading
+              label="Major Sellers"
+              title="Bronze Portrait Busts"
+              subtitle="Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and legacy displays. Sculpted from your photographs — exact likeness, every time."
+              align="center"
+            />
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {bustTypes.map((item, i) => (
+              <FadeIn key={item.label} delay={i * 0.08}>
+                <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                  <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                    <img src={item.img} alt={item.label}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4 text-center border-t border-bronze/10">
+                    <p className="font-serif text-base text-parchment">{item.label}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+                View All Busts <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
