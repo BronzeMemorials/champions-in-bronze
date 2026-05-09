@@ -18,13 +18,29 @@
       "type": "string",
       "description": "Team, university, or organization name"
     },
-    "title": {
+    "who_for": {
       "type": "string",
-      "description": "Job title or role"
+      "enum": [
+        "Professional Athlete",
+        "Sports Team",
+        "College / University",
+        "Stadium / Arena",
+        "Hall of Fame",
+        "Donor Program",
+        "Athlete Agent",
+        "Family"
+      ],
+      "description": "Who the commission is for"
     },
     "project_type": {
       "type": "string",
       "enum": [
+        "Bronze Statue",
+        "Portrait Bust",
+        "3D Bas-Relief Plaque",
+        "Photo Image Cast Plaque",
+        "Donor Recognition Wall",
+        "Hall of Fame Display",
         "bronze_statue",
         "championship_plaque",
         "hall_of_fame",
@@ -39,9 +55,31 @@
       ],
       "description": "Type of project"
     },
+    "display_location": {
+      "type": "string",
+      "enum": [
+        "Stadium / Arena",
+        "Hall of Fame",
+        "Athletic Facility",
+        "Training Facility",
+        "Office / Private",
+        "University Campus",
+        "Home"
+      ],
+      "description": "Where the piece will be displayed"
+    },
+    "preferred_size": {
+      "type": "string",
+      "description": "Preferred size of the commission"
+    },
     "budget_range": {
       "type": "string",
       "enum": [
+        "Under $2,500",
+        "$2,500\u2013$7,500",
+        "$7,500\u2013$25,000",
+        "$25,000\u2013$75,000",
+        "$75,000+",
         "under_5k",
         "5k_15k",
         "15k_50k",
@@ -91,7 +129,6 @@
   },
   "required": [
     "name",
-    "email",
-    "project_type"
+    "email"
   ]
 }

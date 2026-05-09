@@ -1,37 +1,14 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function StickyQuoteButton({ href = "/request-quote" }) {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setVisible(window.scrollY > 400);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function StickyQuoteButton() {
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          className="fixed bottom-8 right-8 z-50"
-        >
-          <Link
-            to={href}
-            className="flex items-center gap-3 bg-bronze hover:bg-gold text-parchment px-6 py-4 rounded-sm shadow-2xl shadow-bronze/30 transition-all duration-300 group"
-          >
-            <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            <span className="font-sans text-sm uppercase tracking-[0.15em] font-semibold hidden md:inline">
-              Request Quote
-            </span>
-          </Link>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden">
+      <Link
+        to="/request-concept-design"
+        className="flex items-center justify-center w-full bg-bronze hover:bg-gold text-parchment py-4 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300"
+      >
+        Request Concept Design
+      </Link>
+    </div>
   );
 }

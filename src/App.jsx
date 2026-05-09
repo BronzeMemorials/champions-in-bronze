@@ -55,6 +55,15 @@ import ReliefJerseyPlaques from './pages/ReliefJerseyPlaques';
 import BronzePaperweights from './pages/BronzePaperweights';
 import HallOfFamePlaques from './pages/HallOfFamePlaques';
 import ModelViewer from './pages/ModelViewer';
+import CustomBronzeStatues from './pages/CustomBronzeStatues';
+import BronzeAthleteBusts from './pages/BronzeAthleteBusts';
+import HallOfFameDisplays from './pages/HallOfFameDisplays';
+import StadiumBronzeStatues from './pages/StadiumBronzeStatues';
+import CollegeAthleticRecognition from './pages/CollegeAthleticRecognition';
+import BronzePricingGuide from './pages/BronzePricingGuide';
+import RequestConceptDesign from './pages/RequestConceptDesign';
+import CommemorateGreatness from './pages/CommemorateGreatness';
+import HowItWorks from './pages/HowItWorks';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -127,6 +136,21 @@ const AuthenticatedApp = () => {
         <Route path="/3d-relief-jersey-plaques" element={<ReliefJerseyPlaques />} />
         <Route path="/bronze-paperweights" element={<BronzePaperweights />} />
         <Route path="/model-viewer" element={<ModelViewer />} />
+
+        {/* New repositioned pages */}
+        <Route path="/custom-bronze-athlete-statues" element={<CustomBronzeStatues />} />
+        <Route path="/bronze-athlete-busts" element={<BronzeAthleteBusts />} />
+        <Route path="/hall-of-fame-bronze-displays" element={<HallOfFameDisplays />} />
+        <Route path="/stadium-bronze-statues" element={<StadiumBronzeStatues />} />
+        <Route path="/college-athletic-recognition" element={<CollegeAthleticRecognition />} />
+        <Route path="/bronze-statue-pricing" element={<BronzePricingGuide />} />
+        <Route path="/request-concept-design" element={<RequestConceptDesign />} />
+        <Route path="/commemorate-greatness" element={<CommemorateGreatness />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        {/* Alias routes for new URL structure */}
+        <Route path="/3d-bas-relief-plaques" element={<ThreeDReliefPlaques />} />
+        <Route path="/photo-image-casting-plaques" element={<PhotoImageCast />} />
+        <Route path="/materials-finishes" element={<MaterialsFinishes />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

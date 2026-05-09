@@ -23,7 +23,39 @@
     },
     "label": {
       "type": "string",
-      "description": "Optional label shown on the viewer (e.g. 'Full-Size Bronze Bust')"
+      "description": "Optional label shown on the viewer"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "Football",
+        "Basketball",
+        "Baseball",
+        "Hockey",
+        "Soccer",
+        "Golf",
+        "Track & Field",
+        "Wrestling",
+        "Tennis",
+        "Lacrosse",
+        "Volleyball",
+        "Swimming",
+        "Multi-Sport",
+        "Hall of Fame"
+      ],
+      "description": "Sport category for gallery filtering"
+    },
+    "pose_type": {
+      "type": "string",
+      "description": "Pose description e.g. 'Passing Stance', 'Heisman Pose'"
+    },
+    "size_range": {
+      "type": "string",
+      "description": "Available size range e.g. '24\"-72\"'"
+    },
+    "price_range": {
+      "type": "string",
+      "description": "Starting price range e.g. 'From $8,000'"
     },
     "is_active": {
       "type": "boolean",
