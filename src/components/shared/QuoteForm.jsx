@@ -50,9 +50,9 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
             <CheckCircle className="w-16 h-16 text-bronze mx-auto mb-6" />
-            <h2 className="font-serif text-4xl text-parchment">Legacy Commission Received</h2>
+            <h2 className="font-serif text-4xl text-parchment">Recognition Project Received</h2>
             <p className="text-parchment/60 mt-4 text-lg leading-relaxed">
-              Our team will review your project details and deliver a concept design proof within 48 hours. Built for champions. Delivered on time.
+              Our team will review your project details and deliver an artwork proof and pricing within 48 hours. Institutional grade. Delivered on time.
             </p>
           </FadeIn>
         </div>
@@ -65,7 +65,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
       <div className="max-w-3xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
-            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Legacy Commission</span>
+            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
             <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">{title}</h2>
             {subtitle && <p className="mt-4 text-parchment/60 text-lg">{subtitle}</p>}
           </div>
@@ -106,22 +106,40 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <p className="text-bronze font-sans text-xs uppercase tracking-[0.2em] mb-6">Project Details</p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className={labelClass}>This commission is for *</label>
+                  <label className={labelClass}>This project is for *</label>
                   <Select value={form.who_for} onValueChange={(v) => handleChange("who_for", v)}>
-                    <SelectTrigger className={selectClass}><SelectValue placeholder="Select recipient" /></SelectTrigger>
+                    <SelectTrigger className={selectClass}><SelectValue placeholder="Select organization type" /></SelectTrigger>
                     <SelectContent className="bg-secondary/20 border-bronze/20">
-                      {["Professional Athlete", "Sports Team", "College / University", "Stadium / Arena", "Hall of Fame", "Donor Program", "Athlete Agent", "Family"].map((v) => (
+                      {[
+                        "Athletic Department",
+                        "Stadium / Arena",
+                        "Hall of Fame",
+                        "Donor Foundation / Booster Club",
+                        "University / College",
+                        "Professional Sports Organization",
+                        "Alumni Association",
+                        "Individual Athlete / Family",
+                      ].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
-                  <label className={labelClass}>Product Type *</label>
+                  <label className={labelClass}>What type of recognition project? *</label>
                   <Select value={form.project_type} onValueChange={(v) => handleChange("project_type", v)}>
-                    <SelectTrigger className={selectClass}><SelectValue placeholder="Select product" /></SelectTrigger>
+                    <SelectTrigger className={selectClass}><SelectValue placeholder="Select project type" /></SelectTrigger>
                     <SelectContent className="bg-secondary/20 border-bronze/20">
-                      {["Bronze Statue", "Portrait Bust", "3D Bas-Relief Plaque", "Photo Image Cast Plaque", "Donor Recognition Wall", "Hall of Fame Display"].map((v) => (
+                      {[
+                        "Hall of Fame Plaques",
+                        "Championship Plaques",
+                        "Photo Image Cast Plaque",
+                        "3D Bas-Relief Plaque",
+                        "Donor Recognition Wall",
+                        "Athletic Facility Signage",
+                        "Athlete Bust",
+                        "Full-Size Statue",
+                      ].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
                     </SelectContent>
@@ -173,7 +191,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <label className={labelClass}>Project Vision</label>
               <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
                 className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze min-h-[140px]"
-                placeholder="Describe your vision — the athlete, sport, pose, installation location, number of pieces, and any inspiration..." />
+                placeholder="Describe your project — plaque type, sport, number of pieces, installation location, timeline, and any specific requirements..." />
             </div>
 
             {/* File Upload */}
@@ -182,7 +200,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <div onClick={() => fileRef.current?.click()}
                 className="border-2 border-dashed border-bronze/25 hover:border-bronze/60 transition-colors p-8 text-center cursor-pointer bg-secondary/20">
                 <Upload className="w-8 h-8 text-bronze/40 mx-auto mb-3" />
-                <p className="text-parchment/40 text-sm">Upload athlete photos, logos, or inspiration images</p>
+                <p className="text-parchment/40 text-sm">Upload your photos for image-cast plaques, reference images, or project briefs</p>
                 <p className="text-parchment/20 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
               </div>
               <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
@@ -201,8 +219,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <Button type="submit" disabled={submitting}
               className="w-full h-14 bg-bronze hover:bg-gold text-white font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300">
               {submitting
-                ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Commission Request…</>
-                : <><Send className="w-4 h-4 mr-2" /> Request Concept Design — 48hr Proof</>
+                ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
+                : <><Send className="w-4 h-4 mr-2" /> Request Quote — 48hr Proof Delivery</>
               }
             </Button>
             <p className="text-center text-parchment/25 text-xs font-sans">

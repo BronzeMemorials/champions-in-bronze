@@ -12,7 +12,7 @@ export default function Footer() {
               Champions<br /><span className="text-bronze">in Bronze</span>
             </h3>
             <p className="text-parchment/40 text-sm mt-4 leading-relaxed max-w-xs">
-              America's premier manufacturer of custom bronze and aluminum recognition monuments. Busts, statues, 3D relief plaques, Photo ImageCast plaques, Hall of Fame displays, and donor walls.
+              America's premier institutional bronze recognition manufacturer. Hall of Fame plaques, photo image-cast plaques, donor recognition walls, championship systems, bronze busts, and full-size statues for stadiums, universities, and athletic organizations.
             </p>
             <div className="mt-6 space-y-3">
               <a href="tel:+15551234567" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
@@ -29,17 +29,17 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold">Products</h4>
+            <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-5 font-semibold">Recognition Products</h4>
             <nav className="space-y-2.5">
               {[
-                { label: "3D Relief Plaques", to: "/3d-relief-plaques" },
-                { label: "Busts & Statues", to: "/busts-and-statues" },
-                { label: "Photo ImageCasting", to: "/photo-imagecast-plaques" },
-                { label: "Hall of Fame", to: "/hall-of-fame" },
-                { label: "Donor Walls", to: "/donor-recognition" },
-                { label: "Dedication Plaques", to: "/dedication-plaques" },
-                { label: "Bronze Memorials", to: "/bronze-memorials" },
-                { label: "Alumni Memorials", to: "/alumni-memorials" },
+                { label: "Photo Image Cast Plaques", to: "/photo-image-casting-plaques" },
+                { label: "3D Bas-Relief Plaques", to: "/3d-bas-relief-plaques" },
+                { label: "Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { label: "Championship Plaques", to: "/championship-bronze-plaques" },
+                { label: "Donor Recognition Walls", to: "/donor-recognition" },
+                { label: "Hall of Fame Displays", to: "/hall-of-fame-bronze-displays" },
+                { label: "Bronze Busts", to: "/bronze-athlete-busts" },
+                { label: "Full-Size Statues", to: "/custom-bronze-athlete-statues" },
               ].map((l) => (
                 <Link key={l.to} to={l.to} className="block text-parchment/50 hover:text-parchment transition-colors text-sm">{l.label}</Link>
               ))}

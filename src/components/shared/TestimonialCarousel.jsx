@@ -4,9 +4,9 @@ import FadeIn from "./FadeIn";
 
 const defaultTestimonials = [
   {
-    quote: "Champions in Bronze captured the intensity and spirit of our franchise player perfectly. The statue has become the most photographed landmark at our stadium.",
+    quote: "The Hall of Fame plaque series transformed our recognition corridor. Every inductee now has a permanent bronze portrait that rivals anything in professional sports.",
     name: "James Mitchell",
-    title: "VP of Facilities, NFL Franchise",
+    title: "VP of Facilities, Professional Athletic Organization",
   },
   {
     quote: "The donor recognition wall transformed our capital campaign. Alumni giving increased 40% once donors could see their legacy immortalized in bronze.",
@@ -19,9 +19,14 @@ const defaultTestimonials = [
     title: "Facilities Director, Professional Stadium",
   },
   {
-    quote: "The dimensional letters at our entrance set the tone for everything. Recruits and their families are stunned when they walk in. It's a game-changer.",
+    quote: "The image-cast plaques for our championship history wall are absolutely stunning. Every detail of every photograph is permanently captured in bronze.",
     name: "Coach David Williams",
-    title: "Head Football Coach, Power 5 Conference",
+    title: "Head Football Coach, Collegiate Athletic Program",
+  },
+  {
+    quote: "Our donor recognition system drove a 60% increase in major gifts. When donors see their name and portrait cast in bronze, they give more — and they give again.",
+    name: "Patricia Harmon",
+    title: "VP of Development, University Athletic Foundation",
   },
 ];
 

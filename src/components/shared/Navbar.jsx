@@ -4,13 +4,14 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const productLinks = [
-  { label: "Custom Bronze Statues", to: "/custom-bronze-athlete-statues" },
-  { label: "Bronze Athlete Busts", to: "/bronze-athlete-busts" },
-  { label: "3D Bas-Relief Plaques", to: "/3d-bas-relief-plaques" },
   { label: "Photo Image Cast Plaques", to: "/photo-image-casting-plaques" },
-  { label: "Hall of Fame Displays", to: "/hall-of-fame-bronze-displays" },
-  { label: "Stadium Bronze Statues", to: "/stadium-bronze-statues" },
+  { label: "3D Bas-Relief Plaques", to: "/3d-bas-relief-plaques" },
+  { label: "Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+  { label: "Championship Plaques", to: "/championship-bronze-plaques" },
   { label: "Donor Recognition Walls", to: "/donor-recognition" },
+  { label: "Hall of Fame Displays", to: "/hall-of-fame-bronze-displays" },
+  { label: "Bronze Athlete Busts", to: "/bronze-athlete-busts" },
+  { label: "Full-Size Bronze Statues", to: "/custom-bronze-athlete-statues" },
 ];
 
 const infoLinks = [
@@ -63,11 +64,11 @@ export default function Navbar() {
   const location = useLocation();
 
   const navLinks = [
-    { label: "Statues", to: "/custom-bronze-athlete-statues" },
-    { label: "Busts", to: "/bronze-athlete-busts" },
+    { label: "Plaques", to: "/3d-bas-relief-plaques" },
+    { label: "Donor Walls", to: "/donor-recognition" },
     { label: "Hall of Fame", to: "/hall-of-fame-bronze-displays" },
-    { label: "Stadiums", to: "/stadium-bronze-statues" },
-    { label: "Colleges", to: "/college-athletic-recognition" },
+    { label: "Busts", to: "/bronze-athlete-busts" },
+    { label: "Statues", to: "/custom-bronze-athlete-statues" },
     { label: "Pricing", to: "/bronze-statue-pricing" },
     { label: "Portfolio", to: "/portfolio" },
   ];

@@ -3,11 +3,11 @@ import FadeIn from "./FadeIn";
 
 const badges = [
   { icon: Flag, label: "Made in USA", sub: "American Foundry" },
-  { icon: Shield, label: "Lifetime Durability", sub: "Guaranteed Forever" },
-  { icon: Award, label: "Museum Quality", sub: "Hand-Finished" },
-  { icon: Camera, label: "Exact Photo Replication", sub: "True Likeness" },
-  { icon: Zap, label: "48-Hour Proofs", sub: "Delivered Fast" },
-  { icon: Star, label: "100+ Year Outdoor", sub: "Durability Rated" },
+  { icon: Shield, label: "100+ Year Durability", sub: "Outdoor Rated" },
+  { icon: Award, label: "Museum Quality", sub: "Institutional Grade" },
+  { icon: Camera, label: "Photo-to-Bronze", sub: "Exact Likeness" },
+  { icon: Zap, label: "48-Hour Proofs", sub: "Artwork Delivered Fast" },
+  { icon: Star, label: "Plaque Specialists", sub: "Hall of Fame Grade" },
 ];
 
 export default function TrustBadges() {
