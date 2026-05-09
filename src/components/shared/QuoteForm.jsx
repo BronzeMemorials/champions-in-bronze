@@ -41,15 +41,15 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     setSubmitted(true);
   };
 
-  const selectClass = "bg-secondary/20 border-bronze/30 text-parchment h-12";
+  const selectClass = "bg-white border-bronze/30 text-parchment h-12";
   const labelClass = "text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block";
 
   if (submitted) {
     return (
-      <section className="py-28 bg-gradient-to-b from-secondary/40 to-bronze/5" id="quote">
+      <section className="py-28 bg-secondary/30" id="quote">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
-            <CheckCircle className="w-16 h-16 text-gold mx-auto mb-6" />
+            <CheckCircle className="w-16 h-16 text-bronze mx-auto mb-6" />
             <h2 className="font-serif text-4xl text-parchment">Legacy Commission Received</h2>
             <p className="text-parchment/60 mt-4 text-lg leading-relaxed">
               Our team will review your project details and deliver a concept design proof within 48 hours. Built for champions. Delivered on time.
@@ -61,49 +61,49 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   }
 
   return (
-    <section className="py-28 bg-gradient-to-b from-secondary/40 to-bronze/5" id="quote">
+    <section className="py-28 bg-secondary/30" id="quote">
       <div className="max-w-3xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
-            <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Legacy Commission</span>
+            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Legacy Commission</span>
             <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">{title}</h2>
             {subtitle && <p className="mt-4 text-parchment/60 text-lg">{subtitle}</p>}
           </div>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/20 border border-bronze/20 p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white border border-bronze/20 shadow-sm p-8 md:p-12">
             {/* Contact */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
                   placeholder="John Mitchell" />
               </div>
               <div>
                 <label className={labelClass}>Email *</label>
                 <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
                   placeholder="john@organization.com" />
               </div>
               <div>
                 <label className={labelClass}>Phone</label>
                 <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
                   placeholder="(555) 123-4567" />
               </div>
               <div>
                 <label className={labelClass}>Organization</label>
                 <Input value={form.organization} onChange={(e) => handleChange("organization", e.target.value)}
-                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
                   placeholder="Team / University / Stadium" />
               </div>
             </div>
 
             {/* Qualification */}
             <div className="border-t border-bronze/10 pt-6">
-              <p className="text-gold font-sans text-xs uppercase tracking-[0.2em] mb-6">Project Details</p>
+              <p className="text-bronze font-sans text-xs uppercase tracking-[0.2em] mb-6">Project Details</p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className={labelClass}>This commission is for *</label>
@@ -163,7 +163,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <div>
                   <label className={labelClass}>Timeline</label>
                   <Input value={form.timeline} onChange={(e) => handleChange("timeline", e.target.value)}
-                    className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                    className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
                     placeholder="e.g., Needed by opening day 2026" />
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Project Vision</label>
               <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold min-h-[140px]"
+                className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze min-h-[140px]"
                 placeholder="Describe your vision — the athlete, sport, pose, installation location, number of pieces, and any inspiration..." />
             </div>
 
@@ -180,7 +180,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Reference Photos & Files</label>
               <div onClick={() => fileRef.current?.click()}
-                className="border-2 border-dashed border-bronze/25 hover:border-gold/50 transition-colors p-8 text-center cursor-pointer bg-obsidian">
+                className="border-2 border-dashed border-bronze/25 hover:border-bronze/60 transition-colors p-8 text-center cursor-pointer bg-secondary/20">
                 <Upload className="w-8 h-8 text-bronze/40 mx-auto mb-3" />
                 <p className="text-parchment/40 text-sm">Upload athlete photos, logos, or inspiration images</p>
                 <p className="text-parchment/20 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
@@ -199,7 +199,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             </div>
 
             <Button type="submit" disabled={submitting}
-              className="w-full h-14 bg-bronze hover:bg-gold text-parchment font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300">
+              className="w-full h-14 bg-bronze hover:bg-gold text-white font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300">
               {submitting
                 ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Commission Request…</>
                 : <><Send className="w-4 h-4 mr-2" /> Request Concept Design — 48hr Proof</>

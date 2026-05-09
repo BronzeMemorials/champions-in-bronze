@@ -37,7 +37,7 @@ function DropdownMenu({ label, links }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 mt-2 w-60 bg-secondary/20 border border-bronze/20 shadow-2xl z-50"
+            className="absolute top-full left-0 mt-2 w-60 bg-white border border-bronze/20 shadow-2xl z-50"
           >
             {links.map((link) => (
               <Link
@@ -74,7 +74,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-obsidian/97 backdrop-blur-xl border-b border-bronze/15">
+      <div className="bg-white/97 backdrop-blur-xl border-b border-bronze/15 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
@@ -121,7 +121,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="xl:hidden bg-obsidian border-b border-bronze/20 overflow-hidden"
+            className="xl:hidden bg-white border-b border-bronze/20 overflow-hidden"
           >
             <nav className="flex flex-col p-6 space-y-1 max-h-[80vh] overflow-y-auto">
               <button

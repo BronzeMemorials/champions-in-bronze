@@ -126,27 +126,27 @@ export default function ProHome() {
             className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
           >
             <img src={s.img} alt={s.label} className="w-full h-full object-cover scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-parchment/10" />
-            <div className="absolute inset-0 bg-gradient-to-r from-parchment/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/85 to-transparent" />
           </div>
         ))}
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 pb-28 pt-40 w-full">
           <FadeIn key={slide}>
-            <span className="text-gold font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">
               {current.label}
             </span>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-obsidian max-w-4xl whitespace-pre-line">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl whitespace-pre-line">
               {current.title}
             </h1>
-            <p className="mt-8 max-w-2xl text-xl text-obsidian/75 leading-relaxed font-sans font-light">
+            <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">
               Custom bronze statues, portrait busts, 3D bas-relief plaques, and photo image cast plaques designed for athletes, stadiums, universities, and Hall of Fame recognition.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/request-concept-design" className="bg-bronze hover:bg-gold text-obsidian px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/request-concept-design" className="bg-bronze hover:bg-gold text-white px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 Request Concept Design
               </Link>
-              <Link to="/custom-bronze-athlete-statues" className="border border-parchment/40 hover:border-bronze bg-obsidian/50 text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/custom-bronze-athlete-statues" className="border border-parchment/30 hover:border-bronze text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
                 Explore Bronze Collections
               </Link>
             </div>
@@ -156,7 +156,7 @@ export default function ProHome() {
           <div className="flex gap-2 mt-14">
             {heroSlides.map((_, i) => (
               <button key={i} onClick={() => setSlide(i)}
-                className={`h-0.5 transition-all duration-500 ${i === slide ? "bg-gold w-10" : "bg-parchment/30 w-4"}`}
+                className={`h-0.5 transition-all duration-500 ${i === slide ? "bg-bronze w-10" : "bg-parchment/20 w-4"}`}
               />
             ))}
           </div>
@@ -169,13 +169,13 @@ export default function ProHome() {
       </section>
 
       {/* TRUSTED BY */}
-      <section className="py-10 border-y border-bronze/20 bg-secondary/50">
+      <section className="py-10 border-y border-bronze/20 bg-obsidian">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <span className="text-parchment/40 font-sans text-xs uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
+            <span className="text-parchment/50 font-sans text-xs uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
             <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
               {["NFL Franchises", "NBA Organizations", "MLB Teams", "NHL Clubs", "NCAA Division I", "PGA Tour", "Hall of Fame Committees"].map((org) => (
-                <span key={org} className="text-parchment/50 font-sans text-xs uppercase tracking-[0.15em] hover:text-parchment transition-colors">{org}</span>
+                <span key={org} className="text-parchment/60 font-sans text-xs uppercase tracking-[0.15em] hover:text-bronze transition-colors">{org}</span>
               ))}
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function ProHome() {
               <FadeIn key={p.to} delay={i * 0.08}>
                 <Link to={p.to} className="group relative aspect-[4/5] overflow-hidden block rounded-sm">
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0704] via-[#0a0704]/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold/15 border border-gold/30 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{p.label}</span>
                   </div>
@@ -217,7 +217,7 @@ export default function ProHome() {
       </section>
 
       {/* STADIUM INSTALLATIONS */}
-      <section className="py-28 border-t border-bronze/10 bg-secondary/30">
+      <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
@@ -286,7 +286,7 @@ export default function ProHome() {
                   { value: "100%", label: "Photo Likeness Accuracy" },
                   { value: "#1", label: "Sports Bronze Studio, USA" },
                 ].map((stat) => (
-                  <div key={stat.label} className="border border-bronze/20 p-5 rounded-sm">
+                  <div key={stat.label} className="border border-bronze/20 bg-white p-5 rounded-sm shadow-sm">
                     <p className="font-serif text-3xl text-gold">{stat.value}</p>
                     <p className="text-parchment/40 text-xs font-sans uppercase tracking-wider mt-1">{stat.label}</p>
                   </div>
@@ -322,7 +322,7 @@ export default function ProHome() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {positions.map((sport, i) => (
               <FadeIn key={sport.sport} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-obsidian p-6 rounded-sm hover:border-gold/40 transition-colors duration-300">
+                <div className="border border-bronze/20 bg-white p-6 rounded-sm hover:border-bronze/60 transition-colors duration-300 shadow-sm">
                   <p className="font-serif text-xl text-gold mb-4">{sport.sport}</p>
                   <ul className="space-y-2">
                     {sport.positions.map((pos) => (
@@ -374,7 +374,7 @@ export default function ProHome() {
               { category: "Full Statues", items: [{ size: '36"', range: "From $12,000" }, { size: '60"', range: "From $35,000" }, { size: '72"+', range: "From $75,000" }], link: "/bronze-statue-pricing" },
             ].map((cat, i) => (
               <FadeIn key={cat.category} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-obsidian shadow-sm p-8 rounded-sm flex flex-col">
+                <div className="border border-bronze/20 bg-white shadow-sm p-8 rounded-sm flex flex-col">
                   <p className="font-serif text-2xl text-gold mb-6">{cat.category}</p>
                   <ul className="space-y-4 flex-1">
                     {cat.items.map((item) => (
@@ -400,15 +400,10 @@ export default function ProHome() {
       </Suspense>
 
       {/* FINAL CTA */}
-      <section className="relative py-40 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png"
-            alt="Bronze legacy sculpture" loading="lazy" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/85 to-obsidian/95" />
-        </div>
+      <section className="relative py-40 overflow-hidden bg-secondary/40">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <FadeIn>
-            <span className="text-gold font-sans tracking-[0.4em] uppercase text-xs font-semibold">Begin Your Legacy</span>
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold">Begin Your Legacy</span>
             <h2 className="font-serif text-5xl md:text-7xl mt-6 leading-tight text-parchment">
               Their Legacy<br />Deserves Bronze.
             </h2>
@@ -416,10 +411,10 @@ export default function ProHome() {
               Every great athlete, coach, and program deserves a permanent monument to their achievement. We deliver museum-quality bronze sculptures from concept to installation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-12">
-              <Link to="/request-concept-design" className="bg-bronze hover:bg-gold text-parchment px-12 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/request-concept-design" className="bg-bronze hover:bg-gold text-white px-12 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 Start Your Legacy Sculpture
               </Link>
-              <Link to="/commemorate-greatness" className="border border-parchment/20 hover:border-gold text-parchment px-12 py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/commemorate-greatness" className="border border-parchment/30 hover:border-bronze text-parchment px-12 py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
                 Commemorate Greatness
               </Link>
             </div>
