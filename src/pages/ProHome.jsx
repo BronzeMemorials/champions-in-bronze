@@ -13,22 +13,22 @@ const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 
 const heroSlides = [
   {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
     label: "Life-Size Bronze Statues",
     title: "Commemorate\nGreatness\nin Bronze.",
   },
   {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png",
     label: "Portrait Busts & Hall of Fame",
     title: "Immortalize\nthe Legend.",
   },
   {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
     label: "3D Bas-Relief Plaques",
     title: "Permanent\nRecognition.",
   },
   {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
     label: "Donor Recognition Walls",
     title: "Legacy Cast\nin Bronze.",
   },
@@ -36,7 +36,7 @@ const heroSlides = [
 
 const products = [
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
     label: "Signature Work",
     title: "Custom Bronze Athlete Statues",
     desc: "Life-size and heroic-scale figures for stadium entrances, arena lobbies, and campus landmarks. Every statue sculpted from your photographs — exact athletic likeness.",
@@ -44,7 +44,7 @@ const products = [
     cta: "View Statues",
   },
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png",
     label: "Hall of Fame Quality",
     title: "Portrait Busts & Hall of Fame",
     desc: "Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and legacy displays. Tabletop through architectural scale.",
@@ -52,7 +52,7 @@ const products = [
     cta: "View Busts",
   },
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
     label: "Most Requested",
     title: "3D Bas-Relief Plaques",
     desc: "High-depth sculptural plaques capturing exact athlete likeness from photographs. Sport-specific shapes. Stadium recognition. Championship moments.",
@@ -60,7 +60,7 @@ const products = [
     cta: "View Relief Plaques",
   },
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/502c0767b_generated_e375b9ec.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
     label: "Proprietary Process",
     title: "Photo Image Cast Plaques",
     desc: "Real photographs permanently cast into bronze. Career retrospectives, team histories, and championship moments — your exact images, not drawings, cast forever.",
@@ -68,7 +68,7 @@ const products = [
     cta: "View Photo Cast",
   },
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
     label: "Major Installations",
     title: "Donor Recognition Walls",
     desc: "Transform capital campaigns into permanent bronze landmarks. Donor portrait Photo ImageCasting included — your donor's face, cast in bronze forever.",
@@ -76,7 +76,7 @@ const products = [
     cta: "View Donor Walls",
   },
   {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/35f2fea4a_generated_46168e9a.png",
+    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png",
     label: "Stadium Grade",
     title: "Stadium Legacy Installations",
     desc: "From entrance plazas to Hall of Fame corridors — full-scale bronze recognition environments designed for stadiums, arenas, and athletic facilities.",
@@ -223,7 +223,7 @@ export default function ProHome() {
             <FadeIn>
               <div className="relative">
                 <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                  <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/35f2fea4a_generated_46168e9a.png"
+                  <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
                     alt="Stadium bronze installation" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-bronze/90 p-6 rounded-sm hidden md:block">
@@ -300,7 +300,7 @@ export default function ProHome() {
             </FadeIn>
             <FadeIn>
               <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png"
+                <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
                   alt="Hall of Fame bronze display" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
@@ -402,7 +402,7 @@ export default function ProHome() {
       {/* FINAL CTA */}
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png"
+          <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png"
             alt="Bronze legacy sculpture" loading="lazy" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/85 to-obsidian/95" />
         </div>

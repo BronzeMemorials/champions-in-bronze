@@ -9,7 +9,7 @@ import SEOHead from "../components/shared/SEOHead";
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png";
 
 const faqs = [
   { question: "What sizes are available for portrait busts?", answer: "We produce busts from 6\" tabletop scale through 36\" architectural scale. Most Hall of Fame commissions are 18\"–24\". Custom sizes available for any application." },

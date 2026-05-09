@@ -9,7 +9,7 @@ import SEOHead from "../components/shared/SEOHead";
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/35f2fea4a_generated_46168e9a.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png";
 
 const faqs = [
   { question: "What structural considerations are required for stadium statues?", answer: "All outdoor stadium statues include full structural engineering — custom base design, seismic anchoring, wind load calculations, and corrosion-resistant mounting hardware. We coordinate directly with your facility engineering team." },

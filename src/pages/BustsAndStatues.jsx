@@ -10,10 +10,10 @@ import { base44 } from "@/api/base44Client";
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
-const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
-const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
-const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
+const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
+const img2 = "https://media.base44.com/images/public/69e6638934292a547ec97753/f91a2af55_0BB7CEA4-F96D-4C51-BADB-946A7C8080BB.png";
+const img3 = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png";
 
 const faqs = [
   { question: "Do you need the athlete present for sculpting?", answer: "No. Every bust and statue is created entirely from photographs you provide. Our master sculptors recreate exact likeness — expression, bone structure, muscle definition — from high-resolution photos alone. No in-person sessions required, ever." },
@@ -103,9 +103,9 @@ export default function BustsAndStatues() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "Heroic Athlete Bust", sub: "Silicon bronze · Life-size · Stadium lobby" },
-              { img: img2, title: "Coach Legacy Statue", sub: "Aluminum · 7-foot · Arena entrance" },
-              { img: img3, title: "Hall of Fame Portrait Bust", sub: "Bronze · Tabletop scale · Inductee ceremony" },
+              { img: img1, title: "QB Action Statue", sub: "Silicon bronze · Life-size · Stadium entrance" },
+              { img: img2, title: "Hockey Goalie Statue", sub: "Bronze · Life-size · Arena lobby" },
+              { img: img3, title: "Basketball Guard Statue", sub: "Silicon bronze · Life-size · Athletic facility" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">

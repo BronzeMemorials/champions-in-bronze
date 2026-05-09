@@ -9,7 +9,7 @@ import SEOHead from "../components/shared/SEOHead";
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png";
 
 const faqs = [
   { question: "What goes into a complete Hall of Fame environment?", answer: "A full HOF installation typically includes portrait busts or relief plaques for each inductee, architectural signage, donor recognition panels, historical timeline displays, and trophy presentation areas. We design and produce all elements." },

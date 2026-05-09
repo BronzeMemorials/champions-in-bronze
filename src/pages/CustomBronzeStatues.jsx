@@ -9,7 +9,9 @@ import SEOHead from "../components/shared/SEOHead";
 const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
+const goalieImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f91a2af55_0BB7CEA4-F96D-4C51-BADB-946A7C8080BB.png";
+const guardImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png";
 
 const faqs = [
   { question: "How large can a custom bronze statue be?", answer: "We produce statues from 24\" portrait scale to 10-foot+ heroic monuments. Life-size (approximately 6 feet for a standing figure) is the most popular for stadium and campus installations." },
@@ -101,6 +103,19 @@ export default function CustomBronzeStatues() {
               <h2 className="font-serif text-4xl mt-3 text-parchment">Athletic Positions We Sculpt</h2>
             </div>
           </FadeIn>
+          {/* Statue Gallery */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <FadeIn>
+              <div className="aspect-[3/4] overflow-hidden rounded-sm">
+                <img src={goalieImg} alt="Hockey goalie bronze statue" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="aspect-[3/4] overflow-hidden rounded-sm">
+                <img src={guardImg} alt="Basketball guard bronze statue" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </FadeIn>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {positions.map((s, i) => (
               <FadeIn key={s.sport} delay={i * 0.08}>
