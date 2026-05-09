@@ -85,6 +85,21 @@ const products = [
   },
 ];
 
+const basketballPositions = [
+  {
+    position: "Guard",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png",
+  },
+  {
+    position: "Forward",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/147740e3b_4CA5A3D0-6148-4652-9EB3-BCF3DAE9DEC7.png",
+  },
+  {
+    position: "Center Dunk Pose",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/020f34d62_5E076DD7-856B-4C90-A8C7-3BD2336FD64F.png",
+  },
+];
+
 const footballPositions = [
   {
     position: "Quarterback",
@@ -325,33 +340,61 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <SectionHeading
-              label="Football · Sport Position Statues"
+              label="Sport Position Statues"
               title="Every Position. Exact Likeness."
-              subtitle="We sculpt any athletic position with precision — from a quarterback's release to a lineman's stance. Tell us the athlete, the position, the moment."
+              subtitle="We sculpt any athletic position with precision — from a quarterback's release to a center's dunk. Tell us the athlete, the sport, the moment."
               align="center"
             />
           </FadeIn>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {footballPositions.map((item, i) => (
-              <FadeIn key={item.position} delay={i * 0.1}>
-                <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
-                  <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
-                    <img
-                      src={item.img}
-                      alt={`Bronze ${item.position} statue`}
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    />
+
+          {/* Football */}
+          <div className="mb-12">
+            <FadeIn>
+              <p className="font-serif text-2xl text-gold mb-6">Football</p>
+            </FadeIn>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {footballPositions.map((item, i) => (
+                <FadeIn key={item.position} delay={i * 0.08}>
+                  <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                    <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                      <img src={item.img} alt={`Bronze ${item.position} statue`}
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4 text-center border-t border-bronze/10">
+                      <p className="font-serif text-base text-parchment">{item.position}</p>
+                      <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Football</p>
+                    </div>
                   </div>
-                  <div className="p-4 text-center border-t border-bronze/10">
-                    <p className="font-serif text-lg text-parchment">{item.position}</p>
-                    <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Football</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              ))}
+            </div>
           </div>
+
+          {/* Basketball */}
+          <div className="mb-10">
+            <FadeIn>
+              <p className="font-serif text-2xl text-gold mb-6">Basketball</p>
+            </FadeIn>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {basketballPositions.map((item, i) => (
+                <FadeIn key={item.position} delay={i * 0.08}>
+                  <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                    <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                      <img src={item.img} alt={`Bronze ${item.position} statue`}
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4 text-center border-t border-bronze/10">
+                      <p className="font-serif text-base text-parchment">{item.position}</p>
+                      <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Basketball</p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+
           <FadeIn delay={0.3}>
-            <div className="text-center mt-10">
+            <div className="text-center mt-4">
               <Link to="/all-sports" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
                 Browse All Sports <ArrowRight className="w-4 h-4" />
               </Link>
