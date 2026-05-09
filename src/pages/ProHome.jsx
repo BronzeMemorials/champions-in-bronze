@@ -216,7 +216,7 @@ export default function ProHome() {
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <span className="text-parchment/50 font-sans text-xs uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
             <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
-              {["NFL Franchises", "NBA Organizations", "MLB Teams", "NHL Clubs", "NCAA Division I", "PGA Tour", "Hall of Fame Committees"].map((org) => (
+              {["Professional Sports Franchises", "Athletic Facilities", "Universities & Colleges", "Hall of Fame Committees", "Stadium & Arena Operators", "Donor Recognition Programs"].map((org) => (
                 <span key={org} className="text-parchment/60 font-sans text-xs uppercase tracking-[0.15em] hover:text-bronze transition-colors">{org}</span>
               ))}
             </div>
@@ -288,7 +288,7 @@ export default function ProHome() {
                   "Engineered for stadium wind and seismic loads",
                   "Coordinated installation with facility management",
                   "Full project management from concept to opening day",
-                  "NFL, NCAA, and MLB installation experience",
+                  "Professional sports and collegiate installation experience",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-4">
                     <span className="w-1.5 h-1.5 bg-gold flex-shrink-0 rounded-full" />
