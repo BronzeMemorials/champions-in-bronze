@@ -85,6 +85,17 @@ const products = [
   },
 ];
 
+const soccerPositions = [
+  {
+    position: "Forward Kick Pose",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png",
+  },
+  {
+    position: "Goal Celebration Pose",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/aceb82ef5_8C52F27A-8EA2-4D4F-AF16-D02E1C58BFD8.png",
+  },
+];
+
 const hockeyPositions = [
   {
     position: "Goalie",
@@ -393,6 +404,29 @@ export default function ProHome() {
                     <div className="p-4 text-center border-t border-bronze/10">
                       <p className="font-serif text-base text-parchment">{item.position}</p>
                       <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Football</p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+
+          {/* Soccer */}
+          <div className="mb-12">
+            <FadeIn>
+              <p className="font-serif text-2xl text-gold mb-6">Soccer</p>
+            </FadeIn>
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              {soccerPositions.map((item, i) => (
+                <FadeIn key={item.position} delay={i * 0.08}>
+                  <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                    <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                      <img src={item.img} alt={`Bronze ${item.position} statue`}
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4 text-center border-t border-bronze/10">
+                      <p className="font-serif text-base text-parchment">{item.position}</p>
+                      <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Soccer</p>
                     </div>
                   </div>
                 </FadeIn>
