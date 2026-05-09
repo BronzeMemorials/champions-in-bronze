@@ -80,7 +80,7 @@ export default function StadiumBronzeStatues() {
         </div>
       </section>
 
-      <section className="py-16 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-16 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <p className="text-parchment/40 font-sans text-xs uppercase tracking-[0.3em] text-center mb-8">Related Collections</p>

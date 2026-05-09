@@ -48,17 +48,17 @@ export default function CommemorateGreatness() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={heroImg} alt="Commemorate greatness in bronze" className="w-full h-full object-cover opacity-20 scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0704]/30 via-[#0a0704]/75 to-[#0a0704]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0704]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-parchment/20 via-parchment/60 to-parchment/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-parchment/70 to-transparent" />
         </div>
         <div className="max-w-5xl mx-auto px-6 relative z-10 pt-36 pb-28">
           <FadeIn>
             <span className="text-gold font-sans tracking-[0.5em] uppercase text-xs font-semibold">A Permanent Tribute</span>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.88] mt-6 text-parchment">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.88] mt-6 text-obsidian">
               Commemorate<br />
-              <span className="text-bronze-light italic">Greatness.</span>
+              <span className="text-bronze italic">Greatness.</span>
             </h1>
-            <p className="mt-10 text-xl md:text-2xl text-parchment/65 leading-relaxed max-w-2xl font-sans font-light">
+            <p className="mt-10 text-xl md:text-2xl text-obsidian/70 leading-relaxed max-w-2xl font-sans font-light">
               Not every achievement can be described in words. Some legacies demand permanence. Bronze is forever.
             </p>
             <div className="flex flex-wrap gap-4 mt-12">
@@ -85,7 +85,7 @@ export default function CommemorateGreatness() {
           <div className="grid md:grid-cols-2 gap-8">
             {legacies.map((story, i) => (
               <FadeIn key={story.title} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-[#0d0b09] p-10 rounded-sm hover:border-gold/40 transition-colors duration-300 flex flex-col">
+                <div className="border border-bronze/20 bg-secondary/30 p-10 rounded-sm hover:border-gold/40 transition-colors duration-300 flex flex-col">
                   <p className="font-serif text-2xl text-gold leading-tight">{story.title}</p>
                   <p className="text-parchment/55 text-base leading-relaxed mt-5 flex-1">{story.desc}</p>
                   <Link to={story.to} className="inline-flex items-center gap-2 mt-8 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
@@ -99,7 +99,7 @@ export default function CommemorateGreatness() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-20 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[

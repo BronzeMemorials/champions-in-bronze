@@ -41,12 +41,12 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     setSubmitted(true);
   };
 
-  const selectClass = "bg-[#0d0b09] border-bronze/30 text-parchment h-12";
+  const selectClass = "bg-secondary/20 border-bronze/30 text-parchment h-12";
   const labelClass = "text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block";
 
   if (submitted) {
     return (
-      <section className="py-28 bg-gradient-to-b from-[#0a0704] to-bronze/5" id="quote">
+      <section className="py-28 bg-gradient-to-b from-secondary/40 to-bronze/5" id="quote">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
             <CheckCircle className="w-16 h-16 text-gold mx-auto mb-6" />
@@ -61,7 +61,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   }
 
   return (
-    <section className="py-28 bg-gradient-to-b from-[#0a0704] to-bronze/5" id="quote">
+    <section className="py-28 bg-gradient-to-b from-secondary/40 to-bronze/5" id="quote">
       <div className="max-w-3xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
@@ -72,31 +72,31 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-[#0d0b09] border border-bronze/20 p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/20 border border-bronze/20 p-8 md:p-12">
             {/* Contact */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                  className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
                   placeholder="John Mitchell" />
               </div>
               <div>
                 <label className={labelClass}>Email *</label>
                 <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                  className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
                   placeholder="john@organization.com" />
               </div>
               <div>
                 <label className={labelClass}>Phone</label>
                 <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                  className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
                   placeholder="(555) 123-4567" />
               </div>
               <div>
                 <label className={labelClass}>Organization</label>
                 <Input value={form.organization} onChange={(e) => handleChange("organization", e.target.value)}
-                  className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                  className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
                   placeholder="Team / University / Stadium" />
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <label className={labelClass}>This commission is for *</label>
                   <Select value={form.who_for} onValueChange={(v) => handleChange("who_for", v)}>
                     <SelectTrigger className={selectClass}><SelectValue placeholder="Select recipient" /></SelectTrigger>
-                    <SelectContent className="bg-[#0d0b09] border-bronze/20">
+                    <SelectContent className="bg-secondary/20 border-bronze/20">
                       {["Professional Athlete", "Sports Team", "College / University", "Stadium / Arena", "Hall of Fame", "Donor Program", "Athlete Agent", "Family"].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
@@ -120,7 +120,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <label className={labelClass}>Product Type *</label>
                   <Select value={form.project_type} onValueChange={(v) => handleChange("project_type", v)}>
                     <SelectTrigger className={selectClass}><SelectValue placeholder="Select product" /></SelectTrigger>
-                    <SelectContent className="bg-[#0d0b09] border-bronze/20">
+                    <SelectContent className="bg-secondary/20 border-bronze/20">
                       {["Bronze Statue", "Portrait Bust", "3D Bas-Relief Plaque", "Photo Image Cast Plaque", "Donor Recognition Wall", "Hall of Fame Display"].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
@@ -131,7 +131,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <label className={labelClass}>Display Location</label>
                   <Select value={form.display_location} onValueChange={(v) => handleChange("display_location", v)}>
                     <SelectTrigger className={selectClass}><SelectValue placeholder="Where will it be displayed?" /></SelectTrigger>
-                    <SelectContent className="bg-[#0d0b09] border-bronze/20">
+                    <SelectContent className="bg-secondary/20 border-bronze/20">
                       {["Stadium / Arena", "Hall of Fame", "Athletic Facility", "Training Facility", "Office / Private", "University Campus", "Home"].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
@@ -142,7 +142,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <label className={labelClass}>Preferred Size</label>
                   <Select value={form.preferred_size} onValueChange={(v) => handleChange("preferred_size", v)}>
                     <SelectTrigger className={selectClass}><SelectValue placeholder="Select size" /></SelectTrigger>
-                    <SelectContent className="bg-[#0d0b09] border-bronze/20">
+                    <SelectContent className="bg-secondary/20 border-bronze/20">
                       {['6"', '12"', '18"', '24"', '36"', '48"', '60"', '72" (Life-Size)', "Larger / Custom"].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
@@ -153,7 +153,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <label className={labelClass}>Investment Range</label>
                   <Select value={form.budget_range} onValueChange={(v) => handleChange("budget_range", v)}>
                     <SelectTrigger className={selectClass}><SelectValue placeholder="Select budget" /></SelectTrigger>
-                    <SelectContent className="bg-[#0d0b09] border-bronze/20">
+                    <SelectContent className="bg-secondary/20 border-bronze/20">
                       {["Under $2,500", "$2,500–$7,500", "$7,500–$25,000", "$25,000–$75,000", "$75,000+"].map((v) => (
                         <SelectItem key={v} value={v} className="text-parchment hover:text-gold">{v}</SelectItem>
                       ))}
@@ -163,7 +163,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <div>
                   <label className={labelClass}>Timeline</label>
                   <Input value={form.timeline} onChange={(e) => handleChange("timeline", e.target.value)}
-                    className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
+                    className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-12"
                     placeholder="e.g., Needed by opening day 2026" />
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Project Vision</label>
               <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                className="bg-[#0a0704] border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold min-h-[140px]"
+                className="bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold min-h-[140px]"
                 placeholder="Describe your vision — the athlete, sport, pose, installation location, number of pieces, and any inspiration..." />
             </div>
 
@@ -180,7 +180,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Reference Photos & Files</label>
               <div onClick={() => fileRef.current?.click()}
-                className="border-2 border-dashed border-bronze/25 hover:border-gold/50 transition-colors p-8 text-center cursor-pointer bg-[#0a0704]">
+                className="border-2 border-dashed border-bronze/25 hover:border-gold/50 transition-colors p-8 text-center cursor-pointer bg-obsidian">
                 <Upload className="w-8 h-8 text-bronze/40 mx-auto mb-3" />
                 <p className="text-parchment/40 text-sm">Upload athlete photos, logos, or inspiration images</p>
                 <p className="text-parchment/20 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
@@ -189,7 +189,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               {files.length > 0 && (
                 <div className="mt-4 space-y-2">
                   {files.map((file, i) => (
-                    <div key={i} className="flex items-center justify-between bg-[#0a0704] border border-bronze/20 px-4 py-2">
+                    <div key={i} className="flex items-center justify-between bg-obsidian border border-bronze/20 px-4 py-2">
                       <span className="text-parchment/60 text-sm truncate">{file.name}</span>
                       <button type="button" onClick={() => removeFile(i)} className="text-parchment/30 hover:text-destructive text-xs ml-4">Remove</button>
                     </div>

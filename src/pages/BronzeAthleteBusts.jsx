@@ -58,7 +58,7 @@ export default function BronzeAthleteBusts() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {formats.map((f, i) => (
               <FadeIn key={f.title} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-[#0d0b09] p-8 rounded-sm flex flex-col">
+                <div className="border border-bronze/20 bg-secondary/30 p-8 rounded-sm flex flex-col">
                   <p className="font-serif text-2xl text-gold">{f.title}</p>
                   <p className="text-bronze-light font-serif text-lg mt-2">{f.range}</p>
                   <p className="text-parchment/55 text-sm mt-4 leading-relaxed flex-1">{f.desc}</p>
@@ -73,7 +73,7 @@ export default function BronzeAthleteBusts() {
       </section>
 
       {/* Related Links */}
-      <section className="py-16 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-16 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <p className="text-parchment/40 font-sans text-xs uppercase tracking-[0.3em] text-center mb-8">Related Collections</p>

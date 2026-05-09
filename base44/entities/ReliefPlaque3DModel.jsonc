@@ -1,0 +1,62 @@
+{
+  "name": "ReliefPlaque3DModel",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Internal name for this model"
+    },
+    "label": {
+      "type": "string",
+      "description": "Display label shown in gallery"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded STL file"
+    },
+    "preview_image": {
+      "type": "string",
+      "description": "Optional static preview image URL"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "Football",
+        "Basketball",
+        "Baseball",
+        "Hockey",
+        "Soccer",
+        "Golf",
+        "Lacrosse",
+        "Track & Field",
+        "Wrestling",
+        "Tennis",
+        "Volleyball",
+        "Swimming",
+        "Multi-Sport"
+      ],
+      "description": "Sport category"
+    },
+    "depth": {
+      "type": "string",
+      "description": "Relief depth e.g. '3/4 inch'"
+    },
+    "size_range": {
+      "type": "string",
+      "description": "Available sizes e.g. '12x18 to 24x30'"
+    },
+    "price_range": {
+      "type": "string",
+      "description": "Starting price e.g. 'From $1,200'"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this model is displayed"
+    }
+  },
+  "required": [
+    "name",
+    "file_url"
+  ]
+}

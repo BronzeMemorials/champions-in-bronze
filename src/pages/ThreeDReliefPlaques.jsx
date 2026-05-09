@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
-import FAQSection from "../components/shared/FAQSection";
-import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import STLGallery from "../components/shared/STLGallery";
+import { base44 } from "@/api/base44Client";
+
+const FAQSection = lazy(() => import("../components/shared/FAQSection"));
+const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -40,7 +43,14 @@ const faqs = [
 
 export default function ThreeDReliefPlaques() {
   const [activeSport, setActiveSport] = useState("All Sports");
+  const [stlModels, setStlModels] = useState([]);
   const filtered = activeSport === "All Sports" ? gallery : gallery.filter((g) => g.sport === activeSport);
+
+  useEffect(() => {
+    base44.entities.ReliefPlaque3DModel.filter({ is_active: true })
+      .then(setStlModels)
+      .catch(() => {});
+  }, []);
 
   return (
     <div className="bg-obsidian text-parchment">
@@ -156,8 +166,15 @@ export default function ThreeDReliefPlaques() {
         </div>
       </section>
 
-      <FAQSection faqs={faqs} />
-      <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />
+      {/* STL 3D Interactive Gallery */}
+      {stlModels.length > 0 && <STLGallery models={stlModels} />}
+
+      <Suspense fallback={<div className="h-40" />}>
+        <FAQSection faqs={faqs} />
+      </Suspense>
+      <Suspense fallback={<div className="h-40" />}>
+        <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />
+      </Suspense>
     </div>
   );
 }

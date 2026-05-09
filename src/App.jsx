@@ -64,6 +64,7 @@ import BronzePricingGuide from './pages/BronzePricingGuide';
 import RequestConceptDesign from './pages/RequestConceptDesign';
 import CommemorateGreatness from './pages/CommemorateGreatness';
 import HowItWorks from './pages/HowItWorks';
+import ReliefModelAdmin from './pages/ReliefModelAdmin';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -151,6 +152,7 @@ const AuthenticatedApp = () => {
         <Route path="/3d-bas-relief-plaques" element={<ThreeDReliefPlaques />} />
         <Route path="/photo-image-casting-plaques" element={<PhotoImageCast />} />
         <Route path="/materials-finishes" element={<MaterialsFinishes />} />
+        <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

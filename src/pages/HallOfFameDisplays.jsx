@@ -60,7 +60,7 @@ export default function HallOfFameDisplays() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {elements.map((el, i) => (
               <FadeIn key={el.title} delay={i * 0.08}>
-                <div className="border border-bronze/20 bg-[#0d0b09] p-8 rounded-sm hover:border-gold/40 transition-colors duration-300">
+                <div className="border border-bronze/20 bg-secondary/30 p-8 rounded-sm hover:border-gold/40 transition-colors duration-300">
                   <p className="font-serif text-xl text-gold mb-3">{el.title}</p>
                   <p className="text-parchment/55 text-sm leading-relaxed">{el.desc}</p>
                 </div>
@@ -71,7 +71,7 @@ export default function HallOfFameDisplays() {
       </section>
 
       {/* Internal Links */}
-      <section className="py-16 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-16 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <p className="text-parchment/40 font-sans text-xs uppercase tracking-[0.3em] text-center mb-8">Related Collections</p>

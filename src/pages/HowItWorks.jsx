@@ -74,7 +74,7 @@ export default function HowItWorks() {
               <FadeIn key={step.step} delay={i * 0.1}>
                 <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start">
                   <div className="flex flex-col items-center gap-4">
-                    <div className="w-16 h-16 border-2 border-bronze/40 rounded-sm flex items-center justify-center bg-[#0d0b09]">
+                    <div className="w-16 h-16 border-2 border-bronze/40 rounded-sm flex items-center justify-center bg-secondary/30">
                       <step.icon className="w-6 h-6 text-gold" />
                     </div>
                     {i < steps.length - 1 && (
@@ -96,7 +96,7 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-16 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-16 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <p className="text-parchment/40 font-sans text-xs uppercase tracking-[0.3em] text-center mb-8">Explore Further</p>

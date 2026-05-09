@@ -79,7 +79,7 @@ export default function STLViewer({ url, height = 500, label = "" }) {
 
     // Scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0f0c09);
+    scene.background = new THREE.Color(0xf5f0ea);
 
     // Camera
     const camera = new THREE.PerspectiveCamera(45, w / h, 0.01, 1000);
@@ -241,9 +241,9 @@ export default function STLViewer({ url, height = 500, label = "" }) {
       <div ref={mountRef} className="w-full h-full" style={{ cursor: "grab" }} />
 
       {loading && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-parchment/5">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-secondary/60">
           <div className="w-10 h-10 border-4 border-bronze/30 border-t-gold rounded-full animate-spin mb-4" />
-          <p className="text-parchment/40 text-xs font-sans uppercase tracking-widest">Loading 3D Model…</p>
+          <p className="text-parchment/60 text-xs font-sans uppercase tracking-widest">Loading 3D Model…</p>
         </div>
       )}
 
@@ -258,22 +258,22 @@ export default function STLViewer({ url, height = 500, label = "" }) {
           {/* Label */}
           {label && (
             <div className="absolute top-4 left-4">
-              <span className="bg-bronze/80 text-parchment text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{label}</span>
+              <span className="bg-bronze/85 text-obsidian text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{label}</span>
             </div>
           )}
 
           {/* Controls */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3">
-            <button onClick={rotateLeft} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+            <button onClick={rotateLeft} className="w-9 h-9 bg-obsidian/90 border border-bronze/40 flex items-center justify-center text-parchment/70 hover:text-gold hover:border-gold transition-colors rounded-sm shadow">
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <button onClick={() => setAutoRotate(!autoRotate)} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+            <button onClick={() => setAutoRotate(!autoRotate)} className="w-9 h-9 bg-obsidian/90 border border-bronze/40 flex items-center justify-center text-parchment/70 hover:text-gold hover:border-gold transition-colors rounded-sm shadow">
               {autoRotate ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </button>
-            <button onClick={resetView} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+            <button onClick={resetView} className="w-9 h-9 bg-obsidian/90 border border-bronze/40 flex items-center justify-center text-parchment/70 hover:text-gold hover:border-gold transition-colors rounded-sm shadow">
               <RotateCcw className="w-4 h-4" />
             </button>
-            <button onClick={rotateRight} className="w-9 h-9 bg-obsidian/80 border border-bronze/30 flex items-center justify-center text-parchment/60 hover:text-gold hover:border-gold transition-colors rounded-sm">
+            <button onClick={rotateRight} className="w-9 h-9 bg-obsidian/90 border border-bronze/40 flex items-center justify-center text-parchment/70 hover:text-gold hover:border-gold transition-colors rounded-sm shadow">
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>

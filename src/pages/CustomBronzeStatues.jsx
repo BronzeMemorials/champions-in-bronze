@@ -93,7 +93,7 @@ export default function CustomBronzeStatues() {
       </section>
 
       {/* Sport Positions */}
-      <section className="py-20 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-20 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">

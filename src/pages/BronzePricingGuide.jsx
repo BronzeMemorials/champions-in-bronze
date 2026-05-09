@@ -73,7 +73,7 @@ export default function BronzePricingGuide() {
           <div className="space-y-4">
             {busts.map((item, i) => (
               <FadeIn key={item.size} delay={i * 0.06}>
-                <div className="border border-bronze/20 bg-[#0d0b09] p-6 rounded-sm grid md:grid-cols-4 gap-4 items-center hover:border-gold/30 transition-colors duration-300">
+                <div className="border border-bronze/20 bg-secondary/30 p-6 rounded-sm grid md:grid-cols-4 gap-4 items-center hover:border-gold/30 transition-colors duration-300">
                   <div className="md:col-span-1">
                     <p className="font-serif text-lg text-parchment">{item.size}</p>
                     <div className="flex gap-2 mt-2">
@@ -107,7 +107,7 @@ export default function BronzePricingGuide() {
       </section>
 
       {/* Statues */}
-      <section className="py-20 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-20 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Full Statues</span>
@@ -159,7 +159,7 @@ export default function BronzePricingGuide() {
           <div className="space-y-4">
             {plaques.map((item, i) => (
               <FadeIn key={item.size} delay={i * 0.06}>
-                <div className="border border-bronze/20 bg-[#0d0b09] p-6 rounded-sm grid md:grid-cols-3 gap-4 items-center hover:border-gold/30 transition-colors duration-300">
+                <div className="border border-bronze/20 bg-secondary/30 p-6 rounded-sm grid md:grid-cols-3 gap-4 items-center hover:border-gold/30 transition-colors duration-300">
                   <p className="font-serif text-lg text-parchment">{item.size}</p>
                   <p className="font-serif text-2xl text-gold">{item.range}</p>
                   <div className="flex items-center justify-between">
@@ -176,7 +176,7 @@ export default function BronzePricingGuide() {
       </section>
 
       {/* Factors */}
-      <section className="py-20 border-t border-bronze/10 bg-[#0d0b09]">
+      <section className="py-20 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Pricing Factors</span>

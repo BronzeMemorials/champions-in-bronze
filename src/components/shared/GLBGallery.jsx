@@ -8,7 +8,7 @@ const GLBViewerLazy = lazy(() => import("./GLBViewer"));
 
 function ModelCard({ model, onView }) {
   return (
-    <div className="border border-bronze/20 bg-[#0d0b09] rounded-sm overflow-hidden group hover:border-gold/50 transition-colors duration-300">
+    <div className="border border-bronze/20 bg-secondary/30 rounded-sm overflow-hidden group hover:border-gold/50 transition-colors duration-300">
       <div className="relative cursor-pointer" onClick={() => onView(model)}>
         <GLBThumbnail url={model.file_url} />
         <div className="absolute inset-0 flex items-center justify-center bg-obsidian/0 group-hover:bg-obsidian/40 transition-all duration-300">
@@ -52,7 +52,7 @@ function ModelCard({ model, onView }) {
 
 function GLBModal({ model, onClose }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0a0704]/95 backdrop-blur-sm p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/95 backdrop-blur-sm p-4">
       <div className="w-full max-w-4xl">
         <div className="flex items-center justify-between mb-4">
           <div>
@@ -65,7 +65,7 @@ function GLBModal({ model, onClose }) {
           </button>
         </div>
         <Suspense fallback={
-          <div className="h-[500px] flex items-center justify-center bg-[#0d0b09]">
+          <div className="h-[500px] flex items-center justify-center bg-secondary/30">
             <div className="w-10 h-10 border-4 border-bronze/30 border-t-gold rounded-full animate-spin" />
           </div>
         }>
@@ -104,7 +104,7 @@ export default function GLBGallery({ models = [] }) {
   if (!models.length) return null;
 
   return (
-    <section className="py-20 border-t border-bronze/10 bg-[#0d0b09]">
+    <section className="py-20 border-t border-bronze/10 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12">
