@@ -85,6 +85,21 @@ const products = [
   },
 ];
 
+const hockeyPositions = [
+  {
+    position: "Goalie",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png",
+  },
+  {
+    position: "Forward",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/18d3f95a4_86AED4DB-6DE3-443F-B6D5-9A1ECB6B5D65.png",
+  },
+  {
+    position: "Defenseman",
+    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b9032e0d_B9A32438-CA2C-4E28-8952-22DB0925B681.png",
+  },
+];
+
 const baseballPositions = [
   {
     position: "Pitcher",
@@ -378,6 +393,29 @@ export default function ProHome() {
                     <div className="p-4 text-center border-t border-bronze/10">
                       <p className="font-serif text-base text-parchment">{item.position}</p>
                       <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Football</p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+
+          {/* Hockey */}
+          <div className="mb-12">
+            <FadeIn>
+              <p className="font-serif text-2xl text-gold mb-6">Hockey</p>
+            </FadeIn>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {hockeyPositions.map((item, i) => (
+                <FadeIn key={item.position} delay={i * 0.08}>
+                  <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
+                    <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
+                      <img src={item.img} alt={`Bronze ${item.position} statue`}
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4 text-center border-t border-bronze/10">
+                      <p className="font-serif text-base text-parchment">{item.position}</p>
+                      <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">Hockey</p>
                     </div>
                   </div>
                 </FadeIn>
