@@ -13,161 +13,161 @@ const FAQSection = lazy(() => import("../components/shared/FAQSection"));
 
 // Hero slides — plaque & recognition first
 const heroSlides = [
-  {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
-    label: "Hall of Fame Plaques & Recognition Systems",
-    title: "Championship\nRecognition\nCast in Bronze.",
-  },
-  {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
-    label: "Photo Image Cast Plaques — Proprietary Process",
-    title: "Permanent\nRecognition.\nExact Likeness.",
-  },
-  {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
-    label: "Donor Recognition Walls & Legacy Systems",
-    title: "Legacy Cast\nin Bronze.\nForever.",
-  },
-  {
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png",
-    label: "Hall of Fame Busts & Portrait Recognition",
-    title: "Immortalize\nEvery\nLegend.",
-  },
-];
+{
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
+  label: "Hall of Fame Plaques & Recognition Systems",
+  title: "Championship\nRecognition\nCast in Bronze."
+},
+{
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
+  label: "Photo Image Cast Plaques — Proprietary Process",
+  title: "Permanent\nRecognition.\nExact Likeness."
+},
+{
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
+  label: "Donor Recognition Walls & Legacy Systems",
+  title: "Legacy Cast\nin Bronze.\nForever."
+},
+{
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png",
+  label: "Hall of Fame Busts & Portrait Recognition",
+  title: "Immortalize\nEvery\nLegend."
+}];
+
 
 // SECTION 1 — Bronze Plaques (dominant)
 const plaquProducts = [
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
-    label: "Most Requested",
-    title: "3D Bas-Relief Plaques",
-    desc: "High-depth sculptural plaques capturing exact athlete likeness from photographs. Championship moments, Hall of Fame recognition, retired jersey dedications.",
-    to: "/3d-bas-relief-plaques",
-    cta: "View Relief Plaques",
-  },
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
-    label: "Proprietary Process",
-    title: "Photo Image Cast Plaques",
-    desc: "Real photographs permanently cast into bronze. Career retrospectives, team histories, and championship moments — your exact images cast forever in museum-grade bronze.",
-    to: "/photo-image-casting-plaques",
-    cta: "View Photo Cast",
-  },
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png",
-    label: "Hall of Fame",
-    title: "Hall of Fame Plaques",
-    desc: "Complete Hall of Fame plaque systems for universities, stadiums, and professional athletic organizations. Individual and series installations.",
-    to: "/hall-of-fame-plaques",
-    cta: "View Hall of Fame",
-  },
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
-    label: "Capital Programs",
-    title: "Donor Recognition Plaques",
-    desc: "Permanent bronze donor recognition for capital campaigns, naming rights, and athletic facility dedications. Portrait photo-casting included.",
-    to: "/donor-recognition",
-    cta: "View Donor Systems",
-  },
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
-    label: "Stadium Grade",
-    title: "Championship & Retirement Plaques",
-    desc: "Championship recognition, retired jersey displays, and milestone tributes. Engineered for permanent stadium and arena installation.",
-    to: "/championship-bronze-plaques",
-    cta: "View Championship",
-  },
-  {
-    image: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png",
-    label: "Memorial & Dedication",
-    title: "Stadium Dedication Plaques",
-    desc: "Stadium naming rights, facility dedications, memorial plaques, and architectural recognition signage for venues of all scales.",
-    to: "/dedication-plaques",
-    cta: "View Dedication Plaques",
-  },
-];
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
+  label: "Most Requested",
+  title: "3D Bas-Relief Plaques",
+  desc: "High-depth sculptural plaques capturing exact athlete likeness from photographs. Championship moments, Hall of Fame recognition, retired jersey dedications.",
+  to: "/3d-bas-relief-plaques",
+  cta: "View Relief Plaques"
+},
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
+  label: "Proprietary Process",
+  title: "Photo Image Cast Plaques",
+  desc: "Real photographs permanently cast into bronze. Career retrospectives, team histories, and championship moments — your exact images cast forever in museum-grade bronze.",
+  to: "/photo-image-casting-plaques",
+  cta: "View Photo Cast"
+},
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png",
+  label: "Hall of Fame",
+  title: "Hall of Fame Plaques",
+  desc: "Complete Hall of Fame plaque systems for universities, stadiums, and professional athletic organizations. Individual and series installations.",
+  to: "/hall-of-fame-plaques",
+  cta: "View Hall of Fame"
+},
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png",
+  label: "Capital Programs",
+  title: "Donor Recognition Plaques",
+  desc: "Permanent bronze donor recognition for capital campaigns, naming rights, and athletic facility dedications. Portrait photo-casting included.",
+  to: "/donor-recognition",
+  cta: "View Donor Systems"
+},
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
+  label: "Stadium Grade",
+  title: "Championship & Retirement Plaques",
+  desc: "Championship recognition, retired jersey displays, and milestone tributes. Engineered for permanent stadium and arena installation.",
+  to: "/championship-bronze-plaques",
+  cta: "View Championship"
+},
+{
+  image: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png",
+  label: "Memorial & Dedication",
+  title: "Stadium Dedication Plaques",
+  desc: "Stadium naming rights, facility dedications, memorial plaques, and architectural recognition signage for venues of all scales.",
+  to: "/dedication-plaques",
+  cta: "View Dedication Plaques"
+}];
+
 
 // SECTION 2 — Hall of Fame Systems
 const hofSystems = [
-  { icon: Award, title: "Complete Hall of Fame Walls", desc: "Full-corridor installations from concept through mounting. Plaques, busts, timelines, and illuminated displays." },
-  { icon: Building2, title: "Athletic Recognition Corridors", desc: "University and professional facility legacy corridors. Custom layouts, sport-specific shapes, and archival histories." },
-  { icon: Shield, title: "Donor Recognition Systems", desc: "Multi-tier donor walls integrating photo-cast portraits, name panels, and legacy recognition at any scale." },
-  { icon: Star, title: "Championship Display Systems", desc: "Championship trophy cases, banner recognition, and permanent bronze championship milestone displays." },
-];
+{ icon: Award, title: "Complete Hall of Fame Walls", desc: "Full-corridor installations from concept through mounting. Plaques, busts, timelines, and illuminated displays." },
+{ icon: Building2, title: "Athletic Recognition Corridors", desc: "University and professional facility legacy corridors. Custom layouts, sport-specific shapes, and archival histories." },
+{ icon: Shield, title: "Donor Recognition Systems", desc: "Multi-tier donor walls integrating photo-cast portraits, name panels, and legacy recognition at any scale." },
+{ icon: Star, title: "Championship Display Systems", desc: "Championship trophy cases, banner recognition, and permanent bronze championship milestone displays." }];
+
 
 // SECTION 3 — Busts
 const bustTypes = [
-  {
-    label: "Standard Hall of Fame Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png",
-  },
-  {
-    label: "Athlete Portrait Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png",
-  },
-  {
-    label: "Coach Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png",
-  },
-  {
-    label: "Championship Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png",
-  },
-  {
-    label: "Stadium Donor Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png",
-  },
-  {
-    label: "Historic Athlete Bust",
-    img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png",
-  },
-];
+{
+  label: "Standard Hall of Fame Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png"
+},
+{
+  label: "Athlete Portrait Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png"
+},
+{
+  label: "Coach Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png"
+},
+{
+  label: "Championship Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png"
+},
+{
+  label: "Stadium Donor Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png"
+},
+{
+  label: "Historic Athlete Bust",
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png"
+}];
+
 
 // SECTION 4 — Statues (reduced, showcase only)
 const soccerPositions = [
-  { position: "Forward Kick Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png" },
-  { position: "Goal Celebration Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/aceb82ef5_8C52F27A-8EA2-4D4F-AF16-D02E1C58BFD8.png" },
-];
+{ position: "Forward Kick Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png" },
+{ position: "Goal Celebration Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/aceb82ef5_8C52F27A-8EA2-4D4F-AF16-D02E1C58BFD8.png" }];
+
 const hockeyPositions = [
-  { position: "Goalie", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png" },
-  { position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/18d3f95a4_86AED4DB-6DE3-443F-B6D5-9A1ECB6B5D65.png" },
-  { position: "Defenseman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b9032e0d_B9A32438-CA2C-4E28-8952-22DB0925B681.png" },
-];
+{ position: "Goalie", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png" },
+{ position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/18d3f95a4_86AED4DB-6DE3-443F-B6D5-9A1ECB6B5D65.png" },
+{ position: "Defenseman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b9032e0d_B9A32438-CA2C-4E28-8952-22DB0925B681.png" }];
+
 const baseballPositions = [
-  { position: "Pitcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png" },
-  { position: "Batter", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e991eeb20_D6CEFC45-7442-4F85-B951-76E2404E7719.png" },
-  { position: "Catcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9354cdeae_6A6BF141-0B16-4BAA-B2A6-B4AB5070E20B.png" },
-];
+{ position: "Pitcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png" },
+{ position: "Batter", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e991eeb20_D6CEFC45-7442-4F85-B951-76E2404E7719.png" },
+{ position: "Catcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9354cdeae_6A6BF141-0B16-4BAA-B2A6-B4AB5070E20B.png" }];
+
 const basketballPositions = [
-  { position: "Guard", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png" },
-  { position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/147740e3b_4CA5A3D0-6148-4652-9EB3-BCF3DAE9DEC7.png" },
-  { position: "Center Dunk Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/020f34d62_5E076DD7-856B-4C90-A8C7-3BD2336FD64F.png" },
-];
+{ position: "Guard", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png" },
+{ position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/147740e3b_4CA5A3D0-6148-4652-9EB3-BCF3DAE9DEC7.png" },
+{ position: "Center Dunk Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/020f34d62_5E076DD7-856B-4C90-A8C7-3BD2336FD64F.png" }];
+
 const footballPositions = [
-  { position: "Quarterback", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png" },
-  { position: "Receiver", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9b8441874_FCBF2923-CF61-4AE0-B720-2DF6F527DF5E.png" },
-  { position: "Lineman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png" },
-  { position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png" },
-];
+{ position: "Quarterback", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png" },
+{ position: "Receiver", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9b8441874_FCBF2923-CF61-4AE0-B720-2DF6F527DF5E.png" },
+{ position: "Lineman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png" },
+{ position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png" }];
+
 
 const faqs = [
-  { question: "What types of bronze plaques do you produce?", answer: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
-  { question: "How does your photo image casting process work?", answer: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
-  { question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within 48 hours. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
-  { question: "Do you handle complete Hall of Fame installations?", answer: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
-  { question: "What is the investment range for a Hall of Fame plaque program?", answer: "Individual plaques start from $895 for standard portrait formats. Hall of Fame series programs typically range from $15,000 to $150,000+ depending on number of inductees, formats, and installation complexity. Donor wall systems are quoted by scope." },
-  { question: "Bronze vs. aluminum — which is right for my project?", answer: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
-];
+{ question: "What types of bronze plaques do you produce?", answer: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
+{ question: "How does your photo image casting process work?", answer: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
+{ question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within 48 hours. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
+{ question: "Do you handle complete Hall of Fame installations?", answer: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
+{ question: "What is the investment range for a Hall of Fame plaque program?", answer: "Individual plaques start from $895 for standard portrait formats. Hall of Fame series programs typically range from $15,000 to $150,000+ depending on number of inductees, formats, and installation complexity. Donor wall systems are quoted by scope." },
+{ question: "Bronze vs. aluminum — which is right for my project?", answer: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." }];
+
 
 function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
   return (
     <div className={`grid grid-cols-2 ${cols} gap-4 md:gap-6`}>
-      {positions.map((item, i) => (
-        <FadeIn key={item.position} delay={i * 0.08}>
+      {positions.map((item, i) =>
+      <FadeIn key={item.position} delay={i * 0.08}>
           <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
             <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
               <img src={item.img} alt={`Bronze ${item.position} statue`}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="p-4 text-center border-t border-bronze/10">
               <p className="font-serif text-base text-parchment">{item.position}</p>
@@ -175,9 +175,9 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
             </div>
           </div>
         </FadeIn>
-      ))}
-    </div>
-  );
+      )}
+    </div>);
+
 }
 
 export default function ProHome() {
@@ -188,8 +188,8 @@ export default function ProHome() {
       <SEOHead
         title="Champions in Bronze — Bronze Plaques, Hall of Fame Systems, Busts & Statues"
         description="America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship plaques, and bronze busts for universities, stadiums, and professional athletic organizations."
-        canonical="/"
-      />
+        canonical="/" />
+      
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
@@ -207,8 +207,8 @@ export default function ProHome() {
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl whitespace-pre-line">
               Commemorating Greatness In Bronze.
             </h1>
-            <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">
-              Custom bronze plaques, donor walls, Hall of Fame systems, busts, and commemorative recognition for universities, stadiums, and professional athletic organizations.
+            <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">Hall of Fame systems, Custom bronze plaques, donor walls, busts, and commemorative recognition for universities, stadiums, and professional athletic organizations.
+
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-white px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -238,9 +238,9 @@ export default function ProHome() {
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <span className="text-parchment/50 font-sans text-xs uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
             <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
-              {["Athletic Departments", "Hall of Fame Committees", "Stadium & Arena Operators", "Universities & Colleges", "Donor Foundations", "Booster & Alumni Organizations"].map((org) => (
-                <span key={org} className="text-parchment/60 font-sans text-xs uppercase tracking-[0.15em] hover:text-bronze transition-colors">{org}</span>
-              ))}
+              {["Athletic Departments", "Hall of Fame Committees", "Stadium & Arena Operators", "Universities & Colleges", "Donor Foundations", "Booster & Alumni Organizations"].map((org) =>
+              <span key={org} className="text-parchment/60 font-sans text-xs uppercase tracking-[0.15em] hover:text-bronze transition-colors">{org}</span>
+              )}
             </div>
           </div>
         </div>
@@ -249,8 +249,8 @@ export default function ProHome() {
       <TrustBadges />
 
       {/* ══════════════════════════════════════════
-          SECTION 1 — BRONZE PLAQUES (DOMINANT)
-      ══════════════════════════════════════════ */}
+           SECTION 1 — BRONZE PLAQUES (DOMINANT)
+        ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -260,14 +260,14 @@ export default function ProHome() {
             <SectionHeading
               label="Bronze Plaques & Recognition Systems"
               title="Hall of Fame Plaques.\nChampionship Recognition.\nDonor Legacy Systems."
-              subtitle="The nation's most trusted source for institutional bronze plaque programs — Hall of Fame, championship, donor, retired jersey, dedication, and memorial plaques for stadiums, universities, and professional athletic organizations."
-            />
+              subtitle="The nation's most trusted source for institutional bronze plaque programs — Hall of Fame, championship, donor, retired jersey, dedication, and memorial plaques for stadiums, universities, and professional athletic organizations." />
+            
           </FadeIn>
 
           {/* Featured 2-up hero plaques */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {plaquProducts.slice(0, 2).map((p, i) => (
-              <FadeIn key={p.to} delay={i * 0.1}>
+            {plaquProducts.slice(0, 2).map((p, i) =>
+            <FadeIn key={p.to} delay={i * 0.1}>
                 <Link to={p.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-transparent" />
@@ -283,13 +283,13 @@ export default function ProHome() {
                   </div>
                 </Link>
               </FadeIn>
-            ))}
+            )}
           </div>
 
           {/* 4-up remaining plaques */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {plaquProducts.slice(2).map((p, i) => (
-              <FadeIn key={p.to} delay={i * 0.07}>
+            {plaquProducts.slice(2).map((p, i) =>
+            <FadeIn key={p.to} delay={i * 0.07}>
                 <Link to={p.to} className="group relative aspect-[4/5] overflow-hidden block rounded-sm">
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-transparent" />
@@ -305,7 +305,7 @@ export default function ProHome() {
                   </div>
                 </Link>
               </FadeIn>
-            ))}
+            )}
           </div>
 
           <FadeIn delay={0.3}>
@@ -322,8 +322,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-          SECTION 2 — HALL OF FAME SYSTEMS
-      ══════════════════════════════════════════ */}
+           SECTION 2 — HALL OF FAME SYSTEMS
+        ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -331,7 +331,7 @@ export default function ProHome() {
               <div className="relative">
                 <div className="aspect-[4/5] overflow-hidden rounded-sm">
                   <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
-                    alt="Hall of Fame installation" loading="lazy" className="w-full h-full object-cover" />
+                  alt="Hall of Fame installation" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-bronze/90 p-6 rounded-sm hidden md:block">
                   <p className="font-serif text-3xl text-parchment">500+</p>
@@ -348,13 +348,13 @@ export default function ProHome() {
                 We design and manufacture complete Hall of Fame environments — from individual portrait plaques and induction series to 60-foot donor recognition walls and illuminated legacy corridors. Every installation communicates the prestige and permanence your program demands.
               </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
-                {hofSystems.map((s) => (
-                  <div key={s.title} className="border border-bronze/20 bg-white p-5 rounded-sm shadow-sm">
+                {hofSystems.map((s) =>
+                <div key={s.title} className="border border-bronze/20 bg-white p-5 rounded-sm shadow-sm">
                     <s.icon className="w-5 h-5 text-gold mb-3" />
                     <p className="font-serif text-sm text-parchment leading-tight">{s.title}</p>
                     <p className="text-parchment/40 text-xs font-sans mt-2 leading-relaxed">{s.desc}</p>
                   </div>
-                ))}
+                )}
               </div>
               <div className="flex flex-wrap gap-4 mt-10">
                 <Link to="/hall-of-fame-bronze-displays" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.15em] font-semibold transition-all duration-300">
@@ -374,23 +374,23 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "48hrs", label: "Artwork Proof Delivery" },
-              { value: "200yr", label: "Outdoor Durability Rating" },
-              { value: "100%", label: "Photo Likeness Accuracy" },
-              { value: "Made\nUSA", label: "American Foundry" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
+            { value: "48hrs", label: "Artwork Proof Delivery" },
+            { value: "200yr", label: "Outdoor Durability Rating" },
+            { value: "100%", label: "Photo Likeness Accuracy" },
+            { value: "Made\nUSA", label: "American Foundry" }].
+            map((stat) =>
+            <div key={stat.label} className="text-center">
                 <p className="font-serif text-3xl md:text-4xl text-gold whitespace-pre-line leading-tight">{stat.value}</p>
                 <p className="text-parchment/40 text-xs font-sans uppercase tracking-wider mt-2">{stat.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          SECTION 3 — BUSTS (Premium Upsell)
-      ══════════════════════════════════════════ */}
+           SECTION 3 — BUSTS (Premium Upsell)
+        ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -398,23 +398,23 @@ export default function ProHome() {
               label="Elevated Legacy Recognition"
               title="Hall of Fame Bronze Busts"
               subtitle="Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. The premium tier of athletic legacy recognition — sculpted from your photographs with exact likeness."
-              align="center"
-            />
+              align="center" />
+            
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {bustTypes.map((item, i) => (
-              <FadeIn key={item.label} delay={i * 0.08}>
+            {bustTypes.map((item, i) =>
+            <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
                   <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
                     <img src={item.img} alt={item.label}
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-bronze/10">
                     <p className="font-serif text-base text-parchment">{item.label}</p>
                   </div>
                 </div>
               </FadeIn>
-            ))}
+            )}
           </div>
           <FadeIn delay={0.3}>
             <div className="text-center mt-10 flex flex-wrap justify-center gap-4">
@@ -447,57 +447,57 @@ export default function ProHome() {
               label="Investment Guide"
               title="Transparent Pricing. Zero Surprises."
               subtitle="Every commission is custom — these ranges reflect typical projects. Plaque programs and Hall of Fame series are our most-requested starting point."
-              align="center"
-            />
+              align="center" />
+            
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              {
-                category: "Bronze Plaques",
-                badge: "Most Popular",
-                items: [{ size: "Standard Portrait", range: "From $895" }, { size: "Large Format", range: "From $1,800" }, { size: "Hall of Fame Series", range: "From $4,500" }],
-                link: "/bronze-statue-pricing",
-              },
-              {
-                category: "Busts & Portraits",
-                items: [{ size: '12" Portrait Bust', range: "From $1,800" }, { size: '18" Hall of Fame', range: "From $3,500" }, { size: 'Donor Bust', range: "From $5,000" }],
-                link: "/bronze-statue-pricing",
-              },
-              {
-                category: "Full Statues",
-                items: [{ size: '36"', range: "From $12,000" }, { size: '60"', range: "From $35,000" }, { size: '72"+ Life-Size', range: "From $75,000" }],
-                link: "/bronze-statue-pricing",
-              },
-            ].map((cat, i) => (
-              <FadeIn key={cat.category} delay={i * 0.1}>
+            {
+              category: "Bronze Plaques",
+              badge: "Most Popular",
+              items: [{ size: "Standard Portrait", range: "From $895" }, { size: "Large Format", range: "From $1,800" }, { size: "Hall of Fame Series", range: "From $4,500" }],
+              link: "/bronze-statue-pricing"
+            },
+            {
+              category: "Busts & Portraits",
+              items: [{ size: '12" Portrait Bust', range: "From $1,800" }, { size: '18" Hall of Fame', range: "From $3,500" }, { size: 'Donor Bust', range: "From $5,000" }],
+              link: "/bronze-statue-pricing"
+            },
+            {
+              category: "Full Statues",
+              items: [{ size: '36"', range: "From $12,000" }, { size: '60"', range: "From $35,000" }, { size: '72"+ Life-Size', range: "From $75,000" }],
+              link: "/bronze-statue-pricing"
+            }].
+            map((cat, i) =>
+            <FadeIn key={cat.category} delay={i * 0.1}>
                 <div className={`border bg-white shadow-sm p-8 rounded-sm flex flex-col ${i === 0 ? "border-bronze/50 ring-1 ring-bronze/20" : "border-bronze/20"}`}>
                   <div className="flex items-center justify-between mb-4">
                     <p className="font-serif text-2xl text-gold">{cat.category}</p>
-                    {cat.badge && (
-                      <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.1em] px-2 py-0.5 font-semibold">{cat.badge}</span>
-                    )}
+                    {cat.badge &&
+                  <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.1em] px-2 py-0.5 font-semibold">{cat.badge}</span>
+                  }
                   </div>
                   <ul className="space-y-4 flex-1">
-                    {cat.items.map((item) => (
-                      <li key={item.size} className="flex items-center justify-between border-b border-bronze/10 pb-4 last:border-0 last:pb-0">
+                    {cat.items.map((item) =>
+                  <li key={item.size} className="flex items-center justify-between border-b border-bronze/10 pb-4 last:border-0 last:pb-0">
                         <span className="font-sans text-sm text-parchment/60">{item.size}</span>
                         <span className="font-serif text-parchment">{item.range}</span>
                       </li>
-                    ))}
+                  )}
                   </ul>
                   <Link to={cat.link} className="inline-flex items-center gap-2 mt-6 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
                     Full Pricing Guide <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </FadeIn>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          SECTION 4 — STATUES (Signature / Reduced)
-      ══════════════════════════════════════════ */}
+           SECTION 4 — STATUES (Signature / Reduced)
+        ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -505,8 +505,8 @@ export default function ProHome() {
               label="Signature Centerpiece Projects"
               title="Full-Size Bronze Statues"
               subtitle="When a program demands the ultimate legacy statement — life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. Sculpted from photographs. Exact athletic likeness."
-              align="center"
-            />
+              align="center" />
+            
           </FadeIn>
 
           {/* Football */}
@@ -581,9 +581,9 @@ export default function ProHome() {
         <QuoteForm
           title="Request Your Recognition Project Quote"
           subtitle="Tell us your project type. We deliver a digital proof and pricing within 48 hours."
-          source="pro"
-        />
+          source="pro" />
+        
       </Suspense>
-    </div>
-  );
+    </div>);
+
 }
