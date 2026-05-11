@@ -47,7 +47,7 @@ export default function BronzeAthleteBusts() {
 
       <TrustBadges />
 
-      <section className="py-28 border-t border-bronze/10">
+      <section className="py-28 border-t border-bronze/10 rounded-none">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-16">
