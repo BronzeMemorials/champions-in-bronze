@@ -22,7 +22,7 @@ const formats = [
 { title: "6\" Tabletop Bust", range: "From $9,990", desc: "Award presentations, ceremonial gifts, and personal recognition. Perfect for Hall of Fame inductee ceremonies." },
 { title: "12\" Portrait Bust", range: "From $14,990", desc: "Standard recognition scale. Trophy room displays, office collections, and wall-mounted presentations." },
 { title: "18\" Display Bust", range: "From $49,750", desc: "Architectural display scale. Ideal for Hall of Fame corridors, reception lobbies, and permanent recognition walls." },
-{ title: "24\"+ Bust", range: "F", desc: "Monumental scale for major installations. Stadium lobbies, arena entrances, and landmark recognition environments." }];
+{ title: "24\"+ Bust", range: "From $79,9", desc: "Monumental scale for major installations. Stadium lobbies, arena entrances, and landmark recognition environments." }];
 
 
 export default function BronzeAthleteBusts() {
