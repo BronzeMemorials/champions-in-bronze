@@ -202,7 +202,7 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 pb-28 pt-40 w-full">
           <FadeIn>
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">
-              {current.label}
+              Hall of Fame Plaques & Legacy Tributes
             </span>
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">
               Commemorating Greatness In Bronze.
