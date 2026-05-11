@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { lazy, Suspense, useState, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { ArrowRight, ChevronDown, Award, Shield, Star, Building2 } from "lucide-react";
 import FadeIn from "../components/shared/FadeIn";
 import TrustBadges from "../components/shared/TrustBadges";
@@ -181,14 +181,7 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
 }
 
 export default function ProHome() {
-  const [slide, setSlide] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 5000);
-    return () => clearInterval(t);
-  }, []);
-
-  const current = heroSlides[slide];
+  const current = heroSlides[0];
 
   return (
     <div className="bg-obsidian text-parchment">
@@ -200,16 +193,14 @@ export default function ProHome() {
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
-        {heroSlides.map((s, i) => (
-          <div key={i} className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}>
-            <img src={s.img} alt={s.label} className="w-full h-full object-cover scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10" />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/85 to-transparent" />
-          </div>
-        ))}
+        <div className="absolute inset-0">
+          <img src={current.img} alt={current.label} className="w-full h-full object-cover scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/85 to-transparent" />
+        </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 pb-28 pt-40 w-full">
-          <FadeIn key={slide}>
+          <FadeIn>
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">
               {current.label}
             </span>
@@ -232,13 +223,7 @@ export default function ProHome() {
             </div>
           </FadeIn>
 
-          <div className="flex gap-2 mt-14">
-            {heroSlides.map((_, i) => (
-              <button key={i} onClick={() => setSlide(i)}
-                className={`h-0.5 transition-all duration-500 ${i === slide ? "bg-bronze w-10" : "bg-parchment/20 w-4"}`}
-              />
-            ))}
-          </div>
+
         </div>
 
         <a href="#plaques" className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-parchment/50 hover:text-bronze transition-colors">
