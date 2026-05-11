@@ -10,11 +10,11 @@
     --font-inter: 'Inter', sans-serif;
 
     --background: 36 33% 97%;
-    --foreground: 20 40% 12%;
+    --foreground: 20 40% 5%;
     --card: 36 20% 94%;
-    --card-foreground: 20 40% 12%;
+    --card-foreground: 20 40% 5%;
     --popover: 36 20% 94%;
-    --popover-foreground: 20 40% 12%;
+    --popover-foreground: 20 40% 5%;
     --primary: 20 55% 30%;
     --primary-foreground: 36 33% 97%;
     --secondary: 36 20% 90%;
@@ -86,6 +86,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-weight: 600;
+    color: #1a0e05;
+  }
+
+  p, span, li, a, label, input, textarea, select, button {
+    font-weight: 600;
+    color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    color: #1a0e05;
   }
 }
 
