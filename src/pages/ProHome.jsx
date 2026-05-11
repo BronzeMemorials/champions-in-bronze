@@ -209,8 +209,8 @@ export default function ProHome() {
             </h1>
             <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Hall of Fame plaques, Custom 3D relief photo plaques, donor recognition walls, personalized lifelike 3D busts & statues created from your photograph, & commemorative recognition for universities, stadiums, & professional athletic organizations.
             </p>
-            <p className="font-serif text-2xl md:text-3xl text-parchment/80 italic mt-4">
-              — A Tribute to Legacy Cast in Bronze.
+            <p className="font-serif md:text-3xl text-parchment/80 italic mt-4 text-xl font-medium">— A Tribute to Legacy Cast in Bronze.
+
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-white px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -251,8 +251,8 @@ export default function ProHome() {
       <TrustBadges />
 
       {/* ══════════════════════════════════════════
-                     SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                  ══════════════════════════════════════════ */}
+                      SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                   ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -324,8 +324,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                     SECTION 2 — HALL OF FAME SYSTEMS
-                  ══════════════════════════════════════════ */}
+                      SECTION 2 — HALL OF FAME SYSTEMS
+                   ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -391,8 +391,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                     SECTION 3 — BUSTS (Premium Upsell)
-                  ══════════════════════════════════════════ */}
+                      SECTION 3 — BUSTS (Premium Upsell)
+                   ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -498,8 +498,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                     SECTION 4 — STATUES (Signature / Reduced)
-                  ══════════════════════════════════════════ */}
+                      SECTION 4 — STATUES (Signature / Reduced)
+                   ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
