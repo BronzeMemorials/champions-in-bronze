@@ -205,7 +205,7 @@ export default function ProHome() {
               {current.label}
             </span>
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl whitespace-pre-line">
-              {current.title}
+              Commemorating Greatness In Bronze.
             </h1>
             <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">
               Custom bronze plaques, donor walls, Hall of Fame systems, busts, and commemorative recognition for universities, stadiums, and professional athletic organizations.
