@@ -248,66 +248,227 @@ export default function ProHome() {
         </div>
       </section>
 
-      {/* ── PRODUCT TYPE CTA ROW ── */}
-      <section className="py-12 bg-white border-b border-bronze/15">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* ── PRODUCT CATEGORY ROWS ── */}
+      <section className="py-16 bg-white border-b border-bronze/15">
+        <div className="max-w-7xl mx-auto px-6 space-y-20">
+
+          {/* Row 1 — Photo Image Casting Bronze Plaques */}
           <FadeIn>
-            <p className="text-center text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold mb-8">Our Bronze Product Categories</p>
-          </FadeIn>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
-            {[
-              {
-                title: "Photo Image Casting Bronze Plaques",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
-                to: "/photo-image-casting-plaques"
-              },
-              {
-                title: "3D Bas-Relief with Photo Image Casting",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
-                to: "/3d-bas-relief-plaques"
-              },
-              {
-                title: "3D Bas-Relief Plaques",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
-                to: "/3d-bas-relief-plaques"
-              },
-              {
-                title: "Standard Bronze Plaques",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png",
-                to: "/championship-bronze-plaques"
-              },
-              {
-                title: "Busts",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png",
-                to: "/bronze-athlete-busts"
-              },
-              {
-                title: "Statues",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png",
-                to: "/custom-bronze-athlete-statues"
-              },
-              {
-                title: "3D Bronze Jerseys",
-                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
-                to: "/3d-relief-jersey-plaques"
-              },
-            ].map((item, i) => (
-              <FadeIn key={item.title} delay={i * 0.06}>
-                <Link to={item.to} className="group flex flex-col items-center text-center gap-2">
-                  <div className="w-full aspect-square overflow-hidden rounded-sm border border-bronze/20 group-hover:border-bronze/60 transition-all duration-300 shadow-sm">
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 01</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Real photographs permanently cast into bronze. Exact likeness — no drawings required.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", cta: "View Donor Plaques", to: "/donor-recognition" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <p className="font-sans text-[10px] uppercase tracking-[0.08em] text-parchment/65 group-hover:text-bronze transition-colors duration-200 leading-tight px-1">
-                    {item.title}
-                  </p>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/photo-image-casting-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All Photo Image Cast Plaques <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 2 — 3D Bas-Relief with Photo Image Casting */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 02</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief with Photo Image Casting</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">High-depth sculptural relief combined with photo casting — the ultimate in plaque realism.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Basketball Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All 3D Bas-Relief + Photo Cast Plaques <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 3 — 3D Bas-Relief Plaques */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 03</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief Plaques</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Sculptural high-depth relief plaques for championship, retired jersey, and recognition displays.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Championship Relief Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", cta: "View All Plaques", to: "/3d-bas-relief-plaques" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All 3D Bas-Relief Plaques <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 4 — Standard Bronze Plaques */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 04</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Standard Bronze Plaques</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Classic engraved and cast bronze plaques for dedication, memorial, and institutional recognition.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Stadium Dedication Plaque", cta: "View Dedication Plaques", to: "/dedication-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Memorial Bronze Plaque", cta: "View Memorial Plaques", to: "/bronze-memorials" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Alumni Recognition Plaque", cta: "View Alumni Memorials", to: "/alumni-memorials" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/championship-bronze-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All Standard Bronze Plaques <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 5 — Busts */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 05</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Busts</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hall of Fame Bust", cta: "View Hall of Fame Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Athlete Portrait Bust", cta: "View Athlete Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", cta: "Request a Bust Quote", to: "/request-quote" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All Bronze Busts <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 6 — Statues */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 06</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Statues</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", cta: "View Football Statues", to: "/football" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Guard Statue", cta: "View Basketball Statues", to: "/basketball" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All Bronze Statues <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Row 7 — 3D Bronze Jerseys */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 07</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">3D Bronze Jerseys</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Dimensional bronze jersey plaques for retired number tributes and championship display programs.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Retired Jersey Plaque", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/3d-relief-jersey-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All 3D Bronze Jersey Plaques <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
         </div>
       </section>
 
