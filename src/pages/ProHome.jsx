@@ -248,6 +248,69 @@ export default function ProHome() {
         </div>
       </section>
 
+      {/* ── PRODUCT TYPE CTA ROW ── */}
+      <section className="py-12 bg-white border-b border-bronze/15">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-center text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold mb-8">Our Bronze Product Categories</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+            {[
+              {
+                title: "Photo Image Casting Bronze Plaques",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png",
+                to: "/photo-image-casting-plaques"
+              },
+              {
+                title: "3D Bas-Relief with Photo Image Casting",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png",
+                to: "/3d-bas-relief-plaques"
+              },
+              {
+                title: "3D Bas-Relief Plaques",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
+                to: "/3d-bas-relief-plaques"
+              },
+              {
+                title: "Standard Bronze Plaques",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png",
+                to: "/championship-bronze-plaques"
+              },
+              {
+                title: "Busts",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png",
+                to: "/bronze-athlete-busts"
+              },
+              {
+                title: "Statues",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png",
+                to: "/custom-bronze-athlete-statues"
+              },
+              {
+                title: "3D Bronze Jerseys",
+                img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png",
+                to: "/3d-relief-jersey-plaques"
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.06}>
+                <Link to={item.to} className="group flex flex-col items-center text-center gap-2">
+                  <div className="w-full aspect-square overflow-hidden rounded-sm border border-bronze/20 group-hover:border-bronze/60 transition-all duration-300 shadow-sm">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <p className="font-sans text-[10px] uppercase tracking-[0.08em] text-parchment/65 group-hover:text-bronze transition-colors duration-200 leading-tight px-1">
+                    {item.title}
+                  </p>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TrustBadges />
 
       {/* ══════════════════════════════════════════
