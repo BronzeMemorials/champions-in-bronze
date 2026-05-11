@@ -505,6 +505,205 @@ export default function ProHome() {
 
       <TrustBadges />
 
+      {/* ── SPORT CATEGORY ROWS ── */}
+      <section className="py-16 bg-secondary/20 border-b border-bronze/15">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-center text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold mb-2">By Sport</p>
+            <h2 className="font-serif text-4xl text-parchment text-center mb-16">Bronze Recognition by Sport</h2>
+          </FadeIn>
+          <div className="space-y-20">
+
+            {/* Football */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 01</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Football</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Hall of Fame plaques, championship recognition, and full-size statues for football programs at every level.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Hall of Fame Statue", cta: "View Football Statues", to: "/football" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Football Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Football Championship Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/football" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Football Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Basketball */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 02</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Basketball</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze statues, portrait busts, and Hall of Fame recognition for basketball programs.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Hall of Fame Statue", cta: "View Basketball Statues", to: "/basketball" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Basketball Relief Plaque", cta: "View Relief Plaques", to: "/3d-bas-relief-plaques" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Basketball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Basketball Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Baseball */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 03</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Baseball</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Bronze statues, plaques, and legacy displays for baseball stadiums, halls of fame, and collegiate programs.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Photo Image Plaque", cta: "View Photo Plaques", to: "/photo-image-casting-plaques" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Baseball Hall of Fame Plaque", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/baseball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Baseball Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Women's Basketball */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 04</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Women's Basketball</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Hall of Fame plaques, portrait busts, and custom bronze statues celebrating women's basketball excellence.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Women's Basketball Statue", cta: "View Basketball Statues", to: "/basketball" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Women's Hall of Fame Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Women's Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Women's Basketball Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Soccer */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 05</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Soccer</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze statues, Hall of Fame plaques, and donor recognition for soccer programs and facilities.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Soccer Relief Plaque", cta: "View Relief Plaques", to: "/3d-bas-relief-plaques" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Soccer Donor Recognition Wall", cta: "View Donor Walls", to: "/donor-recognition" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/soccer" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Soccer Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Hockey */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 06</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Hockey</h3>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Bronze statues, championship plaques, and Hall of Fame recognition for hockey arenas and programs.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Hockey Player Statue", cta: "View Hockey Statues", to: "/hockey" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Hockey Championship Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hockey Hall of Fame Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                ].map((item, i) => (
+                  <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link to="/hockey" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Hockey Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════════════════════════════════
                                    SECTION 1 — BRONZE PLAQUES (DOMINANT)
                                 ══════════════════════════════════════════ */}
