@@ -390,8 +390,8 @@ export default function ProHome() {
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", cta: "Request a Bust Quote", to: "/request-quote" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
-                    <img src={item.img} alt={item.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                     <p className="font-serif text-sm text-parchment">{item.label}</p>
@@ -421,8 +421,8 @@ export default function ProHome() {
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
-                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
-                    <img src={item.img} alt={item.label} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                     <p className="font-serif text-sm text-parchment">{item.label}</p>
