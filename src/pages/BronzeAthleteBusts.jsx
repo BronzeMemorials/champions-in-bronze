@@ -19,8 +19,8 @@ const faqs = [
 
 
 const formats = [
-{ title: "6\" Tabletop Bust", range: "From $8,000", desc: "Award presentations, ceremonial gifts, and personal recognition. Perfect for Hall of Fame inductee ceremonies." },
-{ title: "12\" Portrait Bust", range: "From $1,800", desc: "Standard recognition scale. Trophy room displays, office collections, and wall-mounted presentations." },
+{ title: "6\" Tabletop Bust", range: "From $9,990", desc: "Award presentations, ceremonial gifts, and personal recognition. Perfect for Hall of Fame inductee ceremonies." },
+{ title: "12\" Portrait Bust", range: "From $1,80", desc: "Standard recognition scale. Trophy room displays, office collections, and wall-mounted presentations." },
 { title: "18\" Display Bust", range: "From $3,500", desc: "Architectural display scale. Ideal for Hall of Fame corridors, reception lobbies, and permanent recognition walls." },
 { title: "24\"+ Bust", range: "Custom Quote", desc: "Monumental scale for major installations. Stadium lobbies, arena entrances, and landmark recognition environments." }];
 
