@@ -469,6 +469,37 @@ export default function ProHome() {
             </div>
           </FadeIn>
 
+          {/* Row 8 — Donor Recognition Walls */}
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 08</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Donor Recognition Walls</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze donor recognition systems for stadiums, universities, athletic facilities, and capital campaigns.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" },
+              ].map((item, i) => (
+                <div key={i} className="group flex flex-col">
+                  <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5">
+              <Link to="/donor-recognition" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                View All Donor Recognition Walls <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+
         </div>
       </section>
 
