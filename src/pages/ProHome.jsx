@@ -207,10 +207,10 @@ export default function ProHome() {
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">
               Commemorating Greatness In Bronze.
             </h1>
+            <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Hall of Fame plaques, Custom 3D relief photo plaques, donor recognition walls, personalized lifelike 3D busts & statues created from your photograph, & commemorative recognition for universities, stadiums, & professional athletic organizations.
+            </p>
             <p className="font-serif text-2xl md:text-3xl text-parchment/80 italic mt-4">
               — A Tribute to Legacy Cast in Bronze.
-            </p>
-            <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Hall of Fame plaques, Custom 3D relief photo plaques, donor recognition walls, personalized lifelike 3D busts & statues created from your photograph, & commemorative recognition for universities, stadiums, & professional athletic organizations.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-white px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
