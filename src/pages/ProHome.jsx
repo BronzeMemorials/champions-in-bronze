@@ -204,9 +204,12 @@ export default function ProHome() {
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">
               {current.label}
             </span>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl whitespace-pre-line">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">
               Commemorating Greatness In Bronze.
             </h1>
+            <p className="font-serif text-2xl md:text-3xl text-parchment/80 italic mt-4">
+              — A Tribute to Legacy Cast in Bronze.
+            </p>
             <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Hall of Fame plaques, Custom 3D relief photo plaques, donor recognition walls, personalized lifelike 3D busts & statues created from your photograph, & commemorative recognition for universities, stadiums, & professional athletic organizations– a tribute to legacy cast in bronze.
 
             </p>
