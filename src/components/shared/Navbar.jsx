@@ -86,7 +86,7 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-7">
-            <DropdownMenu label="Products" links={productLinks} />
+            <DropdownMenu label="Showcase" links={productLinks} />
             {navLinks.map((link) => (
               <Link
                 key={link.to}
