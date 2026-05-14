@@ -88,21 +88,21 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
             <Stars />
             <div className="min-h-[200px] flex items-center justify-center">
               <div key={current}>
-                <p className="font-serif text-xl md:text-2xl leading-relaxed text-parchment/90 italic">
+                <p className="font-serif text-xl md:text-2xl leading-relaxed text-white italic">
                   "{testimonials[current].quote}"
                 </p>
                 <div className="mt-8">
                   <p className="font-sans text-gold text-sm tracking-[0.2em] uppercase font-semibold">
-                    {testimonials[current].name}
-                  </p>
-                  <p className="font-sans text-parchment/40 text-sm mt-1">
-                    {testimonials[current].title}
-                  </p>
+                     {testimonials[current].name}
+                   </p>
+                   <p className="font-sans text-white text-sm mt-1">
+                     {testimonials[current].title}
+                   </p>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-center gap-6 mt-10">
-              <button onClick={prev} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-parchment/40">
+              <button onClick={prev} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-white">
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <div className="flex gap-2">
@@ -114,11 +114,11 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
                   />
                 ))}
               </div>
-              <button onClick={next} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-parchment/40">
+              <button onClick={next} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-white">
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-parchment/30 font-sans text-xs uppercase tracking-widest mt-6">Over 1,600 Five-Star Reviews</p>
+            <p className="text-white font-sans text-xs uppercase tracking-widest mt-6 opacity-60">Over 1,600 Five-Star Reviews</p>
           </div>
         </FadeIn>
       </div>

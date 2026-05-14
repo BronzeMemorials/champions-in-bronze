@@ -64,7 +64,7 @@ export default function Reviews() {
               ))}
             </div>
             <h1 className="font-serif text-5xl md:text-6xl text-white">Our Customers Say It Best</h1>
-            <p className="mt-4 text-white/60 text-lg font-sans">Over 1,600 unsolicited five-star reviews. Real people. Real projects. Real results.</p>
+            <p className="mt-4 text-white text-lg font-sans">Over 1,600 unsolicited five-star reviews. Real people. Real projects. Real results.</p>
             <div className="flex flex-wrap justify-center gap-8 mt-10">
               {["1,600+ Reviews", "5-Star Average", "50 Years in Business", "Made in the USA"].map((stat) => (
                 <div key={stat} className="text-center">
@@ -89,7 +89,7 @@ export default function Reviews() {
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <p className="font-sans text-xs font-semibold text-gray-900 uppercase tracking-wide">{review.name}</p>
                     {review.role && <p className="text-gray-400 text-xs mt-0.5">{review.role}</p>}
-                    {review.date && <p className="text-gray-300 text-xs mt-0.5">{review.date}</p>}
+                    {review.date && <p className="text-gray-600 text-xs mt-0.5">{review.date}</p>}
                   </div>
                 </div>
               </FadeIn>
@@ -104,10 +104,10 @@ export default function Reviews() {
           <FadeIn>
             <Quote className="w-10 h-10 text-yellow-500/40 mx-auto mb-6" />
             <h2 className="font-serif text-4xl text-white">Ready to Experience It Yourself?</h2>
-            <p className="text-white/60 mt-4 text-lg">Call us directly — we answer the phone.</p>
-            <a href="tel:7724184353" className="inline-flex items-center gap-3 mt-8 text-gray-900 px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold"
+            <p className="text-white mt-4 text-lg">Call us directly — we answer the phone.</p>
+            <a href="tel:7723090412" className="inline-flex items-center gap-3 mt-8 text-black px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold"
               style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
-              Call 772-418-4353
+              Call 772-309-0412
             </a>
           </FadeIn>
         </div>
