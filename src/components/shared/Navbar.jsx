@@ -28,7 +28,7 @@ function DropdownMenu({ label, links }) {
 
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button className="flex items-center gap-1 font-sans text-xs uppercase tracking-[0.08em] text-parchment/60 hover:text-parchment transition-colors duration-200 whitespace-nowrap">
+      <button className="flex items-center gap-1 font-sans text-xs font-bold uppercase tracking-[0.08em] text-parchment hover:text-bronze transition-colors duration-200 whitespace-nowrap">
         {label} <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={`font-sans text-xs uppercase tracking-[0.08em] whitespace-nowrap transition-colors duration-200 ${
-                  location.pathname === link.to ? "text-gold" : "text-parchment/55 hover:text-parchment"
+                  location.pathname === link.to ? "text-gold" : "text-parchment font-bold hover:text-bronze"
                 }`}
               >
                 {link.label}
