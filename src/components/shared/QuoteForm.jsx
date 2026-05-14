@@ -125,58 +125,58 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   ];
 
   return (
-    <section className="py-28 bg-gray-50" id="quote">
+    <section className="py-14 bg-gray-50" id="quote">
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <span className="text-yellow-600 font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
-            <h2 className="font-serif text-4xl md:text-5xl mt-3 text-black">{title}</h2>
-            {subtitle && <p className="mt-4 text-black text-lg">{subtitle}</p>}
+            <h2 className="font-serif text-3xl md:text-4xl mt-2 text-black">{title}</h2>
+            {subtitle && <p className="mt-2 text-black text-base">{subtitle}</p>}
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* LEFT — Form */}
           <FadeIn delay={0.2} className="h-full">
             {/* A/B Test Title Block */}
             {abVariant && (
-              <div className="mb-4 bg-[#1e3a5f] px-8 py-5 text-center">
-                <p className="font-serif text-2xl md:text-3xl text-white leading-tight">{abVariant}</p>
+              <div className="mb-3 bg-[#1e3a5f] px-6 py-3 text-center">
+                <p className="font-serif text-xl md:text-2xl text-white leading-tight">{abVariant}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-6 bg-white border-2 shadow-2xl p-8 md:p-10" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-4 bg-white border-2 shadow-2xl p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-12"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
                   placeholder="John Mitchell" />
               </div>
               <div>
                 <label className={labelClass}>Email *</label>
                 <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-12"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
                   placeholder="john@organization.com" />
               </div>
               <div>
                 <label className={labelClass}>Phone</label>
                 <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-12"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
                   placeholder="(555) 123-4567" />
               </div>
               <div>
                 <label className={labelClass}>Additional Notes <span className="normal-case text-gray-600 font-normal">(optional)</span></label>
                 <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 min-h-[100px]"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 min-h-[72px]"
                   placeholder="Any specific requirements, sport, size, or project details..." />
               </div>
 
               <div>
                 <label className={labelClass}>Reference Photos & Files <span className="normal-case text-gray-600 font-normal">(optional)</span></label>
                 <div onClick={() => fileRef.current?.click()}
-                  className="border-2 border-dashed border-gray-300 hover:border-yellow-400 transition-colors p-8 text-center cursor-pointer bg-gray-50">
-                  <Upload className="w-8 h-8 text-gray-500 mx-auto mb-3" />
+                  className="border-2 border-dashed border-gray-300 hover:border-yellow-400 transition-colors p-4 text-center cursor-pointer bg-gray-50">
+                  <Upload className="w-6 h-6 text-gray-500 mx-auto mb-2" />
                   <p className="text-black text-sm font-medium">Upload photos, reference images, or project briefs</p>
-                  <p className="text-gray-600 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
+                  <p className="text-gray-600 text-xs mt-0.5">PDF, JPG, PNG up to 25MB each</p>
                 </div>
                 <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
                 {files.length > 0 && (
@@ -192,7 +192,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               <Button type="submit" disabled={submitting}
-                className="w-full h-14 text-black font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
+                className="w-full h-11 text-black font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
                 {submitting
                   ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
                   : <><Send className="w-4 h-4 mr-2" /> Request Quote — Artwork Within The Hour</>
@@ -206,13 +206,13 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
 
           {/* RIGHT — Trust panel */}
           <FadeIn delay={0.35} className="h-full">
-            <div className="flex flex-col gap-6 h-full">
+            <div className="flex flex-col gap-4 h-full">
               {/* Phone CTA */}
-              <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-6 py-5 border-2 border-gray-200 group">
-                <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-14 h-14 object-contain flex-shrink-0" />
+              <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-5 py-4 border-2 border-gray-200 group">
+                <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-10 h-10 object-contain flex-shrink-0" />
                 <div>
                   <p className="text-black font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
-                  <p className="text-black font-serif text-2xl mt-0.5">772-309-0412</p>
+                  <p className="text-black font-serif text-xl mt-0.5">772-309-0412</p>
                   <p className="text-gray-600 font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
                 </div>
               </a>
@@ -221,15 +221,15 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <ReviewCarousel />
 
               {/* Why us bullets */}
-              <div className="bg-white border-2 border-gray-200 shadow-sm p-7 space-y-5 flex-1">
-                <p className="font-serif text-lg text-black border-b border-yellow-200 pb-4">Why Organizations Choose Us</p>
+              <div className="bg-white border-2 border-gray-200 shadow-sm p-5 space-y-3 flex-1">
+                <p className="font-serif text-base text-black border-b border-yellow-200 pb-3">Why Organizations Choose Us</p>
                 {whyUs.map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-sm bg-yellow-50 border border-yellow-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <item.icon className="w-4 h-4 text-yellow-600" />
+                  <div key={item.title} className="flex items-start gap-3">
+                    <div className="w-7 h-7 rounded-sm bg-yellow-50 border border-yellow-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <item.icon className="w-3.5 h-3.5 text-yellow-600" />
                     </div>
                     <div>
-                      <p className="font-sans text-sm font-bold text-black">{item.title}</p>
+                      <p className="font-sans text-xs font-bold text-black">{item.title}</p>
                       <p className="text-gray-700 text-xs mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
