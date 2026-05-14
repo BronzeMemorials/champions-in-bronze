@@ -15,16 +15,16 @@ module.exports = {
     extend: {
       colors: {
         bronze: {
-          DEFAULT: '#7A3B1E',
-          light: '#A66D55',
-          dark: '#5E321E',
+          DEFAULT: '#C9A84C',
+          light: '#DFC07A',
+          dark: '#A8872E',
         },
         gold: {
-          DEFAULT: '#B8860B',
-          shimmer: '#DAA520',
+          DEFAULT: '#C9A84C',
+          shimmer: '#F0C040',
         },
-        obsidian: '#F7F3EE',
-        parchment: '#2C1A0E',
+        obsidian: '#F8F9FA',
+        parchment: '#111827',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

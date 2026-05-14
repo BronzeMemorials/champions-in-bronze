@@ -34,16 +34,16 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     setSubmitted(true);
   };
 
-  const labelClass = "text-xs text-parchment/50 uppercase tracking-wider font-sans mb-2 block";
+  const labelClass = "text-xs text-gray-500 uppercase tracking-wider font-sans mb-2 block";
 
   if (submitted) {
     return (
-      <section className="py-28 bg-secondary/30" id="quote">
+      <section className="py-28 bg-gray-50" id="quote">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
-            <CheckCircle className="w-16 h-16 text-bronze mx-auto mb-6" />
-            <h2 className="font-serif text-4xl text-parchment">Recognition Project Received</h2>
-            <p className="text-parchment/60 mt-4 text-lg leading-relaxed">
+            <CheckCircle className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
+            <h2 className="font-serif text-4xl text-gray-900">Recognition Project Received</h2>
+            <p className="text-gray-500 mt-4 text-lg leading-relaxed">
               Our team will review your project details and deliver an artwork proof within the hour. Institutional grade. Delivered on time.
             </p>
           </FadeIn>
@@ -53,13 +53,13 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   }
 
   return (
-    <section className="py-28 bg-secondary/30" id="quote">
+    <section className="py-28 bg-gray-50" id="quote">
       <div className="max-w-2xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
-            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
-            <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">{title}</h2>
-            {subtitle && <p className="mt-4 text-parchment/60 text-lg">{subtitle}</p>}
+            <span className="text-yellow-600 font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
+            <h2 className="font-serif text-4xl md:text-5xl mt-3 text-gray-900">{title}</h2>
+            {subtitle && <p className="mt-4 text-gray-500 text-lg">{subtitle}</p>}
           </div>
         </FadeIn>
 
@@ -68,26 +68,26 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Full Name *</label>
               <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
+                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-yellow-500 h-12"
                 placeholder="John Mitchell" />
             </div>
             <div>
               <label className={labelClass}>Email *</label>
               <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
+                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-yellow-500 h-12"
                 placeholder="john@organization.com" />
             </div>
             <div>
               <label className={labelClass}>Phone</label>
               <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze h-12"
+                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-yellow-500 h-12"
                 placeholder="(555) 123-4567" />
             </div>
 
             <div>
               <label className={labelClass}>Additional Notes <span className="normal-case text-parchment/30">(optional)</span></label>
               <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                className="bg-white border-bronze/30 text-parchment placeholder:text-parchment/30 focus:border-bronze min-h-[100px]"
+                className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-yellow-500 min-h-[100px]"
                 placeholder="Any specific requirements, sport, size, or project details..." />
             </div>
 
@@ -95,18 +95,18 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div>
               <label className={labelClass}>Reference Photos & Files <span className="normal-case text-parchment/30">(optional)</span></label>
               <div onClick={() => fileRef.current?.click()}
-                className="border-2 border-dashed border-bronze/25 hover:border-bronze/60 transition-colors p-8 text-center cursor-pointer bg-secondary/20">
-                <Upload className="w-8 h-8 text-bronze/40 mx-auto mb-3" />
-                <p className="text-parchment/40 text-sm">Upload photos, reference images, or project briefs</p>
-                <p className="text-parchment/20 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
+                className="border-2 border-dashed border-gray-300 hover:border-yellow-400 transition-colors p-8 text-center cursor-pointer bg-gray-50">
+                <Upload className="w-8 h-8 text-gray-400 mx-auto mb-3" />
+                <p className="text-gray-400 text-sm">Upload photos, reference images, or project briefs</p>
+                <p className="text-gray-300 text-xs mt-1">PDF, JPG, PNG up to 25MB each</p>
               </div>
               <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
               {files.length > 0 && (
                 <div className="mt-4 space-y-2">
                   {files.map((file, i) => (
-                    <div key={i} className="flex items-center justify-between bg-obsidian border border-bronze/20 px-4 py-2">
-                      <span className="text-parchment/60 text-sm truncate">{file.name}</span>
-                      <button type="button" onClick={() => removeFile(i)} className="text-parchment/30 hover:text-destructive text-xs ml-4">Remove</button>
+                    <div key={i} className="flex items-center justify-between bg-gray-100 border border-gray-200 px-4 py-2">
+                      <span className="text-gray-600 text-sm truncate">{file.name}</span>
+                      <button type="button" onClick={() => removeFile(i)} className="text-gray-400 hover:text-red-500 text-xs ml-4">Remove</button>
                     </div>
                   ))}
                 </div>
@@ -114,13 +114,13 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             </div>
 
             <Button type="submit" disabled={submitting}
-              className="w-full h-14 bg-bronze hover:bg-gold text-white font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300">
-              {submitting
+              className="w-full h-14 text-gray-900 font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
+                {submitting
                 ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
                 : <><Send className="w-4 h-4 mr-2" /> Request Quote — Artwork Within The Hour</>
               }
             </Button>
-            <p className="text-center text-parchment/25 text-xs font-sans">
+            <p className="text-center text-gray-400 text-xs font-sans">
               Museum-quality artwork proof delivered within the hour. No commitment required.
             </p>
           </form>
