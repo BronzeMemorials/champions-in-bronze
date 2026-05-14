@@ -209,9 +209,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             <div className="flex flex-col gap-6 h-full">
               {/* Phone CTA */}
               <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-6 py-5 border-2 border-gray-200 group">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{background: "linear-gradient(135deg, #B8860B 0%, #FFD700 50%, #B8860B 100%)"}}>
-                  <Phone className="w-5 h-5 text-black" />
-                </div>
+                <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-14 h-14 object-contain flex-shrink-0" />
                 <div>
                   <p className="text-black font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
                   <p className="text-black font-serif text-2xl mt-0.5">772-309-0412</p>
