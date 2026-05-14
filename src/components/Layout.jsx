@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
+import FiftyYearsBanner from "./shared/FiftyYearsBanner";
 import StickyQuoteButton from "./shared/StickyQuoteButton";
 
 export default function Layout() {
@@ -10,6 +11,7 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
+      <FiftyYearsBanner />
       <Footer />
       <StickyQuoteButton />
     </div>
