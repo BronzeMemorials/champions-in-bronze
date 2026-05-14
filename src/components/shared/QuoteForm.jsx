@@ -16,6 +16,8 @@ const testimonials = [
   { quote: "We are very pleased with the finished plaque. Exceptionally quick responses during the proofing process. We met our 35th anniversary deadline. Would absolutely come back.", name: "Monique Monroe", role: "Purchasing Manager" },
   { quote: "In a world where there can be so much difficulty, you made this transaction so smooth. It is gorgeous!! Perfect as a matter of fact! Thank you, Thank you!", name: "Anne Fox" },
   { quote: "Very much ahead of schedule and above our expectations on quality. Thank you!", name: "Brian Yi", role: "Director of Investments" },
+  { quote: "Bronze Memorials has saved my job and saved our town from a major embarrassment. Jim, the President himself, assured us he could turn it around in time. This is a company that knows the meaning of rush order!", name: "Jim", role: "Town Administrator" },
+  { quote: "Bronzememorials.net is a lifesaver! I am very appreciative and would recommend your company to anyone in a similar situation. The plaque arrived quickly and looks outstanding.", name: "Jim", role: "" },
 ];
 
 function ReviewCarousel() {
@@ -28,30 +30,35 @@ function ReviewCarousel() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
   const t = testimonials[current];
   return (
-    <div className="bg-gray-900 p-6 border border-gray-700">
+    <div className="bg-white border-2 border-gray-200 p-6">
       <div className="flex gap-1 mb-3">
-        {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 text-yellow-400 fill-current" />)}
+        {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-current" />)}
       </div>
-      <Quote className="w-6 h-6 text-yellow-400/40 mb-2" />
-      <p className="text-white font-serif text-base leading-relaxed min-h-[80px]">"{t.quote}"</p>
+      <Quote className="w-6 h-6 text-yellow-500/40 mb-2" />
+      <p className="text-black font-serif text-base leading-relaxed min-h-[80px]">"{t.quote}"</p>
       <div className="mt-4">
-        <p className="text-yellow-400 font-sans text-xs uppercase tracking-widest font-semibold">{t.name}</p>
-        {t.role && <p className="text-white/60 font-sans text-xs mt-0.5">{t.role}</p>}
+        <p className="text-yellow-700 font-sans text-xs uppercase tracking-widest font-semibold">{t.name}</p>
+        {t.role && <p className="text-gray-600 font-sans text-xs mt-0.5">{t.role}</p>}
       </div>
       <div className="flex items-center gap-3 mt-4">
-        <button onClick={prev} className="w-7 h-7 border border-gray-600 flex items-center justify-center hover:border-yellow-400 hover:text-yellow-400 text-white/60 transition-colors">
+        <button onClick={prev} className="w-7 h-7 border border-gray-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-gray-500 transition-colors">
           <ChevronLeft className="w-3.5 h-3.5" />
         </button>
         <div className="flex gap-1.5 flex-1">
           {testimonials.map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "bg-yellow-400 w-5" : "bg-white/20 w-1.5"}`} />
+            <button key={i} onClick={() => setCurrent(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "bg-yellow-500 w-5" : "bg-gray-300 w-1.5"}`} />
           ))}
         </div>
-        <button onClick={next} className="w-7 h-7 border border-gray-600 flex items-center justify-center hover:border-yellow-400 hover:text-yellow-400 text-white/60 transition-colors">
+        <button onClick={next} className="w-7 h-7 border border-gray-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-gray-500 transition-colors">
           <ChevronRight className="w-3.5 h-3.5" />
         </button>
       </div>
-      <p className="text-white/40 font-sans text-xs uppercase tracking-widest mt-3">1,600+ Five-Star Reviews</p>
+      <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+        <p className="text-gray-500 font-sans text-xs uppercase tracking-widest">1,600+ Five-Star Reviews</p>
+        <Link to="/reviews" className="text-yellow-700 hover:text-yellow-600 font-sans text-xs uppercase tracking-widest font-semibold transition-colors">
+          Read All →
+        </Link>
+      </div>
     </div>
   );
 }
@@ -183,29 +190,15 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           {/* RIGHT — Trust panel */}
           <FadeIn delay={0.35} className="h-full">
             <div className="flex flex-col gap-6 h-full">
-              {/* Product photo */}
-              <div className="relative overflow-hidden rounded-sm shadow-lg">
-                <img
-                  src="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
-                  alt="Hall of Fame Bronze Plaque"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="font-serif text-white text-xl leading-tight">Museum-Quality Bronze.<br />Delivered on Time.</p>
-                  <p className="text-white font-sans text-xs uppercase tracking-widest mt-1 opacity-80">Hall of Fame — Donor — Championship</p>
-                </div>
-              </div>
-
               {/* Phone CTA */}
-              <a href="tel:7723090412" className="flex items-center gap-4 bg-gray-900 hover:bg-gray-800 transition-colors px-6 py-5 border border-gray-700 group">
+              <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-6 py-5 border-2 border-gray-200 group">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{background: "linear-gradient(135deg, #B8860B 0%, #FFD700 50%, #B8860B 100%)"}}>
                   <Phone className="w-5 h-5 text-black" />
                 </div>
                 <div>
-                  <p className="text-white font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
-                  <p className="text-white font-serif text-2xl mt-0.5">772-309-0412</p>
-                  <p className="text-white font-sans text-xs mt-0.5 opacity-70">Call for a direct answer — right now</p>
+                  <p className="text-black font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
+                  <p className="text-black font-serif text-2xl mt-0.5">772-309-0412</p>
+                  <p className="text-gray-600 font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
                 </div>
               </a>
 
@@ -228,10 +221,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 ))}
               </div>
 
-              {/* Secondary CTA */}
-              <Link to="/reviews" className="inline-flex items-center justify-center gap-2 border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black text-black px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] transition-all duration-300 text-center font-semibold">
-                Read Our 1,600+ Five-Star Reviews →
-              </Link>
+
             </div>
           </FadeIn>
         </div>
