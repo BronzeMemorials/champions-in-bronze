@@ -107,7 +107,8 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/request-concept-design"
-              className="hidden lg:inline-flex bg-bronze hover:bg-gold text-parchment px-5 py-2.5 font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
+              className="hidden lg:inline-flex text-parchment px-5 py-2.5 font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
+              style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)", boxShadow: "0 2px 8px rgba(184,134,11,0.5)"}}
             >
               Request Design
             </Link>
