@@ -32,11 +32,11 @@ export default function FiftyYearsBanner() {
                 Five decades of crafting legacy — honoring athletes, institutions, donors, and champions across America. Every plaque, bust, and statue a testament to enduring quality and timeless recognition.
               </p>
               <div className="flex flex-wrap justify-center gap-6 mt-6 text-white/60 font-sans text-xs uppercase tracking-[0.2em]">
-                <span>500+ Institutional Installations</span>
+                <span>Over 50,000 Satisfied Customers</span>
                 <span className="text-gold/50">·</span>
                 <span>All 50 States</span>
                 <span className="text-gold/50">·</span>
-                <span>American Foundry</span>
+                <span>Made in the USA</span>
               </div>
             </div>
 
