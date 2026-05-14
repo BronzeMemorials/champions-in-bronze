@@ -64,7 +64,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white border border-bronze/20 shadow-sm p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white border border-bronze/40 shadow-2xl p-8 md:p-12" style={{boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
             <div>
               <label className={labelClass}>Full Name *</label>
               <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
