@@ -23,9 +23,9 @@ export default function FiftyYearsBanner() {
 
             {/* Center — main text */}
             <div className="text-center flex-1">
-              <p className="font-sans text-xs uppercase tracking-[0.4em] mb-2" style={{background: "linear-gradient(90deg, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", textShadow: "none"}}>Est. 1974</p>
+              <p className="font-sans text-xs uppercase tracking-[0.4em] mb-2 font-bold" style={{color: "#FFD700", textShadow: "0 0 8px #B8860B, 0 1px 2px rgba(0,0,0,0.8)"}}>Est. 1974</p>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>
-                Celebrating <span style={{background: "linear-gradient(90deg, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>50 Years</span><br className="hidden md:block" /> of Bronze Excellence
+                Celebrating <span style={{color: "#FFD700", textShadow: "0 0 10px #B8860B, 0 0 20px #DAA520, 0 1px 2px rgba(0,0,0,0.8)"}}>50 Years</span><br className="hidden md:block" /> of Bronze Excellence
               </h2>
               <p className="mt-3 text-white font-sans text-sm md:text-base leading-relaxed max-w-2xl mx-auto" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>
                 Five decades of crafting legacy — honoring athletes, institutions, donors, and champions across America. Every plaque, bust, and statue a testament to enduring quality and timeless recognition.
