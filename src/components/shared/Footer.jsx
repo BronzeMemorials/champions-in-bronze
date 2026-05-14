@@ -11,6 +11,7 @@ export default function Footer() {
             <h3 className="font-serif text-2xl text-parchment">
               Champions<br /><span className="text-bronze">in Bronze</span>
             </h3>
+            <p className="font-sans text-xs text-parchment/40 tracking-[0.15em] uppercase mt-1">Powered By Bronze Memorials</p>
             <p className="text-parchment/40 text-sm mt-4 leading-relaxed max-w-xs">
               America's premier institutional bronze recognition manufacturer. Hall of Fame plaques, photo image-cast plaques, donor recognition walls, championship systems, bronze busts, and full-size statues for stadiums, universities, and athletic organizations.
             </p>
@@ -84,7 +85,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-bronze/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-parchment/30 text-xs font-sans">
-            © {new Date().getFullYear()} Champions in Bronze. All rights reserved. Made in USA.
+            © 2026 Bronze Memorials Inc. / Champions in Bronze. All rights reserved. Made in USA.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/portfolio" className="text-parchment/30 hover:text-parchment/60 text-xs transition-colors">Portfolio</Link>

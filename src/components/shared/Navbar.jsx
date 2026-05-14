@@ -79,9 +79,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <span className="font-serif text-xl text-parchment tracking-wide">
-              Champions <span className="text-bronze">in Bronze</span>
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="font-serif text-xl text-parchment tracking-wide">
+                Champions <span className="text-bronze">in Bronze</span>
+              </span>
+              <span className="font-sans text-[10px] text-parchment/40 tracking-[0.15em] uppercase mt-0.5">Powered By Bronze Memorials</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
