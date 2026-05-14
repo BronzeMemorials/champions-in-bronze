@@ -1,0 +1,38 @@
+{
+  "name": "ABTestVariant",
+  "type": "object",
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "description": "Identifier for the test (e.g. 'quote_form_title')"
+    },
+    "phrase": {
+      "type": "string",
+      "description": "The exact phrase/variant being tested"
+    },
+    "impressions": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times this variant was shown"
+    },
+    "conversions": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of quote form submissions with this variant"
+    },
+    "clicks": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times user clicked/interacted with the form under this variant"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this variant is still being tested (false = retired/filtered out)"
+    }
+  },
+  "required": [
+    "test_id",
+    "phrase"
+  ]
+}

@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Upload, Send, CheckCircle, Loader2, Phone, Shield, Award, Clock, Star, Users, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import FadeIn from "./FadeIn";
 import { Link } from "react-router-dom";
+import { useABTest } from "@/hooks/useABTest";
 
 const testimonials = [
   { quote: "IT IS HARD TO FIND GREAT CUSTOMER SERVICE THESE DAYS AND YOUR COMPANY HAS IT. From start to finish things have been painless. Our order is on its way before the due date.", name: "Susan Martel" },
@@ -68,11 +69,20 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   const [files, setFiles] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [clickTracked, setClickTracked] = useState(false);
   const fileRef = useRef(null);
+  const { variant: abVariant, trackConversion, trackClick } = useABTest();
 
   const handleChange = (field, value) => setForm((prev) => ({ ...prev, [field]: value }));
   const handleFiles = (e) => setFiles((prev) => [...prev, ...Array.from(e.target.files)]);
   const removeFile = (idx) => setFiles((prev) => prev.filter((_, i) => i !== idx));
+
+  const handleFormClick = () => {
+    if (!clickTracked) {
+      setClickTracked(true);
+      trackClick();
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,6 +93,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
       file_urls.push(result.file_url);
     }
     await base44.entities.QuoteRequest.create({ ...form, file_urls, source_domain: source });
+    await trackConversion();
     setSubmitting(false);
     setSubmitted(true);
   };
@@ -127,7 +138,13 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* LEFT — Form */}
           <FadeIn delay={0.2} className="h-full">
-            <form onSubmit={handleSubmit} className="h-full space-y-6 bg-white border-2 shadow-2xl p-8 md:p-10" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+            {/* A/B Test Title Block */}
+            {abVariant && (
+              <div className="mb-4 bg-[#1e3a5f] px-8 py-5 text-center">
+                <p className="font-serif text-2xl md:text-3xl text-white leading-tight">{abVariant}</p>
+              </div>
+            )}
+            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-6 bg-white border-2 shadow-2xl p-8 md:p-10" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}

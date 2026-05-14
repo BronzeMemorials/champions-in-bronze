@@ -66,6 +66,7 @@ import CommemorateGreatness from './pages/CommemorateGreatness';
 import HowItWorks from './pages/HowItWorks';
 import ReliefModelAdmin from './pages/ReliefModelAdmin';
 import Reviews from './pages/Reviews';
+import ABTestDashboard from './pages/ABTestDashboard';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -155,6 +156,7 @@ const AuthenticatedApp = () => {
         <Route path="/materials-finishes" element={<MaterialsFinishes />} />
         <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
