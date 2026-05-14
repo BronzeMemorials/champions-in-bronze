@@ -1,6 +1,8 @@
 import FadeIn from "./FadeIn";
 
 export default function SocialProofBar({ logos, caption }) {
+  const safeLogos = Array.isArray(logos) ? logos : [];
+  if (!safeLogos.length) return null;
   return (
     <section className="py-16 border-y border-bronze/10 bg-obsidian/80">
       <div className="max-w-7xl mx-auto px-6">
@@ -9,7 +11,7 @@ export default function SocialProofBar({ logos, caption }) {
             {caption}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
-            {logos.map((logo) => (
+            {safeLogos.map((logo) => (
               <div
                 key={logo}
                 className="text-parchment/25 hover:text-gold/60 transition-colors duration-500"

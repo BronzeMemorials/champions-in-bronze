@@ -1,0 +1,16 @@
+{
+  "name": "Champions in Bronze",
+  "short_name": "Champions in Bronze",
+  "description": "America's premier sports bronze foundry — custom plaques, statues, and recognition monuments.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#C9A84C",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://base44.com/logo_v2.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
