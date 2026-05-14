@@ -65,6 +65,7 @@ import RequestConceptDesign from './pages/RequestConceptDesign';
 import CommemorateGreatness from './pages/CommemorateGreatness';
 import HowItWorks from './pages/HowItWorks';
 import ReliefModelAdmin from './pages/ReliefModelAdmin';
+import Reviews from './pages/Reviews';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -153,6 +154,7 @@ const AuthenticatedApp = () => {
         <Route path="/photo-image-casting-plaques" element={<PhotoImageCast />} />
         <Route path="/materials-finishes" element={<MaterialsFinishes />} />
         <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
+        <Route path="/reviews" element={<Reviews />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

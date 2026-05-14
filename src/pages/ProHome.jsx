@@ -153,7 +153,7 @@ const footballPositions = [
 const faqs = [
 { question: "What types of bronze plaques do you produce?", answer: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
 { question: "How does your photo image casting process work?", answer: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
-{ question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within 48 hours. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
+{ question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
 { question: "Do you handle complete Hall of Fame installations?", answer: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
 { question: "What is the investment range for a Hall of Fame plaque program?", answer: "Individual plaques start from $895 for standard portrait formats. Hall of Fame series programs typically range from $15,000 to $150,000+ depending on number of inductees, formats, and installation complexity. Donor wall systems are quoted by scope." },
 { question: "Bronze vs. aluminum — which is right for my project?", answer: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." }];
@@ -830,7 +830,7 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-            { value: "48hrs", label: "Artwork Proof Delivery" },
+            { value: "~1hr", label: "Artwork Proof Delivery" },
             { value: "200yr", label: "Outdoor Durability Rating" },
             { value: "100%", label: "Photo Likeness Accuracy" },
             { value: "Made\nUSA", label: "American Foundry" }].
@@ -1036,7 +1036,7 @@ export default function ProHome() {
       <Suspense fallback={<div className="h-40" />}>
         <QuoteForm
           title="Request Your Recognition Project Quote"
-          subtitle="Tell us your project type. We deliver a digital proof and pricing within 48 hours."
+          subtitle="Tell us your project type. We deliver a digital proof and pricing within the hour."
           source="pro" />
       </Suspense>
 

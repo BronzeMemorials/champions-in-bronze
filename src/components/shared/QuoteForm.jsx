@@ -54,7 +54,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   }
 
   const whyUs = [
-    { icon: Clock, title: "Artwork Proof Within 48 Hours", desc: "Digital proof of your custom design delivered fast — no commitment required." },
+    { icon: Clock, title: "Artwork Proof Within The Hour", desc: "Digital proof of your custom design delivered within the hour — no commitment required." },
     { icon: Award, title: "Museum-Quality Craftsmanship", desc: "Institutional-grade bronze manufactured to last 100+ years outdoors." },
     { icon: Shield, title: "Exact Photo Likeness", desc: "Proprietary Photo ImageCasting process — your real photos cast permanently in bronze." },
     { icon: Users, title: "500+ Institutional Installations", desc: "Trusted by universities, stadiums, and Hall of Fame programs nationwide." },
@@ -72,10 +72,10 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* LEFT — Form */}
-          <FadeIn delay={0.2}>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white border border-bronze/40 shadow-2xl p-8 md:p-10" style={{boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+          <FadeIn delay={0.2} className="h-full">
+            <form onSubmit={handleSubmit} className="h-full space-y-6 bg-white border-2 border-navy-800 shadow-2xl p-8 md:p-10" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
@@ -136,8 +136,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </FadeIn>
 
           {/* RIGHT — Trust panel */}
-          <FadeIn delay={0.35}>
-            <div className="flex flex-col gap-8">
+          <FadeIn delay={0.35} className="h-full">
+            <div className="flex flex-col gap-6 h-full">
               {/* Product photo */}
               <div className="relative overflow-hidden rounded-sm shadow-lg">
                 <img
@@ -153,19 +153,19 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               {/* Phone CTA */}
-              <a href="tel:18005551234" className="flex items-center gap-4 bg-gray-900 hover:bg-gray-800 transition-colors px-6 py-5 rounded-sm group">
+              <a href="tel:7724184353" className="flex items-center gap-4 bg-gray-900 hover:bg-gray-800 transition-colors px-6 py-5 border border-gray-700 group">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{background: "linear-gradient(135deg, #B8860B 0%, #FFD700 50%, #B8860B 100%)"}}>
                   <Phone className="w-5 h-5 text-gray-900" />
                 </div>
                 <div>
-                  <p className="text-white/60 font-sans text-xs uppercase tracking-widest">Speak Directly With a Specialist</p>
-                  <p className="text-white font-serif text-2xl mt-0.5">1-800-555-1234</p>
-                  <p className="text-white/50 font-sans text-xs mt-0.5">Mon–Fri 8am–6pm CST</p>
+                  <p className="text-white/60 font-sans text-xs uppercase tracking-widest">We Answer The Phone</p>
+                  <p className="text-white font-serif text-2xl mt-0.5">772-418-4353</p>
+                  <p className="text-white/50 font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
                 </div>
               </a>
 
               {/* Why us bullets */}
-              <div className="bg-white border border-bronze/20 shadow-sm p-7 space-y-5">
+              <div className="bg-white border-2 border-gray-200 shadow-sm p-7 space-y-5 flex-1">
                 <p className="font-serif text-lg text-gray-900 border-b border-bronze/15 pb-4">Why Organizations Choose Us</p>
                 {whyUs.map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
@@ -181,8 +181,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               {/* Secondary CTA */}
-              <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 border border-bronze/40 hover:border-bronze text-gray-700 hover:text-gray-900 px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] transition-all duration-300 text-center">
-                View Our Portfolio of Completed Projects →
+              <Link to="/reviews" className="inline-flex items-center justify-center gap-2 border-2 border-bronze/40 hover:border-bronze text-gray-700 hover:text-gray-900 px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] transition-all duration-300 text-center">
+                Read Our 1,600+ Five-Star Reviews →
               </Link>
             </div>
           </FadeIn>

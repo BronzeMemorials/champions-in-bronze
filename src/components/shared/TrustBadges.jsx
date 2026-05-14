@@ -6,7 +6,7 @@ const badges = [
   { icon: Shield, label: "100+ Year Durability", sub: "Outdoor Rated" },
   { icon: Award, label: "Museum Quality", sub: "Institutional Grade" },
   { icon: Camera, label: "Photo-to-Bronze", sub: "Exact Likeness" },
-  { icon: Zap, label: "48-Hour Proofs", sub: "Artwork Delivered Fast" },
+  { icon: Zap, label: "Artwork Within The Hour", sub: "Proofs Delivered Fast" },
   { icon: Star, label: "Plaque Specialists", sub: "Hall of Fame Grade" },
 ];
 
