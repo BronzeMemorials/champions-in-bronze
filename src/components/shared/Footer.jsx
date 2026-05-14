@@ -16,15 +16,15 @@ export default function Footer() {
               America's premier institutional bronze recognition manufacturer. Hall of Fame plaques, photo image-cast plaques, donor recognition walls, championship systems, bronze busts, and full-size statues for stadiums, universities, and athletic organizations.
             </p>
             <div className="mt-6 space-y-3">
-              <a href="tel:+15551234567" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
-                <Phone className="w-4 h-4" /> (555) 123-4567
-              </a>
-              <a href="mailto:studio@championsinbronze.com" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
-                <Mail className="w-4 h-4" /> studio@championsinbronze.com
-              </a>
-              <div className="flex items-center gap-3 text-parchment/50 text-sm">
-                <MapPin className="w-4 h-4 flex-shrink-0" /> American Foundry, USA
-              </div>
+              <a href="tel:7724184353" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
+                 <Phone className="w-4 h-4" /> 772-418-4353
+               </a>
+               <a href="mailto:info@championsinbronze.com" className="flex items-center gap-3 text-parchment/50 hover:text-gold transition-colors text-sm">
+                 <Mail className="w-4 h-4" /> info@championsinbronze.com
+               </a>
+               <div className="flex items-center gap-3 text-parchment/50 text-sm">
+                 <MapPin className="w-4 h-4 flex-shrink-0" /> 1775 SW Gatlin Blvd Ste 203, Port St Lucie, FL 34953
+               </div>
             </div>
           </div>
 
