@@ -3,13 +3,12 @@ import FadeIn from "./FadeIn";
 
 export default function FiftyYearsBanner() {
   return (
-    <section className="relative py-16 overflow-hidden bg-bronze">
+    <section className="relative py-8 overflow-hidden bg-bronze/90">
       {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-10" style={{
+      <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: "repeating-linear-gradient(45deg, #DAA520 0, #DAA520 1px, transparent 0, transparent 50%)",
         backgroundSize: "20px 20px"
       }} />
-      <div className="absolute inset-0 bg-gradient-to-r from-bronze-dark/60 via-transparent to-bronze-dark/60" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <FadeIn>
@@ -24,14 +23,14 @@ export default function FiftyYearsBanner() {
 
             {/* Center — main text */}
             <div className="text-center flex-1">
-              <p className="font-sans text-xs uppercase tracking-[0.4em] text-gold/80 mb-2">Est. 1974</p>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+              <p className="font-sans text-xs uppercase tracking-[0.4em] text-gold mb-2" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>Est. 1974</p>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>
                 Celebrating <span className="text-gold">50 Years</span><br className="hidden md:block" /> of Bronze Excellence
               </h2>
-              <p className="mt-4 text-white/70 font-sans text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-3 text-white font-sans text-sm md:text-base leading-relaxed max-w-2xl mx-auto" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>
                 Five decades of crafting legacy — honoring athletes, institutions, donors, and champions across America. Every plaque, bust, and statue a testament to enduring quality and timeless recognition.
               </p>
-              <div className="flex flex-wrap justify-center gap-6 mt-6 text-white/60 font-sans text-xs uppercase tracking-[0.2em]">
+              <div className="flex flex-wrap justify-center gap-6 mt-4 text-white font-sans text-xs uppercase tracking-[0.2em]" style={{textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"}}>
                 <span>Over 50,000 Satisfied Customers</span>
                 <span className="text-gold/50">·</span>
                 <span>All 50 States</span>
