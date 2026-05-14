@@ -125,8 +125,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   ];
 
   return (
-    <section className="py-14 bg-gray-50" id="quote">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-10 md:py-14 bg-gray-50" id="quote">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <FadeIn>
           <div className="text-center mb-8">
             <span className="text-yellow-600 font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
@@ -135,7 +135,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           {/* LEFT — Form */}
           <FadeIn delay={0.2} className="h-full">
             {/* A/B Test Title Block */}
@@ -144,7 +144,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <p className="font-serif text-xl md:text-2xl text-white leading-tight">{abVariant}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-4 bg-white border-2 shadow-2xl p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-3 bg-white border-2 shadow-2xl p-4 sm:p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
