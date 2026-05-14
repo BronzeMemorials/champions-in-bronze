@@ -35,6 +35,8 @@ export default function RetiredJerseyDisplays() {
       />
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your retired jersey display — we'll deliver a digital proof within the hour." source="edu" />
+
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -64,6 +66,7 @@ export default function RetiredJerseyDisplays() {
       </section>
 
       <RelatedProducts products={relatedProducts} />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="edu" />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission a Jersey Display" subtitle="Send us the jersey details and installation photos. Designs in 48 hours." source="edu" />
     </div>

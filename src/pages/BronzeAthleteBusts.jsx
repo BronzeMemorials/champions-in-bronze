@@ -47,6 +47,8 @@ export default function BronzeAthleteBusts() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your bust project — we'll deliver a digital proof within the hour." source="pro" />
+
       <section className="py-28 border-t border-bronze/10 rounded-none">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -94,6 +96,8 @@ export default function BronzeAthleteBusts() {
           </FadeIn>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <Suspense fallback={<div className="h-40" />}>
         <FAQSection faqs={faqs} />

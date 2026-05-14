@@ -38,6 +38,8 @@ export default function ChampionshipBronzePlaques() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your championship plaque — we'll deliver a digital proof within the hour." source="pro" />
+
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -89,6 +91,7 @@ export default function ChampionshipBronzePlaques() {
 
       <RelatedProducts products={relatedProducts} />
       <TestimonialCarousel />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission Your Plaque" subtitle="Share your championship details. Proofs delivered in 48 hours." source="pro" />
     </div>

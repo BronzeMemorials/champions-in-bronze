@@ -32,6 +32,8 @@ export default function DedicationPlaques() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -62,6 +64,7 @@ export default function DedicationPlaques() {
         </div>
       </section>
 
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
       <FAQSection faqs={faqs} title="Dedication Plaque FAQ" />
       <QuoteForm title="Start Your Dedication Plaque" subtitle="Tell us about the occasion and honoree. Artwork proof within 48 hours." source="pro" />
     </div>

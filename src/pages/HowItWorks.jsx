@@ -67,6 +67,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       <section className="py-28">
         <div className="max-w-5xl mx-auto px-6">
           <div className="space-y-20">
@@ -95,6 +97,8 @@ export default function HowItWorks() {
           </div>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <section className="py-16 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-6">

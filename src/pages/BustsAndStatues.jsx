@@ -47,6 +47,8 @@ export default function BustsAndStatues() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Photo Accuracy Feature */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
@@ -152,6 +154,8 @@ export default function BustsAndStatues() {
           </div>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <Suspense fallback={<div className="h-40" />}>
         <FAQSection faqs={faqs} />

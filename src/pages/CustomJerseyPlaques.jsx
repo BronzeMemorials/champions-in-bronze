@@ -40,6 +40,8 @@ export default function CustomJerseyPlaques() {
       />
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your jersey plaque — we'll deliver a digital proof within the hour." source="shop" />
+
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -72,6 +74,7 @@ export default function CustomJerseyPlaques() {
       </section>
 
       <RelatedProducts products={relatedProducts} />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="shop" />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Order Your Jersey Plaque" subtitle="Tell us about the jersey you want immortalized." source="shop" />
     </div>

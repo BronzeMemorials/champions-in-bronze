@@ -95,6 +95,8 @@ export default function CollegiateHome() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your collegiate program — we'll deliver a digital proof within the hour." source="edu" />
+
       {/* Products Grid */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
@@ -187,6 +189,7 @@ export default function CollegiateHome() {
       </section>
 
       <ProcessTimeline />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="edu" />
       <TestimonialCarousel testimonials={collegiateTestimonials} />
       <QuoteForm
         title="Start Your College Commission"

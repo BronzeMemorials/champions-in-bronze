@@ -49,6 +49,8 @@ export default function CustomBronzeStatues() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your statue project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Key Details */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
@@ -158,6 +160,8 @@ export default function CustomBronzeStatues() {
           </FadeIn>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <Suspense fallback={<div className="h-40" />}>
         <FAQSection faqs={faqs} />

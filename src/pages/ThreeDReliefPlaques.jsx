@@ -67,6 +67,8 @@ export default function ThreeDReliefPlaques() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Photo Accuracy Callout */}
       <section className="py-20 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
@@ -168,6 +170,8 @@ export default function ThreeDReliefPlaques() {
 
       {/* STL 3D Interactive Gallery */}
       {stlModels.length > 0 && <STLGallery models={stlModels} />}
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <Suspense fallback={<div className="h-40" />}>
         <FAQSection faqs={faqs} />

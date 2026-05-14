@@ -105,6 +105,8 @@ export default function ReliefJerseyPlaques() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your plaque project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Intro feature row */}
       <section className="py-20 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
@@ -136,6 +138,8 @@ export default function ReliefJerseyPlaques() {
           source="pro"
         />
       ))}
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <FAQSection faqs={faqs} />
 

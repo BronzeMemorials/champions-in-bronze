@@ -43,6 +43,8 @@ export default function PhotoImageCast() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* What Makes It Different */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
@@ -144,6 +146,8 @@ export default function PhotoImageCast() {
           </div>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <FAQSection faqs={faqs} title="Photo ImageCasting FAQ" />
       <QuoteForm

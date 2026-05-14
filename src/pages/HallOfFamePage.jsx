@@ -41,6 +41,8 @@ export default function HallOfFamePage() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Formats */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
@@ -89,6 +91,8 @@ export default function HallOfFamePage() {
           </div>
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <FAQSection faqs={faqs} title="Hall of Fame FAQ" />
       <QuoteForm title="Design Your Hall of Fame" subtitle="Tell us about your program and inductees. We'll deliver a complete design proposal within 48 hours." source="pro" />

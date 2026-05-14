@@ -36,6 +36,8 @@ export default function DonorRecognition() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
       {/* Impact stat */}
       <section className="py-20 border-t border-bronze/10 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-6">
@@ -89,6 +91,7 @@ export default function DonorRecognition() {
       </section>
 
       <TestimonialCarousel />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
       <FAQSection faqs={faqs} title="Donor Recognition FAQ" />
       <QuoteForm title="Start Your Donor Recognition Wall" subtitle="Tell us about your program and campaign goals. Design proposal and pricing within 48 hours." source="pro" />
     </div>

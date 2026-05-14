@@ -234,6 +234,10 @@ export default function ProHome() {
         </a>
       </section>
 
+      <Suspense fallback={<div className="h-40" />}>
+        <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+      </Suspense>
+
       {/* ── TRUSTED BY ── */}
       <section className="py-10 border-y border-bronze/20 bg-obsidian">
         <div className="max-w-7xl mx-auto px-6">
@@ -1008,6 +1012,10 @@ export default function ProHome() {
       {/* FAQ */}
       <Suspense fallback={<div className="h-40" />}>
         <FAQSection faqs={faqs} />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-40" />}>
+        <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
       </Suspense>
 
       {/* FINAL CTA */}

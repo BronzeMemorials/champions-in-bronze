@@ -32,6 +32,8 @@ export default function BronzeMemorials() {
 
       <TrustBadges />
 
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your memorial project — we'll deliver a digital proof within the hour." source="pro" />
+
       <section className="py-20 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-bronze/10 border border-bronze/30 rounded-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
@@ -69,6 +71,7 @@ export default function BronzeMemorials() {
         </div>
       </section>
 
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
       <FAQSection faqs={faqs} title="Bronze Memorial FAQ" />
       <QuoteForm title="Begin a Bronze Memorial" subtitle="Our memorial team will guide you through every step with care. Artwork proof within 48 hours." source="pro" />
     </div>
