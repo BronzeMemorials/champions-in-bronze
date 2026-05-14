@@ -15,8 +15,6 @@ const productLinks = [
 ];
 
 const infoLinks = [
-  { label: "Portfolio", to: "/portfolio" },
-  { label: "Pricing Guide", to: "/bronze-statue-pricing" },
   { label: "College Athletics", to: "/college-athletic-recognition" },
   { label: "How It Works", to: "/how-it-works" },
   { label: "Materials & Finishes", to: "/materials-finishes" },
@@ -69,8 +67,6 @@ export default function Navbar() {
     { label: "Hall of Fame", to: "/hall-of-fame-bronze-displays" },
     { label: "Busts", to: "/bronze-athlete-busts" },
     { label: "Statues", to: "/custom-bronze-athlete-statues" },
-    { label: "Pricing", to: "/bronze-statue-pricing" },
-    { label: "Portfolio", to: "/portfolio" },
   ];
 
   return (
