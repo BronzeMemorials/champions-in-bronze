@@ -2,6 +2,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import FadeIn from "./FadeIn";
 
 export default function FAQSection({ faqs, title = "Frequently Asked Questions" }) {
+  const safeFaqs = Array.isArray(faqs) ? faqs : [];
+  if (!safeFaqs.length) return null;
   return (
     <section className="py-28 bg-secondary/30">
       <div className="max-w-3xl mx-auto px-6">
@@ -14,7 +16,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
 
         <FadeIn delay={0.2}>
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, i) => (
+            {safeFaqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`item-${i}`}

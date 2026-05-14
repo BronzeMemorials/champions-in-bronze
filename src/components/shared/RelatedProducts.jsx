@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import FadeIn from "./FadeIn";
 
 export default function RelatedProducts({ products }) {
+  const safeProducts = Array.isArray(products) ? products : [];
+  if (!safeProducts.length) return null;
   return (
     <section className="py-28 bg-secondary/20">
       <div className="max-w-7xl mx-auto px-6">
@@ -14,7 +16,7 @@ export default function RelatedProducts({ products }) {
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, i) => (
+          {safeProducts.map((product, i) => (
             <FadeIn key={product.to} delay={i * 0.1}>
               <Link to={product.to} className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-sm">

@@ -26,7 +26,8 @@ const PRUNE_THRESHOLD = 0.0; // will auto-prune bottom performers once we have e
 const TOP_N_KEEP = 5; // stop pruning once we're down to this many
 
 function pickVariant(variants) {
-  const active = variants.filter((v) => v.is_active !== false);
+  const safeVariants = Array.isArray(variants) ? variants : [];
+  const active = safeVariants.filter((v) => v.is_active !== false);
   if (!active.length) return null;
 
   const explore = Math.random() < EPSILON;
@@ -43,7 +44,8 @@ function pickVariant(variants) {
 }
 
 async function pruneIfNeeded(variants) {
-  const active = variants.filter((v) => v.is_active !== false);
+  const safeVariants = Array.isArray(variants) ? variants : [];
+  const active = safeVariants.filter((v) => v.is_active !== false);
   if (active.length <= TOP_N_KEEP) return; // already at target
 
   // Find variants with enough impressions to evaluate
@@ -72,6 +74,7 @@ export function useABTest() {
     async function init() {
       // Load existing variants for this test
       let variants = await base44.entities.ABTestVariant.filter({ test_id: TEST_ID });
+      if (!Array.isArray(variants)) variants = [];
 
       // Seed any missing phrases
       const existing = new Set(variants.map((v) => v.phrase));
@@ -92,6 +95,7 @@ export function useABTest() {
       await pruneIfNeeded(variants);
       // Refresh after potential prune
       variants = await base44.entities.ABTestVariant.filter({ test_id: TEST_ID });
+      if (!Array.isArray(variants)) variants = [];
 
       const chosen = pickVariant(variants);
       if (!chosen || cancelled) return;
@@ -116,7 +120,8 @@ export function useABTest() {
   const trackConversion = async () => {
     if (!variantId) return;
     const current = await base44.entities.ABTestVariant.filter({ test_id: TEST_ID });
-    const v = current.find((x) => x.id === variantId);
+    const safeCurrentArr = Array.isArray(current) ? current : [];
+    const v = safeCurrentArr.find((x) => x.id === variantId);
     if (v) {
       await base44.entities.ABTestVariant.update(variantId, {
         conversions: (v.conversions || 0) + 1,
@@ -128,7 +133,8 @@ export function useABTest() {
   const trackClick = async () => {
     if (!variantId) return;
     const current = await base44.entities.ABTestVariant.filter({ test_id: TEST_ID });
-    const v = current.find((x) => x.id === variantId);
+    const safeCurrentArr = Array.isArray(current) ? current : [];
+    const v = safeCurrentArr.find((x) => x.id === variantId);
     if (v) {
       await base44.entities.ABTestVariant.update(variantId, {
         clicks: (v.clicks || 0) + 1,

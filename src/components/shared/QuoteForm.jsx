@@ -181,7 +181,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
                 {files.length > 0 && (
                   <div className="mt-4 space-y-2">
-                    {files.map((file, i) => (
+                    {(Array.isArray(files) ? files : []).map((file, i) => (
                       <div key={i} className="flex items-center justify-between bg-gray-100 border border-gray-200 px-4 py-2">
                         <span className="text-black text-sm truncate">{file.name}</span>
                         <button type="button" onClick={() => removeFile(i)} className="text-gray-600 hover:text-red-500 text-xs ml-4">Remove</button>
@@ -223,7 +223,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               {/* Why us bullets */}
               <div className="bg-white border-2 border-gray-200 shadow-sm p-5 space-y-3 flex-1">
                 <p className="font-serif text-base text-black border-b border-yellow-200 pb-3">Why Organizations Choose Us</p>
-                {whyUs.map((item) => (
+                {(Array.isArray(whyUs) ? whyUs : []).map((item) => (
                   <div key={item.title} className="flex items-start gap-3">
                     <div className="w-7 h-7 rounded-sm bg-yellow-50 border border-yellow-200 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <item.icon className="w-3.5 h-3.5 text-yellow-600" />

@@ -66,17 +66,18 @@ function Stars() {
 }
 
 export default function TestimonialCarousel({ testimonials = realTestimonials }) {
+  const safeTestimonials = Array.isArray(testimonials) && testimonials.length > 0 ? testimonials : realTestimonials;
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
+      setCurrent((prev) => (prev + 1) % safeTestimonials.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, [testimonials.length]);
+  }, [safeTestimonials.length]);
 
-  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+  const prev = () => setCurrent((c) => (c - 1 + safeTestimonials.length) % safeTestimonials.length);
+  const next = () => setCurrent((c) => (c + 1) % safeTestimonials.length);
 
   return (
     <section className="py-24 bg-obsidian relative overflow-hidden">
@@ -89,14 +90,14 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
             <div className="min-h-[200px] flex items-center justify-center">
               <div key={current}>
                 <p className="font-serif text-xl md:text-2xl leading-relaxed text-white italic">
-                  "{testimonials[current].quote}"
+                  "{safeTestimonials[current].quote}"
                 </p>
                 <div className="mt-8">
                   <p className="font-sans text-gold text-sm tracking-[0.2em] uppercase font-semibold">
-                     {testimonials[current].name}
+                     {safeTestimonials[current].name}
                    </p>
                    <p className="font-sans text-white text-sm mt-1">
-                     {testimonials[current].title}
+                     {safeTestimonials[current].title}
                    </p>
                 </div>
               </div>
@@ -106,7 +107,7 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <div className="flex gap-2">
-                {testimonials.map((_, i) => (
+                {safeTestimonials.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrent(i)}

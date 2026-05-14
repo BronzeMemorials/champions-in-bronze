@@ -9,12 +9,13 @@ export default function ABTestDashboard() {
 
   useEffect(() => {
     base44.entities.ABTestVariant.filter({ test_id: "quote_form_title" }).then((data) => {
-      setVariants(data);
+      setVariants(Array.isArray(data) ? data : []);
       setLoading(false);
-    });
+    }).catch(() => setLoading(false));
   }, []);
 
-  const sorted = [...variants].sort((a, b) => {
+  const safeVariants = Array.isArray(variants) ? variants : [];
+  const sorted = [...safeVariants].sort((a, b) => {
     const rA = (a.conversions + 1) / (a.impressions + 2);
     const rB = (b.conversions + 1) / (b.impressions + 2);
     return rB - rA;
@@ -32,7 +33,7 @@ export default function ABTestDashboard() {
 
   const toggleActive = async (v) => {
     await base44.entities.ABTestVariant.update(v.id, { is_active: !v.is_active });
-    setVariants((prev) => prev.map((x) => x.id === v.id ? { ...x, is_active: !x.is_active } : x));
+    setVariants((prev) => (Array.isArray(prev) ? prev : []).map((x) => x.id === v.id ? { ...x, is_active: !x.is_active } : x));
   };
 
   return (

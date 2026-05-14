@@ -48,8 +48,8 @@ export default function ThreeDReliefPlaques() {
 
   useEffect(() => {
     base44.entities.ReliefPlaque3DModel.filter({ is_active: true })
-      .then(setStlModels)
-      .catch(() => {});
+      .then((results) => setStlModels(Array.isArray(results) ? results : []))
+      .catch(() => setStlModels([]));
   }, []);
 
   return (

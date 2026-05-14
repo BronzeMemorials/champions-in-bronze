@@ -5,6 +5,9 @@ import FadeIn from "./FadeIn";
 
 export default function PortfolioGrid({ items, title = "Portfolio", label = "Our Work" }) {
   const [selected, setSelected] = useState(null);
+  const safeItems = Array.isArray(items) ? items : [];
+
+  if (!safeItems.length) return null;
 
   return (
     <section className="py-28 bg-obsidian">
@@ -17,7 +20,7 @@ export default function PortfolioGrid({ items, title = "Portfolio", label = "Our
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {items.map((item, i) => (
+          {safeItems.map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div
                 onClick={() => setSelected(item)}

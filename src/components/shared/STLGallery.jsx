@@ -109,8 +109,9 @@ function STLModal({ model, onClose }) {
 
 export default function STLGallery({ models = [] }) {
   const [active, setActive] = useState(null);
+  const safeModels = Array.isArray(models) ? models : [];
 
-  if (!models.length) return null;
+  if (!safeModels.length) return null;
 
   return (
     <section className="py-20 border-t border-bronze/10 bg-secondary/20">
@@ -126,7 +127,7 @@ export default function STLGallery({ models = [] }) {
         </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {models.map((model, i) => (
+          {safeModels.map((model, i) => (
             <FadeIn key={model.id} delay={i * 0.08}>
               <ReliefCard model={model} onView={setActive} />
             </FadeIn>

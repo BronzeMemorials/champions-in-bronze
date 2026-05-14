@@ -17,6 +17,7 @@ import QuoteForm from "./QuoteForm";
  *   formTitle - title for QuoteForm (only if showForm=true)
  */
 export default function ProductGallerySection({ label, title, items = [], source = "pro", showForm = false, formTitle }) {
+  const safeItems = Array.isArray(items) ? items : [];
   return (
     <section className="py-20 border-t border-bronze/10">
       <div className="max-w-7xl mx-auto px-6">
@@ -34,7 +35,7 @@ export default function ProductGallerySection({ label, title, items = [], source
 
         {/* 3-column image grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {items.map((item, i) => (
+          {safeItems.map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="group">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-sm">

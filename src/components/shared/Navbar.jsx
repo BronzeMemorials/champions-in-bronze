@@ -23,6 +23,7 @@ const infoLinks = [
 function DropdownMenu({ label, links }) {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const safeLinks = Array.isArray(links) ? links : [];
 
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
@@ -38,7 +39,7 @@ function DropdownMenu({ label, links }) {
             transition={{ duration: 0.15 }}
             className="absolute top-full left-0 mt-2 w-60 bg-white border border-gray-200 shadow-2xl z-50"
           >
-            {links.map((link) => (
+            {safeLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -87,7 +88,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-7">
             <DropdownMenu label="Showcase" links={productLinks} />
-            {navLinks.map((link) => (
+            {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -132,14 +133,14 @@ export default function Navbar() {
               >
                 Products <ChevronDown className={`w-4 h-4 transition-transform ${mobileSection === "products" ? "rotate-180" : ""}`} />
               </button>
-              {mobileSection === "products" && productLinks.map((link) => (
+              {mobileSection === "products" && (Array.isArray(productLinks) ? productLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
                   className="pl-4 font-sans text-xs uppercase tracking-[0.1em] py-2 text-parchment/45 hover:text-gold">
                   {link.label}
                 </Link>
               ))}
 
-              {navLinks.map((link) => (
+              {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
                   className="font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-parchment/60 hover:text-gold">
                   {link.label}

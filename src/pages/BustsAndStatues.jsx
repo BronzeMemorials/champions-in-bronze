@@ -29,7 +29,8 @@ export default function BustsAndStatues() {
 
   useEffect(() => {
     base44.entities.Product3DModel.filter({ page: "busts_and_statues", is_active: true })
-      .then((results) => setModels(results));
+      .then((results) => setModels(Array.isArray(results) ? results : []))
+      .catch(() => setModels([]));
   }, []);
 
   return (
