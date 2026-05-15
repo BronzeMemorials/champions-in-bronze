@@ -1,14 +1,13 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import STLGallery from "../components/shared/STLGallery";
+import FAQSection from "../components/shared/FAQSection";
+import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
-
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png";
@@ -173,12 +172,8 @@ export default function ThreeDReliefPlaques() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />
     </div>
   );
 }
