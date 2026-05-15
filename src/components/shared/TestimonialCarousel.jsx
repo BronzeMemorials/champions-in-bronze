@@ -80,30 +80,30 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
   const next = () => setCurrent((c) => (c + 1) % safeTestimonials.length);
 
   return (
-    <section className="py-24 bg-obsidian relative overflow-hidden">
+    <section className="py-24 bg-stone-100 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bronze/5 to-transparent" />
       <div className="max-w-4xl mx-auto px-6 relative">
         <FadeIn>
           <div className="text-center">
-            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-4" />
+            <Quote className="w-10 h-10 text-bronze/40 mx-auto mb-4" />
             <Stars />
             <div className="min-h-[200px] flex items-center justify-center">
               <div key={current}>
-                <p className="font-serif text-xl md:text-2xl leading-relaxed text-white italic">
+                <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-900 italic">
                   "{safeTestimonials[current].quote}"
                 </p>
                 <div className="mt-8">
-                  <p className="font-sans text-gold text-sm tracking-[0.2em] uppercase font-semibold">
+                  <p className="font-sans text-bronze-dark text-sm tracking-[0.2em] uppercase font-semibold">
                      {safeTestimonials[current].name}
                    </p>
-                   <p className="font-sans text-white text-sm mt-1">
+                   <p className="font-sans text-gray-600 text-sm mt-1">
                      {safeTestimonials[current].title}
                    </p>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-center gap-6 mt-10">
-              <button onClick={prev} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-white">
+              <button onClick={prev} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-gray-700">
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <div className="flex gap-2">
@@ -111,15 +111,15 @@ export default function TestimonialCarousel({ testimonials = realTestimonials })
                   <button
                     key={i}
                     onClick={() => setCurrent(i)}
-                    className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-gold w-6" : "bg-parchment/20 w-2"}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-gold w-6" : "bg-gray-300 w-2"}`}
                   />
                 ))}
               </div>
-              <button onClick={next} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-white">
+              <button onClick={next} className="w-10 h-10 rounded-sm border border-bronze/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors text-gray-700">
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-white font-sans text-xs uppercase tracking-widest mt-6 opacity-60">Over 1,600 Five-Star Reviews</p>
+            <p className="text-gray-500 font-sans text-xs uppercase tracking-widest mt-6">Over 1,600 Five-Star Reviews</p>
           </div>
         </FadeIn>
       </div>
