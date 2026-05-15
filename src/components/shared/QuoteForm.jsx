@@ -121,7 +121,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     { icon: Award, title: "Museum-Quality Craftsmanship", desc: "Institutional-grade bronze manufactured to last 100+ years outdoors." },
     { icon: Shield, title: "Exact Photo Likeness", desc: "Proprietary Photo ImageCasting process — your real photos cast permanently in bronze." },
     { icon: Users, title: "Over 50,000 Satisfied Customers", desc: "Don't believe us? Read our reviews!" },
-    { icon: Star, title: "Made in the USA", desc: "100% Made in America. No tariffs. Been in business for over 50 years." },
+    { icon: Star, title: "Bronze Plaques & Busts Made in the USA", desc: "100% Made in America. No tariffs. Been in business for over 50 years." },
   ];
 
   return (
