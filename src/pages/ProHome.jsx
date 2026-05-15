@@ -321,7 +321,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 01</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Real photographs permanently cast into bronze. Exact likeness — no drawings required.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze. Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever. The most powerful recognition product in athletics today.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -352,7 +352,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 02</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief with Photo Image Casting</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">High-depth sculptural relief combined with photo casting — the ultimate in plaque realism.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The pinnacle of athletic plaque recognition — high-depth sculptural action figures rising from the surface, combined with your actual photographic portraits cast permanently into bronze. Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours. Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees, championship programs, and retired numbers.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -383,7 +383,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 03</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Sculptural high-depth relief plaques for championship, retired jersey, and recognition displays.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Sculptural bronze plaques where athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth. Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans, cast in silicon bronze, and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -414,7 +414,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 04</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Standard Bronze Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Classic engraved and cast bronze plaques for dedication, memorial, and institutional recognition.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Cast architectural bronze plaques for facility dedications, memorial installations, alumni recognition, and institutional signage. Silicon bronze or aluminum. Available in any size, any shape. Every format rated for 100+ years of outdoor permanence. The institutional standard for universities, stadiums, and athletic facilities across America.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -445,7 +445,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 05</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Busts</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. {photoLikenessPhrase}.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">When champions see themselves immortalized in bronze, the emotion is overwhelming — because the pain, sacrifice, brotherhood, dedication, and greatness that shaped their lives are finally transformed into something permanent. Every bust is created from your exact photographs using advanced sculptural technology. No in-person sessions. No generic likenesses. Museum-quality craftsmanship for Hall of Fame corridors, trophy rooms, and legacy recognition environments. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -476,7 +476,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 06</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Statues</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. {photoLikenessPhrase}.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Legends battled, sacrificed, and rose. Now their story lives in bronze. Life-size and heroic-scale bronze statues sculpted from your actual photographs for stadium entrances, arena lobbies, and campus landmarks. Every figure captures exact likeness — bone structure, athletic stance, personality. Champions fade only when forgotten. Bronze holds what time cannot take. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -507,7 +507,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 07</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bronze Jerseys</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Dimensional bronze jersey plaques for retired number tributes and championship display programs.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques for retired number ceremonies, championship tributes, and Hall of Fame installations. Cast in silicon bronze or aluminum, available in any team's colors and typography. The most visually striking way to honor a retired number.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -583,7 +583,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 01</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Football</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Hall of Fame plaques, championship recognition, and full-size statues for football programs at every level.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The sacrifice, brotherhood, and grind of football deserves permanent recognition. Hall of Fame portrait plaques, championship commemorations, retired jersey tributes, donor recognition walls, and life-size bronze statues — sculpted from actual photographs and built to honor every player, coach, and program that gave everything to the game.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -614,7 +614,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 02</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Basketball</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze statues, portrait busts, and Hall of Fame recognition for basketball programs.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">From arena-entrance statues to Hall of Fame portrait plaques and championship trophy recognition — basketball programs trust Champions in Bronze to capture the legends, the moments, and the championships that define programs and inspire future generations.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -645,7 +645,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 03</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Baseball</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Bronze statues, plaques, and legacy displays for baseball stadiums, halls of fame, and collegiate programs.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Baseball is the sport of legacy. Retired numbers, Hall of Fame walls, stadium dedication plaques, and bronze statues that anchor the identity of every ballpark. Champions in Bronze creates baseball recognition designed to outlast the stadium itself.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -676,7 +676,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 04</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Women's Basketball</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Hall of Fame plaques, portrait busts, and custom bronze statues celebrating women's basketball excellence.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Every champion deserves recognition that matches their greatness. Hall of Fame plaques, portrait busts, and bronze statues celebrating women's basketball excellence — the legends who built programs, broke records, and inspired the next generation of athletes.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -707,7 +707,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 05</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Soccer</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze statues, Hall of Fame plaques, and donor recognition for soccer programs and facilities.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The beautiful game deserves beautiful recognition. Championship commemorations, Hall of Fame induction plaques, donor walls, and bronze statues for soccer programs, MLS facilities, and collegiate athletics — crafted from your exact photographs to honor the players and moments that defined your program.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -738,7 +738,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 06</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Hockey</h3>
-                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Bronze statues, championship plaques, and Hall of Fame recognition for hockey arenas and programs.</p>
+                <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in silicon bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[

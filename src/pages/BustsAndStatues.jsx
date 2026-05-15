@@ -70,7 +70,7 @@ export default function BustsAndStatues() {
                 Champions in Bronze creates elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues from your exact photograph using advanced image casting, bas-relief sculpting, and dimensional bronze technology. Each piece is designed for universities, stadiums, arenas, athletic facilities, and legacy recognition environments where lifelike detail, architectural craftsmanship, and permanent recognition are required to honor greatness for generations.
               </p>
               <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
-                Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship — the result is a sculpture that family members recognize instantly.
+                Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship — the result is a sculpture that family members recognize instantly. A lifelike bronze bust is never about the cost — it is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their life will never be forgotten.
               </p>
               <ul className="mt-8 space-y-3 border-l border-bronze/30 pl-6">
                 {[
@@ -116,6 +116,7 @@ export default function BustsAndStatues() {
             <div className="mb-12">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Gallery</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Recent Commissions</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Legends battled, sacrificed, and rose. Now their story lives in bronze. Every commission below was created from photographs provided by the client — no in-person sessions, no generic likenesses. Every figure is the real person, captured forever.</p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
@@ -146,6 +147,7 @@ export default function BustsAndStatues() {
             <div className="text-center mb-12">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Specifications</span>
               <h2 className="font-serif text-4xl mt-3 text-parchment">Available Formats</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">From tabletop awards to 10-foot heroic statues — every size, every format, created from your photographs. Designed for Hall of Fame walls, stadium entrances, arena lobbies, donor recognition environments, and campus landmarks.</p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">

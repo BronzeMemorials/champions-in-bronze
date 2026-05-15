@@ -76,7 +76,7 @@ export default function ThreeDReliefPlaques() {
             <div>
               <h3 className="font-serif text-2xl md:text-3xl text-parchment">Your Exact Photographic Image. Not an Interpretation.</h3>
               <p className="mt-3 text-parchment/60 leading-relaxed">
-                Our sculptors use your submitted photographs as the master reference. Every 3D relief begins with your real images — faces are captured feature by feature, action poses frame by frame. The finished bronze will be recognized by people who knew your athlete personally. That's our standard.
+                Our sculptors use your submitted photographs as the master reference. Every 3D relief begins with your real images — faces captured feature by feature, action poses frame by frame. The finished bronze will be recognized by people who knew your athlete personally. That's our standard. A lifelike bronze relief is never about the cost — it is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their athletic career will never be forgotten. Champions fade only when forgotten. Bronze holds what time cannot take.
               </p>
             </div>
           </div>
@@ -90,6 +90,7 @@ export default function ThreeDReliefPlaques() {
             <div className="mb-10">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Browse by Sport</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">3D Relief Plaque Gallery</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Every sport. Every position. Every moment worth preserving forever. Browse our gallery of sculptural 3D bas-relief bronze plaques — each one created from actual athlete photographs and cast in museum-quality silicon bronze or aluminum for Hall of Fame walls, championship displays, and retired number ceremonies.</p>
             </div>
           </FadeIn>
 
@@ -144,6 +145,7 @@ export default function ThreeDReliefPlaques() {
           <FadeIn>
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl text-parchment">Available Formats & Specs</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">Silicon bronze or aluminum. Any size. Any shape — including home plate, pennant, jersey silhouette, and custom architectural forms. Designed to expand annually for Hall of Fame programs that add inductees every year.</p>
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>

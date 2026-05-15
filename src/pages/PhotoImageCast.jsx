@@ -58,10 +58,10 @@ export default function PhotoImageCast() {
                 Your Real Photos.<br />Cast Into Bronze.<br />Forever.
               </h2>
               <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
-                Most bronze plaques use text and generic imagery. Photo ImageCasting uses <em>your actual photographs</em> — game-winning moments, team portraits, career milestones, archival history — and permanently casts them into bronze at museum quality.
+                Most bronze plaques use text and generic imagery. Photo ImageCasting uses <em>your actual photographs</em> — game-winning moments, team portraits, career milestones, archival history — and permanently casts them into bronze at museum quality. When champions see their real image preserved in bronze, the emotion is overwhelming. Because the pain, sacrifice, and dedication that shaped their career are finally transformed into something permanent that future generations will recognize and remember forever.
               </p>
               <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
-                No interpretation. No generalization. The exact image you provide, with dimensional depth and bronze permanence that will last longer than any photograph, print, or digital display.
+                No interpretation. No generalization. The exact image you provide, with dimensional depth and bronze permanence that will last longer than any photograph, print, or digital display. Crowds fade into night. Champions live on in bronze. Legacy remains.
               </p>
               <div className="mt-10 grid grid-cols-2 gap-4">
                 {[
@@ -121,6 +121,7 @@ export default function PhotoImageCast() {
             <div className="text-center mb-14">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Perfect For</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Every Recognition Occasion</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">From a single Hall of Fame induction to an entire career retrospective wall — Photo ImageCasting is used by universities, professional sports franchises, athletic departments, and donor programs nationwide to permanently honor the athletes, coaches, and supporters who shaped their history.</p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

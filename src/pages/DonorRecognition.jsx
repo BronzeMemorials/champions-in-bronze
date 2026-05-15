@@ -82,6 +82,7 @@ export default function DonorRecognition() {
             <div className="text-center mb-14">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Donor Recognition Formats</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Preserve The Legacy Behind Your Gift.</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">Your contribution helped shape the future of the institution, the athletes, and the generations that follow. Champions in Bronze transforms generosity, leadership, and lasting institutional impact into permanent bronze recognition — designed to inspire future generations and honor the vision behind every gift. Athletic departments consistently report 30–50% increases in donor participation after installing a prestigious bronze recognition wall.</p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
