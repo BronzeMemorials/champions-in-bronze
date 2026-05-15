@@ -73,9 +73,9 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="bg-white backdrop-blur-xl border-b border-white shadow-sm">
-        <div className="w-full px-8 sm:px-12 md:px-16 lg:px-20 flex items-center justify-between h-20">
+        <div className="w-full px-8 sm:px-12 md:px-16 lg:px-20 flex items-center justify-between gap-8 h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0 min-w-fit">
             <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-12 h-12 object-contain flex-shrink-0 self-center" />
             <div className="flex flex-col leading-none">
               <span className="font-serif text-xl text-parchment tracking-wide">
@@ -102,7 +102,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile toggle */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 flex-shrink-0">
             <Link
               to="/request-concept-design"
               className="hidden lg:inline-flex text-white px-5 py-2.5 font-sans text-base uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
