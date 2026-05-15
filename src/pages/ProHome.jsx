@@ -268,7 +268,9 @@ export default function ProHome() {
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5">Legacy Tributes in Plaques, Busts, & Statues
 
             </span>
-            <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl text-2xl">Immortalize Champions.<br />Preserve Legacy<br />For Generations</h1>
+            <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl text-4xl">Commem
+
+            </h1>
             <p className="mt-6 max-w-2xl text-base sm:text-xl md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <p className="font-serif text-xl sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
@@ -785,8 +787,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                          SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                       ══════════════════════════════════════════ */}
+                                            SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                         ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -795,7 +797,7 @@ export default function ProHome() {
             </div>
             <SectionHeading
               label="Immortalize Champions. Preserve Legacy For Generations."
-              title="Hall of Fame Plaques. Championship Recognition. Donor Legacy Systems."
+              title="Hall of Fame Plaques.\nChampionship Recognition.\nDonor Legacy Systems."
               subtitle="Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues — designed for universities, stadiums, and athletic facilities that honor sacrifice, celebrate champions, and immortalize the moments that deserve to be remembered for generations." />
             
           </FadeIn>
@@ -858,8 +860,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                          SECTION 2 — HALL OF FAME SYSTEMS
-                                       ══════════════════════════════════════════ */}
+                                            SECTION 2 — HALL OF FAME SYSTEMS
+                                         ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -878,7 +880,7 @@ export default function ProHome() {
             <FadeIn delay={0.2}>
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-base font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
-                Honor Greatness. Forever.
+                Honor Greatness.<br />Forever.
               </h2>
               <p className="mt-6 text-black text-xl leading-relaxed">
                 Champions in Bronze creates elite recognition environments — from individual Hall of Fame portrait plaques to 60-foot donor recognition walls and illuminated legacy corridors — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments, people, and history that deserve to be remembered for generations.
@@ -925,8 +927,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                          SECTION 3 — BUSTS (Premium Upsell)
-                                       ══════════════════════════════════════════ */}
+                                            SECTION 3 — BUSTS (Premium Upsell)
+                                         ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1014,8 +1016,8 @@ export default function ProHome() {
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                          SECTION 4 — STATUES (Signature / Reduced)
-                                       ══════════════════════════════════════════ */}
+                                            SECTION 4 — STATUES (Signature / Reduced)
+                                         ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
