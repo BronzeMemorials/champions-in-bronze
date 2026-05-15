@@ -33,17 +33,17 @@ export default function Footer() {
             <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-yellow-400 mb-5 font-semibold">Recognition Products</h4>
             <nav className="space-y-2.5">
               {[
-                { label: "Photo Image Cast Plaques", to: "/photo-image-casting-plaques" },
-                { label: "3D Bas-Relief Plaques", to: "/3d-bas-relief-plaques" },
-                { label: "Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { label: "Championship Plaques", to: "/championship-bronze-plaques" },
-                { label: "Donor Recognition Walls", to: "/donor-recognition" },
-                { label: "Hall of Fame Displays", to: "/hall-of-fame-bronze-displays" },
-                { label: "Bronze Busts", to: "/bronze-athlete-busts" },
-                { label: "Full-Size Statues", to: "/custom-bronze-athlete-statues" },
-              ].map((l) => (
-                <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
-              ))}
+              { label: "Photo Image Cast Plaques", to: "/photo-image-casting-plaques" },
+              { label: "3D Bas-Relief Plaques", to: "/3d-bas-relief-plaques" },
+              { label: "Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+              { label: "Championship Plaques", to: "/championship-bronze-plaques" },
+              { label: "Donor Recognition Walls", to: "/donor-recognition" },
+              { label: "Hall of Fame Displays", to: "/hall-of-fame-bronze-displays" },
+              { label: "Bronze Busts", to: "/bronze-athlete-busts" },
+              { label: "Full-Size Statues", to: "/custom-bronze-athlete-statues" }].
+              map((l) =>
+              <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
+              )}
             </nav>
           </div>
 
@@ -52,17 +52,17 @@ export default function Footer() {
             <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-yellow-400 mb-5 font-semibold">Sports</h4>
             <nav className="space-y-2.5">
               {[
-                { label: "Football", to: "/football" },
-                { label: "Basketball", to: "/basketball" },
-                { label: "Baseball", to: "/baseball" },
-                { label: "Hockey", to: "/hockey" },
-                { label: "Soccer", to: "/soccer" },
-                { label: "Lacrosse", to: "/lacrosse" },
-                { label: "Golf", to: "/golf" },
-                { label: "All Sports", to: "/all-sports" },
-              ].map((l) => (
-                <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
-              ))}
+              { label: "Football", to: "/football" },
+              { label: "Basketball", to: "/basketball" },
+              { label: "Baseball", to: "/baseball" },
+              { label: "Hockey", to: "/hockey" },
+              { label: "Soccer", to: "/soccer" },
+              { label: "Lacrosse", to: "/lacrosse" },
+              { label: "Golf", to: "/golf" },
+              { label: "All Sports", to: "/all-sports" }].
+              map((l) =>
+              <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
+              )}
             </nav>
           </div>
 
@@ -71,21 +71,21 @@ export default function Footer() {
             <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-yellow-400 mb-5 font-semibold">Company</h4>
             <nav className="space-y-2.5">
               {[
-                { label: "Collegiate", to: "/collegiate" },
-                { label: "Portfolio", to: "/portfolio" },
-                { label: "Our Process", to: "/process" },
-                { label: "Materials & Finishes", to: "/materials" },
-                { label: "Request a Quote", to: "/request-quote" },
-              ].map((l) => (
-                <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
-              ))}
+              { label: "Collegiate", to: "/collegiate" },
+              { label: "Portfolio", to: "/portfolio" },
+              { label: "Our Process", to: "/process" },
+              { label: "Materials & Finishes", to: "/materials" },
+              { label: "Request a Quote", to: "/request-quote" }].
+              map((l) =>
+              <Link key={l.to} to={l.to} className="block text-white hover:text-yellow-400 transition-colors text-sm">{l.label}</Link>
+              )}
             </nav>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-gray-800">
-          <p className="text-gray-700 text-[10px] font-sans leading-relaxed text-center">
-            DISCLAIMER AND LEGAL NOTICE: All Content on this site is owned by Bronze Memorials Inc. and protected under US &amp; International Copyright law. Reproduction and distribution of any content, text verbatim, reviews is strictly prohibited. Violations of this will result in legal action. | Photo ImageCasting™ is a proprietary process of Bronze Memorials Inc. Unauthorized use of this name or process is prohibited.
+          <p className="text-gray-700 text-[10px] font-sans leading-relaxed text-center">DISCLAIMER AND LEGAL NOTICE: All Content on this site is owned by Bronze Memorials Inc. and protected under US & International Copyright law. Reproduction and distribution of any content, text verbatim, reviews is strictly prohibited. Violations of this will result in legal action.
+
           </p>
         </div>
 
@@ -101,6 +101,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
