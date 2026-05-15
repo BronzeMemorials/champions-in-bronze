@@ -43,6 +43,22 @@ export default function HallOfFamePage() {
 
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
+      {/* Emotional Statement */}
+      <section className="py-20 bg-parchment text-obsidian">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <FadeIn>
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-6">Why Hall of Fame</span>
+            <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-parchment italic mb-6">
+              "Legends battled, sacrificed, and rose. Now their story lives in bronze. Champions fade only when forgotten — legacy lives forever."
+            </blockquote>
+            <div className="w-12 h-px bg-bronze mx-auto mb-6" />
+            <p className="font-sans text-base text-parchment/60 leading-relaxed">
+              When champions see themselves immortalized in bronze, the emotion is overwhelming — because the pain, sacrifice, brotherhood, dedication, and greatness that shaped their lives are finally transformed into something permanent that future generations will remember forever.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Formats */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
