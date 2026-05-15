@@ -1,37 +1,32 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import FadeIn from "./FadeIn";
 
 export default function FAQSection({ faqs, title = "Frequently Asked Questions" }) {
   const safeFaqs = Array.isArray(faqs) ? faqs : [];
   if (!safeFaqs.length) return null;
   return (
-    <section className="py-28 bg-secondary/30">
-      <div className="max-w-3xl mx-auto px-6">
+    <section className="py-20 bg-secondary/30">
+      <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="text-center mb-14">
             <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Questions</span>
             <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">{title}</h2>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.2}>
-          <Accordion type="single" collapsible className="space-y-4">
-            {safeFaqs.map((faq, i) => (
-              <AccordionItem
-                key={i}
-                value={`item-${i}`}
-                className="border border-bronze/20 bg-white px-6 rounded-sm shadow-sm"
-              >
-                <AccordionTrigger className="font-serif text-lg text-parchment hover:text-bronze transition-colors py-6 text-left">
+        <div className="space-y-8">
+          {safeFaqs.map((faq, i) => (
+            <FadeIn key={i} delay={i * 0.04}>
+              <div className="border-b border-bronze/20 pb-8">
+                <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">
                   {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-parchment/60 leading-relaxed pb-6 font-sans">
+                </p>
+                <p className="font-sans text-sm italic text-parchment/65 leading-relaxed">
                   {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </FadeIn>
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

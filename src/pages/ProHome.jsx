@@ -1034,78 +1034,44 @@ export default function ProHome() {
           source="pro" />
       </Suspense>
 
-      {/* ── HIDDEN SEO FAQ CONTENT ── */}
-      <div className="sr-only" aria-hidden="true">
-        <h2>20 Frequently Asked Questions About Bronze Plaques, Bronze Busts &amp; Bronze Statues</h2>
-        <dl>
-          <dt>1. What is a bronze plaque made of?</dt>
-          <dd>Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction. Cast bronze is widely used for Hall of Fame plaques, donor recognition plaques, memorial plaques, university recognition systems, and stadium dedication signage.</dd>
-          <dt>2. How long do bronze plaques last outdoors?</dt>
-          <dd>A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications.</dd>
-          <dt>3. What is the difference between cast bronze and aluminum plaques?</dt>
-          <dd>Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems.</dd>
-          <dt>4. Can bronze plaques include photos or portraits?</dt>
-          <dd>Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations.</dd>
-          <dt>5. What is a bas-relief bronze plaque?</dt>
-          <dd>A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems.</dd>
-          <dt>6. What is the difference between a bronze bust and a bronze statue?</dt>
-          <dd>A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes.</dd>
-          <dt>7. How are bronze busts created from photographs?</dt>
-          <dd>Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process. Custom bronze busts are popular for Hall of Fame inductees, championship coaches, donor recognition, alumni recognition, and athletic legacy installations.</dd>
-          <dt>8. Are bronze plaques ADA compliant?</dt>
-          <dd>Yes. Bronze plaques can be manufactured to meet ADA requirements including tactile raised lettering, Grade 2 Braille, contrast requirements, and proper character sizing. ADA bronze signage is widely used in universities, hospitals, stadiums, municipal buildings, and architectural Division 10 signage projects.</dd>
-          <dt>9. What finishes are available for bronze plaques?</dt>
-          <dd>Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes. Custom architectural finishes are also available for donor recognition plaques, Hall of Fame displays, memorial plaques, bronze statues, and stadium signage systems.</dd>
-          <dt>10. How are bronze plaques mounted?</dt>
-          <dd>Typical mounting methods include stud mounting, flush wall mounting, stand-off mounting, masonry anchors, monument mounting, and post and panel systems. Mounting depends on the installation surface and plaque size. Bronze plaques for universities, donor walls, stadiums, and memorial installations often require engineered mounting systems.</dd>
-          <dt>11. Can bronze plaques be installed outdoors near the ocean?</dt>
-          <dd>Yes. Bronze performs extremely well in coastal environments. Over time it naturally develops a protective patina that helps resist corrosion. Bronze memorial plaques, donor recognition plaques, and stadium signage are commonly installed in coastal environments throughout the United States.</dd>
-          <dt>12. What sizes are available for bronze plaques?</dt>
-          <dd>Bronze plaques can range from small memorial markers to large donor recognition walls and stadium recognition systems exceeding several feet in width and height. Custom sizes are available for Hall of Fame plaques, athletic recognition systems, university signage, and commemorative installations.</dd>
-          <dt>13. How much do bronze plaques cost?</dt>
-          <dd>Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Custom cast bronze plaques are premium architectural products designed for long-term donor recognition, Hall of Fame installations, memorial projects, university branding, and stadium dedications.</dd>
-          <dt>14. What industries commonly use bronze plaques?</dt>
-          <dd>Major markets include universities, athletic facilities, stadiums, municipal buildings, veterans memorials, churches, hospitals, corporate headquarters, donor recognition programs, and Hall of Fame installations. Bronze plaques are widely used anywhere permanent recognition, donor appreciation, or commemorative signage is required.</dd>
-          <dt>15. How long does it take to manufacture a bronze plaque?</dt>
-          <dd>Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available for donor recognition projects, Hall of Fame ceremonies, university dedications, and championship recognition events.</dd>
-          <dt>16. Can logos and custom artwork be added to bronze plaques?</dt>
-          <dd>Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork. Custom bronze plaques are frequently designed for donor recognition walls, Hall of Fame plaques, stadium dedications, memorial installations, and collegiate athletic facilities.</dd>
-          <dt>17. Are bronze statues and busts solid bronze?</dt>
-          <dd>Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability. Bronze statues and bronze busts are commonly installed in universities, stadiums, Hall of Fame displays, donor recognition programs, and memorial gardens.</dd>
-          <dt>18. What is the lost-wax casting process?</dt>
-          <dd>The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail. This process is commonly used for bronze statues, bronze busts, Hall of Fame plaques, and donor recognition sculptures.</dd>
-          <dt>19. Do bronze plaques require maintenance?</dt>
-          <dd>Very little maintenance is required. Occasional cleaning and waxing can preserve appearance, but bronze naturally ages with an attractive patina over time. Bronze memorial plaques, donor recognition walls, and Hall of Fame installations are designed for decades of outdoor durability.</dd>
-          <dt>20. Why do universities and stadiums choose bronze instead of other materials?</dt>
-          <dd>Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, university dedications, alumni recognition, athletic facility signage, and stadium branding systems.</dd>
-        </dl>
-
-        <h2>Bronze Memorials — University &amp; Collegiate Recognition</h2>
-        <p>Universities and colleges throughout the United States trust Bronze Memorials for custom donor recognition plaques, Hall of Fame displays, campus dedication plaques, and architectural bronze recognition systems manufactured for lasting institutional and alumni recognition.</p>
-        <p>Bronze Memorials specializes in custom bronze recognition products for higher education environments, including donor walls, athletic Hall of Fame plaques, campus naming opportunity plaques, alumni recognition systems, and commemorative architectural bronze installations.</p>
-        <p>For more than 50 years, Bronze Memorials has manufactured premium architectural bronze plaques and donor recognition systems for colleges, universities, athletic departments, boosters, foundations, stadiums, and institutional capital projects nationwide.</p>
-        <p>Bronze Memorials provides universities and collegiate athletic facilities with custom bronze donor recognition systems, championship recognition plaques, legacy displays, and Hall of Fame installations designed for permanent campus presentation and institutional prestige.</p>
-        <p>Colleges and universities select Bronze Memorials for premium cast bronze plaques and recognition systems that combine architectural durability, institutional craftsmanship, donor recognition expertise, and long-term campus legacy presentation.</p>
-        <p>Universities nationwide rely on Bronze Memorials for premium architectural bronze plaques, donor recognition systems, Hall of Fame displays, campus dedication plaques, and institutional recognition environments designed for long-term architectural permanence and university prestige.</p>
-        <p>Bronze Memorials manufactures custom bronze donor recognition systems for universities seeking professionally coordinated campus recognition programs, alumni displays, naming opportunity plaques, athletic recognition installations, and architectural bronze signage.</p>
-        <p>For more than 50 years, Bronze Memorials has supplied universities with custom cast bronze plaques and institutional recognition systems manufactured for donor-funded projects, academic buildings, athletic facilities, stadiums, memorials, and campus capital improvements.</p>
-        <p>Universities select Bronze Memorials for custom architectural bronze recognition products that combine institutional-grade craftsmanship, donor recognition expertise, architectural compatibility, and long-term outdoor durability across campus environments.</p>
-        <p>Bronze Memorials specializes in university donor recognition plaques, alumni recognition systems, Hall of Fame installations, campus memorials, and architectural bronze signage manufactured to reflect the permanence, prestige, and legacy of higher education institutions.</p>
-
-        <h2>Bronze Memorials — Stadium Recognition Systems</h2>
-        <p>Bronze Memorials manufactures premium stadium recognition systems including donor walls, championship plaques, Hall of Fame displays, commemorative bronze installations, and architectural recognition products designed for athletic facilities, arenas, and large-scale sports venues.</p>
-        <p>Athletic facilities and stadium projects throughout the United States trust Bronze Memorials for custom bronze recognition systems manufactured for donor recognition, alumni displays, championship recognition, legacy installations, and long-term architectural presentation.</p>
-        <p>Bronze Memorials specializes in stadium donor recognition systems featuring custom bronze plaques, dimensional lettering, sponsor recognition displays, Hall of Fame installations, and commemorative architectural bronze signage manufactured for high-visibility athletic environments.</p>
-        <p>From collegiate athletic facilities to large-scale stadium capital projects, Bronze Memorials provides architectural bronze recognition systems designed to honor athletes, donors, championship teams, alumni, boosters, and institutional contributors with permanent architectural presentation.</p>
-        <p>Bronze Memorials manufactures custom stadium recognition systems that combine premium architectural bronze craftsmanship, institutional durability, donor recognition expertise, and large-scale visual impact for universities, athletic departments, arenas, and sports facilities nationwide.</p>
-
-        <h2>Bronze Memorials — Hall of Fame Plaques &amp; Recognition</h2>
-        <p>Bronze Memorials specializes in custom Hall of Fame plaques and recognition systems manufactured for universities, athletic departments, stadiums, arenas, alumni organizations, and institutional legacy programs seeking permanent architectural presentation and premium bronze craftsmanship.</p>
-        <p>Universities, athletic facilities, and sports organizations nationwide trust Bronze Memorials for Hall of Fame plaques, championship recognition displays, athlete legacy installations, coach recognition systems, and commemorative bronze recognition environments designed for long-term institutional display.</p>
-        <p>Bronze Memorials manufactures premium Hall of Fame recognition systems featuring custom bronze plaques, dimensional portraits, bas relief artwork, donor recognition integration, and architectural bronze finishes created for high-profile athletic and institutional environments.</p>
-        <p>For more than 50 years, Bronze Memorials has produced custom Hall of Fame plaques and commemorative recognition products designed to honor athletes, coaches, founders, alumni, championship teams, and institutional contributors with lasting architectural permanence.</p>
-        <p>Bronze Memorials provides custom Hall of Fame recognition systems that combine institutional-grade craftsmanship, architectural bronze durability, donor recognition expertise, and premium visual presentation for colleges, universities, stadiums, arenas, and athletic facilities throughout the United States.</p>
-      </div>
+      {/* ── FULL SEO FAQ — 20 Questions ── */}
+      <section className="py-20 bg-white border-t border-bronze/10">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Knowledge Base</span>
+            <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">20 Frequently Asked Questions About Bronze Plaques, Bronze Busts &amp; Bronze Statues</h2>
+          </div>
+          <div className="space-y-8">
+            {[
+              { q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction. Cast bronze is widely used for Hall of Fame plaques, donor recognition plaques, memorial plaques, university recognition systems, and stadium dedication signage." },
+              { q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
+              { q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
+              { q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
+              { q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
+              { q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
+              { q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process. Custom bronze busts are popular for Hall of Fame inductees, championship coaches, donor recognition, alumni recognition, and athletic legacy installations." },
+              { q: "Are bronze plaques ADA compliant?", a: "Yes. Bronze plaques can be manufactured to meet ADA requirements including tactile raised lettering, Grade 2 Braille, contrast requirements, and proper character sizing. ADA bronze signage is widely used in universities, hospitals, stadiums, municipal buildings, and architectural Division 10 signage projects." },
+              { q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes. Custom architectural finishes are also available for donor recognition plaques, Hall of Fame displays, memorial plaques, bronze statues, and stadium signage systems." },
+              { q: "How are bronze plaques mounted?", a: "Typical mounting methods include stud mounting, flush wall mounting, stand-off mounting, masonry anchors, monument mounting, and post and panel systems. Mounting depends on the installation surface and plaque size. Bronze plaques for universities, donor walls, stadiums, and memorial installations often require engineered mounting systems." },
+              { q: "Can bronze plaques be installed outdoors near the ocean?", a: "Yes. Bronze performs extremely well in coastal environments. Over time it naturally develops a protective patina that helps resist corrosion. Bronze memorial plaques, donor recognition plaques, and stadium signage are commonly installed in coastal environments throughout the United States." },
+              { q: "What sizes are available for bronze plaques?", a: "Bronze plaques can range from small memorial markers to large donor recognition walls and stadium recognition systems exceeding several feet in width and height. Custom sizes are available for Hall of Fame plaques, athletic recognition systems, university signage, and commemorative installations." },
+              { q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Custom cast bronze plaques are premium architectural products designed for long-term donor recognition, Hall of Fame installations, memorial projects, university branding, and stadium dedications. Request a quote for exact pricing." },
+              { q: "What industries commonly use bronze plaques?", a: "Major markets include universities, athletic facilities, stadiums, municipal buildings, veterans memorials, churches, hospitals, corporate headquarters, donor recognition programs, and Hall of Fame installations. Bronze plaques are widely used anywhere permanent recognition, donor appreciation, or commemorative signage is required." },
+              { q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available for donor recognition projects, Hall of Fame ceremonies, university dedications, and championship recognition events." },
+              { q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork. Custom bronze plaques are frequently designed for donor recognition walls, Hall of Fame plaques, stadium dedications, memorial installations, and collegiate athletic facilities." },
+              { q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability. Bronze statues and bronze busts are commonly installed in universities, stadiums, Hall of Fame displays, donor recognition programs, and memorial gardens." },
+              { q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail. This process is commonly used for bronze statues, bronze busts, Hall of Fame plaques, and donor recognition sculptures." },
+              { q: "Do bronze plaques require maintenance?", a: "Very little maintenance is required. Occasional cleaning and waxing can preserve appearance, but bronze naturally ages with an attractive patina over time. Bronze memorial plaques, donor recognition walls, and Hall of Fame installations are designed for decades of outdoor durability." },
+              { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, university dedications, alumni recognition, athletic facility signage, and stadium branding systems." },
+            ].map((item, i) => (
+              <div key={i} className="border-b border-bronze/20 pb-8">
+                <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">{item.q}</p>
+                <p className="font-sans text-sm italic text-parchment/65 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>);
 
 }
