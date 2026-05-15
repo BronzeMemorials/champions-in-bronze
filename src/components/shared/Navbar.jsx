@@ -72,8 +72,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-white backdrop-blur-xl border-b border-white shadow-sm">
-        <div className="w-full px-8 sm:px-12 md:px-16 lg:px-20 flex items-center justify-between gap-8 h-20">
+      <div className="bg-white backdrop-blur-xl border-b border-white shadow-sm flex justify-center">
+        <div className="flex items-center justify-between gap-8 h-20 px-8 sm:px-12 md:px-16 lg:px-20 w-full">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0 min-w-fit">
             <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-12 h-12 object-contain flex-shrink-0 self-center" />
