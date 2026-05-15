@@ -480,7 +480,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 08</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Donor Recognition Walls</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Custom bronze donor recognition systems for stadiums, universities, athletic facilities, and capital campaigns.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Your contribution deserves permanence. Champions in Bronze creates architectural donor recognition environments that transform generosity, leadership, and legacy into permanent bronze recognition crafted to inspire future generations at universities, stadiums, athletic facilities, and capital campaigns.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[

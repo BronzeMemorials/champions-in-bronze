@@ -26,8 +26,8 @@ export default function DonorRecognition() {
       <ProductHero
         image={heroImg}
         label="Major Installations · Recognition Systems"
-        title="Donor Recognition Walls & Capital Campaign Monuments"
-        subtitle="Transform your capital campaign into a permanent bronze landmark. Modular systems for stadiums, arenas, universities, and medical centers — designed to grow with your program for decades."
+        title="Your Contribution Deserves Permanence."
+        subtitle="Designed for universities, stadiums, athletic facilities, and capital campaigns, Champions in Bronze creates architectural donor recognition environments that transform generosity, leadership, and legacy into permanent bronze recognition crafted to inspire future generations."
         cta1="Start Your Donor Wall"
         cta1Link="/request-quote"
         cta2="View Portfolio"
@@ -37,6 +37,24 @@ export default function DonorRecognition() {
       <TrustBadges />
 
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+
+      {/* Donor positioning statement */}
+      <section className="py-16 border-t border-bronze/10 bg-secondary/30">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <FadeIn>
+            <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Recognition Worthy Of Your Legacy</span>
+            <h2 className="font-serif text-3xl md:text-4xl mt-4 text-parchment leading-tight">
+              Transform Generosity Into Lasting Legacy
+            </h2>
+            <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
+              Your contribution helped shape the future of the institution, the athletes, and the generations that follow. Champions in Bronze preserves that legacy through premium donor recognition displays, architectural bronze plaques, and commemorative installations designed to honor the impact behind your gift with permanent institutional recognition.
+            </p>
+            <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
+              Champions in Bronze creates elite donor recognition walls, commemorative bronze plaques, architectural recognition displays, and legacy installations designed to preserve the generosity, vision, and lasting institutional impact behind every contribution for generations to come.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* Impact stat */}
       <section className="py-20 border-t border-bronze/10 bg-secondary/20">
@@ -63,7 +81,7 @@ export default function DonorRecognition() {
           <FadeIn>
             <div className="text-center mb-14">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Donor Recognition Formats</span>
-              <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Every Program. Every Scale.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Preserve The Legacy Behind Your Gift.</h2>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
@@ -91,9 +109,9 @@ export default function DonorRecognition() {
       </section>
 
       <TestimonialCarousel />
-      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+      <QuoteForm title="Honor The Contribution That Changed Futures" subtitle="Your contribution deserves permanence. Museum-quality artwork proof delivered within the hour." source="pro" />
       <FAQSection faqs={faqs} title="Donor Recognition FAQ" />
-      <QuoteForm title="Start Your Donor Recognition Wall" subtitle="Tell us about your program and campaign goals. Design proposal and pricing within 48 hours." source="pro" />
+      <QuoteForm title="Create A Legacy Future Generations Will See" subtitle="Tell us about your program and campaign goals. Design proposal and pricing within 48 hours." source="pro" />
     </div>
   );
 }
