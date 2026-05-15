@@ -102,10 +102,10 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile toggle */}
-          <div className="flex items-center gap-6 flex-shrink-0">
+          <div className="flex items-center gap-4 flex-shrink-0 min-w-fit">
             <Link
               to="/request-concept-design"
-              className="hidden lg:inline-flex text-white px-5 py-2.5 font-sans text-base uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
+              className="hidden md:inline-block text-white px-4 py-2 font-sans text-sm uppercase tracking-[0.08em] font-semibold transition-all duration-300 whitespace-nowrap"
               style={{background: "#1e3a8a", boxShadow: "0 2px 8px rgba(30,58,138,0.3)"}}
             >
               Request Design
