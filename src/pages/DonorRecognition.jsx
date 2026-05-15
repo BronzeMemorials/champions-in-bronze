@@ -62,7 +62,7 @@ export default function DonorRecognition() {
           <div className="grid md:grid-cols-3 gap-10 text-center">
             {[
               { stat: "40%+", label: "Average Donor Increase", desc: "Athletic departments report significant alumni giving increases after installing prestigious bronze recognition." },
-              { stat: "Any Scale", label: "Small Plaque to Full Wall", desc: "Single donor portrait plaques starting at $895. Full multi-tier walls up to 60 feet wide." },
+              { stat: "Any Scale", label: "Small Plaque to Full Wall", desc: "From individual donor portrait plaques to full multi-tier walls up to 60 feet wide. Every project custom-quoted." },
               { stat: "Forever", label: "Built to Last", desc: "Silicon bronze is rated 200+ years. Your donors will be recognized in perpetuity." },
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.1}>

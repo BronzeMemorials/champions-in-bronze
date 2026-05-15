@@ -1,10 +1,9 @@
-import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
+import QuoteForm from "../components/shared/QuoteForm";
 
 const factors = [
   "Pose complexity — action vs. portrait stance",
@@ -68,9 +67,7 @@ export default function BronzePricingGuide() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Request Your Custom Quote" subtitle="Every commission is unique. Share your project and receive a full proposal and artwork proof within the hour." source="pro" />
-      </Suspense>
+      <QuoteForm title="Request Your Custom Quote" subtitle="Every commission is unique. Share your project and receive a full proposal and artwork proof within the hour." source="pro" />
     </div>
   );
 }

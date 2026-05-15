@@ -35,7 +35,7 @@ export default function PhotoImageCast() {
         label="Proprietary Technology · American Foundry"
         title="Photo ImageCasting Bronze Plaques"
         subtitle="Your actual photographs — career highlights, team history, portrait collages — permanently cast into museum-quality bronze or aluminum. Not engraved. Not printed. Cast forever."
-        cta1="Get Instant Price"
+        cta1="Request a Quote"
         cta1Link="/request-quote"
         cta2="See Examples"
         cta2Link="/portfolio"

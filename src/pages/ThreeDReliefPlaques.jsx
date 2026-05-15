@@ -35,7 +35,7 @@ const faqs = [
   { question: "What makes 3D bas relief different from a flat plaque?", answer: "A 3D bas relief is a fully sculpted work — figures, faces, and action poses rise physically from the surface with up to 1 inch of dimensional depth. Light plays across the contours and changes with viewing angle. It's the difference between a photograph and a sculpture." },
   { question: "Is my athlete's exact likeness captured?", answer: "Yes. We use your photographs to sculpt accurate likeness — not a generic pose or stock figure. Your athlete's actual face, build, and expression are captured from the photos you submit. No in-person sessions required." },
   { question: "What sports and shapes are available?", answer: "Every sport. We create sport-shaped plaques including home plate, pennant, jersey outline, basketball, football, puck, and any custom architectural form. We also offer standard rectangular, oval, and arched formats." },
-  { question: "What is the price range?", answer: "3D bas relief plaques start at $895 for standard portrait formats. Multi-figure championship scenes and large-format installations are quoted individually. Volume pricing available for Hall of Fame series." },
+  { question: "What is the price range?", answer: "Every project is custom-quoted based on size, material, and complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
   { question: "How fast is turnaround?", answer: "Digital artwork proof within 48 hours. Physical production is 15–30 days for standard plaques. Rush 5-day service available on select sizes." },
   { question: "Indoor vs outdoor?", answer: "Both. Silicon bronze is fully outdoor-rated for 100+ years. Aluminum is ideal for indoor and is significantly lighter. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
 ];
@@ -58,7 +58,7 @@ export default function ThreeDReliefPlaques() {
         label="Museum Quality · Sports Division"
         title="3D Bas Relief Bronze Plaques"
         subtitle="Hand-sculpted from your actual photographs. Every face, every action pose — dimensional, permanent, and unmistakably authentic. Not an artist's interpretation of your athlete. Their real likeness."
-        cta1="Get Instant Price"
+        cta1="Request a Quote"
         cta1Link="/request-quote"
         cta2="View Portfolio"
         cta2Link="/portfolio"
@@ -143,23 +143,22 @@ export default function ThreeDReliefPlaques() {
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="font-serif text-4xl text-parchment">Starting Prices & Specs</h2>
+              <h2 className="font-serif text-4xl text-parchment">Available Formats & Specs</h2>
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="border border-bronze/20 rounded-sm overflow-hidden">
               {[
-                { size: "12 × 18″", material: "Bronze or Aluminum", relief: "Single portrait", price: "From $895" },
-                { size: "16 × 20″", material: "Bronze or Aluminum", relief: "Portrait + stats panel", price: "From $1,200" },
-                { size: "18 × 24″", material: "Silicon Bronze", relief: "Action scene", price: "From $1,800" },
-                { size: "24 × 30″", material: "Silicon Bronze", relief: "Multi-figure / championship", price: "From $3,200" },
-                { size: "Custom", material: "Any alloy", relief: "Any composition", price: "Quote on request" },
+                { size: "12 × 18″", material: "Bronze or Aluminum", relief: "Single portrait" },
+                { size: "16 × 20″", material: "Bronze or Aluminum", relief: "Portrait + stats panel" },
+                { size: "18 × 24″", material: "Silicon Bronze", relief: "Action scene" },
+                { size: "24 × 30″", material: "Silicon Bronze", relief: "Multi-figure / championship" },
+                { size: "Custom", material: "Any alloy", relief: "Any composition" },
               ].map((row, i) => (
-                <div key={row.size} className={`grid grid-cols-4 gap-4 px-6 py-4 text-sm border-b border-bronze/10 last:border-0 ${i === 0 ? "bg-bronze/10 font-semibold text-parchment/80" : "text-parchment/60"}`}>
+                <div key={row.size} className={`grid grid-cols-3 gap-4 px-6 py-4 text-sm border-b border-bronze/10 last:border-0 ${i === 0 ? "bg-bronze/10 font-semibold text-parchment/80" : "text-parchment/60"}`}>
                   <span className="font-sans">{row.size}</span>
                   <span className="font-sans">{row.material}</span>
                   <span className="font-sans">{row.relief}</span>
-                  <span className="font-serif text-gold">{row.price}</span>
                 </div>
               ))}
             </div>
