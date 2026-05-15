@@ -368,7 +368,7 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
@@ -401,7 +401,7 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
@@ -434,7 +434,7 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
@@ -787,8 +787,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                    SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                 ══════════════════════════════════════════ */}
+                                     SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                  ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -860,8 +860,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                    SECTION 2 — HALL OF FAME SYSTEMS
-                                 ══════════════════════════════════════════ */}
+                                     SECTION 2 — HALL OF FAME SYSTEMS
+                                  ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -927,8 +927,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                    SECTION 3 — BUSTS (Premium Upsell)
-                                 ══════════════════════════════════════════ */}
+                                     SECTION 3 — BUSTS (Premium Upsell)
+                                  ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1016,8 +1016,8 @@ export default function ProHome() {
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                    SECTION 4 — STATUES (Signature / Reduced)
-                                 ══════════════════════════════════════════ */}
+                                     SECTION 4 — STATUES (Signature / Reduced)
+                                  ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
