@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="font-serif text-2xl text-white">
-              Champions<br /><span className="text-yellow-400">in Bronze</span>
+              Champions<br /><span className="text-yellow-400">in Bronze™</span>
             </h3>
             <p className="font-sans text-xs text-gray-400 tracking-[0.15em] uppercase mt-1">Powered By Bronze Memorials</p>
             <p className="text-white text-sm mt-4 leading-relaxed max-w-xs">
@@ -83,9 +83,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-6 border-t border-gray-800">
+          <p className="text-gray-700 text-[10px] font-sans leading-relaxed text-center">
+            DISCLAIMER AND LEGAL NOTICE: All Content on this site is owned by Bronze Memorials Inc. and protected under US &amp; International Copyright law. Reproduction and distribution of any content, text verbatim, reviews is strictly prohibited. Violations of this will result in legal action. | Photo ImageCasting™ is a proprietary process of Bronze Memorials Inc. Unauthorized use of this name or process is prohibited.
+          </p>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white text-xs font-sans">
-            © 2026 Bronze Memorials Inc. / Champions in Bronze. All rights reserved. Made in USA.
+            © 2026 Bronze Memorials Inc. / Champions in Bronze™. All rights reserved. Made in USA.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/portfolio" className="text-white hover:text-yellow-400 text-xs transition-colors">Portfolio</Link>
