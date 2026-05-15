@@ -79,7 +79,7 @@ export default function Navbar() {
             <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-12 h-12 object-contain flex-shrink-0 self-center" />
             <div className="flex flex-col leading-none">
               <span className="font-serif text-xl text-parchment tracking-wide">
-                Champions <span className="text-bronze">in Bronze</span>
+                Champions <span style={{color: '#C9A84C'}}>in Bronze</span>
               </span>
               <span className="font-sans text-[10px] text-parchment/40 tracking-[0.15em] uppercase mt-0.5">Powered By Bronze Memorials</span>
             </div>
@@ -105,8 +105,8 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/request-concept-design"
-              className="hidden lg:inline-flex text-parchment px-5 py-2.5 font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
-              style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)", boxShadow: "0 2px 8px rgba(184,134,11,0.5)"}}
+              className="hidden lg:inline-flex text-white px-5 py-2.5 font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
+              style={{background: "#1e3a8a", boxShadow: "0 2px 8px rgba(30,58,138,0.3)"}}
             >
               Request Design
             </Link>
