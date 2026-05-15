@@ -69,12 +69,11 @@ export default function CollegiateHome() {
               Collegiate Athletic Recognition
             </span>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.92] mt-6 max-w-5xl">
-              Honoring the<br />
-              <span className="text-bronze-light italic">Student-Athlete Legacy.</span>
+              Preserve The<br />
+              <span className="text-bronze-light italic">Brotherhood Forever.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-xl text-parchment/70 leading-relaxed font-sans font-light">
-              3D bas relief Hall of Fame plaques, campus statues, donor recognition walls, and capital campaign 
-              monuments — built in bronze and aluminum for NCAA programs that honor excellence permanently.
+              Championships are remembered for generations because of the players, coaches, sacrifices, and moments that built the legacy together. Champions in Bronze transforms those historic achievements into permanent bronze recognition designed to honor the team, preserve the culture, and immortalize the era that defined greatness.
             </p>
             <div className="mt-12 flex flex-wrap gap-5">
               <Link to="/request-quote" className="bg-bronze hover:bg-gold text-parchment px-10 py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -101,9 +100,9 @@ export default function CollegiateHome() {
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            label="For Your Institution"
-            title="Bronze & Aluminum Recognition for Collegiate Athletics"
-            subtitle="Every piece is individually cast, hand-finished, and rated for outdoor installation — built to honor your program for 100+ years."
+            label="Immortalize The Team That Made History"
+            title="Preserve A Championship For Generations"
+            subtitle="Champions in Bronze creates elite championship displays, Hall of Fame installations, donor recognition environments, and commemorative bronze plaques designed to preserve the brotherhood, sacrifice, tradition, and championship legacy that define unforgettable teams and historic athletic eras."
             align="center"
           />
           <div className="grid md:grid-cols-2 gap-6">
@@ -139,14 +138,15 @@ export default function CollegiateHome() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">The Difference Is Clear</span>
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Honor The Team Future Players Will Remember</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
-                3D Relief Portraits —<br />Not Just a Photo.
+                Celebrate The Era<br />That Defined Greatness.
               </h2>
               <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
-                Most Hall of Fame displays use a framed photograph. Ours are hand-sculpted, three-dimensional 
-                bronze portraits — a tactile, permanent work of art that honors the athlete's entire career, 
-                not just a moment. Created entirely from photos, delivered in 48 hours.
+                Most Hall of Fame displays use a framed photograph. Ours are hand-sculpted, three-dimensional bronze portraits — a tactile, permanent work of art that honors the athlete's entire career, not just a moment. Created entirely from photos, delivered in 48 hours.
+              </p>
+              <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
+                Preserve the legacy built together — the brotherhood, sacrifice, tradition, and championship culture that future players will look up to for generations.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-6">
                 {[
@@ -189,10 +189,10 @@ export default function CollegiateHome() {
       </section>
 
       <ProcessTimeline />
-      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="edu" />
+      <QuoteForm title="Honor The Team That Changed History" subtitle="Preserve the brotherhood for generations. Museum-quality artwork proof delivered within the hour." source="edu" />
       <TestimonialCarousel testimonials={collegiateTestimonials} />
       <QuoteForm
-        title="Start Your College Commission"
+        title="Immortalize A Legacy Bigger Than The Game"
         subtitle="Tell us about your program. Receive artwork and pricing within 48 hours. We don't miss deadlines."
         source="edu"
       />
