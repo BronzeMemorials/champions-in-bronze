@@ -192,10 +192,10 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               <Button type="submit" disabled={submitting}
-                className="w-full h-11 text-black font-sans uppercase tracking-[0.2em] text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
+                className="w-full min-h-11 h-auto py-3 px-4 text-black font-sans uppercase tracking-[0.15em] text-xs sm:text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
                 {submitting
                   ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
-                  : <><Send className="w-4 h-4 mr-2 flex-shrink-0" /> <span className="whitespace-normal text-center leading-tight">Request Quote — Artwork Within The Hour</span></>
+                  : <><Send className="w-4 h-4 mr-2 flex-shrink-0" /> <span className="whitespace-normal text-center leading-tight text-wrap break-words">Request Quote — Artwork Within The Hour</span></>
                 }
               </Button>
               <p className="text-center text-black text-xs font-sans font-medium">
