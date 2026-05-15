@@ -23,39 +23,39 @@ const localBusinessSchema = {
     "@type": "OfferCatalog",
     "name": "Bronze Recognition Products",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "3D Bas-Relief Bronze Plaques" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Photo Image Cast Plaques" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hall of Fame Plaques" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Donor Recognition Walls" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bronze Athlete Busts" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Championship Bronze Plaques" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Custom Bronze Statues" } }
-    ]
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "3D Bas-Relief Bronze Plaques" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Photo Image Cast Plaques" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hall of Fame Plaques" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Donor Recognition Walls" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bronze Athlete Busts" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Championship Bronze Plaques" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Custom Bronze Statues" } }]
+
   }
 };
 
 const faqSchemaItems = [
-  { q: "What types of bronze plaques do you produce?", a: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
-  { q: "How does your photo image casting process work?", a: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
-  { q: "What is the typical lead time for plaques?", a: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
-  { q: "Do you handle complete Hall of Fame installations?", a: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
-  { q: "What is the investment range for a Hall of Fame plaque program?", a: "Every program is custom-quoted based on scope, number of inductees, formats, and installation complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
-  { q: "Bronze vs. aluminum — which is right for my project?", a: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
-  { q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction." },
-  { q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
-  { q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
-  { q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
-  { q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
-  { q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
-  { q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process." },
-  { q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes." },
-  { q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Every project is custom-quoted — request a quote for exact pricing." },
-  { q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available." },
-  { q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork." },
-  { q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability." },
-  { q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail." },
-  { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, and stadium branding systems." },
-];
+{ q: "What types of bronze plaques do you produce?", a: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
+{ q: "How does your photo image casting process work?", a: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
+{ q: "What is the typical lead time for plaques?", a: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
+{ q: "Do you handle complete Hall of Fame installations?", a: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
+{ q: "What is the investment range for a Hall of Fame plaque program?", a: "Every program is custom-quoted based on scope, number of inductees, formats, and installation complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
+{ q: "Bronze vs. aluminum — which is right for my project?", a: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
+{ q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction." },
+{ q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
+{ q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
+{ q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
+{ q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
+{ q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
+{ q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process." },
+{ q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes." },
+{ q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Every project is custom-quoted — request a quote for exact pricing." },
+{ q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available." },
+{ q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork." },
+{ q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability." },
+{ q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail." },
+{ q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, and stadium branding systems." }];
+
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -324,23 +324,23 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/photo-image-casting-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -357,11 +357,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", desc: "High-depth sculptural action figures rising from the surface with your actual photographs cast permanently into bronze.", cta: "Request Quote", to: "/request-quote" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Basketball Relief & Photo Cast", desc: "Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours.", cta: "Request Quote", to: "/request-quote" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", desc: "Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees and championship programs.", cta: "Request Quote", to: "/request-quote" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", desc: "High-depth sculptural action figures rising from the surface with your actual photographs cast permanently into bronze.", cta: "Request Quote", to: "/request-quote" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Basketball Relief & Photo Cast", desc: "Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours.", cta: "Request Quote", to: "/request-quote" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", desc: "Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees and championship programs.", cta: "Request Quote", to: "/request-quote" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -373,7 +373,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -390,11 +390,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Championship Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in silicon bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Championship Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in silicon bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -406,7 +406,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -423,11 +423,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Stadium Dedication Plaque", desc: "Cast architectural bronze plaques for facility dedications, memorial installations, alumni recognition, and institutional signage.", cta: "View Dedication Plaques", to: "/dedication-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Memorial Bronze Plaque", desc: "Silicon bronze or aluminum. Available in any size, any shape for complete customization.", cta: "View Memorial Plaques", to: "/bronze-memorials" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Alumni Recognition Plaque", desc: "Every format rated for 100+ years of outdoor permanence. The institutional standard for universities and stadiums.", cta: "View Alumni Memorials", to: "/alumni-memorials" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Stadium Dedication Plaque", desc: "Cast architectural bronze plaques for facility dedications, memorial installations, alumni recognition, and institutional signage.", cta: "View Dedication Plaques", to: "/dedication-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Memorial Bronze Plaque", desc: "Silicon bronze or aluminum. Available in any size, any shape for complete customization.", cta: "View Memorial Plaques", to: "/bronze-memorials" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Alumni Recognition Plaque", desc: "Every format rated for 100+ years of outdoor permanence. The institutional standard for universities and stadiums.", cta: "View Alumni Memorials", to: "/alumni-memorials" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -439,7 +439,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/championship-bronze-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -456,11 +456,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hall of Fame Bust", desc: "When champions see themselves immortalized in bronze, the emotion is overwhelming. Created from your exact photographs.", cta: "View Hall of Fame Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Athlete Portrait Bust", desc: "Advanced sculptural technology with no in-person sessions required. No generic likenesses. Museum-quality craftsmanship.", cta: "View Athlete Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", desc: "Hall of Fame corridors, trophy rooms, and legacy recognition environments designed for permanent institutional display.", cta: "Request a Bust Quote", to: "/request-quote" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hall of Fame Bust", desc: "When champions see themselves immortalized in bronze, the emotion is overwhelming. Created from your exact photographs.", cta: "View Hall of Fame Busts", to: "/bronze-athlete-busts" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Athlete Portrait Bust", desc: "Advanced sculptural technology with no in-person sessions required. No generic likenesses. Museum-quality craftsmanship.", cta: "View Athlete Busts", to: "/bronze-athlete-busts" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", desc: "Hall of Fame corridors, trophy rooms, and legacy recognition environments designed for permanent institutional display.", cta: "Request a Bust Quote", to: "/request-quote" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                     <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -472,7 +472,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -489,11 +489,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", desc: "Legends battled, sacrificed, and rose. Now their story lives in bronze. Life-size and heroic-scale sculptures.", cta: "View Football Statues", to: "/football" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Guard Statue", desc: "Sculpted from your actual photographs for stadium entrances, arena lobbies, and campus landmarks.", cta: "View Basketball Statues", to: "/basketball" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", desc: "Every figure captures exact likeness — bone structure, athletic stance, personality. Champions fade only when forgotten.", cta: "View Baseball Statues", to: "/baseball" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", desc: "Legends battled, sacrificed, and rose. Now their story lives in bronze. Life-size and heroic-scale sculptures.", cta: "View Football Statues", to: "/football" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Guard Statue", desc: "Sculpted from your actual photographs for stadium entrances, arena lobbies, and campus landmarks.", cta: "View Basketball Statues", to: "/basketball" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", desc: "Every figure captures exact likeness — bone structure, athletic stance, personality. Champions fade only when forgotten.", cta: "View Baseball Statues", to: "/baseball" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                     <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -505,7 +505,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -522,11 +522,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in silicon bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in silicon bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -538,7 +538,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/3d-relief-jersey-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -555,11 +555,11 @@ export default function ProHome() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", desc: "Your contribution deserves permanence. Architectural donor recognition environments that transform generosity into permanent bronze.", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", desc: "Leadership and legacy transformed into permanent bronze recognition designed to inspire future generations.", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", desc: "Installed at universities, stadiums, athletic facilities, and capital campaigns nationwide.", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" },
-              ].map((item, i) => (
-                <div key={i} className="group flex flex-col">
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", desc: "Your contribution deserves permanence. Architectural donor recognition environments that transform generosity into permanent bronze.", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", desc: "Leadership and legacy transformed into permanent bronze recognition designed to inspire future generations.", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", desc: "Installed at universities, stadiums, athletic facilities, and capital campaigns nationwide.", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" }].
+              map((item, i) =>
+              <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -571,7 +571,7 @@ export default function ProHome() {
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-5">
               <Link to="/donor-recognition" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -605,11 +605,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Football Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Football Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", cta: "View Football Statues", to: "/football" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Football Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Football Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", cta: "View Football Statues", to: "/football" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -618,7 +618,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/football" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -636,11 +636,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Basketball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Basketball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Player Statue", cta: "View Basketball Statues", to: "/basketball" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Basketball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Basketball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Player Statue", cta: "View Basketball Statues", to: "/basketball" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -649,7 +649,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -667,11 +667,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Baseball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Baseball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -680,7 +680,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/baseball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -698,11 +698,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Women's Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Women's Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Women's Basketball Statue", cta: "View Basketball Statues", to: "/basketball" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Women's Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Women's Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Women's Basketball Statue", cta: "View Basketball Statues", to: "/basketball" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -711,7 +711,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -729,11 +729,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Soccer Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Soccer Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Soccer Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Soccer Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -742,7 +742,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/soccer" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -760,11 +760,11 @@ export default function ProHome() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Hockey Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hockey Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                  { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Hockey Player Statue", cta: "View Hockey Statues", to: "/hockey" },
-                ].map((item, i) => (
-                  <div key={i} className="group flex flex-col">
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Hockey Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hockey Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Hockey Player Statue", cta: "View Hockey Statues", to: "/hockey" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -773,7 +773,7 @@ export default function ProHome() {
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
               <div className="mt-5">
                 <Link to="/hockey" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -787,8 +787,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                   SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                ══════════════════════════════════════════ */}
+                                    SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                 ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -860,8 +860,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                   SECTION 2 — HALL OF FAME SYSTEMS
-                                ══════════════════════════════════════════ */}
+                                    SECTION 2 — HALL OF FAME SYSTEMS
+                                 ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -927,8 +927,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                   SECTION 3 — BUSTS (Premium Upsell)
-                                ══════════════════════════════════════════ */}
+                                    SECTION 3 — BUSTS (Premium Upsell)
+                                 ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1016,8 +1016,8 @@ export default function ProHome() {
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                   SECTION 4 — STATUES (Signature / Reduced)
-                                ══════════════════════════════════════════ */}
+                                    SECTION 4 — STATUES (Signature / Reduced)
+                                 ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1109,32 +1109,32 @@ export default function ProHome() {
           </div>
           <div className="space-y-8">
             {[
-              { q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction. Cast bronze is widely used for Hall of Fame plaques, donor recognition plaques, memorial plaques, university recognition systems, and stadium dedication signage." },
-              { q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
-              { q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
-              { q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
-              { q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
-              { q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
-              { q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process. Custom bronze busts are popular for Hall of Fame inductees, championship coaches, donor recognition, alumni recognition, and athletic legacy installations." },
-              { q: "Are bronze plaques ADA compliant?", a: "Yes. Bronze plaques can be manufactured to meet ADA requirements including tactile raised lettering, Grade 2 Braille, contrast requirements, and proper character sizing. ADA bronze signage is widely used in universities, hospitals, stadiums, municipal buildings, and architectural Division 10 signage projects." },
-              { q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes. Custom architectural finishes are also available for donor recognition plaques, Hall of Fame displays, memorial plaques, bronze statues, and stadium signage systems." },
-              { q: "How are bronze plaques mounted?", a: "Typical mounting methods include stud mounting, flush wall mounting, stand-off mounting, masonry anchors, monument mounting, and post and panel systems. Mounting depends on the installation surface and plaque size. Bronze plaques for universities, donor walls, stadiums, and memorial installations often require engineered mounting systems." },
-              { q: "Can bronze plaques be installed outdoors near the ocean?", a: "Yes. Bronze performs extremely well in coastal environments. Over time it naturally develops a protective patina that helps resist corrosion. Bronze memorial plaques, donor recognition plaques, and stadium signage are commonly installed in coastal environments throughout the United States." },
-              { q: "What sizes are available for bronze plaques?", a: "Bronze plaques can range from small memorial markers to large donor recognition walls and stadium recognition systems exceeding several feet in width and height. Custom sizes are available for Hall of Fame plaques, athletic recognition systems, university signage, and commemorative installations." },
-              { q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Custom cast bronze plaques are premium architectural products designed for long-term donor recognition, Hall of Fame installations, memorial projects, university branding, and stadium dedications. Request a quote for exact pricing." },
-              { q: "What industries commonly use bronze plaques?", a: "Major markets include universities, athletic facilities, stadiums, municipal buildings, veterans memorials, churches, hospitals, corporate headquarters, donor recognition programs, and Hall of Fame installations. Bronze plaques are widely used anywhere permanent recognition, donor appreciation, or commemorative signage is required." },
-              { q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available for donor recognition projects, Hall of Fame ceremonies, university dedications, and championship recognition events." },
-              { q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork. Custom bronze plaques are frequently designed for donor recognition walls, Hall of Fame plaques, stadium dedications, memorial installations, and collegiate athletic facilities." },
-              { q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability. Bronze statues and bronze busts are commonly installed in universities, stadiums, Hall of Fame displays, donor recognition programs, and memorial gardens." },
-              { q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail. This process is commonly used for bronze statues, bronze busts, Hall of Fame plaques, and donor recognition sculptures." },
-              { q: "Do bronze plaques require maintenance?", a: "Very little maintenance is required. Occasional cleaning and waxing can preserve appearance, but bronze naturally ages with an attractive patina over time. Bronze memorial plaques, donor recognition walls, and Hall of Fame installations are designed for decades of outdoor durability." },
-              { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, university dedications, alumni recognition, athletic facility signage, and stadium branding systems." },
-            ].map((item, i) => (
-              <div key={i} className="border-b border-bronze/20 pb-8">
+            { q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction. Cast bronze is widely used for Hall of Fame plaques, donor recognition plaques, memorial plaques, university recognition systems, and stadium dedication signage." },
+            { q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
+            { q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
+            { q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
+            { q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
+            { q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
+            { q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process. Custom bronze busts are popular for Hall of Fame inductees, championship coaches, donor recognition, alumni recognition, and athletic legacy installations." },
+            { q: "Are bronze plaques ADA compliant?", a: "Yes. Bronze plaques can be manufactured to meet ADA requirements including tactile raised lettering, Grade 2 Braille, contrast requirements, and proper character sizing. ADA bronze signage is widely used in universities, hospitals, stadiums, municipal buildings, and architectural Division 10 signage projects." },
+            { q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes. Custom architectural finishes are also available for donor recognition plaques, Hall of Fame displays, memorial plaques, bronze statues, and stadium signage systems." },
+            { q: "How are bronze plaques mounted?", a: "Typical mounting methods include stud mounting, flush wall mounting, stand-off mounting, masonry anchors, monument mounting, and post and panel systems. Mounting depends on the installation surface and plaque size. Bronze plaques for universities, donor walls, stadiums, and memorial installations often require engineered mounting systems." },
+            { q: "Can bronze plaques be installed outdoors near the ocean?", a: "Yes. Bronze performs extremely well in coastal environments. Over time it naturally develops a protective patina that helps resist corrosion. Bronze memorial plaques, donor recognition plaques, and stadium signage are commonly installed in coastal environments throughout the United States." },
+            { q: "What sizes are available for bronze plaques?", a: "Bronze plaques can range from small memorial markers to large donor recognition walls and stadium recognition systems exceeding several feet in width and height. Custom sizes are available for Hall of Fame plaques, athletic recognition systems, university signage, and commemorative installations." },
+            { q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Custom cast bronze plaques are premium architectural products designed for long-term donor recognition, Hall of Fame installations, memorial projects, university branding, and stadium dedications. Request a quote for exact pricing." },
+            { q: "What industries commonly use bronze plaques?", a: "Major markets include universities, athletic facilities, stadiums, municipal buildings, veterans memorials, churches, hospitals, corporate headquarters, donor recognition programs, and Hall of Fame installations. Bronze plaques are widely used anywhere permanent recognition, donor appreciation, or commemorative signage is required." },
+            { q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available for donor recognition projects, Hall of Fame ceremonies, university dedications, and championship recognition events." },
+            { q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork. Custom bronze plaques are frequently designed for donor recognition walls, Hall of Fame plaques, stadium dedications, memorial installations, and collegiate athletic facilities." },
+            { q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability. Bronze statues and bronze busts are commonly installed in universities, stadiums, Hall of Fame displays, donor recognition programs, and memorial gardens." },
+            { q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail. This process is commonly used for bronze statues, bronze busts, Hall of Fame plaques, and donor recognition sculptures." },
+            { q: "Do bronze plaques require maintenance?", a: "Very little maintenance is required. Occasional cleaning and waxing can preserve appearance, but bronze naturally ages with an attractive patina over time. Bronze memorial plaques, donor recognition walls, and Hall of Fame installations are designed for decades of outdoor durability." },
+            { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, university dedications, alumni recognition, athletic facility signage, and stadium branding systems." }].
+            map((item, i) =>
+            <div key={i} className="border-b border-bronze/20 pb-8">
                 <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">{item.q}</p>
                 <p className="font-sans text-sm italic text-black leading-relaxed">{item.a}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
