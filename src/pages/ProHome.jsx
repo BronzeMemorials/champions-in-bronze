@@ -265,10 +265,13 @@ export default function ProHome() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pb-20 sm:pb-28 pt-32 sm:pt-40 w-full">
           <FadeIn>
-            <span className="font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5 text-[hsl(var(--foreground))]">LEGACY TRIBUTES IN PLAQUES, BUSTS, & STATUES
+            <span className="font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5 text-[hsl(var(--foreground))] text-center">LEGACY TRIBUTES IN PLAQUES, BUSTS, & STATUES
 
             </span>
-            <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment w-full text-center text-3xl">ImmortalizeYour Legacy Champions Deserve to Live Forever</h1>
+            <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment w-full text-center text-3xl">Immortalize
+Your Legacy 
+Champions Deserve 
+to Live Forever</h1>
             <p className="mt-6 max-w-2xl text-base sm:text-xl md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <p className="font-serif text-xl sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
@@ -320,9 +323,7 @@ export default function ProHome() {
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[{ img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].
-              map((item, i) =>
-              <div key={i} className="group flex flex-col">
+              {[{ img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].map((item, i) => <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
@@ -333,8 +334,7 @@ export default function ProHome() {
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
-                </div>
-              )}
+                </div>)}
             </div>
             <div className="mt-5">
               <Link to="/photo-image-casting-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -781,8 +781,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                                              SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                                           ══════════════════════════════════════════ */}
+                                                               SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                                            ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -854,8 +854,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                                              SECTION 2 — HALL OF FAME SYSTEMS
-                                                           ══════════════════════════════════════════ */}
+                                                               SECTION 2 — HALL OF FAME SYSTEMS
+                                                            ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -919,8 +919,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                                              SECTION 3 — BUSTS (Premium Upsell)
-                                                           ══════════════════════════════════════════ */}
+                                                               SECTION 3 — BUSTS (Premium Upsell)
+                                                            ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1008,8 +1008,8 @@ export default function ProHome() {
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                                              SECTION 4 — STATUES (Signature / Reduced)
-                                                           ══════════════════════════════════════════ */}
+                                                               SECTION 4 — STATUES (Signature / Reduced)
+                                                            ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
