@@ -321,20 +321,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 01</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze. Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever. The most powerful recognition product in athletics today.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", cta: "View Donor Plaques", to: "/donor-recognition" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -352,20 +354,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 02</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief with Photo Image Casting</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The pinnacle of athletic plaque recognition — high-depth sculptural action figures rising from the surface, combined with your actual photographic portraits cast permanently into bronze. Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours. Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees, championship programs, and retired numbers.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Basketball Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", cta: "Request Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", desc: "High-depth sculptural action figures rising from the surface with your actual photographs cast permanently into bronze.", cta: "Request Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Basketball Relief & Photo Cast", desc: "Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours.", cta: "Request Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", desc: "Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees and championship programs.", cta: "Request Quote", to: "/request-quote" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -383,20 +387,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 03</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Sculptural bronze plaques where athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth. Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans, cast in silicon bronze, and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Championship Relief Plaque", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", cta: "View All Plaques", to: "/3d-bas-relief-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Championship Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in silicon bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -414,20 +420,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 04</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Standard Bronze Plaques</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Cast architectural bronze plaques for facility dedications, memorial installations, alumni recognition, and institutional signage. Silicon bronze or aluminum. Available in any size, any shape. Every format rated for 100+ years of outdoor permanence. The institutional standard for universities, stadiums, and athletic facilities across America.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Stadium Dedication Plaque", cta: "View Dedication Plaques", to: "/dedication-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Memorial Bronze Plaque", cta: "View Memorial Plaques", to: "/bronze-memorials" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Alumni Recognition Plaque", cta: "View Alumni Memorials", to: "/alumni-memorials" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Stadium Dedication Plaque", desc: "Cast architectural bronze plaques for facility dedications, memorial installations, alumni recognition, and institutional signage.", cta: "View Dedication Plaques", to: "/dedication-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Memorial Bronze Plaque", desc: "Silicon bronze or aluminum. Available in any size, any shape for complete customization.", cta: "View Memorial Plaques", to: "/bronze-memorials" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Alumni Recognition Plaque", desc: "Every format rated for 100+ years of outdoor permanence. The institutional standard for universities and stadiums.", cta: "View Alumni Memorials", to: "/alumni-memorials" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -445,20 +453,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 05</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Busts</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">When champions see themselves immortalized in bronze, the emotion is overwhelming — because the pain, sacrifice, brotherhood, dedication, and greatness that shaped their lives are finally transformed into something permanent. Every bust is created from your exact photographs using advanced sculptural technology. No in-person sessions. No generic likenesses. Museum-quality craftsmanship for Hall of Fame corridors, trophy rooms, and legacy recognition environments. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hall of Fame Bust", cta: "View Hall of Fame Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Athlete Portrait Bust", cta: "View Athlete Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", cta: "Request a Bust Quote", to: "/request-quote" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", label: "Hall of Fame Bust", desc: "When champions see themselves immortalized in bronze, the emotion is overwhelming. Created from your exact photographs.", cta: "View Hall of Fame Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", label: "Athlete Portrait Bust", desc: "Advanced sculptural technology with no in-person sessions required. No generic likenesses. Museum-quality craftsmanship.", cta: "View Athlete Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", label: "Coach Portrait Bust", desc: "Hall of Fame corridors, trophy rooms, and legacy recognition environments designed for permanent institutional display.", cta: "Request a Bust Quote", to: "/request-quote" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                     <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -476,20 +486,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 06</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Statues</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Legends battled, sacrificed, and rose. Now their story lives in bronze. Life-size and heroic-scale bronze statues sculpted from your actual photographs for stadium entrances, arena lobbies, and campus landmarks. Every figure captures exact likeness — bone structure, athletic stance, personality. Champions fade only when forgotten. Bronze holds what time cannot take. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", cta: "View Football Statues", to: "/football" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Guard Statue", cta: "View Basketball Statues", to: "/basketball" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png", label: "Football Quarterback Statue", desc: "Legends battled, sacrificed, and rose. Now their story lives in bronze. Life-size and heroic-scale sculptures.", cta: "View Football Statues", to: "/football" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png", label: "Basketball Guard Statue", desc: "Sculpted from your actual photographs for stadium entrances, arena lobbies, and campus landmarks.", cta: "View Basketball Statues", to: "/basketball" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png", label: "Baseball Pitcher Statue", desc: "Every figure captures exact likeness — bone structure, athletic stance, personality. Champions fade only when forgotten.", cta: "View Baseball Statues", to: "/baseball" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
                     <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -507,20 +519,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 07</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bronze Jerseys</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques for retired number ceremonies, championship tributes, and Hall of Fame installations. Cast in silicon bronze or aluminum, available in any team's colors and typography. The most visually striking way to honor a retired number.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Retired Jersey Plaque", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in silicon bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -538,20 +552,22 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 08</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Donor Recognition Walls</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Your contribution deserves permanence. Champions in Bronze creates architectural donor recognition environments that transform generosity, leadership, and legacy into permanent bronze recognition crafted to inspire future generations at universities, stadiums, athletic facilities, and capital campaigns.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", desc: "Your contribution deserves permanence. Architectural donor recognition environments that transform generosity into permanent bronze.", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", desc: "Leadership and legacy transformed into permanent bronze recognition designed to inspire future generations.", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", desc: "Installed at universities, stadiums, athletic facilities, and capital campaigns nationwide.", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" },
               ].map((item, i) => (
                 <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
                     <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <p className="font-serif text-sm text-parchment">{item.label}</p>
+                  <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
+                    <div>
+                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="text-parchment/50 font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
@@ -566,6 +582,8 @@ export default function ProHome() {
 
         </div>
       </section>
+
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       <TrustBadges />
 
@@ -1053,7 +1071,6 @@ export default function ProHome() {
 
       {/* FAQ */}
       <FAQSection faqs={faqs} />
-      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       {/* FINAL CTA */}
       <section className="relative py-40 overflow-hidden bg-secondary/40">
