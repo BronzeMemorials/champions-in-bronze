@@ -156,7 +156,7 @@ const faqs = [
 { question: "How does your photo image casting process work?", answer: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
 { question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
 { question: "Do you handle complete Hall of Fame installations?", answer: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
-{ question: "What is the investment range for a Hall of Fame plaque program?", answer: "Individual plaques start from $895 for standard portrait formats. Hall of Fame series programs typically range from $15,000 to $150,000+ depending on number of inductees, formats, and installation complexity. Donor wall systems are quoted by scope." },
+{ question: "What is the investment range for a Hall of Fame plaque program?", answer: "Every program is custom-quoted based on scope, number of inductees, formats, and installation complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
 { question: "Bronze vs. aluminum — which is right for my project?", answer: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." }];
 
 
@@ -940,62 +940,6 @@ export default function ProHome() {
       <Suspense fallback={<div className="h-40" />}>
         <TestimonialCarousel />
       </Suspense>
-
-      {/* PRICING PREVIEW — plaques first */}
-      <section className="py-28 border-t border-bronze/10 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn>
-            <SectionHeading
-              label="Investment Guide"
-              title="Transparent Pricing. Zero Surprises."
-              subtitle="Every commission is custom — these ranges reflect typical projects. Plaque programs and Hall of Fame series are our most-requested starting point."
-              align="center" />
-            
-          </FadeIn>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-            {
-              category: "Bronze Plaques",
-              badge: "Most Popular",
-              items: [{ size: "Standard Portrait", range: "From $895" }, { size: "Large Format", range: "From $1,800" }, { size: "Hall of Fame Series", range: "From $4,500" }],
-              link: "/bronze-statue-pricing"
-            },
-            {
-              category: "Busts & Portraits",
-              items: [{ size: '12" Portrait Bust', range: "From $1,800" }, { size: '18" Hall of Fame', range: "From $3,500" }, { size: 'Donor Bust', range: "From $5,000" }],
-              link: "/bronze-statue-pricing"
-            },
-            {
-              category: "Full Statues",
-              items: [{ size: '36"', range: "From $12,000" }, { size: '60"', range: "From $35,000" }, { size: '72"+ Life-Size', range: "From $75,000" }],
-              link: "/bronze-statue-pricing"
-            }].
-            map((cat, i) =>
-            <FadeIn key={cat.category} delay={i * 0.1}>
-                <div className={`border bg-white shadow-sm p-8 rounded-sm flex flex-col ${i === 0 ? "border-bronze/50 ring-1 ring-bronze/20" : "border-bronze/20"}`}>
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="font-serif text-2xl text-gold">{cat.category}</p>
-                    {cat.badge &&
-                  <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.1em] px-2 py-0.5 font-semibold">{cat.badge}</span>
-                  }
-                  </div>
-                  <ul className="space-y-4 flex-1">
-                    {cat.items.map((item) =>
-                  <li key={item.size} className="flex items-center justify-between border-b border-bronze/10 pb-4 last:border-0 last:pb-0">
-                        <span className="font-sans text-sm text-parchment/60">{item.size}</span>
-                        <span className="font-serif text-parchment">{item.range}</span>
-                      </li>
-                  )}
-                  </ul>
-                  <Link to={cat.link} className="inline-flex items-center gap-2 mt-6 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
-                    Full Pricing Guide <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </FadeIn>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════════════
                                    SECTION 4 — STATUES (Signature / Reduced)

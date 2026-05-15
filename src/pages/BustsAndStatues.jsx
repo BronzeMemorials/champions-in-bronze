@@ -151,17 +151,16 @@ export default function BustsAndStatues() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Portrait Bust", range: "12″ – 36″", desc: "Head and shoulders. Pedestal-mounted. Perfect for Hall of Fame walls, award presentations, and office displays.", price: "From $1,800" },
-              { title: "Half-Figure Bust", range: "36″ – 60″", desc: "Torso and above. Architectural scale. Common for locker room entrances and facility dedications.", price: "From $8,500" },
-              { title: "Full Statue", range: "Life-size to 10′+", desc: "Full standing, action, or heroic-scale figures. Stadium entrances, arena lobbies, campus landmarks.", price: "From $35,000" },
+              { title: "Portrait Bust", range: "12″ – 36″", desc: "Head and shoulders. Pedestal-mounted. Perfect for Hall of Fame walls, award presentations, and office displays." },
+              { title: "Half-Figure Bust", range: "36″ – 60″", desc: "Torso and above. Architectural scale. Common for locker room entrances and facility dedications." },
+              { title: "Full Statue", range: "Life-size to 10′+", desc: "Full standing, action, or heroic-scale figures. Stadium entrances, arena lobbies, campus landmarks." },
             ].map((spec, i) => (
               <FadeIn key={spec.title} delay={i * 0.1}>
                 <div className="border border-bronze/20 bg-obsidian p-8 rounded-sm">
                   <p className="font-serif text-2xl text-gold">{spec.title}</p>
                   <p className="text-parchment/40 text-sm mt-1 font-sans uppercase tracking-wider">{spec.range}</p>
                   <p className="text-parchment/60 text-sm mt-4 leading-relaxed">{spec.desc}</p>
-                  <p className="text-bronze-light font-serif text-lg mt-6">{spec.price}</p>
-                  <Link to="/request-quote" className="inline-flex items-center gap-2 mt-4 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
+                  <Link to="/request-quote" className="inline-flex items-center gap-2 mt-6 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
                     Get a Quote <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
