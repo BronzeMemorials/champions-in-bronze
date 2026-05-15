@@ -269,7 +269,8 @@ export default function ProHome() {
 
             </span>
             <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl text-4xl">Commemorate
-Champions InBronze</h1>
+Champions
+In Bronze</h1>
             <p className="mt-6 max-w-2xl text-base sm:text-xl md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <p className="font-serif text-xl sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
@@ -321,8 +322,7 @@ Champions InBronze</h1>
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+              {[{ img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].
               map((item, i) =>
@@ -785,8 +785,8 @@ Champions InBronze</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                             SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                          ══════════════════════════════════════════ */}
+                                              SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                           ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -858,8 +858,8 @@ Champions InBronze</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                             SECTION 2 — HALL OF FAME SYSTEMS
-                                          ══════════════════════════════════════════ */}
+                                              SECTION 2 — HALL OF FAME SYSTEMS
+                                           ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -923,8 +923,8 @@ Champions InBronze</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                             SECTION 3 — BUSTS (Premium Upsell)
-                                          ══════════════════════════════════════════ */}
+                                              SECTION 3 — BUSTS (Premium Upsell)
+                                           ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1012,8 +1012,8 @@ Champions InBronze</h1>
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                             SECTION 4 — STATUES (Signature / Reduced)
-                                          ══════════════════════════════════════════ */}
+                                              SECTION 4 — STATUES (Signature / Reduced)
+                                           ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
