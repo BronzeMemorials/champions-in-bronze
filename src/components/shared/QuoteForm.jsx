@@ -117,9 +117,9 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   }
 
   const whyUs = [
+    { icon: Shield, title: "Exact Photo Likeness", desc: "Proprietary Photo ImageCasting process — your real photos cast permanently in bronze." },
     { icon: Clock, title: "Artwork Proof Within The Hour", desc: "Digital proof of your custom design delivered within the hour — no commitment required." },
     { icon: Award, title: "Museum-Quality Craftsmanship", desc: "Institutional-grade bronze manufactured to last 100+ years outdoors." },
-    { icon: Shield, title: "Exact Photo Likeness", desc: "Proprietary Photo ImageCasting process — your real photos cast permanently in bronze." },
     { icon: Users, title: "Over 50,000 Satisfied Customers", desc: "Don't believe us? Read our reviews!" },
     { icon: Star, title: "Bronze Plaques & Busts Made in the USA", desc: "100% Made in America. No tariffs. Been in business for over 50 years." },
   ];
