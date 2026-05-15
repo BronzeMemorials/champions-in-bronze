@@ -89,6 +89,8 @@
     font-weight: 700;
     color: #111827;
     overflow-x: hidden;
+    transform: scale(1.25);
+    transform-origin: top center;
   }
 
   p, span, li, a, label, input, textarea, select, button {
