@@ -86,7 +86,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-10">
+          <nav className="hidden xl:flex items-center gap-10 flex-1 justify-center">
             <DropdownMenu label="Showcase" links={productLinks} />
             {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
               <Link
