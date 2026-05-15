@@ -37,14 +37,14 @@ function DropdownMenu({ label, links }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 mt-2 w-60 bg-white border border-gray-200 shadow-2xl z-50"
+            className="absolute top-full left-0 mt-2 w-60 bg-white border border-white shadow-2xl z-50"
           >
             {safeLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block px-5 py-3 font-sans text-xs uppercase tracking-[0.08em] border-b border-bronze/10 last:border-0 transition-colors duration-200 ${
-                  location.pathname === link.to ? "text-gold bg-bronze/10" : "text-parchment/55 hover:text-gold hover:bg-bronze/5"
+                className={`block px-5 py-3 font-sans text-xs uppercase tracking-[0.08em] border-b border-white last:border-0 transition-colors duration-200 ${
+                  location.pathname === link.to ? "text-gold bg-white" : "text-parchment/55 hover:text-gold hover:bg-white"
                 }`}
               >
                 {link.label}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-white backdrop-blur-xl border-b border-gray-200 shadow-sm">
+      <div className="bg-white backdrop-blur-xl border-b border-white shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">

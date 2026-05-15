@@ -31,7 +31,7 @@ function ReviewCarousel() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
   const t = testimonials[current];
   return (
-    <div className="bg-white border-2 border-gray-200 p-6">
+    <div className="bg-white border-2 border-white p-6">
       <div className="flex gap-1 mb-3">
         {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 text-yellow-500 fill-current" />)}
       </div>
@@ -42,20 +42,20 @@ function ReviewCarousel() {
         {t.role && <p className="text-gray-600 font-sans text-xs mt-0.5">{t.role}</p>}
       </div>
       <div className="flex items-center gap-3 mt-4">
-        <button onClick={prev} className="w-7 h-7 border border-gray-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-gray-500 transition-colors">
+        <button onClick={prev} className="w-7 h-7 border border-white flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-black transition-colors">
           <ChevronLeft className="w-3.5 h-3.5" />
         </button>
         <div className="flex gap-1.5 flex-1">
           {testimonials.map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "bg-yellow-500 w-5" : "bg-gray-300 w-1.5"}`} />
+            <button key={i} onClick={() => setCurrent(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "bg-yellow-500 w-5" : "bg-black w-1.5"}`} />
           ))}
         </div>
-        <button onClick={next} className="w-7 h-7 border border-gray-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-gray-500 transition-colors">
+        <button onClick={next} className="w-7 h-7 border border-white flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-black transition-colors">
           <ChevronRight className="w-3.5 h-3.5" />
         </button>
       </div>
-      <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-        <p className="text-gray-500 font-sans text-xs uppercase tracking-widest">1,600+ Five-Star Reviews</p>
+      <div className="mt-4 pt-4 border-t border-white flex items-center justify-between">
+        <p className="text-black font-sans text-xs uppercase tracking-widest">1,600+ Five-Star Reviews</p>
         <Link to="/reviews" className="text-yellow-700 hover:text-yellow-600 font-sans text-xs uppercase tracking-widest font-semibold transition-colors">
           Read All →
         </Link>
@@ -102,7 +102,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
 
   if (submitted) {
     return (
-      <section className="py-28 bg-gray-50" id="quote">
+      <section className="py-28 bg-white" id="quote">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <FadeIn>
             <CheckCircle className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
@@ -125,7 +125,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   ];
 
   return (
-    <section className="py-10 md:py-14 bg-gray-50" id="quote">
+    <section className="py-10 md:py-14 bg-white" id="quote">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <FadeIn>
           <div className="text-center mb-8">
@@ -141,50 +141,50 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             {/* A/B Test Title Block */}
             {abVariant && (
               <div className="mb-3 bg-bronze/10 border border-bronze/30 px-6 py-3 text-center">
-                <p className="font-serif text-xl md:text-2xl text-gray-900 leading-tight">{abVariant}</p>
+                <p className="font-serif text-xl md:text-2xl text-black leading-tight">{abVariant}</p>
               </div>
             )}
             <form onSubmit={handleSubmit} onClick={handleFormClick} className="flex flex-col flex-1 space-y-3 bg-white border-2 border-bronze/40 shadow-2xl p-4 sm:p-6 md:p-8" style={{boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
+                  className="bg-white border-white text-black placeholder:text-black focus:border-yellow-500 h-10"
                   placeholder="John Mitchell" />
               </div>
               <div>
                 <label className={labelClass}>Email *</label>
                 <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
+                  className="bg-white border-white text-black placeholder:text-black focus:border-yellow-500 h-10"
                   placeholder="john@organization.com" />
               </div>
               <div>
                 <label className={labelClass}>Phone</label>
                 <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 h-10"
+                  className="bg-white border-white text-black placeholder:text-black focus:border-yellow-500 h-10"
                   placeholder="(555) 123-4567" />
               </div>
               <div>
-                <label className={labelClass}>Additional Notes <span className="normal-case text-gray-600 font-normal">(optional)</span></label>
+                <label className={labelClass}>Additional Notes <span className="normal-case text-black font-normal">(optional)</span></label>
                 <Textarea value={form.description} onChange={(e) => handleChange("description", e.target.value)}
-                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-yellow-500 min-h-[72px]"
+                  className="bg-white border-white text-black placeholder:text-black focus:border-yellow-500 min-h-[72px]"
                   placeholder="Any specific requirements, sport, size, or project details..." />
               </div>
 
               <div>
-                <label className={labelClass}>Reference Photos & Files <span className="normal-case text-gray-600 font-normal">(optional)</span></label>
+                <label className={labelClass}>Reference Photos & Files <span className="normal-case text-black font-normal">(optional)</span></label>
                 <div onClick={() => fileRef.current?.click()}
-                  className="border-2 border-dashed border-gray-300 hover:border-yellow-400 transition-colors p-4 text-center cursor-pointer bg-gray-50">
-                  <Upload className="w-6 h-6 text-gray-500 mx-auto mb-2" />
+                  className="border-2 border-dashed border-white hover:border-yellow-400 transition-colors p-4 text-center cursor-pointer bg-white">
+                  <Upload className="w-6 h-6 text-black mx-auto mb-2" />
                   <p className="text-black text-sm font-medium">Upload photos, reference images, or project briefs</p>
-                  <p className="text-gray-600 text-xs mt-0.5">PDF, JPG, PNG up to 25MB each</p>
+                  <p className="text-black text-xs mt-0.5">PDF, JPG, PNG up to 25MB each</p>
                 </div>
                 <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
                 {files.length > 0 && (
                   <div className="mt-4 space-y-2">
                     {(Array.isArray(files) ? files : []).map((file, i) => (
-                      <div key={i} className="flex items-center justify-between bg-gray-100 border border-gray-200 px-4 py-2">
-                        <span className="text-black text-sm truncate">{file.name}</span>
-                        <button type="button" onClick={() => removeFile(i)} className="text-gray-600 hover:text-red-500 text-xs ml-4">Remove</button>
+                      <div key={i} className="flex items-center justify-between bg-white border border-white px-4 py-2">
+                         <span className="text-black text-sm truncate">{file.name}</span>
+                         <button type="button" onClick={() => removeFile(i)} className="text-black hover:text-red-500 text-xs ml-4">Remove</button>
                       </div>
                     ))}
                   </div>
@@ -213,7 +213,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <div>
                   <p className="text-black font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
                   <p className="text-black font-serif text-xl mt-0.5">772-309-0412</p>
-                  <p className="text-gray-600 font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
+                  <p className="text-black font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
                 </div>
               </a>
 
@@ -221,7 +221,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <ReviewCarousel />
 
               {/* Why us bullets */}
-              <div className="bg-white border-2 border-gray-200 shadow-sm p-5 space-y-3 flex-1 flex flex-col justify-start">
+              <div className="bg-white border-2 border-white shadow-sm p-5 space-y-3 flex-1 flex flex-col justify-start">
                 <p className="font-serif text-base text-black border-b border-yellow-200 pb-3">Why Organizations Choose Us</p>
                 {(Array.isArray(whyUs) ? whyUs : []).map((item) => (
                   <div key={item.title} className="flex items-start gap-3">
@@ -230,7 +230,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                     </div>
                     <div>
                       <p className="font-sans text-xs font-bold text-black">{item.title}</p>
-                      <p className="text-gray-700 text-xs mt-0.5 leading-relaxed">{item.desc}</p>
+                      <p className="text-black text-xs mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
