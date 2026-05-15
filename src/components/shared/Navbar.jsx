@@ -27,7 +27,7 @@ function DropdownMenu({ label, links }) {
 
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button className="flex items-center gap-1 font-sans text-xs font-bold uppercase tracking-[0.08em] text-parchment hover:text-bronze transition-colors duration-200 whitespace-nowrap">
+      <button className="flex items-center gap-1 font-sans text-base font-bold uppercase tracking-[0.08em] text-parchment hover:text-bronze transition-colors duration-200 whitespace-nowrap">
         {label} <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
@@ -43,7 +43,7 @@ function DropdownMenu({ label, links }) {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block px-5 py-3 font-sans text-xs uppercase tracking-[0.08em] border-b border-white last:border-0 transition-colors duration-200 ${
+                className={`block px-5 py-3 font-sans text-base uppercase tracking-[0.08em] border-b border-white last:border-0 transition-colors duration-200 ${
                   location.pathname === link.to ? "text-gold bg-white" : "text-parchment/55 hover:text-gold hover:bg-white"
                 }`}
               >
@@ -92,7 +92,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`font-sans text-xs uppercase tracking-[0.08em] whitespace-nowrap transition-colors duration-200 ${
+                className={`font-sans text-base uppercase tracking-[0.08em] whitespace-nowrap transition-colors duration-200 ${
                   location.pathname === link.to ? "text-gold" : "text-parchment font-bold hover:text-bronze"
                 }`}
               >
@@ -105,7 +105,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/request-concept-design"
-              className="hidden lg:inline-flex text-white px-5 py-2.5 font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
+              className="hidden lg:inline-flex text-white px-5 py-2.5 font-sans text-base uppercase tracking-[0.1em] font-semibold transition-all duration-300 whitespace-nowrap"
               style={{background: "#1e3a8a", boxShadow: "0 2px 8px rgba(30,58,138,0.3)"}}
             >
               Request Design
@@ -135,7 +135,7 @@ export default function Navbar() {
               </button>
               {mobileSection === "products" && (Array.isArray(productLinks) ? productLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="pl-4 font-sans text-xs uppercase tracking-[0.1em] py-2 text-black hover:text-gold">
+                  className="pl-4 font-sans text-base uppercase tracking-[0.1em] py-2 text-black hover:text-gold">
                   {link.label}
                 </Link>
               ))}

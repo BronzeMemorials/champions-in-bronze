@@ -8,7 +8,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-14">
-            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Questions</span>
+            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Questions</span>
             <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">{title}</h2>
           </div>
         </FadeIn>

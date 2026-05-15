@@ -232,7 +232,7 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
             </div>
             <div className="p-4 text-center border-t border-bronze/10">
               <p className="font-serif text-base text-parchment">{item.position}</p>
-              <p className="text-parchment/40 font-sans text-xs uppercase tracking-widest mt-1">{sport}</p>
+              <p className="text-parchment/40 font-sans text-base uppercase tracking-widest mt-1">{sport}</p>
             </div>
           </div>
         </FadeIn>
@@ -265,7 +265,7 @@ export default function ProHome() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pb-20 sm:pb-28 pt-32 sm:pt-40 w-full">
           <FadeIn>
-            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">Legacy Tributes in Plaques, Busts, & Statues
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5">Legacy Tributes in Plaques, Busts, & Statues
 
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">Immortalize Champions.<br />Preserve Legacy<br /><span className="text-bronze-light italic">For Generations.</span>
@@ -291,7 +291,7 @@ export default function ProHome() {
         </div>
 
         <a href="#plaques" className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-parchment/50 hover:text-bronze transition-colors">
-          <span className="font-sans text-xs uppercase tracking-[0.3em]">Scroll</span>
+          <span className="font-sans text-base uppercase tracking-[0.3em]">Scroll</span>
           <ChevronDown className="w-4 h-4 animate-bounce" />
         </a>
       </section>
@@ -302,10 +302,10 @@ export default function ProHome() {
       <section className="py-8 border-y border-bronze/20 bg-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-12">
-            <span className="text-parchment/50 font-sans text-xs uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
+            <span className="text-parchment/50 font-sans text-base uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
             <div className="flex flex-wrap justify-center gap-3 md:gap-10">
               {["Athletic Departments", "Hall of Fame Committees", "Stadium & Arena Operators", "Universities & Colleges", "Donor Foundations", "Booster & Alumni Organizations"].map((org) =>
-              <span key={org} className="text-parchment/60 font-sans text-xs uppercase tracking-[0.15em] hover:text-bronze transition-colors text-center">{org}</span>
+              <span key={org} className="text-parchment/60 font-sans text-base uppercase tracking-[0.15em] hover:text-bronze transition-colors text-center">{org}</span>
               )}
             </div>
           </div>
@@ -319,7 +319,7 @@ export default function ProHome() {
           {/* Row 1 — Photo Image Casting Bronze Plaques */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 01</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 01</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -337,13 +337,13 @@ export default function ProHome() {
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/photo-image-casting-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/photo-image-casting-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Photo Image Cast Plaques <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -352,7 +352,7 @@ export default function ProHome() {
           {/* Row 2 — 3D Bas-Relief with Photo Image Casting */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 02</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 02</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief with Photo Image Casting</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -370,13 +370,13 @@ export default function ProHome() {
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All 3D Bas-Relief + Photo Cast Plaques <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -385,7 +385,7 @@ export default function ProHome() {
           {/* Row 3 — 3D Bas-Relief Plaques */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 03</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 03</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bas-Relief Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -403,13 +403,13 @@ export default function ProHome() {
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All 3D Bas-Relief Plaques <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -418,7 +418,7 @@ export default function ProHome() {
           {/* Row 4 — Standard Bronze Plaques */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 04</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 04</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Standard Bronze Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -436,13 +436,13 @@ export default function ProHome() {
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/championship-bronze-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/championship-bronze-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Standard Bronze Plaques <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -451,7 +451,7 @@ export default function ProHome() {
           {/* Row 5 — Busts */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 05</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 05</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Busts</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -467,15 +467,15 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Bronze Busts <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -484,7 +484,7 @@ export default function ProHome() {
           {/* Row 6 — Statues */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 06</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 06</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Statues</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -500,15 +500,15 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Bronze Statues <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -517,7 +517,7 @@ export default function ProHome() {
           {/* Row 7 — 3D Bronze Jerseys */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 07</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 07</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">3D Bronze Jerseys</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -533,15 +533,15 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/3d-relief-jersey-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/3d-relief-jersey-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All 3D Bronze Jersey Plaques <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -550,7 +550,7 @@ export default function ProHome() {
           {/* Row 8 — Donor Recognition Walls */}
           <FadeIn>
             <div className="mb-6">
-              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 08</span>
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Category 08</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Donor Recognition Walls</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -566,15 +566,15 @@ export default function ProHome() {
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <p className="text-black font-sans text-xs mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
-                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                   </div>
                 </div>
               )}
             </div>
             <div className="mt-5">
-              <Link to="/donor-recognition" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/donor-recognition" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Donor Recognition Walls <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -591,7 +591,7 @@ export default function ProHome() {
       <section className="py-10 md:py-16 bg-secondary/20 border-b border-bronze/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn>
-            <p className="text-center text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold mb-2">By Sport</p>
+            <p className="text-center text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold mb-2">By Sport</p>
             <h2 className="font-serif text-4xl text-parchment text-center mb-16">Bronze Recognition by Sport</h2>
           </FadeIn>
           <div className="space-y-20">
@@ -599,7 +599,7 @@ export default function ProHome() {
             {/* Football */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 01</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 01</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Football</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">The sacrifice, brotherhood, and grind of football deserves permanent recognition. Hall of Fame portrait plaques, championship commemorations, retired jersey tributes, donor recognition walls, and life-size bronze statues — sculpted from actual photographs and built to honor every player, coach, and program that gave everything to the game.</p>
               </div>
@@ -615,13 +615,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/football" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/football" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Football Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -630,7 +630,7 @@ export default function ProHome() {
             {/* Basketball */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 02</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 02</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Basketball</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">From arena-entrance statues to Hall of Fame portrait plaques and championship trophy recognition — basketball programs trust Champions in Bronze to capture the legends, the moments, and the championships that define programs and inspire future generations.</p>
               </div>
@@ -646,13 +646,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Basketball Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -661,7 +661,7 @@ export default function ProHome() {
             {/* Baseball */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 03</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 03</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Baseball</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">Baseball is the sport of legacy. Retired numbers, Hall of Fame walls, stadium dedication plaques, and bronze statues that anchor the identity of every ballpark. Champions in Bronze creates baseball recognition designed to outlast the stadium itself.</p>
               </div>
@@ -677,13 +677,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/baseball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/baseball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Baseball Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -692,7 +692,7 @@ export default function ProHome() {
             {/* Women's Basketball */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 04</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 04</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Women's Basketball</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">Every champion deserves recognition that matches their greatness. Hall of Fame plaques, portrait busts, and bronze statues celebrating women's basketball excellence — the legends who built programs, broke records, and inspired the next generation of athletes.</p>
               </div>
@@ -708,13 +708,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/basketball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Women's Basketball Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -723,7 +723,7 @@ export default function ProHome() {
             {/* Soccer */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 05</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 05</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Soccer</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">The beautiful game deserves beautiful recognition. Championship commemorations, Hall of Fame induction plaques, donor walls, and bronze statues for soccer programs, MLS facilities, and collegiate athletics — crafted from your exact photographs to honor the players and moments that defined your program.</p>
               </div>
@@ -739,13 +739,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/soccer" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/soccer" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Soccer Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -754,7 +754,7 @@ export default function ProHome() {
             {/* Hockey */}
             <FadeIn>
               <div className="mb-6">
-                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Sport 06</span>
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 06</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Hockey</h3>
                 <p className="text-black font-sans text-sm mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in silicon bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
               </div>
@@ -770,13 +770,13 @@ export default function ProHome() {
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
                       <p className="font-serif text-sm text-parchment">{item.label}</p>
-                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-xs uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
                 )}
               </div>
               <div className="mt-5">
-                <Link to="/hockey" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                <Link to="/hockey" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Hockey Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -793,7 +793,7 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="flex items-center gap-4 mb-4">
-              <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.2em] px-3 py-1.5 font-semibold">Most Requested Products</span>
+              <span className="bg-bronze text-parchment text-base font-sans uppercase tracking-[0.2em] px-3 py-1.5 font-semibold">Most Requested Products</span>
             </div>
             <SectionHeading
               label="Immortalize Champions. Preserve Legacy For Generations."
@@ -810,12 +810,12 @@ export default function ProHome() {
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.15em] px-3 py-1 font-semibold">{p.label}</span>
+                    <span className="bg-bronze text-parchment text-base font-sans uppercase tracking-[0.15em] px-3 py-1 font-semibold">{p.label}</span>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="font-serif text-2xl text-parchment group-hover:text-gold transition-colors duration-300">{p.title}</h3>
                     <p className="text-black mt-2 text-sm leading-relaxed line-clamp-2">{p.desc}</p>
-                    <div className="flex items-center gap-2 mt-4 text-gold text-xs font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 mt-4 text-gold text-base font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>{p.cta}</span><ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -832,12 +832,12 @@ export default function ProHome() {
                   <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-parchment/90 via-parchment/40 to-transparent" />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-gold/15 border border-gold/30 text-gold text-xs font-sans uppercase tracking-[0.12em] px-2 py-0.5">{p.label}</span>
+                    <span className="bg-gold/15 border border-gold/30 text-gold text-base font-sans uppercase tracking-[0.12em] px-2 py-0.5">{p.label}</span>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <h3 className="font-serif text-lg text-parchment group-hover:text-gold transition-colors duration-300">{p.title}</h3>
-                    <p className="text-black mt-1 text-xs leading-relaxed line-clamp-2">{p.desc}</p>
-                    <div className="flex items-center gap-2 mt-3 text-gold text-xs font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-black mt-1 text-base leading-relaxed line-clamp-2">{p.desc}</p>
+                    <div className="flex items-center gap-2 mt-3 text-gold text-base font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>{p.cta}</span><ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -873,12 +873,12 @@ export default function ProHome() {
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-bronze/90 p-6 rounded-sm hidden md:block">
                   <p className="font-serif text-3xl text-parchment">500+</p>
-                  <p className="font-sans text-xs text-parchment/60 uppercase tracking-widest mt-1">Institutional Installations</p>
+                  <p className="font-sans text-base text-parchment/60 uppercase tracking-widest mt-1">Institutional Installations</p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-base font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
                 Honor Greatness.<br />Forever.
               </h2>
@@ -890,7 +890,7 @@ export default function ProHome() {
                 <div key={s.title} className="border border-bronze/20 bg-white p-5 rounded-sm shadow-sm">
                     <s.icon className="w-5 h-5 text-gold mb-3" />
                     <p className="font-serif text-sm text-parchment leading-tight">{s.title}</p>
-                    <p className="text-black text-xs font-sans mt-2 leading-relaxed">{s.desc}</p>
+                    <p className="text-black text-base font-sans mt-2 leading-relaxed">{s.desc}</p>
                   </div>
                 )}
               </div>
@@ -919,7 +919,7 @@ export default function ProHome() {
             map((stat) =>
             <div key={stat.label} className="text-center">
                 <p className="font-serif text-3xl md:text-4xl text-gold whitespace-pre-line leading-tight">{stat.value}</p>
-                <p className="text-parchment/40 text-xs font-sans uppercase tracking-wider mt-2">{stat.label}</p>
+                <p className="text-parchment/40 text-base font-sans uppercase tracking-wider mt-2">{stat.label}</p>
               </div>
             )}
           </div>
@@ -971,7 +971,7 @@ export default function ProHome() {
       <section className="py-28 bg-stone-100 border-t border-bronze/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <FadeIn>
-            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-8">Why Bronze</span>
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-8">Why Bronze</span>
             <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-black italic mb-10">
               "The tears come when champions realize their sacrifice, brotherhood, and journey will outlive the game — and be remembered forever in bronze."
             </blockquote>
@@ -1076,7 +1076,7 @@ export default function ProHome() {
       <section className="relative py-40 overflow-hidden bg-secondary/40">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <FadeIn>
-            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-base font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
             <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl mt-6 leading-tight text-parchment">
               Immortalize champions,<br />preserve legendary<br /><span className="text-bronze-light italic">athletic legacy forever.</span>
             </h2>
@@ -1104,7 +1104,7 @@ export default function ProHome() {
       <section className="py-20 bg-white border-t border-bronze/10">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Knowledge Base</span>
+            <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Knowledge Base</span>
             <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">20 Frequently Asked Questions About Bronze Plaques, Bronze Busts &amp; Bronze Statues</h2>
           </div>
           <div className="space-y-8">

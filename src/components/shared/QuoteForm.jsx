@@ -38,8 +38,8 @@ function ReviewCarousel() {
       <Quote className="w-6 h-6 text-yellow-500/40 mb-2" />
       <p className="text-black font-serif text-base leading-relaxed min-h-[80px]">"{t.quote}"</p>
       <div className="mt-4">
-        <p className="text-yellow-700 font-sans text-xs uppercase tracking-widest font-semibold">{t.name}</p>
-        {t.role && <p className="text-gray-600 font-sans text-xs mt-0.5">{t.role}</p>}
+        <p className="text-yellow-700 font-sans text-base uppercase tracking-widest font-semibold">{t.name}</p>
+        {t.role && <p className="text-gray-600 font-sans text-base mt-0.5">{t.role}</p>}
       </div>
       <div className="flex items-center gap-3 mt-4">
         <button onClick={prev} className="w-7 h-7 border border-white flex items-center justify-center hover:border-yellow-500 hover:text-yellow-600 text-black transition-colors">
@@ -55,8 +55,8 @@ function ReviewCarousel() {
         </button>
       </div>
       <div className="mt-4 pt-4 border-t border-white flex items-center justify-between">
-        <p className="text-black font-sans text-xs uppercase tracking-widest">1,600+ Five-Star Reviews</p>
-        <Link to="/reviews" className="text-yellow-700 hover:text-yellow-600 font-sans text-xs uppercase tracking-widest font-semibold transition-colors">
+        <p className="text-black font-sans text-base uppercase tracking-widest">1,600+ Five-Star Reviews</p>
+        <Link to="/reviews" className="text-yellow-700 hover:text-yellow-600 font-sans text-base uppercase tracking-widest font-semibold transition-colors">
           Read All →
         </Link>
       </div>
@@ -98,7 +98,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     setSubmitted(true);
   };
 
-  const labelClass = "text-xs text-black uppercase tracking-wider font-sans mb-2 block font-semibold";
+  const labelClass = "text-base text-black uppercase tracking-wider font-sans mb-2 block font-semibold";
 
   if (submitted) {
     return (
@@ -129,7 +129,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <FadeIn>
           <div className="text-center mb-8">
-            <span className="text-yellow-600 font-sans tracking-[0.3em] uppercase text-xs font-semibold">Begin Your Recognition Project</span>
+            <span className="text-yellow-600 font-sans tracking-[0.3em] uppercase text-base font-semibold">Begin Your Recognition Project</span>
             <h2 className="font-serif text-3xl md:text-4xl mt-2 text-black">{title}</h2>
             {subtitle && <p className="mt-2 text-black text-base">{subtitle}</p>}
           </div>
@@ -176,7 +176,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   className="border-2 border-dashed border-white hover:border-yellow-400 transition-colors p-4 text-center cursor-pointer bg-white">
                   <Upload className="w-6 h-6 text-black mx-auto mb-2" />
                   <p className="text-black text-sm font-medium">Upload photos, reference images, or project briefs</p>
-                  <p className="text-black text-xs mt-0.5">PDF, JPG, PNG up to 25MB each</p>
+                  <p className="text-black text-base mt-0.5">PDF, JPG, PNG up to 25MB each</p>
                 </div>
                 <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
                 {files.length > 0 && (
@@ -184,7 +184,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                     {(Array.isArray(files) ? files : []).map((file, i) => (
                       <div key={i} className="flex items-center justify-between bg-white border border-white px-4 py-2">
                          <span className="text-black text-sm truncate">{file.name}</span>
-                         <button type="button" onClick={() => removeFile(i)} className="text-black hover:text-red-500 text-xs ml-4">Remove</button>
+                         <button type="button" onClick={() => removeFile(i)} className="text-black hover:text-red-500 text-base ml-4">Remove</button>
                       </div>
                     ))}
                   </div>
@@ -192,13 +192,13 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               <Button type="submit" disabled={submitting}
-                className="w-full min-h-11 h-auto py-3 px-4 text-black font-sans uppercase tracking-[0.15em] text-xs sm:text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
+                className="w-full min-h-11 h-auto py-3 px-4 text-black font-sans uppercase tracking-[0.15em] text-base sm:text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
                 {submitting
                   ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
                   : <><Send className="w-4 h-4 mr-2 flex-shrink-0" /> <span className="whitespace-normal text-center leading-tight text-wrap break-words">Request Quote — Artwork Within The Hour</span></>
                 }
               </Button>
-              <p className="text-center text-black text-xs font-sans font-medium">
+              <p className="text-center text-black text-base font-sans font-medium">
                 Museum-quality artwork proof delivered within the hour. No commitment required.
               </p>
             </form>
@@ -211,9 +211,9 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-5 py-4 border-2 border-gray-200 group">
                 <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-10 h-10 object-contain flex-shrink-0" />
                 <div>
-                  <p className="text-black font-sans text-xs uppercase tracking-widest font-semibold">We Answer The Phone</p>
+                  <p className="text-black font-sans text-base uppercase tracking-widest font-semibold">We Answer The Phone</p>
                   <p className="text-black font-serif text-xl mt-0.5">772-309-0412</p>
-                  <p className="text-black font-sans text-xs mt-0.5">Call for a direct answer — right now</p>
+                  <p className="text-black font-sans text-base mt-0.5">Call for a direct answer — right now</p>
                 </div>
               </a>
 
@@ -229,8 +229,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                       <item.icon className="w-3.5 h-3.5 text-yellow-600" />
                     </div>
                     <div>
-                      <p className="font-sans text-xs font-bold text-black">{item.title}</p>
-                      <p className="text-black text-xs mt-0.5 leading-relaxed">{item.desc}</p>
+                      <p className="font-sans text-base font-bold text-black">{item.title}</p>
+                      <p className="text-black text-base mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}

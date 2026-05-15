@@ -21,8 +21,8 @@ export default function TrustBadges() {
                 <div className="w-10 h-10 rounded-sm bg-bronze/10 border border-bronze/20 flex items-center justify-center">
                   <badge.icon className="w-4 h-4 text-gold" />
                 </div>
-                <p className="font-serif text-xs text-parchment font-semibold leading-tight">{badge.label}</p>
-                <p className="text-xs text-black">{badge.sub}</p>
+                <p className="font-serif text-base text-parchment font-semibold leading-tight">{badge.label}</p>
+                <p className="text-base text-black">{badge.sub}</p>
               </div>
             </FadeIn>
           ))}
