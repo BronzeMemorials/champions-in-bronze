@@ -268,8 +268,9 @@ export default function ProHome() {
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5">Legacy Tributes in Plaques, Busts, & Statues
 
             </span>
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">Immortalize Champions.<br />Preserve Legacy<br /><span className="italic text-[hsl(var(--foreground))] text-4xl font-semibold normal-case">For Generations.</span>
-            </h1>
+            <h1 className="font-serif sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl text-2xl">Immortalize Champions.
+Preserve Legacy
+For Generations</h1>
             <p className="mt-6 max-w-2xl text-base sm:text-xl md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <p className="font-serif text-xl sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
@@ -304,8 +305,7 @@ export default function ProHome() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-12">
             <span className="text-parchment/50 font-sans text-base uppercase tracking-[0.3em] whitespace-nowrap flex-shrink-0">Trusted By</span>
             <div className="flex flex-wrap justify-center gap-3 md:gap-10">
-              {["Athletic Departments", "Hall of Fame Committees", "Stadium & Arena Operators", "Universities & Colleges", "Donor Foundations", "Booster & Alumni Organizations"].map((org) =>
-              <span key={org} className="text-parchment/60 font-sans text-base uppercase tracking-[0.15em] hover:text-bronze transition-colors text-center">{org}</span>
+              {["Athletic Departments", "Hall of Fame Committees", "Stadium & Arena Operators", "Universities & Colleges", "Donor Foundations", "Booster & Alumni Organizations"].map((org) => <span key={org} className="text-parchment/60 font-sans text-base uppercase tracking-[0.15em] hover:text-bronze transition-colors text-center">{org}</span>
               )}
             </div>
           </div>
@@ -787,8 +787,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                         SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                      ══════════════════════════════════════════ */}
+                                          SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                       ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -860,8 +860,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                         SECTION 2 — HALL OF FAME SYSTEMS
-                                      ══════════════════════════════════════════ */}
+                                          SECTION 2 — HALL OF FAME SYSTEMS
+                                       ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -927,8 +927,8 @@ export default function ProHome() {
       </section>
 
       {/* ══════════════════════════════════════════
-                                         SECTION 3 — BUSTS (Premium Upsell)
-                                      ══════════════════════════════════════════ */}
+                                          SECTION 3 — BUSTS (Premium Upsell)
+                                       ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1016,8 +1016,8 @@ export default function ProHome() {
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                         SECTION 4 — STATUES (Signature / Reduced)
-                                      ══════════════════════════════════════════ */}
+                                          SECTION 4 — STATUES (Signature / Reduced)
+                                       ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
