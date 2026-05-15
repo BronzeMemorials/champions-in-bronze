@@ -95,14 +95,14 @@ export default function BustsAndStatues() {
       {models.length > 0 && <GLBGallery models={models} />}
 
       {/* Emotional Pull Quote */}
-      <section className="py-20 bg-parchment text-obsidian">
+      <section className="py-20 bg-stone-100">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
-            <blockquote className="font-serif text-2xl md:text-3xl leading-relaxed text-parchment italic mb-6">
+            <blockquote className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-900 italic mb-6">
               "When champions see themselves immortalized in bronze, the emotion is overwhelming — because the pain, sacrifice, brotherhood, dedication, and greatness that shaped their lives are finally transformed into something permanent that future generations will remember forever."
             </blockquote>
             <div className="w-12 h-px bg-bronze mx-auto mb-6" />
-            <p className="font-sans text-sm md:text-base text-parchment/60 leading-relaxed">
+            <p className="font-sans text-sm md:text-base text-gray-600 leading-relaxed">
               A lifelike bronze bust is never about the cost. It is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their life will never be forgotten.
             </p>
           </FadeIn>

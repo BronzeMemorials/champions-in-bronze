@@ -950,22 +950,22 @@ export default function ProHome() {
       </section>
 
       {/* ── EMOTIONAL MONUMENT SECTION ── */}
-      <section className="py-28 bg-parchment text-obsidian border-t border-bronze/20">
+      <section className="py-28 bg-stone-100 border-t border-bronze/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <FadeIn>
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-8">Why Bronze</span>
-            <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-parchment italic mb-10">
+            <blockquote className="font-serif text-2xl md:text-4xl leading-relaxed text-gray-900 italic mb-10">
               "The tears come when champions realize their sacrifice, brotherhood, and journey will outlive the game — and be remembered forever in bronze."
             </blockquote>
             <div className="w-16 h-px bg-bronze mx-auto mb-10" />
-            <p className="font-sans text-base md:text-lg text-parchment/70 leading-relaxed max-w-3xl mx-auto mb-12">
+            <p className="font-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
               A lifelike bronze bust is never about the cost — it is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their life will never be forgotten.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8 text-left mt-4">
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-parchment leading-relaxed">
+                <p className="font-serif text-lg text-gray-800 leading-relaxed">
                   Legends battled, sacrificed, and rose.<br />
                   Now their story lives in bronze.<br />
                   Champions fade only when forgotten —<br />
@@ -973,14 +973,14 @@ export default function ProHome() {
                 </p>
               </div>
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-parchment leading-relaxed">
+                <p className="font-serif text-lg text-gray-800 leading-relaxed">
                   Crowds fade into night.<br />
                   Champions live on in bronze.<br />
                   <span className="text-bronze-dark font-semibold not-italic">Legacy remains.</span>
                 </p>
               </div>
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-parchment leading-relaxed">
+                <p className="font-serif text-lg text-gray-800 leading-relaxed">
                   Champions rise high.<br />
                   Bronze holds what time cannot take.<br />
                   <span className="text-bronze-dark font-semibold not-italic">Legacy lives on.</span>

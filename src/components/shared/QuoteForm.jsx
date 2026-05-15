@@ -140,11 +140,11 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           <FadeIn delay={0.2} className="h-full flex flex-col">
             {/* A/B Test Title Block */}
             {abVariant && (
-              <div className="mb-3 bg-[#1e3a5f] px-6 py-3 text-center">
-                <p className="font-serif text-xl md:text-2xl text-white leading-tight">{abVariant}</p>
+              <div className="mb-3 bg-bronze/10 border border-bronze/30 px-6 py-3 text-center">
+                <p className="font-serif text-xl md:text-2xl text-gray-900 leading-tight">{abVariant}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit} onClick={handleFormClick} className="flex flex-col flex-1 space-y-3 bg-white border-2 shadow-2xl p-4 sm:p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+            <form onSubmit={handleSubmit} onClick={handleFormClick} className="flex flex-col flex-1 space-y-3 bg-white border-2 border-bronze/40 shadow-2xl p-4 sm:p-6 md:p-8" style={{boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
