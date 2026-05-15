@@ -76,12 +76,12 @@ export default function Navbar() {
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between gap-8 h-20 px-8 sm:px-12 md:px-16 lg:px-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0 min-w-fit">
-            <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-12 h-12 object-contain flex-shrink-0 self-center" />
+            <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-16 h-16 object-contain flex-shrink-0 self-center" />
             <div className="flex flex-col leading-none">
-              <span className="font-serif text-xl text-parchment tracking-wide">
+              <span className="font-serif text-2xl text-parchment tracking-wide">
                 Champions <span style={{color: '#C9A84C'}}>in Bronze</span>
               </span>
-              <span className="font-sans text-[10px] text-parchment/40 tracking-[0.15em] uppercase mt-0.5">Powered By Bronze Memorials</span>
+              <span className="font-sans text-xs text-parchment/40 tracking-[0.15em] uppercase mt-0.5">Powered By Bronze Memorials</span>
             </div>
           </Link>
 
