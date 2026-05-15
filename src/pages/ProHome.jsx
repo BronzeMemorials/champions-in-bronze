@@ -5,7 +5,68 @@ import FadeIn from "../components/shared/FadeIn";
 import TrustBadges from "../components/shared/TrustBadges";
 import SectionHeading from "../components/shared/SectionHeading";
 import SEOHead from "../components/shared/SEOHead";
+import JsonLdSchema from "../components/shared/JsonLdSchema";
 import { usePhotoLikeness } from "../hooks/usePhotoLikeness";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Champions in Bronze",
+  "description": "America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship plaques, and bronze busts for universities, stadiums, and professional athletic organizations.",
+  "url": "https://www.championsinbronze.com",
+  "telephone": "+17723090412",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bronze Recognition Products",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "3D Bas-Relief Bronze Plaques" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Photo Image Cast Plaques" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hall of Fame Plaques" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Donor Recognition Walls" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bronze Athlete Busts" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Championship Bronze Plaques" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Custom Bronze Statues" } }
+    ]
+  }
+};
+
+const faqSchemaItems = [
+  { q: "What types of bronze plaques do you produce?", a: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
+  { q: "How does your photo image casting process work?", a: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
+  { q: "What is the typical lead time for plaques?", a: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
+  { q: "Do you handle complete Hall of Fame installations?", a: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
+  { q: "What is the investment range for a Hall of Fame plaque program?", a: "Every program is custom-quoted based on scope, number of inductees, formats, and installation complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
+  { q: "Bronze vs. aluminum — which is right for my project?", a: "Silicon bronze is the museum standard — rich amber warmth, exceptional detail, 200-year outdoor proven durability. Aluminum is significantly lighter and lower cost, ideal for indoor installations or budget-sensitive programs. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
+  { q: "What is a bronze plaque made of?", a: "Bronze plaques are typically manufactured from architectural-grade cast bronze alloy, commonly ASTM B584, designed for long-term outdoor durability, corrosion resistance, and detailed artwork reproduction." },
+  { q: "How long do bronze plaques last outdoors?", a: "A properly manufactured cast bronze plaque can last 50–100+ years outdoors with minimal maintenance. Bronze is one of the most durable recognition materials available for institutional signage, donor recognition walls, Hall of Fame displays, championship plaques, and athletic facility dedications." },
+  { q: "What is the difference between cast bronze and aluminum plaques?", a: "Cast bronze offers a richer appearance, higher prestige, deeper relief detail, and longer-term value. Aluminum plaques are lighter and more economical but are generally considered a lower-tier architectural product compared to bronze plaques used for Hall of Fame recognition, donor walls, memorial installations, and university signage systems." },
+  { q: "Can bronze plaques include photos or portraits?", a: "Yes. Bronze plaques can include etched photographs, 2D relief portraits, or full 3D bas-relief image castings created from photographs for Hall of Fame plaques, donor recognition displays, athletic awards, memorial plaques, championship recognition, and stadium commemorations." },
+  { q: "What is a bas-relief bronze plaque?", a: "A bas-relief bronze plaque features raised sculpted artwork that projects from the background surface. Bas-relief bronze plaques are commonly used for Hall of Fame displays, donor recognition walls, veterans memorials, university dedications, and commemorative recognition systems." },
+  { q: "What is the difference between a bronze bust and a bronze statue?", a: "A bronze bust typically includes the head and upper torso mounted on a pedestal, while a bronze statue is a full-body sculptural figure. Bronze busts and statues are commonly installed in universities, stadiums, Hall of Fame facilities, donor recognition programs, and athletic complexes." },
+  { q: "How are bronze busts created from photographs?", a: "Artists digitally sculpt a likeness using reference photographs, then produce a clay or digital model before casting the final piece in bronze using the lost-wax casting process." },
+  { q: "What finishes are available for bronze plaques?", a: "Common finishes include Satin Bronze, Statuary Bronze, Oxidized Bronze, Dark Oxidized, Polished Bronze, and Chemically Patinated finishes." },
+  { q: "How much do bronze plaques cost?", a: "Pricing depends on plaque size, thickness, relief depth, artwork complexity, border style, finish, and mounting requirements. Request a quote for exact pricing." },
+  { q: "How long does it take to manufacture a bronze plaque?", a: "Standard production timelines are typically 4–8 weeks depending on complexity, approvals, and artwork requirements. Rush production may also be available." },
+  { q: "Can logos and custom artwork be added to bronze plaques?", a: "Yes. Bronze plaques can include corporate logos, university branding, military seals, athletic insignias, architectural renderings, custom borders, and sculpted relief artwork." },
+  { q: "Are bronze statues and busts solid bronze?", a: "Most professional bronze sculptures are hollow cast bronze for structural integrity and weight management while maintaining substantial wall thickness and durability." },
+  { q: "What is the lost-wax casting process?", a: "The lost-wax casting process is a traditional bronze casting method where a wax model is created, encased in ceramic, melted out, and replaced with molten bronze to capture extremely fine sculptural detail." },
+  { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, and stadium branding systems." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqSchemaItems.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+};
 
 const ProcessTimeline = lazy(() => import("../components/shared/ProcessTimeline"));
 const TestimonialCarousel = lazy(() => import("../components/shared/TestimonialCarousel"));
@@ -191,6 +252,8 @@ export default function ProHome() {
         title="Champions in Bronze — Bronze Plaques, Hall of Fame Systems, Busts & Statues"
         description="America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship plaques, and bronze busts for universities, stadiums, and professional athletic organizations."
         canonical="/" />
+      <JsonLdSchema schema={localBusinessSchema} />
+      <JsonLdSchema schema={faqSchema} />
       
 
       {/* ── HERO ── */}
