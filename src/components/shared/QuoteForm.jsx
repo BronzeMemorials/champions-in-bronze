@@ -135,16 +135,16 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-stretch">
           {/* LEFT — Form */}
-          <FadeIn delay={0.2} className="h-full">
+          <FadeIn delay={0.2} className="h-full flex flex-col">
             {/* A/B Test Title Block */}
             {abVariant && (
               <div className="mb-3 bg-[#1e3a5f] px-6 py-3 text-center">
                 <p className="font-serif text-xl md:text-2xl text-white leading-tight">{abVariant}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit} onClick={handleFormClick} className="space-y-3 bg-white border-2 shadow-2xl p-4 sm:p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
+            <form onSubmit={handleSubmit} onClick={handleFormClick} className="flex flex-col flex-1 space-y-3 bg-white border-2 shadow-2xl p-4 sm:p-6 md:p-8" style={{borderColor: "#1e3a5f", boxShadow: "0 8px 40px rgba(90,40,10,0.22), 0 2px 8px rgba(90,40,10,0.12)"}}>
               <div>
                 <label className={labelClass}>Full Name *</label>
                 <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
@@ -205,8 +205,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </FadeIn>
 
           {/* RIGHT — Trust panel */}
-          <FadeIn delay={0.35} className="h-full">
-            <div className="flex flex-col gap-4">
+          <FadeIn delay={0.35} className="h-full flex flex-col">
+            <div className="flex flex-col gap-4 h-full">
               {/* Phone CTA */}
               <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-5 py-4 border-2 border-gray-200 group">
                 <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-10 h-10 object-contain flex-shrink-0" />
@@ -221,7 +221,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               <ReviewCarousel />
 
               {/* Why us bullets */}
-              <div className="bg-white border-2 border-gray-200 shadow-sm p-5 space-y-3 flex-1">
+              <div className="bg-white border-2 border-gray-200 shadow-sm p-5 space-y-3 flex-1 flex flex-col justify-start">
                 <p className="font-serif text-base text-black border-b border-yellow-200 pb-3">Why Organizations Choose Us</p>
                 {(Array.isArray(whyUs) ? whyUs : []).map((item) => (
                   <div key={item.title} className="flex items-start gap-3">
