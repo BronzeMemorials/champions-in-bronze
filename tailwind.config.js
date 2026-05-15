@@ -15,15 +15,15 @@ module.exports = {
     extend: {
       colors: {
         bronze: {
-          DEFAULT: '#C9A84C',
-          light: '#DFC07A',
-          dark: '#A8872E',
+          DEFAULT: '#1e3a8a',
+          light: '#3b5bdb',
+          dark: '#1e40af',
         },
         gold: {
-          DEFAULT: '#C9A84C',
-          shimmer: '#F0C040',
+          DEFAULT: '#1e3a8a',
+          shimmer: '#3b5bdb',
         },
-        obsidian: '#F8F9FA',
+        obsidian: '#ffffff',
         parchment: '#111827',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
