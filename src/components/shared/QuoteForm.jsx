@@ -175,7 +175,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                 <div onClick={() => fileRef.current?.click()}
                   className="border-2 border-dashed border-white hover:border-yellow-400 transition-colors p-4 text-center cursor-pointer bg-white">
                   <Upload className="w-6 h-6 text-black mx-auto mb-2" />
-                  <p className="text-black text-sm font-medium">Upload photos, reference images, or project briefs</p>
+                  <p className="text-black text-lg font-medium">Upload photos, reference images, or project briefs</p>
                   <p className="text-black text-base mt-0.5">PDF, JPG, PNG up to 25MB each</p>
                 </div>
                 <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp" onChange={handleFiles} className="hidden" />
@@ -183,7 +183,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
                   <div className="mt-4 space-y-2">
                     {(Array.isArray(files) ? files : []).map((file, i) => (
                       <div key={i} className="flex items-center justify-between bg-white border border-white px-4 py-2">
-                         <span className="text-black text-sm truncate">{file.name}</span>
+                         <span className="text-black text-lg truncate">{file.name}</span>
                          <button type="button" onClick={() => removeFile(i)} className="text-black hover:text-red-500 text-base ml-4">Remove</button>
                       </div>
                     ))}
@@ -192,7 +192,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
               </div>
 
               <Button type="submit" disabled={submitting}
-                className="w-full min-h-11 h-auto py-3 px-4 text-black font-sans uppercase tracking-[0.15em] text-base sm:text-sm font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
+                className="w-full min-h-11 h-auto py-3 px-4 text-black font-sans uppercase tracking-[0.15em] text-base sm:text-lg font-semibold transition-all duration-300" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
                 {submitting
                   ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting Request…</>
                   : <><Send className="w-4 h-4 mr-2 flex-shrink-0" /> <span className="whitespace-normal text-center leading-tight text-wrap break-words">Request Quote — Artwork Within The Hour</span></>

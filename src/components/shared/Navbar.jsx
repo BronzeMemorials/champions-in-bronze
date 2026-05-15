@@ -129,7 +129,7 @@ export default function Navbar() {
             <nav className="flex flex-col p-6 space-y-1 max-h-[80vh] overflow-y-auto">
               <button
                 onClick={() => setMobileSection(mobileSection === "products" ? null : "products")}
-                className="flex items-center justify-between font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black"
+                className="flex items-center justify-between font-sans text-lg uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black"
               >
                 Products <ChevronDown className={`w-4 h-4 transition-transform ${mobileSection === "products" ? "rotate-180" : ""}`} />
               </button>
@@ -142,13 +142,13 @@ export default function Navbar() {
 
               {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black hover:text-gold">
+                  className="font-sans text-lg uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black hover:text-gold">
                   {link.label}
                 </Link>
               ))}
 
               <Link to="/request-concept-design" onClick={() => setOpen(false)}
-                className="bg-bronze hover:bg-gold text-parchment px-6 py-4 font-sans text-sm uppercase tracking-[0.15em] font-semibold text-center mt-4 transition-colors">
+                className="bg-bronze hover:bg-gold text-parchment px-6 py-4 font-sans text-lg uppercase tracking-[0.15em] font-semibold text-center mt-4 transition-colors">
                 Request Concept Design
               </Link>
             </nav>

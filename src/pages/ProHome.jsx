@@ -270,18 +270,18 @@ export default function ProHome() {
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">Immortalize Champions.<br />Preserve Legacy<br /><span className="text-bronze-light italic">For Generations.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
+            <p className="mt-6 max-w-2xl text-base sm:text-xl md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
-            <p className="font-serif text-lg sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
+            <p className="font-serif text-xl sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
-              <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-6 py-4 sm:px-10 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-6 py-4 sm:px-10 sm:py-5 font-sans text-xl uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 Request Quote
               </Link>
-              <Link to="/hall-of-fame-bronze-displays" className="text-center bg-parchment/10 hover:bg-parchment/20 border border-parchment/30 hover:border-bronze text-parchment px-6 py-4 sm:px-10 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/hall-of-fame-bronze-displays" className="text-center bg-parchment/10 hover:bg-parchment/20 border border-parchment/30 hover:border-bronze text-parchment px-6 py-4 sm:px-10 sm:py-5 font-sans text-xl uppercase tracking-[0.2em] transition-all duration-300">
                 Start Hall of Fame Project
               </Link>
-              <Link to="/photo-image-casting-plaques" className="text-center border border-parchment/30 hover:border-bronze text-parchment px-6 py-4 sm:px-10 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/photo-image-casting-plaques" className="text-center border border-parchment/30 hover:border-bronze text-parchment px-6 py-4 sm:px-10 sm:py-5 font-sans text-xl uppercase tracking-[0.2em] transition-all duration-300">
                 Upload Photos for Plaque Design
               </Link>
             </div>
@@ -334,7 +334,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -367,7 +367,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -400,7 +400,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -433,7 +433,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans mt-1 leading-relaxed text-base">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -466,7 +466,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -499,7 +499,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -532,7 +532,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -565,7 +565,7 @@ export default function ProHome() {
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <p className="text-black font-sans text-base mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                     <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
@@ -601,7 +601,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 01</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Football</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">The sacrifice, brotherhood, and grind of football deserves permanent recognition. Hall of Fame portrait plaques, championship commemorations, retired jersey tributes, donor recognition walls, and life-size bronze statues — sculpted from actual photographs and built to honor every player, coach, and program that gave everything to the game.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">The sacrifice, brotherhood, and grind of football deserves permanent recognition. Hall of Fame portrait plaques, championship commemorations, retired jersey tributes, donor recognition walls, and life-size bronze statues — sculpted from actual photographs and built to honor every player, coach, and program that gave everything to the game.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -614,7 +614,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -632,7 +632,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 02</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Basketball</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">From arena-entrance statues to Hall of Fame portrait plaques and championship trophy recognition — basketball programs trust Champions in Bronze to capture the legends, the moments, and the championships that define programs and inspire future generations.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">From arena-entrance statues to Hall of Fame portrait plaques and championship trophy recognition — basketball programs trust Champions in Bronze to capture the legends, the moments, and the championships that define programs and inspire future generations.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -645,7 +645,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -663,7 +663,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 03</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Baseball</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">Baseball is the sport of legacy. Retired numbers, Hall of Fame walls, stadium dedication plaques, and bronze statues that anchor the identity of every ballpark. Champions in Bronze creates baseball recognition designed to outlast the stadium itself.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Baseball is the sport of legacy. Retired numbers, Hall of Fame walls, stadium dedication plaques, and bronze statues that anchor the identity of every ballpark. Champions in Bronze creates baseball recognition designed to outlast the stadium itself.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -676,7 +676,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -694,7 +694,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 04</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Women's Basketball</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">Every champion deserves recognition that matches their greatness. Hall of Fame plaques, portrait busts, and bronze statues celebrating women's basketball excellence — the legends who built programs, broke records, and inspired the next generation of athletes.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Every champion deserves recognition that matches their greatness. Hall of Fame plaques, portrait busts, and bronze statues celebrating women's basketball excellence — the legends who built programs, broke records, and inspired the next generation of athletes.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -707,7 +707,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -725,7 +725,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 05</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Soccer</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">The beautiful game deserves beautiful recognition. Championship commemorations, Hall of Fame induction plaques, donor walls, and bronze statues for soccer programs, MLS facilities, and collegiate athletics — crafted from your exact photographs to honor the players and moments that defined your program.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">The beautiful game deserves beautiful recognition. Championship commemorations, Hall of Fame induction plaques, donor walls, and bronze statues for soccer programs, MLS facilities, and collegiate athletics — crafted from your exact photographs to honor the players and moments that defined your program.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -738,7 +738,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -756,7 +756,7 @@ export default function ProHome() {
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 06</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Hockey</h3>
-                <p className="text-black font-sans text-sm mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in silicon bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in silicon bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
@@ -769,7 +769,7 @@ export default function ProHome() {
                       <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
-                      <p className="font-serif text-sm text-parchment">{item.label}</p>
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
                       <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
                     </div>
                   </div>
@@ -814,7 +814,7 @@ export default function ProHome() {
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="font-serif text-2xl text-parchment group-hover:text-gold transition-colors duration-300">{p.title}</h3>
-                    <p className="text-black mt-2 text-sm leading-relaxed line-clamp-2">{p.desc}</p>
+                    <p className="text-black mt-2 text-xl leading-relaxed line-clamp-2">{p.desc}</p>
                     <div className="flex items-center gap-2 mt-4 text-gold text-base font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>{p.cta}</span><ArrowRight className="w-3 h-3" />
                     </div>
@@ -835,7 +835,7 @@ export default function ProHome() {
                     <span className="bg-gold/15 border border-gold/30 text-gold text-base font-sans uppercase tracking-[0.12em] px-2 py-0.5">{p.label}</span>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="font-serif text-lg text-parchment group-hover:text-gold transition-colors duration-300">{p.title}</h3>
+                    <h3 className="font-serif text-xl text-parchment group-hover:text-gold transition-colors duration-300">{p.title}</h3>
                     <p className="text-black mt-1 text-base leading-relaxed line-clamp-2">{p.desc}</p>
                     <div className="flex items-center gap-2 mt-3 text-gold text-base font-sans uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>{p.cta}</span><ArrowRight className="w-3 h-3" />
@@ -848,10 +848,10 @@ export default function ProHome() {
 
           <FadeIn delay={0.3}>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.15em] font-semibold transition-all duration-300">
+              <Link to="/3d-bas-relief-plaques" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.15em] font-semibold transition-all duration-300">
                 Browse All Plaque Types <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/request-quote" className="inline-flex items-center gap-2 border border-bronze/40 hover:border-gold text-parchment/70 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.15em] transition-all duration-300">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 border border-bronze/40 hover:border-gold text-parchment/70 hover:text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.15em] transition-all duration-300">
                 Request a Plaque Quote
               </Link>
             </div>
@@ -882,23 +882,23 @@ export default function ProHome() {
               <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
                 Honor Greatness.<br />Forever.
               </h2>
-              <p className="mt-6 text-black text-lg leading-relaxed">
+              <p className="mt-6 text-black text-xl leading-relaxed">
                 Champions in Bronze creates elite recognition environments — from individual Hall of Fame portrait plaques to 60-foot donor recognition walls and illuminated legacy corridors — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments, people, and history that deserve to be remembered for generations.
               </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {hofSystems.map((s) =>
                 <div key={s.title} className="border border-bronze/20 bg-white p-5 rounded-sm shadow-sm">
                     <s.icon className="w-5 h-5 text-gold mb-3" />
-                    <p className="font-serif text-sm text-parchment leading-tight">{s.title}</p>
+                    <p className="font-serif text-xl text-parchment leading-tight">{s.title}</p>
                     <p className="text-black text-base font-sans mt-2 leading-relaxed">{s.desc}</p>
                   </div>
                 )}
               </div>
               <div className="flex flex-wrap gap-4 mt-10">
-                <Link to="/hall-of-fame-bronze-displays" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.15em] font-semibold transition-all duration-300">
+                <Link to="/hall-of-fame-bronze-displays" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.15em] font-semibold transition-all duration-300">
                   View Hall of Fame Systems <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link to="/request-concept-design" className="inline-flex items-center gap-2 border border-bronze/40 hover:border-gold text-parchment/70 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.15em] transition-all duration-300">
+                <Link to="/request-concept-design" className="inline-flex items-center gap-2 border border-bronze/40 hover:border-gold text-parchment/70 hover:text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.15em] transition-all duration-300">
                   Start Hall of Fame Project
                 </Link>
               </div>
@@ -956,10 +956,10 @@ export default function ProHome() {
           </div>
           <FadeIn delay={0.3}>
             <div className="text-center mt-10 flex flex-wrap justify-center gap-4">
-              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 View All Busts <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/request-quote" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.2em] transition-all duration-300">
                 Request Bust Quote
               </Link>
             </div>
@@ -976,14 +976,14 @@ export default function ProHome() {
               "The tears come when champions realize their sacrifice, brotherhood, and journey will outlive the game — and be remembered forever in bronze."
             </blockquote>
             <div className="w-16 h-px bg-bronze mx-auto mb-10" />
-            <p className="font-sans text-base md:text-lg text-black leading-relaxed max-w-3xl mx-auto mb-12">
+            <p className="font-sans text-base md:text-xl text-black leading-relaxed max-w-3xl mx-auto mb-12">
               A lifelike bronze bust is never about the cost — it is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their life will never be forgotten.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8 text-left mt-4">
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-black leading-relaxed">
+                <p className="font-serif text-xl text-black leading-relaxed">
                   Legends battled, sacrificed, and rose.<br />
                   Now their story lives in bronze.<br />
                   Champions fade only when forgotten —<br />
@@ -991,14 +991,14 @@ export default function ProHome() {
                 </p>
               </div>
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-black leading-relaxed">
+                <p className="font-serif text-xl text-black leading-relaxed">
                   Crowds fade into night.<br />
                   Champions live on in bronze.<br />
                   <span className="text-bronze-dark font-semibold not-italic">Legacy remains.</span>
                 </p>
               </div>
               <div className="border-l-2 border-bronze/40 pl-6">
-                <p className="font-serif text-lg text-black leading-relaxed">
+                <p className="font-serif text-xl text-black leading-relaxed">
                   Champions rise high.<br />
                   Bronze holds what time cannot take.<br />
                   <span className="text-bronze-dark font-semibold not-italic">Legacy lives on.</span>
@@ -1061,7 +1061,7 @@ export default function ProHome() {
 
           <FadeIn delay={0.3}>
             <div className="text-center mt-4">
-              <Link to="/all-sports" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/all-sports" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-4 font-sans text-xl uppercase tracking-[0.2em] transition-all duration-300">
                 Browse All Sports <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -1084,10 +1084,10 @@ export default function ProHome() {
               From a single Hall of Fame plaque to a complete 60-foot donor recognition wall — Champions in Bronze creates elite bronze recognition designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 mt-10">
-              <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-8 py-4 sm:px-12 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+              <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-8 py-4 sm:px-12 sm:py-5 font-sans text-xl uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                 Request a Quote
               </Link>
-              <Link to="/hall-of-fame-bronze-displays" className="text-center border border-parchment/30 hover:border-bronze text-parchment px-8 py-4 sm:px-12 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-300">
+              <Link to="/hall-of-fame-bronze-displays" className="text-center border border-parchment/30 hover:border-bronze text-parchment px-8 py-4 sm:px-12 sm:py-5 font-sans text-xl uppercase tracking-[0.2em] transition-all duration-300">
                 Start Hall of Fame Project
               </Link>
             </div>
@@ -1131,8 +1131,8 @@ export default function ProHome() {
             { q: "Why do universities and stadiums choose bronze instead of other materials?", a: "Bronze conveys permanence, prestige, tradition, and legacy recognition. It is considered the premier material for donor recognition plaques, championship commemorations, Hall of Fame installations, university dedications, alumni recognition, athletic facility signage, and stadium branding systems." }].
             map((item, i) =>
             <div key={i} className="border-b border-bronze/20 pb-8">
-                <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">{item.q}</p>
-                <p className="font-sans text-sm italic text-black leading-relaxed">{item.a}</p>
+                <p className="font-sans text-xl font-bold uppercase tracking-wider text-parchment mb-3">{item.q}</p>
+                <p className="font-sans text-xl italic text-black leading-relaxed">{item.a}</p>
               </div>
             )}
           </div>

@@ -17,10 +17,10 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
           {safeFaqs.map((faq, i) => (
             <FadeIn key={i} delay={i * 0.04}>
               <div className="border-b border-bronze/20 pb-8">
-                <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">
+                <p className="font-sans text-lg font-bold uppercase tracking-wider text-parchment mb-3">
                   {faq.question}
                 </p>
-                <p className="font-sans text-sm italic text-black leading-relaxed">
+                <p className="font-sans text-lg italic text-black leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
