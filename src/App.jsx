@@ -48,17 +48,15 @@ import BronzePlayerStatues from './pages/BronzePlayerStatues';
 import ChampionshipBronzePlaques from './pages/ChampionshipBronzePlaques';
 import StadiumDonorWalls from './pages/StadiumDonorWalls';
 import AthleticDonorWalls from './pages/AthleticDonorWalls';
-import CollegeHallOfFame from './pages/CollegeHallOfFame';
 import RetiredJerseyDisplays from './pages/RetiredJerseyDisplays';
 import CapitalCampaignRecognition from './pages/CapitalCampaignRecognition';
 import CustomJerseyPlaques from './pages/CustomJerseyPlaques';
 import ReliefJerseyPlaques from './pages/ReliefJerseyPlaques';
 import BronzePaperweights from './pages/BronzePaperweights';
-import HallOfFamePlaques from './pages/HallOfFamePlaques';
 import ModelViewer from './pages/ModelViewer';
 import CustomBronzeStatues from './pages/CustomBronzeStatues';
 import BronzeAthleteBusts from './pages/BronzeAthleteBusts';
-import HallOfFameDisplays from './pages/HallOfFameDisplays';
+import { Navigate } from 'react-router-dom';
 import StadiumBronzeStatues from './pages/StadiumBronzeStatues';
 import CollegeAthleticRecognition from './pages/CollegeAthleticRecognition';
 import BronzePricingGuide from './pages/BronzePricingGuide';
@@ -130,10 +128,10 @@ const AuthenticatedApp = () => {
         {/* Legacy routes — preserved for SEO / backward compat */}
         <Route path="/bronze-player-statues" element={<BronzePlayerStatues />} />
         <Route path="/championship-bronze-plaques" element={<ChampionshipBronzePlaques />} />
-        <Route path="/hall-of-fame-plaques" element={<HallOfFamePlaques />} />
+        <Route path="/hall-of-fame-plaques" element={<Navigate to="/hall-of-fame" replace />} />
         <Route path="/stadium-donor-walls" element={<StadiumDonorWalls />} />
         <Route path="/athletic-donor-walls" element={<AthleticDonorWalls />} />
-        <Route path="/college-hall-of-fame-plaques" element={<CollegeHallOfFame />} />
+        <Route path="/college-hall-of-fame-plaques" element={<Navigate to="/hall-of-fame" replace />} />
         <Route path="/retired-jersey-displays" element={<RetiredJerseyDisplays />} />
         <Route path="/capital-campaign-recognition" element={<CapitalCampaignRecognition />} />
         <Route path="/custom-jersey-plaques" element={<CustomJerseyPlaques />} />
@@ -144,7 +142,7 @@ const AuthenticatedApp = () => {
         {/* New repositioned pages */}
         <Route path="/custom-bronze-athlete-statues" element={<CustomBronzeStatues />} />
         <Route path="/bronze-athlete-busts" element={<BronzeAthleteBusts />} />
-        <Route path="/hall-of-fame-bronze-displays" element={<HallOfFameDisplays />} />
+        <Route path="/hall-of-fame-bronze-displays" element={<Navigate to="/hall-of-fame" replace />} />
         <Route path="/stadium-bronze-statues" element={<StadiumBronzeStatues />} />
         <Route path="/college-athletic-recognition" element={<CollegeAthleticRecognition />} />
         <Route path="/bronze-statue-pricing" element={<BronzePricingGuide />} />
