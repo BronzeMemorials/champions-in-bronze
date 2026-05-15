@@ -5,6 +5,7 @@ import FadeIn from "../components/shared/FadeIn";
 import TrustBadges from "../components/shared/TrustBadges";
 import SectionHeading from "../components/shared/SectionHeading";
 import SEOHead from "../components/shared/SEOHead";
+import { usePhotoLikeness } from "../hooks/usePhotoLikeness";
 
 const ProcessTimeline = lazy(() => import("../components/shared/ProcessTimeline"));
 const TestimonialCarousel = lazy(() => import("../components/shared/TestimonialCarousel"));
@@ -182,6 +183,7 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
 
 export default function ProHome() {
   const current = heroSlides[0];
+  const photoLikenessPhrase = usePhotoLikeness();
 
   return (
     <div className="bg-obsidian text-parchment">
@@ -385,7 +387,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 05</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Busts</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -416,7 +418,7 @@ export default function ProHome() {
             <div className="mb-6">
               <span className="text-bronze font-sans tracking-[0.3em] uppercase text-xs font-semibold">Category 06</span>
               <h2 className="font-serif text-3xl text-parchment mt-1">Statues</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-2 max-w-2xl">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. {photoLikenessPhrase}.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
@@ -857,7 +859,7 @@ export default function ProHome() {
             <SectionHeading
               label="Elevated Legacy Recognition"
               title="Hall of Fame Bronze Busts"
-              subtitle="Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. The premium tier of athletic legacy recognition — sculpted from your photographs with exact likeness."
+              subtitle={`Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. The premium tier of athletic legacy recognition. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>
@@ -964,7 +966,7 @@ export default function ProHome() {
             <SectionHeading
               label="Signature Centerpiece Projects"
               title="Full-Size Bronze Statues"
-              subtitle="When a program demands the ultimate legacy statement — life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. Sculpted from photographs. Exact athletic likeness."
+              subtitle={`When a program demands the ultimate legacy statement — life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>
