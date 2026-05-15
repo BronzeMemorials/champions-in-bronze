@@ -206,13 +206,11 @@ export default function ProHome() {
             <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold block mb-5">Legacy Tributes in Plaques, Busts, & Statues
 
             </span>
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">Commemorating Champions In Bronze.
-
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] text-parchment max-w-4xl">Immortalize Champions.<br />Preserve Legacy<br /><span className="text-bronze-light italic">For Generations.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Hall of Fame plaques, custom 3D relief photo plaques, donor / championship recognition walls, personalized lifelike 3D busts & statues created from your photograph, and commemorative recognition for colleges, universities, athletic facilities, boosters, alumni, and athletic foundations.
+            <p className="mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-parchment/70 leading-relaxed font-sans font-medium normal-case">Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues created from your exact photograph — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
-            <p className="font-serif text-lg sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— a tribute to legacy recognition cast in bronze.
-
+            <p className="font-serif text-lg sm:text-2xl md:text-3xl text-parchment/80 italic mt-4 font-medium lowercase">— immortalize champions, preserve legacy for generations.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-6 py-4 sm:px-10 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
@@ -720,9 +718,9 @@ export default function ProHome() {
               <span className="bg-bronze text-parchment text-xs font-sans uppercase tracking-[0.2em] px-3 py-1.5 font-semibold">Most Requested Products</span>
             </div>
             <SectionHeading
-              label="Bronze Plaques & Recognition Systems"
+              label="Immortalize Champions. Preserve Legacy For Generations."
               title="Hall of Fame Plaques.\nChampionship Recognition.\nDonor Legacy Systems."
-              subtitle="The nation's most trusted source for institutional bronze plaque programs — Hall of Fame, championship, donor, retired jersey, dedication, and memorial plaques for stadiums, universities, and professional athletic organizations." />
+              subtitle="Champions in Bronze transforms greatness into permanent legacy through elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues — designed for universities, stadiums, and athletic facilities that honor sacrifice, celebrate champions, and immortalize the moments that deserve to be remembered for generations." />
             
           </FadeIn>
 
@@ -802,12 +800,12 @@ export default function ProHome() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Complete Hall of Fame Systems</span>
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-parchment">
-                Hall of Fame Worthy.<br />Always.
+                Honor Greatness.<br />Forever.
               </h2>
               <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
-                We design and manufacture complete Hall of Fame environments — from individual portrait plaques and induction series to 60-foot donor recognition walls and illuminated legacy corridors. Every installation communicates the prestige and permanence your program demands.
+                Champions in Bronze creates elite recognition environments — from individual Hall of Fame portrait plaques to 60-foot donor recognition walls and illuminated legacy corridors — designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments, people, and history that deserve to be remembered for generations.
               </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {hofSystems.map((s) =>
@@ -857,9 +855,9 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <SectionHeading
-              label="Elevated Legacy Recognition"
+              label="Preserve Legacy For Generations"
               title="Hall of Fame Bronze Busts"
-              subtitle={`Immortalize champions with elite bronze recognition created from their exact photograph — sculpted for Hall of Fame displays, donor recognition walls, championship installations, and commemorative busts built to preserve legacy for generations. ${photoLikenessPhrase}.`}
+              subtitle={`Immortalize champions and preserve legendary athletic legacy for future generations. Each bust is created from your exact photograph using advanced sculptural technology and architectural bronze craftsmanship — designed to honor sacrifice, celebrate champions, and immortalize the people that deserve to be remembered forever. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>
@@ -964,9 +962,9 @@ export default function ProHome() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <SectionHeading
-              label="Signature Centerpiece Projects"
+              label="Honor Sacrifice. Celebrate Champions. Preserve Brotherhood."
               title="Exact Likeness. Sculpted From Your Photograph. Immortalized In Bronze."
-              subtitle={`Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship for Hall of Fame displays, donor recognition walls, championship installations, athlete busts, and commemorative statues. ${photoLikenessPhrase}.`}
+              subtitle={`Champions in Bronze transforms greatness into permanent legacy through elite bronze statues created from your exact photograph — designed for universities, stadiums, athletic facilities, and legacy recognition environments built to immortalize the moments, people, and history that deserve to be remembered for generations. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>
@@ -1024,12 +1022,12 @@ export default function ProHome() {
       <section className="relative py-40 overflow-hidden bg-secondary/40">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <FadeIn>
-            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold">Begin Your Recognition Program</span>
+            <span className="text-bronze font-sans tracking-[0.4em] uppercase text-xs font-semibold">Immortalize Champions. Preserve Legacy For Generations.</span>
             <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl mt-6 leading-tight text-parchment">
-              Permanent Recognition<br />Deserves Bronze.
+              Immortalize champions,<br />preserve legendary<br /><span className="text-bronze-light italic">athletic legacy forever.</span>
             </h2>
             <p className="mt-6 text-parchment/60 text-base sm:text-xl leading-relaxed max-w-2xl mx-auto">
-              From a single Hall of Fame plaque to a complete 60-foot donor recognition wall — we deliver museum-quality bronze recognition systems built for institutions that take legacy seriously.
+              From a single Hall of Fame plaque to a complete 60-foot donor recognition wall — Champions in Bronze creates elite bronze recognition designed to honor sacrifice, celebrate champions, preserve brotherhood, and immortalize the moments that deserve to be remembered for generations.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 mt-10">
               <Link to="/request-quote" className="text-center bg-bronze hover:bg-gold text-white px-8 py-4 sm:px-12 sm:py-5 font-sans text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300">
