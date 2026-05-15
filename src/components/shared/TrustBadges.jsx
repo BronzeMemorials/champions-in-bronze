@@ -22,7 +22,7 @@ export default function TrustBadges() {
                   <badge.icon className="w-4 h-4 text-gold" />
                 </div>
                 <p className="font-serif text-xs text-parchment font-semibold leading-tight">{badge.label}</p>
-                <p className="text-xs text-parchment/50">{badge.sub}</p>
+                <p className="text-xs text-black">{badge.sub}</p>
               </div>
             </FadeIn>
           ))}

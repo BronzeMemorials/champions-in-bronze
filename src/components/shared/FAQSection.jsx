@@ -20,7 +20,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
                 <p className="font-sans text-sm font-bold uppercase tracking-wider text-parchment mb-3">
                   {faq.question}
                 </p>
-                <p className="font-sans text-sm italic text-parchment/65 leading-relaxed">
+                <p className="font-sans text-sm italic text-black leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

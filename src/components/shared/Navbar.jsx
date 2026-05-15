@@ -110,7 +110,7 @@ export default function Navbar() {
             >
               Request Design
             </Link>
-            <button onClick={() => setOpen(!open)} className="xl:hidden text-parchment/60 hover:text-parchment">
+            <button onClick={() => setOpen(!open)} className="xl:hidden text-black hover:text-black">
               {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -129,20 +129,20 @@ export default function Navbar() {
             <nav className="flex flex-col p-6 space-y-1 max-h-[80vh] overflow-y-auto">
               <button
                 onClick={() => setMobileSection(mobileSection === "products" ? null : "products")}
-                className="flex items-center justify-between font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-parchment/60"
+                className="flex items-center justify-between font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black"
               >
                 Products <ChevronDown className={`w-4 h-4 transition-transform ${mobileSection === "products" ? "rotate-180" : ""}`} />
               </button>
               {mobileSection === "products" && (Array.isArray(productLinks) ? productLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="pl-4 font-sans text-xs uppercase tracking-[0.1em] py-2 text-parchment/45 hover:text-gold">
+                  className="pl-4 font-sans text-xs uppercase tracking-[0.1em] py-2 text-black hover:text-gold">
                   {link.label}
                 </Link>
               ))}
 
               {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-parchment/60 hover:text-gold">
+                  className="font-sans text-sm uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black hover:text-gold">
                   {link.label}
                 </Link>
               ))}
