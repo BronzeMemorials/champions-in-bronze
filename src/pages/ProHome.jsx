@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { lazy, Suspense } from "react";
 import { ArrowRight, ChevronDown, Award, Shield, Star, Building2 } from "lucide-react";
 import FadeIn from "../components/shared/FadeIn";
 import TrustBadges from "../components/shared/TrustBadges";
@@ -68,10 +67,10 @@ const faqSchema = {
   }))
 };
 
-const ProcessTimeline = lazy(() => import("../components/shared/ProcessTimeline"));
-const TestimonialCarousel = lazy(() => import("../components/shared/TestimonialCarousel"));
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
+import ProcessTimeline from "../components/shared/ProcessTimeline";
+import TestimonialCarousel from "../components/shared/TestimonialCarousel";
+import QuoteForm from "../components/shared/QuoteForm";
+import FAQSection from "../components/shared/FAQSection";
 
 // Hero slides — plaque & recognition first
 const heroSlides = [
@@ -297,9 +296,7 @@ export default function ProHome() {
         </a>
       </section>
 
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
-      </Suspense>
+      <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       {/* ── TRUSTED BY ── */}
       <section className="py-8 border-y border-bronze/20 bg-obsidian">
@@ -995,14 +992,10 @@ export default function ProHome() {
       </section>
 
       {/* PROCESS */}
-      <Suspense fallback={<div className="h-40" />}>
-        <ProcessTimeline />
-      </Suspense>
+      <ProcessTimeline />
 
       {/* TESTIMONIALS */}
-      <Suspense fallback={<div className="h-40" />}>
-        <TestimonialCarousel />
-      </Suspense>
+      <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
                                    SECTION 4 — STATUES (Signature / Reduced)
@@ -1059,13 +1052,8 @@ export default function ProHome() {
       </section>
 
       {/* FAQ */}
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       {/* FINAL CTA */}
       <section className="relative py-40 overflow-hidden bg-secondary/40">
@@ -1090,12 +1078,10 @@ export default function ProHome() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm
-          title="Request Your Recognition Project Quote"
-          subtitle="Tell us your project type. We deliver a digital proof and pricing within the hour."
-          source="pro" />
-      </Suspense>
+      <QuoteForm
+        title="Request Your Recognition Project Quote"
+        subtitle="Tell us your project type. We deliver a digital proof and pricing within the hour."
+        source="pro" />
 
       {/* ── FULL SEO FAQ — 20 Questions ── */}
       <section className="py-20 bg-white border-t border-bronze/10">

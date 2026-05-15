@@ -1,13 +1,11 @@
-import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Trophy, Users, Star, Shield, Landmark, Heart, Zap, Award } from "lucide-react";
+import { ArrowRight, Trophy, Users, Star, Shield, Landmark, Heart, Award } from "lucide-react";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import SocialProofBar from "../components/shared/SocialProofBar";
 import QuoteForm from "../components/shared/QuoteForm";
-
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
+import FAQSection from "../components/shared/FAQSection";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png";
 const donorImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png";
@@ -323,17 +321,12 @@ export default function StadiumBronzeStatues() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm
-          title="Build A Stadium Worth Remembering"
-          subtitle="Tell us your vision. Full concept design and artwork proof within the hour. We don't miss deadlines."
-          source="pro"
-        />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm
+        title="Build A Stadium Worth Remembering"
+        subtitle="Tell us your vision. Full concept design and artwork proof within the hour. We don't miss deadlines."
+        source="pro"
+      />
     </div>
   );
 }

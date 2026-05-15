@@ -1,13 +1,11 @@
-import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
-
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
+import FAQSection from "../components/shared/FAQSection";
+import QuoteForm from "../components/shared/QuoteForm";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
 const goalieImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f91a2af55_0BB7CEA4-F96D-4C51-BADB-946A7C8080BB.png";
@@ -163,12 +161,8 @@ export default function CustomBronzeStatues() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Commission Your Bronze Statue" subtitle="Upload athlete photos and project details. Digital sculpt proof within 48 hours." source="pro" />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm title="Commission Your Bronze Statue" subtitle="Upload athlete photos and project details. Digital sculpt proof within 48 hours." source="pro" />
     </div>
   );
 }

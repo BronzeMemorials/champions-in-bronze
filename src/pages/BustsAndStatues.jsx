@@ -1,14 +1,13 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import GLBGallery from "../components/shared/GLBGallery";
+import FAQSection from "../components/shared/FAQSection";
+import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
-
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
@@ -172,12 +171,8 @@ export default function BustsAndStatues() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
     </div>
   );
 }

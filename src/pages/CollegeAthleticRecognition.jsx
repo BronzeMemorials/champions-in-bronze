@@ -1,13 +1,11 @@
-import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
-
-const FAQSection = lazy(() => import("../components/shared/FAQSection"));
-const QuoteForm = lazy(() => import("../components/shared/QuoteForm"));
+import FAQSection from "../components/shared/FAQSection";
+import QuoteForm from "../components/shared/QuoteForm";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 
@@ -96,12 +94,8 @@ export default function CollegeAthleticRecognition() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
-      <Suspense fallback={<div className="h-40" />}>
-        <FAQSection faqs={faqs} />
-      </Suspense>
-      <Suspense fallback={<div className="h-40" />}>
-        <QuoteForm title="Elevate Your Athletic Program" subtitle="Tell us about your program. We'll design a bronze recognition plan within 48 hours." source="pro" />
-      </Suspense>
+      <FAQSection faqs={faqs} />
+      <QuoteForm title="Elevate Your Athletic Program" subtitle="Tell us about your program. We'll design a bronze recognition plan within 48 hours." source="pro" />
     </div>
   );
 }
