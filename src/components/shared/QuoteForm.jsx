@@ -120,8 +120,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     { icon: Clock, title: "Artwork Proof Within The Hour", desc: "Digital proof of your custom design delivered within the hour — no commitment required." },
     { icon: Award, title: "Museum-Quality Craftsmanship", desc: "Institutional-grade bronze manufactured to last 100+ years outdoors." },
     { icon: Shield, title: "Exact Photo Likeness", desc: "Proprietary Photo ImageCasting process — your real photos cast permanently in bronze." },
-    { icon: Users, title: "500+ Institutional Installations", desc: "Trusted by universities, stadiums, and Hall of Fame programs nationwide." },
-    { icon: Star, title: "Made in the USA", desc: "American foundry. Every piece sculpted and cast on U.S. soil." },
+    { icon: Users, title: "Over 50,000 Satisfied Customers", desc: "Don't believe us? Read our reviews!" },
+    { icon: Star, title: "Made in the USA", desc: "100% Made in America. No tariffs. Been in business for over 50 years." },
   ];
 
   return (
@@ -135,7 +135,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:items-start">
           {/* LEFT — Form */}
           <FadeIn delay={0.2} className="h-full">
             {/* A/B Test Title Block */}
@@ -206,7 +206,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
 
           {/* RIGHT — Trust panel */}
           <FadeIn delay={0.35} className="h-full">
-            <div className="flex flex-col gap-4 h-full">
+            <div className="flex flex-col gap-4">
               {/* Phone CTA */}
               <a href="tel:7723090412" className="flex items-center gap-4 bg-white hover:bg-gray-50 transition-colors px-5 py-4 border-2 border-gray-200 group">
                 <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/07d72101a_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze ring" className="w-10 h-10 object-contain flex-shrink-0" />
