@@ -859,7 +859,7 @@ export default function ProHome() {
             <SectionHeading
               label="Elevated Legacy Recognition"
               title="Hall of Fame Bronze Busts"
-              subtitle={`Museum-quality portrait busts for Hall of Fame corridors, trophy rooms, and recognition displays. The premium tier of athletic legacy recognition. ${photoLikenessPhrase}.`}
+              subtitle={`Immortalize champions with elite bronze recognition created from their exact photograph — sculpted for Hall of Fame displays, donor recognition walls, championship installations, and commemorative busts built to preserve legacy for generations. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>
@@ -965,8 +965,8 @@ export default function ProHome() {
           <FadeIn>
             <SectionHeading
               label="Signature Centerpiece Projects"
-              title="Full-Size Bronze Statues"
-              subtitle={`When a program demands the ultimate legacy statement — life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks. ${photoLikenessPhrase}.`}
+              title="Exact Likeness. Sculpted From Your Photograph. Immortalized In Bronze."
+              subtitle={`Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship for Hall of Fame displays, donor recognition walls, championship installations, athlete busts, and commemorative statues. ${photoLikenessPhrase}.`}
               align="center" />
             
           </FadeIn>

@@ -38,8 +38,8 @@ export default function BustsAndStatues() {
       <ProductHero
         image={heroImg}
         label="Signature Work · American Foundry"
-        title="Bronze & Aluminum Busts and Statues"
-        subtitle="Life-size and heroic-scale figures sculpted from your actual photographs. Not an artist's interpretation — your exact likeness, expression, and presence, cast forever in solid bronze or aluminum."
+        title="Exact Likeness. Sculpted From Your Photograph. Immortalized In Bronze."
+        subtitle="Immortalize champions with elite bronze recognition created from their exact photograph and sculpted for Hall of Fame displays, donor recognition walls, championship installations, athlete busts, and commemorative statues built to preserve legacy for generations."
         cta1="Start a Commission"
         cta1Link="/request-quote"
         cta2="View Portfolio"
@@ -68,10 +68,10 @@ export default function BustsAndStatues() {
                 True Replication.<br />Not Interpretation.
               </h2>
               <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
-                Every bust and statue we create is built from the photographs you provide. Our master sculptors use advanced photogrammetric techniques to capture exact bone structure, expression lines, eye shape, and physical presence.
+                Champions in Bronze creates elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues from your exact photograph using advanced image casting, bas-relief sculpting, and dimensional bronze technology. Each piece is designed for universities, stadiums, arenas, athletic facilities, and legacy recognition environments where lifelike detail, architectural craftsmanship, and permanent recognition are required to honor greatness for generations.
               </p>
               <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
-                The result is a sculpture that family members recognize instantly — not a generalized artistic likeness, but the actual person.
+                Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship — the result is a sculpture that family members recognize instantly.
               </p>
               <ul className="mt-8 space-y-3 border-l border-bronze/30 pl-6">
                 {[
