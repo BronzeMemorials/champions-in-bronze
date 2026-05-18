@@ -92,8 +92,14 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
       const result = await base44.integrations.Core.UploadFile({ file });
       file_urls.push(result.file_url);
     }
-    await base44.entities.QuoteRequest.create({ ...form, file_urls, source_domain: source });
+    const quoteData = { ...form, file_urls, source_domain: source };
+    await base44.entities.QuoteRequest.create(quoteData);
     await trackConversion();
+    try {
+      await base44.functions.invoke('sendQuoteEmail', quoteData);
+    } catch (e) {
+      console.error('Email send failed:', e);
+    }
     setSubmitting(false);
     setSubmitted(true);
   };
