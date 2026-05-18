@@ -33,7 +33,7 @@ Deno.serve(async (req) => {
           content: bodyLines,
         },
         toRecipients: [
-          { emailAddress: { address: 'quotes@bronzememorials.net' } },
+          { emailAddress: { address: 'info@championsinbronze.com' } },
         ],
       },
       saveToSentItems: true,
