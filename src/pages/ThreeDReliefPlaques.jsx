@@ -8,6 +8,7 @@ import STLGallery from "../components/shared/STLGallery";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
+import ProcessGallery from "../components/shared/ProcessGallery";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png";
@@ -172,6 +173,96 @@ export default function ThreeDReliefPlaques() {
       {stlModels.length > 0 && <STLGallery models={stlModels} />}
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+
+      <ProcessGallery
+        title="Photo → Clay → Cast in Bronze"
+        subtitle="See the complete transformation — from the reference photograph our sculptors work from, to the hand-sculpted clay mold, to the finished cast bronze plaque. Every likeness is captured exactly from your real photos."
+        groups={[
+          {
+            label: "Gen. Norman Schwarzkopf — Military Hall of Fame Plaque",
+            caption: "Color portrait photograph used as sculpting reference → hand-sculpted clay mold with medal insignia → finished cast bronze plaque.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/0a4d2f8f0_SCHWARZKOPF-photo.jpg", tag: "Photo", alt: "General Schwarzkopf reference photo" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/108110e75_SCHWARZKOPF-clay-mold.jpg", tag: "Clay Mold", alt: "General Schwarzkopf clay mold" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/767475c4f_schwarzkopf-ph-plaque.jpg", tag: "Finished Bronze", alt: "General Schwarzkopf finished bronze plaque" },
+            ],
+          },
+          {
+            label: "Manfred Hoffmann — Institutional Recognition Plaque",
+            caption: "Original color photograph → detailed clay sculpt showing exact likeness.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/dff654d8a_Manfred_HoffmannHighRes-colorphoto.jpg", tag: "Photo", alt: "Manfred Hoffmann reference photo" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/125fa40c8_manfred-artis-clay-mold.jpg", tag: "Clay Mold", alt: "Manfred Hoffmann clay mold" },
+            ],
+          },
+          {
+            label: "Reynolds — Portrait Bas-Relief Plaque",
+            caption: "From a formal portrait photo to a precision clay mold ready for bronze casting.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cf9e2126a_REYNOLDS-pic-ts.jpg", tag: "Photo", alt: "Reynolds reference photo" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c5d05c31e_reynolds-clay-ts.jpg", tag: "Clay Mold", alt: "Reynolds clay mold" },
+            ],
+          },
+          {
+            label: "Carol Hutchins — University of Michigan Softball Hall of Fame",
+            caption: "NCAA Hall of Fame induction plaque for the winningest coach in NCAA softball history. Sports-specific relief with athletic portrait and comprehensive career stats.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/dc6a79710_2026-CAROL-HUTCHINS-bas-relief.jpg", tag: "Finished Bronze", alt: "Carol Hutchins Michigan Softball Hall of Fame plaque" },
+            ],
+          },
+          {
+            label: "Baseball — Clay Mold in Progress",
+            caption: "A baseball player sculpted in clay wearing a 'P' cap — showing the precision of our relief sculpting before casting.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/03a853216_clay-baseball-man.jpg", tag: "Clay Mold", alt: "Baseball player clay mold in progress" },
+            ],
+          },
+          {
+            label: "Historical Marker Plaques — Installed in the Field",
+            caption: "Completed cast bronze historical marker plaques installed on-site. The Jessie Andrews and John Gaines plaques feature 3D bas-relief portrait medallions at top with detailed narrative panels.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9549ea0b4_2025-bas-relief-cast-bronze-plaque-Andrews.jpg", tag: "Finished Bronze", alt: "Jessie Andrews historical marker plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/540027290_2025-bas-relief-cast-bronze-plaque-Gaines.jpg", tag: "Finished Bronze", alt: "John Gaines historical marker plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d7e79f62a_2025-bas-relief-cast-bronze-plaque-taniguchi.jpg", tag: "Finished Bronze", alt: "Isamu Taniguchi historical marker plaque" },
+            ],
+          },
+          {
+            label: "Dr Pepper Museum — Double Portrait Co-Founders Plaque",
+            caption: "Two subjects sculpted in a single bas-relief composition. Shown here: the finished bronze plaque and the no-border variant.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3e7b0f81_drpepper-440.jpg", tag: "Finished Bronze", alt: "Dr Pepper Museum Co-Founders bronze plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82a1a4020_drpepper-440-no-border.jpg", tag: "Finished Bronze", alt: "Dr Pepper plaque no border variant" },
+            ],
+          },
+          {
+            label: "Veterans Memorial Relief Plaques",
+            caption: "Panoramic narrative relief plaques honoring Vietnam, WWI, and WWII veterans. Multi-figure battle scene compositions with full text panels — designed for permanent outdoor memorial installations.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b10d7478c_Vietnam-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "Vietnam Veterans Memorial Relief Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c16278797_WWI-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "WWI Veterans Memorial Relief Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fa624bcd9_WWII-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "WWII Veterans Memorial Relief Plaque" },
+            ],
+          },
+          {
+            label: "Emergency Services Relief Plaques",
+            caption: "Multi-figure narrative compositions for firefighter and police service recognition. Hall of Fame grade bas-relief for public safety institutions.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d72ca993_firefighter-service-plaque.jpg", tag: "Finished Bronze", alt: "Firefighter service relief plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/506d7cbcb_relief-police.jpg", tag: "Finished Bronze", alt: "Police service relief plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fa624bcd9_18x24EmergencyServices.jpg", tag: "Finished Bronze", alt: "Emergency services relief plaque" },
+            ],
+          },
+          {
+            label: "Portrait Bas-Relief Plaques — Institutional Gallery",
+            caption: "Individual and multi-subject portrait plaques for universities, banks, fraternal organizations, and community recognition programs.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1a0471236_hunter-brooks-2.jpg", tag: "Finished Bronze", alt: "Hunter Brooks Watson memorial plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/bb8ee0525_500-birk.jpg", tag: "Finished Bronze", alt: "Berkshire Hills Bancorp portrait plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3c32eaa2a_500-plummer.jpg", tag: "Finished Bronze", alt: "Harold Plummer recognition plaque" },
+            ],
+          },
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
       <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />

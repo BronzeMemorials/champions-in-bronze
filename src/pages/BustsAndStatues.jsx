@@ -8,6 +8,7 @@ import GLBGallery from "../components/shared/GLBGallery";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
+import ProcessGallery from "../components/shared/ProcessGallery";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
@@ -121,13 +122,13 @@ export default function BustsAndStatues() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "QB Action Statue", sub: "Silicon bronze · Life-size · Stadium entrance" },
-              { img: img2, title: "Hockey Goalie Statue", sub: "Bronze · Life-size · Arena lobby" },
-              { img: img3, title: "Basketball Guard Statue", sub: "Silicon bronze · Life-size · Athletic facility" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", title: "Firefighter Memorial Statue", sub: "Silicon bronze · 72-inch · Memorial installation" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ce2eda476_firefighter-72-inches.jpg", title: "Kneeling Firefighter", sub: "Bronze · Life-size · First responder memorial" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/bfca59864_vietnam-soldier.jpg", title: "Vietnam Soldier Statue", sub: "Silicon bronze · Life-size · Veterans memorial" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>
@@ -172,6 +173,112 @@ export default function BustsAndStatues() {
       </section>
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+
+      <ProcessGallery
+        title="Statues & Sculptures — Real Work Gallery"
+        subtitle="From life-size military and memorial statues to eagles, soldiers, firefighters, and institutional figures — every piece hand-sculpted by our master American artisans. Where applicable, we show the process from reference photo to clay mold to finished bronze."
+        groups={[
+          {
+            label: "Eagle Sculptures — Foundry to Finished",
+            caption: "Heroic-scale bronze eagle sculpted, assembled, and patina-finished in our American foundry. Three views showing the wings, body assembly, and final piece.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/57ec33cb4_IMG_34042.jpg", tag: "In Foundry", alt: "Bronze eagle statue in foundry" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9574a705a_Gorham-Eagle-Front-View.jpg", tag: "Finished Bronze", alt: "Gorham Eagle front view" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/46c712195_Gorham-eagle-side-view.jpg", tag: "Finished Bronze", alt: "Gorham Eagle side view" },
+            ],
+          },
+          {
+            label: "Tabletop Eagle Sculptures",
+            caption: "Smaller-scale collectible bronze eagles — museum-quality casting, warm amber patina, suitable for desk, trophy case, or award presentation.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/172481efe_AmericanEagle-cr.jpg", tag: "Finished Bronze", alt: "American Eagle bronze sculpture" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/71c629ec8_AmericanEagle-cr-2.jpg", tag: "Finished Bronze", alt: "American Eagle bronze sculpture angle 2" },
+            ],
+          },
+          {
+            label: "Firefighter Memorial Statues",
+            caption: "Life-size and 72-inch firefighter memorial statues in silicon bronze — kneeling, grieving, and action poses. Used for fire station dedications, city memorials, and fallen firefighter recognition.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5ac10b016_figherfighter-72-inch-cr.jpg", tag: "Finished Bronze", alt: "Firefighter 72-inch statue cropped" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", tag: "Finished Bronze", alt: "Firefighter 72-inch statue full" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c80c9698_figherfighter-large.jpg", tag: "Finished Bronze", alt: "Firefighter large statue" },
+            ],
+          },
+          {
+            label: "Kneeling Firefighter — Dark & Gold Patina",
+            caption: "The same sculpture shown in two different patina finishes — traditional dark bronze and warm gold bronze — demonstrating how patina color dramatically changes the aesthetic.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a736e67f3_table-top-firefighter-dark.jpg", tag: "Dark Patina", alt: "Kneeling firefighter dark patina" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fee1a9240_table-top-firefighter-light-r.jpg", tag: "Gold Patina", alt: "Kneeling firefighter gold patina" },
+            ],
+          },
+          {
+            label: "Firefighter Helmet — Custom Bronze Sculpture",
+            caption: "Life-size replica bronze firefighter helmet — 'Captain 46, Houston' — cast in silicon bronze with warm patina. Custom text and insignia cast in permanently.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/7c64e41ff_firefighter-helmet.jpg", tag: "Finished Bronze", alt: "Firefighter helmet bronze sculpture" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/0bb44a23f_firefighter-helmet-cr.jpg", tag: "Finished Bronze", alt: "Firefighter helmet cropped view" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/491e4c058_firefighter-helmet-cr-2.jpg", tag: "Finished Bronze", alt: "Firefighter helmet angle 2" },
+            ],
+          },
+          {
+            label: "Military Memorial Statues — Battle Cross & Soldier",
+            caption: "M4 and M16 battle cross memorial statues — helmet, rifle, boots on base — for veterans memorials and military installations. Alongside a kneeling soldier and standing Vietnam-era soldier.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ff47f84a6_m4-rifle-cr.jpg", tag: "Finished Bronze", alt: "M4 battle cross memorial statue" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3c35f781_m16-rifle-cr.jpg", tag: "Finished Bronze", alt: "M16 battle cross memorial statue" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c0b8156f5_soldier-kneeling-800-crr.jpg", tag: "Finished Bronze", alt: "Kneeling soldier bronze statue" },
+            ],
+          },
+          {
+            label: "Service Dog — Polychrome Bronze Sculpture",
+            caption: "Full-color polychrome bronze German Shepherd service dog — realistic fur texture and coloring achieved through multi-layer patina application over silicon bronze casting.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d6b4c5020_service-dog.jpg", tag: "Finished Bronze", alt: "Service dog bronze sculpture" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5f116da28_service-dogs.jpg", tag: "Finished Bronze", alt: "Service dog bronze sculpture angle 2" },
+            ],
+          },
+          {
+            label: "Soldier Saluting — Front & Back View",
+            caption: "Life-size modern soldier in full tactical gear, saluting — shown front and back to illustrate the full 360° sculpting detail that goes into every statue.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f860ddcd4_bronze-front-back-statue.jpg", tag: "Finished Bronze", alt: "Soldier statue front and back view" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ec72f3757_bronze-front-back-statue-cr.jpg", tag: "Finished Bronze", alt: "Soldier statue cropped detail" },
+            ],
+          },
+          {
+            label: "Portrait Bust — Photo to Clay to Cast",
+            caption: "The complete bust creation process: original reference photograph → hand-sculpted clay mold → finished cast bronze. Shown here for an institutional subject.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8f204e96a_Dr_Carl_Everett-pic.jpg", tag: "Photo", alt: "Portrait reference photo" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cdaeeb4e4_Dr_Carl_Everett-clay-mold.jpg", tag: "Clay Mold", alt: "Portrait clay mold" },
+            ],
+          },
+          {
+            label: "Couple Portrait — Photo to Clay Mold",
+            caption: "Two subjects captured together in a single bas-relief composition. From a casual couple photo to a precisely sculpted clay mold capturing both likenesses.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cf9e2126a_REYNOLDS-pic-ts.jpg", tag: "Photo", alt: "Reynolds couple reference photo" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c5d05c31e_reynolds-clay-ts.jpg", tag: "Clay Mold", alt: "Reynolds couple clay mold" },
+            ],
+          },
+          {
+            label: "Meade Woman — Clay Bust Mold",
+            caption: "Hand-sculpted clay bust mold in progress — full head, hair texture, and shoulder detail captured from photographic reference.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e556bcdc6_meade-woman.jpg", tag: "Clay Mold", alt: "Meade woman clay bust mold" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c2734dc11_IMG_9572-meade-clay-mold.jpg", tag: "Clay Mold", alt: "Meade clay mold in studio" },
+            ],
+          },
+          {
+            label: "3D Printed Sculpture — Modern Process",
+            caption: "For certain commissions, we use 3D printing as an intermediate step — digitally sculpted, printed at scale, then hand-finished and cast in bronze using the lost-wax process.",
+            steps: [
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f81a6917b_3d-print-statue-man.jpg", tag: "3D Print", alt: "3D printed statue model" },
+            ],
+          },
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
