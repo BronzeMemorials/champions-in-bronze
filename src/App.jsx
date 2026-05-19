@@ -69,6 +69,7 @@ import ABTestDashboard from './pages/ABTestDashboard';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PhotoGalleryAdmin from './pages/PhotoGalleryAdmin';
+import AdminLayout from './components/AdminLayout';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -156,12 +157,16 @@ const AuthenticatedApp = () => {
         <Route path="/3d-bas-relief-plaques" element={<ThreeDReliefPlaques />} />
         <Route path="/photo-image-casting-plaques" element={<PhotoImageCast />} />
         <Route path="/materials-finishes" element={<MaterialsFinishes />} />
-        <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
         <Route path="/reviews" element={<Reviews />} />
-        <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+      </Route>
+
+      {/* Admin routes — auth-gated, no public navbar/footer */}
+      <Route element={<AdminLayout />}>
         <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
+        <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
+        <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
