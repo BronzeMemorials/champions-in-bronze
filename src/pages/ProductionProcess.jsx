@@ -2,6 +2,7 @@ import ProcessTimeline from "../components/shared/ProcessTimeline";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
 import SectionHeading from "../components/shared/SectionHeading";
+import SEOHead from "../components/shared/SEOHead";
 
 const foundryImg = "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80";
 
@@ -17,10 +18,15 @@ const steps = [
 export default function ProductionProcess() {
   return (
     <div className="bg-obsidian text-parchment pt-20">
+      <SEOHead
+        title="The Lost-Wax Bronze Casting Process — How We Make Bronze Plaques & Statues | Champions in Bronze"
+        description="Learn how Champions in Bronze creates museum-quality bronze sculptures using the 5,000-year-old lost-wax casting process — from clay sculpting to silicon mold, wax casting, ceramic shell, bronze pour, and final patina."
+        canonical="/process"
+      />
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={foundryImg} alt="Bronze foundry" className="w-full h-full object-cover opacity-25" />
+          <img src={foundryImg} alt="Bronze foundry — lost-wax casting process at Champions in Bronze American foundry" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 to-obsidian" />
         </div>
         <div className="max-w-3xl mx-auto px-6 relative z-10 text-center">

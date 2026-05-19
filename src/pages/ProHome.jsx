@@ -160,27 +160,33 @@ const hofSystems = [
 const bustTypes = [
 {
   label: "Standard Hall of Fame Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png",
+  alt: "Standard Hall of Fame bronze bust — sculpted from athlete photograph"
 },
 {
   label: "Athlete Portrait Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png",
+  alt: "Custom athlete portrait bronze bust — exact likeness from photographs, no in-person sessions"
 },
 {
   label: "Coach Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png",
+  alt: "Coach portrait bronze bust — sculpted from photographs for Hall of Fame or recognition wall"
 },
 {
   label: "Championship Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png",
+  alt: "Championship bronze bust — silicon bronze, museum quality"
 },
 {
   label: "Stadium Donor Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png",
+  alt: "Stadium donor recognition bronze bust — permanent bronze portrait for capital campaign"
 },
 {
   label: "Historic Athlete Bust",
-  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png"
+  img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png",
+  alt: "Historic athlete bronze bust — created from archival photographs"
 }];
 
 
@@ -227,7 +233,7 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
       <FadeIn key={item.position} delay={i * 0.08}>
           <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
             <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
-              <img src={item.img} alt={`Bronze ${item.position} statue`}
+              <img src={item.img} alt={`Bronze ${sport} ${item.position} statue — life-size athletic sculpture from photograph`}
             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="p-4 text-center border-t border-bronze/10">
@@ -248,9 +254,10 @@ export default function ProHome() {
   return (
     <div className="bg-obsidian text-parchment">
       <SEOHead
-        title="Champions in Bronze — Bronze Plaques, Hall of Fame Systems, Busts & Statues"
-        description="America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship plaques, and bronze busts for universities, stadiums, and professional athletic organizations."
-        canonical="/" />
+        title="Champions in Bronze — Bronze Hall of Fame Plaques, Busts & Statues | American Foundry"
+        description="America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship bronze plaques, and athlete busts for universities, stadiums, and professional athletic organizations. Artwork proof within the hour. Made in USA."
+        canonical="/"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png" />
       <JsonLdSchema schema={localBusinessSchema} />
       <JsonLdSchema schema={faqSchema} />
       
@@ -258,7 +265,7 @@ export default function ProHome() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src={current.img} alt={current.label} className="w-full h-full object-cover scale-105" />
+          <img src={current.img} alt="Champions in Bronze — Hall of Fame plaques, busts, and bronze statues" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 to-transparent" />
         </div>
@@ -323,9 +330,9 @@ to Live Forever</h1>
               <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Casting Bronze Plaques</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[{ img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].map((item, i) => <div key={i} className="group flex flex-col">
+              {[{ img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Hall of Fame Portrait Plaque", alt: "Hall of Fame portrait Photo ImageCast bronze plaque — exact athlete likeness from photographs", desc: "Your real photographs — career highlights, championship moments, team history — permanently cast into museum-quality bronze.", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Championship Tribute Plaque", alt: "Championship tribute Photo ImageCast bronze plaque — real photos permanently cast in museum-quality bronze", desc: "Not engraved. Not printed. Not an artist's interpretation. Your exact image, cast forever in museum-quality bronze.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" }, { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Donor Recognition Plaque", alt: "Donor recognition Photo ImageCast bronze plaque — donor portrait permanently cast in museum-quality bronze", desc: "The most powerful recognition product in athletics today — permanent bronze casting with your exact image cast forever.", cta: "View Donor Plaques", to: "/donor-recognition" }].map((item, i) => <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
-                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src={item.img} alt={item.alt || item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
@@ -863,7 +870,7 @@ to Live Forever</h1>
               <div className="relative">
                 <div className="aspect-[4/5] overflow-hidden rounded-sm">
                   <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
-                  alt="Hall of Fame installation" loading="lazy" className="w-full h-full object-cover" />
+                  alt="Complete Hall of Fame bronze plaque wall installation — university athletic facility" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-bronze/90 p-6 rounded-sm hidden md:block">
                   <p className="font-serif text-3xl text-parchment">500+</p>
@@ -936,7 +943,7 @@ to Live Forever</h1>
             <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-bronze/20 shadow-sm hover:shadow-md hover:border-bronze/50 transition-all duration-300">
                   <div className="aspect-[3/4] overflow-hidden bg-secondary/30">
-                    <img src={item.img} alt={item.label}
+                    <img src={item.img} alt={item.alt || item.label}
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-bronze/10">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Camera, ArrowRight, Image, Layers, Award } from "lucide-react";
+import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
@@ -30,6 +31,12 @@ const steps = [
 export default function PhotoImageCast() {
   return (
     <div className="bg-obsidian text-parchment">
+      <SEOHead
+        title="Photo Image Cast Bronze Plaques — Exact Likeness from Your Photos | Champions in Bronze"
+        description="Our proprietary Photo ImageCasting process permanently embeds your actual photographs into museum-quality bronze or aluminum plaques. Hall of Fame, championship, donor recognition, and retirement tributes. Artwork proof within the hour."
+        canonical="/photo-imagecast-plaques"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png"
+      />
       <ProductHero
         image={heroImg}
         label="Proprietary Technology · American Foundry"
@@ -79,7 +86,7 @@ export default function PhotoImageCast() {
             </FadeIn>
             <FadeIn>
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-                <img src={img1} alt="Photo ImageCasting plaque example" className="w-full h-full object-cover" />
+                <img src={img1} alt="Photo ImageCasting bronze plaque — real photographs permanently cast in museum-quality bronze" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">Photo ImageCasting™</span>
@@ -126,16 +133,16 @@ export default function PhotoImageCast() {
           </FadeIn>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "Hall of Fame Induction", desc: "Career-spanning photo collage with stats — mounted alongside name and years of service." },
-              { img: img2, title: "Championship Commemoration", desc: "Season highlights, trophy presentation, team portrait — all captured in a single bronze piece." },
-              { img: img3, title: "Retirement Tribute", desc: "A career in photographs, permanently cast. Presented to the athlete or coach at retirement ceremony." },
-              { img: img1, title: "Donor Recognition", desc: "Donor portrait and family photos alongside dedication text — a truly personal recognition." },
-              { img: img2, title: "Alumni Memorial", desc: "Commemorate a beloved alumnus or athlete with photographs that capture their full story." },
-              { img: img3, title: "Building Dedication", desc: "Photo history of the facility, founding donors, and inaugural events — cast for the lobby wall." },
+              { img: img1, title: "Hall of Fame Induction", desc: "Career-spanning photo collage with stats — mounted alongside name and years of service.", alt: "Hall of Fame induction Photo ImageCasting bronze plaque with career photos" },
+              { img: img2, title: "Championship Commemoration", desc: "Season highlights, trophy presentation, team portrait — all captured in a single bronze piece.", alt: "Championship commemoration Photo ImageCast bronze plaque with team photos" },
+              { img: img3, title: "Retirement Tribute", desc: "A career in photographs, permanently cast. Presented to the athlete or coach at retirement ceremony.", alt: "Retirement tribute Photo ImageCast bronze plaque for athlete or coach" },
+              { img: img1, title: "Donor Recognition", desc: "Donor portrait and family photos alongside dedication text — a truly personal recognition.", alt: "Donor recognition Photo ImageCast bronze plaque with portrait" },
+              { img: img2, title: "Alumni Memorial", desc: "Commemorate a beloved alumnus or athlete with photographs that capture their full story.", alt: "Alumni memorial Photo ImageCast bronze plaque" },
+              { img: img3, title: "Building Dedication", desc: "Photo history of the facility, founding donors, and inaugural events — cast for the lobby wall.", alt: "Building dedication Photo ImageCast bronze plaque for stadium or arena" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.img} alt={item.alt || item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>

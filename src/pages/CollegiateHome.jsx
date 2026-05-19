@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import SEOHead from "../components/shared/SEOHead";
 import FadeIn from "../components/shared/FadeIn";
 import SocialProofBar from "../components/shared/SocialProofBar";
 import TrustBadges from "../components/shared/TrustBadges";
@@ -55,11 +56,17 @@ const collegiateTestimonials = [
 export default function CollegiateHome() {
   return (
     <div className="bg-obsidian text-parchment">
+      <SEOHead
+        title="Collegiate Bronze Athletic Recognition — Hall of Fame Plaques, Donor Walls & Statues | Champions in Bronze"
+        description="Bronze Hall of Fame plaques, donor recognition walls, campus statues, and championship displays for NCAA universities and collegiate athletic programs. Trusted by SEC, Big Ten, ACC programs. Artwork proof within 48 hours."
+        canonical="/collegiate"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png"
+      />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={hallImg} alt="College Hall of Fame" className="w-full h-full object-cover opacity-30 scale-105" />
+          <img src={hallImg} alt="Collegiate Hall of Fame bronze plaque wall installation at university athletic facility" className="w-full h-full object-cover opacity-30 scale-105" />
           <div className="absolute inset-0 bg-gradient-to-b from-obsidian/30 via-obsidian/60 to-obsidian" />
           <div className="absolute inset-0 bg-gradient-to-r from-obsidian/80 to-transparent" />
         </div>
@@ -109,7 +116,7 @@ export default function CollegiateHome() {
             {collegiateProducts.map((p, i) => (
               <FadeIn key={p.to} delay={i * 0.1}>
                 <Link to={p.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={p.image} alt={`${p.title} — collegiate bronze athletic recognition`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{p.label}</span>
@@ -134,7 +141,7 @@ export default function CollegiateHome() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-                <img src={jerseyImg} alt="3D bas relief Hall of Fame plaque" className="w-full h-full object-cover" />
+                <img src={jerseyImg} alt="3D bas-relief Hall of Fame portrait plaque — hand-sculpted from athlete photograph" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>

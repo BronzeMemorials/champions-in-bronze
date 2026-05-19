@@ -1,6 +1,7 @@
 import PortfolioGrid from "../components/shared/PortfolioGrid";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import SEOHead from "../components/shared/SEOHead";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png";
 const donorImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
@@ -26,6 +27,12 @@ const items = [
 export default function Portfolio() {
   return (
     <div className="bg-obsidian text-parchment pt-20">
+      <SEOHead
+        title="Bronze Recognition Portfolio — Hall of Fame Plaques, Statues & Donor Walls | Champions in Bronze"
+        description="View our portfolio of completed bronze commissions — NFL stadium statues, university Hall of Fame walls, donor recognition systems, championship plaques, and memorial sculptures. American-made. Museum quality."
+        canonical="/portfolio"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/d74e93030_generated_7f57395d.png"
+      />
       <section className="py-20 text-center">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>

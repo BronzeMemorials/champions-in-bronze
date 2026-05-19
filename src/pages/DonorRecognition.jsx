@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
@@ -23,6 +24,12 @@ const faqs = [
 export default function DonorRecognition() {
   return (
     <div className="bg-obsidian text-parchment">
+      <SEOHead
+        title="Donor Recognition Walls & Bronze Plaques — Athletic & University Programs | Champions in Bronze"
+        description="Architectural bronze donor recognition walls, naming-rights plaques, and capital campaign displays for universities, stadiums, and athletic facilities. Multi-tier systems that inspire alumni giving. Artwork proof within the hour."
+        canonical="/donor-recognition"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png"
+      />
       <ProductHero
         image={heroImg}
         label="Major Installations · Recognition Systems"
@@ -87,13 +94,13 @@ export default function DonorRecognition() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: img1, title: "Naming Rights Plaques", desc: "Building, suite, field, court, and room naming recognition. Architecture-scale bronze letters and plaques permanently identifying major donors." },
-              { img: img2, title: "Multi-Tier Donor Walls", desc: "Complete recognition wall systems with Founding Patron, Gold, Silver, and Bronze tiers. Designed for expansion as new donors join." },
-              { img: img3, title: "Capital Campaign Milestones", desc: "Campaign thermometers, milestone markers, and phase-complete monuments that chronicle the history of your fundraising achievement." },
+              { img: img1, title: "Naming Rights Plaques", desc: "Building, suite, field, court, and room naming recognition. Architecture-scale bronze letters and plaques permanently identifying major donors.", alt: "Bronze naming rights plaque — stadium suite or athletic facility dedication" },
+              { img: img2, title: "Multi-Tier Donor Walls", desc: "Complete recognition wall systems with Founding Patron, Gold, Silver, and Bronze tiers. Designed for expansion as new donors join.", alt: "Multi-tier bronze donor recognition wall — university athletic facility" },
+              { img: img3, title: "Capital Campaign Milestones", desc: "Campaign thermometers, milestone markers, and phase-complete monuments that chronicle the history of your fundraising achievement.", alt: "Capital campaign bronze milestone recognition plaque for university or stadium" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.img} alt={item.alt || item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-xl text-parchment">{item.title}</h3>

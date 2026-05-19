@@ -1,6 +1,7 @@
 import FadeIn from "../components/shared/FadeIn";
 import QuoteForm from "../components/shared/QuoteForm";
 import { Link } from "react-router-dom";
+import SEOHead from "../components/shared/SEOHead";
 
 const materials = [
   {
@@ -38,6 +39,11 @@ const patinas = [
 export default function MaterialsFinishes() {
   return (
     <div className="bg-obsidian text-parchment pt-20">
+      <SEOHead
+        title="Bronze Alloys & Patina Finishes — Silicon Bronze, Architectural Bronze & Statuary Bronze | Champions in Bronze"
+        description="Compare silicon bronze, architectural bronze, and statuary bronze alloys for plaques, busts, and statues. Explore patina finish options including natural oxidation, French brown, verde antique, and custom colors."
+        canonical="/materials"
+      />
       {/* Hero */}
       <section className="py-24 text-center">
         <div className="max-w-3xl mx-auto px-6">

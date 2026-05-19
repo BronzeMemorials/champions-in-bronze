@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
+import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
@@ -35,6 +36,12 @@ export default function BustsAndStatues() {
 
   return (
     <div className="bg-obsidian text-parchment">
+      <SEOHead
+        title="Custom Bronze Athlete Busts & Statues — Exact Likeness from Photographs | Champions in Bronze"
+        description="Custom bronze busts and full statues sculpted from your photographs — no in-person sessions required. Hall of Fame busts, life-size athlete statues, firefighter memorials, and military monuments. American foundry. 48-hour proof."
+        canonical="/busts-and-statues"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png"
+      />
       <ProductHero
         image={heroImg}
         label="Signature Work · American Foundry"
@@ -56,7 +63,7 @@ export default function BustsAndStatues() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={img1} alt="Bronze bust from photo" loading="lazy" className="w-full h-full object-cover" />
+                <img src={img1} alt="Custom bronze bust sculpted from photograph — exact likeness, no in-person sessions" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>

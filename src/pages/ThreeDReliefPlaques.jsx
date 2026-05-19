@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
+import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
@@ -21,15 +22,15 @@ const img6 = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9
 const sports = ["All Sports", "Football", "Basketball", "Baseball", "Hockey", "Soccer", "Lacrosse", "Golf"];
 
 const gallery = [
-  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Silicon Bronze · 18×24″" },
-  { sport: "Football", img: img2, title: "Championship Scene", sub: "NCAA · Bronze Patina · 24×30″" },
-  { sport: "Basketball", img: img3, title: "MVP Portrait Plaque", sub: "NBA · Dark Bronze · 16×20″" },
-  { sport: "Basketball", img: img4, title: "Retirement Honor", sub: "NCAA · Aluminum · 20×24″" },
-  { sport: "Baseball", img: img5, title: "Home Plate Relief", sub: "MLB · Bronze Cast · Custom shape" },
-  { sport: "Hockey", img: img6, title: "Stanley Cup Scene", sub: "NHL · Bronze · 24×30″" },
-  { sport: "Soccer", img: img1, title: "Championship Trophy", sub: "MLS · Bronze · 18×24″" },
-  { sport: "Lacrosse", img: img2, title: "All-American Portrait", sub: "NCAA · Aluminum · 16×20″" },
-  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Silicon Bronze · 18×24″" },
+  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Silicon Bronze · 18×24″", alt: "3D bas-relief football quarterback action bronze plaque — NFL silicon bronze 18x24" },
+  { sport: "Football", img: img2, title: "Championship Scene", sub: "NCAA · Bronze Patina · 24×30″", alt: "3D bas-relief NCAA football championship scene bronze plaque — 24x30" },
+  { sport: "Basketball", img: img3, title: "MVP Portrait Plaque", sub: "NBA · Dark Bronze · 16×20″", alt: "3D bas-relief basketball MVP Hall of Fame portrait bronze plaque — NBA dark bronze 16x20" },
+  { sport: "Basketball", img: img4, title: "Retirement Honor", sub: "NCAA · Aluminum · 20×24″", alt: "3D bas-relief basketball retirement honor plaque — NCAA aluminum 20x24" },
+  { sport: "Baseball", img: img5, title: "Home Plate Relief", sub: "MLB · Bronze Cast · Custom shape", alt: "3D bas-relief baseball home plate shape bronze plaque — MLB custom cast" },
+  { sport: "Hockey", img: img6, title: "Stanley Cup Scene", sub: "NHL · Bronze · 24×30″", alt: "3D bas-relief hockey Stanley Cup championship scene bronze plaque — NHL 24x30" },
+  { sport: "Soccer", img: img1, title: "Championship Trophy", sub: "MLS · Bronze · 18×24″", alt: "3D bas-relief soccer championship bronze plaque — MLS silicon bronze 18x24" },
+  { sport: "Lacrosse", img: img2, title: "All-American Portrait", sub: "NCAA · Aluminum · 16×20″", alt: "3D bas-relief lacrosse All-American portrait plaque — NCAA aluminum 16x20" },
+  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Silicon Bronze · 18×24″", alt: "3D bas-relief golf tournament champion bronze plaque — PGA silicon bronze 18x24" },
 ];
 
 const faqs = [
@@ -54,6 +55,12 @@ export default function ThreeDReliefPlaques() {
 
   return (
     <div className="bg-obsidian text-parchment">
+      <SEOHead
+        title="3D Bas-Relief Bronze Plaques — Hand-Sculpted from Athlete Photographs | Champions in Bronze"
+        description="3D bas-relief bronze plaques hand-sculpted from your actual athlete photographs. Hall of Fame portrait plaques, championship scenes, and retired jersey displays in silicon bronze or aluminum. Every sport. Artwork proof within 48 hours."
+        canonical="/3d-relief-plaques"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png"
+      />
       <ProductHero
         image={heroImg}
         label="Museum Quality · Sports Division"
@@ -116,7 +123,7 @@ export default function ThreeDReliefPlaques() {
             {filtered.map((item, i) => (
               <FadeIn key={`${item.sport}-${item.title}`} delay={i * 0.07}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.img} alt={item.alt || item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
                   <div className="absolute top-3 left-3">
                     <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.12em] px-2 py-0.5">{item.sport}</span>

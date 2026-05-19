@@ -23,9 +23,9 @@ const faqs = [
 ];
 
 const formats = [
-  { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years, stats, and achievement text. Available in bronze or aluminum. The foundation of every Hall of Fame.", img: img1 },
-  { title: "Photo ImageCasting Career Retrospective", desc: "Multiple photographs from the inductee's career permanently cast into bronze alongside their portrait relief and career statistics.", img: img2 },
-  { title: "Full Wall Installation", desc: "Complete Hall of Fame wall system with architectural framework, unified aesthetic, sport-themed borders, and modular expansion design.", img: img3 },
+  { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years, stats, and achievement text. Available in bronze or aluminum. The foundation of every Hall of Fame.", img: img1, alt: "Individual Hall of Fame inductee bronze portrait relief plaque" },
+  { title: "Photo ImageCasting Career Retrospective", desc: "Multiple photographs from the inductee's career permanently cast into bronze alongside their portrait relief and career statistics.", img: img2, alt: "Hall of Fame Photo ImageCasting career retrospective bronze plaque with multiple photos" },
+  { title: "Full Wall Installation", desc: "Complete Hall of Fame wall system with architectural framework, unified aesthetic, sport-themed borders, and modular expansion design.", img: img3, alt: "Complete Hall of Fame bronze plaque wall installation — university or stadium athletic facility" },
 ];
 
 const elements = [
@@ -42,8 +42,9 @@ export default function HallOfFamePage() {
     <div className="bg-obsidian text-parchment">
       <SEOHead
         title="Hall of Fame Bronze Plaques & Recognition Systems | Champions in Bronze"
-        description="Complete Hall of Fame bronze plaque systems — portrait relief plaques, photo image cast panels, wall installations, and recognition systems. Designed for universities, stadiums, and athletic facilities."
+        description="Complete Hall of Fame bronze plaque systems — portrait relief plaques, photo image cast panels, modular wall installations, and recognition systems. Designed for universities, stadiums, and athletic facilities. Artwork proof within the hour."
         canonical="/hall-of-fame"
+        ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/502c0767b_generated_e375b9ec.png"
       />
 
       <ProductHero
@@ -91,7 +92,7 @@ export default function HallOfFamePage() {
               <FadeIn key={fmt.title} delay={i * 0.1}>
                 <div className="border border-bronze/20 rounded-sm overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={fmt.img} alt={fmt.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img src={fmt.img} alt={fmt.alt || fmt.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div className="p-6">
                     <h3 className="font-serif text-xl text-parchment">{fmt.title}</h3>
