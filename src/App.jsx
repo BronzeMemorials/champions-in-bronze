@@ -68,6 +68,7 @@ import Reviews from './pages/Reviews';
 import ABTestDashboard from './pages/ABTestDashboard';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import PhotoGalleryAdmin from './pages/PhotoGalleryAdmin';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -160,6 +161,7 @@ const AuthenticatedApp = () => {
         <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
