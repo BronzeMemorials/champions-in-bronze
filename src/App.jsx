@@ -66,6 +66,8 @@ import HowItWorks from './pages/HowItWorks';
 import ReliefModelAdmin from './pages/ReliefModelAdmin';
 import Reviews from './pages/Reviews';
 import ABTestDashboard from './pages/ABTestDashboard';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -156,6 +158,8 @@ const AuthenticatedApp = () => {
         <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

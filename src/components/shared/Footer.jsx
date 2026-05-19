@@ -71,6 +71,8 @@ export default function Footer() {
             <h4 className="font-sans text-xs tracking-[0.2em] uppercase text-gray-900 mb-5 font-bold">Company</h4>
             <nav className="space-y-2.5">
               {[
+              { label: "About", to: "/about" },
+              { label: "Contact", to: "/contact" },
               { label: "Collegiate", to: "/collegiate" },
               { label: "Portfolio", to: "/portfolio" },
               { label: "Our Process", to: "/process" },

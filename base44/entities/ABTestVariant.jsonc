@@ -10,6 +10,11 @@
       "type": "string",
       "description": "The exact phrase/variant being tested"
     },
+    "description": {
+      "type": "string",
+      "description": "Optional description of what this variant tests and why (up to 1000 characters)",
+      "maxLength": 1000
+    },
     "impressions": {
       "type": "number",
       "default": 0,

@@ -6,6 +6,11 @@
       "type": "string",
       "description": "Display name for this 3D model"
     },
+    "description": {
+      "type": "string",
+      "description": "Optional description of this 3D model (up to 1000 characters)",
+      "maxLength": 1000
+    },
     "file_url": {
       "type": "string",
       "description": "URL of the uploaded GLB file"

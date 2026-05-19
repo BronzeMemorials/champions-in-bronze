@@ -10,6 +10,11 @@
       "type": "string",
       "description": "Display label shown in gallery"
     },
+    "description": {
+      "type": "string",
+      "description": "Optional description of this relief plaque model (up to 1000 characters)",
+      "maxLength": 1000
+    },
     "file_url": {
       "type": "string",
       "description": "URL of the uploaded STL file"
