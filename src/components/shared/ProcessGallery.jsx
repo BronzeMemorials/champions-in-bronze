@@ -28,27 +28,29 @@ export default function ProcessGallery({ groups = [], title = "From Photo to Bro
                 {group.caption && (
                   <p className="text-parchment/45 font-sans text-xs mb-5 max-w-2xl">{group.caption}</p>
                 )}
-                <div className={`grid gap-4 ${group.steps.length === 1 ? "grid-cols-1 max-w-sm" : group.steps.length === 2 ? "grid-cols-2 max-w-2xl" : "grid-cols-3"}`}>
+                <div className={`grid gap-6 ${group.steps.length === 1 ? "grid-cols-1 max-w-md" : group.steps.length === 2 ? "grid-cols-1 sm:grid-cols-2 max-w-3xl" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"}`}>
                   {group.steps.map((step, si) => (
-                    <div key={si} className="group relative overflow-hidden rounded-sm bg-black/20">
-                      <div className="aspect-[4/5] overflow-hidden">
+                    <div key={si} className="flex flex-col">
+                      {/* Tag badge above image */}
+                      {step.tag && (
+                        <div className="mb-2">
+                          <span className="inline-block bg-white text-black text-xs font-sans uppercase tracking-[0.12em] px-3 py-1 font-bold border border-gray-200">
+                            {step.tag}
+                          </span>
+                        </div>
+                      )}
+                      {/* Natural aspect ratio image — shows full image */}
+                      <div className="overflow-hidden bg-gray-100">
                         <img
                           src={step.img}
                           alt={step.alt || group.label}
                           loading="lazy"
-                          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                          className="w-full h-auto object-contain block"
                         />
                       </div>
-                      {step.tag && (
-                        <div className="absolute top-2 left-2">
-                          <span className={`text-xs font-sans uppercase tracking-[0.1em] px-2 py-0.5 rounded-sm font-semibold ${
-                            step.tag === "Photo" ? "bg-blue-900/80 text-blue-200" :
-                            step.tag === "Clay Mold" ? "bg-amber-900/80 text-amber-200" :
-                            "bg-gold/30 text-gold"
-                          }`}>
-                            {step.tag}
-                          </span>
-                        </div>
+                      {/* Caption below image */}
+                      {step.alt && (
+                        <p className="mt-2 text-parchment/50 font-sans text-xs leading-snug">{step.alt}</p>
                       )}
                     </div>
                   ))}

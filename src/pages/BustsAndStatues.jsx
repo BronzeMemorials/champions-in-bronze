@@ -180,36 +180,20 @@ export default function BustsAndStatues() {
         groups={[
           {
             label: "Eagle Sculptures — Foundry to Finished",
-            caption: "Heroic-scale bronze eagle sculpted, assembled, and patina-finished in our American foundry. Three views showing the wings, body assembly, and final piece.",
+            caption: "Heroic-scale bronze eagle sculpted, assembled, and patina-finished in our American foundry — shown in-progress in the foundry, then as the completed tabletop sculpture.",
             steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/57ec33cb4_IMG_34042.jpg", tag: "In Foundry", alt: "Bronze eagle statue in foundry" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9574a705a_Gorham-Eagle-Front-View.jpg", tag: "Finished Bronze", alt: "Gorham Eagle front view" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/46c712195_Gorham-eagle-side-view.jpg", tag: "Finished Bronze", alt: "Gorham Eagle side view" },
-            ],
-          },
-          {
-            label: "Tabletop Eagle Sculptures",
-            caption: "Smaller-scale collectible bronze eagles — museum-quality casting, warm amber patina, suitable for desk, trophy case, or award presentation.",
-            steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/172481efe_AmericanEagle-cr.jpg", tag: "Finished Bronze", alt: "American Eagle bronze sculpture" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/71c629ec8_AmericanEagle-cr-2.jpg", tag: "Finished Bronze", alt: "American Eagle bronze sculpture angle 2" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/57ec33cb4_IMG_34042.jpg", tag: "In Foundry", alt: "Heroic bronze eagle — wings being assembled in our American foundry" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9574a705a_Gorham-Eagle-Front-View.jpg", tag: "Finished Bronze", alt: "Gorham Eagle — completed heroic bronze sculpture, front view" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/172481efe_AmericanEagle-cr.jpg", tag: "Finished Bronze", alt: "Tabletop American Eagle — warm amber patina, museum-quality casting" },
             ],
           },
           {
             label: "Firefighter Memorial Statues",
-            caption: "Life-size and 72-inch firefighter memorial statues in silicon bronze — kneeling, grieving, and action poses. Used for fire station dedications, city memorials, and fallen firefighter recognition.",
+            caption: "Life-size and 72-inch firefighter memorial statues in silicon bronze. Same sculpture shown in two patina options — dark bronze and warm gold — demonstrating how finish color transforms the aesthetic.",
             steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5ac10b016_figherfighter-72-inch-cr.jpg", tag: "Finished Bronze", alt: "Firefighter 72-inch statue cropped" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", tag: "Finished Bronze", alt: "Firefighter 72-inch statue full" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c80c9698_figherfighter-large.jpg", tag: "Finished Bronze", alt: "Firefighter large statue" },
-            ],
-          },
-          {
-            label: "Kneeling Firefighter — Dark & Gold Patina",
-            caption: "The same sculpture shown in two different patina finishes — traditional dark bronze and warm gold bronze — demonstrating how patina color dramatically changes the aesthetic.",
-            steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a736e67f3_table-top-firefighter-dark.jpg", tag: "Dark Patina", alt: "Kneeling firefighter dark patina" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fee1a9240_table-top-firefighter-light-r.jpg", tag: "Gold Patina", alt: "Kneeling firefighter gold patina" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", tag: "Finished Bronze", alt: "Firefighter 72-inch kneeling with axe statue" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a736e67f3_table-top-firefighter-dark.jpg", tag: "Dark Patina", alt: "Kneeling firefighter — dark bronze patina" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fee1a9240_table-top-firefighter-light-r.jpg", tag: "Gold Patina", alt: "Kneeling firefighter — warm gold patina" },
             ],
           },
           {
@@ -223,11 +207,10 @@ export default function BustsAndStatues() {
           },
           {
             label: "Military Memorial Statues — Battle Cross & Soldier",
-            caption: "M4 and M16 battle cross memorial statues — helmet, rifle, boots on base — for veterans memorials and military installations. Alongside a kneeling soldier and standing Vietnam-era soldier.",
+            caption: "M4 battle cross memorial statue (helmet, rifle, boots on base) alongside a kneeling Vietnam-era soldier — for veterans memorials and military installations.",
             steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ff47f84a6_m4-rifle-cr.jpg", tag: "Finished Bronze", alt: "M4 battle cross memorial statue" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3c35f781_m16-rifle-cr.jpg", tag: "Finished Bronze", alt: "M16 battle cross memorial statue" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c0b8156f5_soldier-kneeling-800-crr.jpg", tag: "Finished Bronze", alt: "Kneeling soldier bronze statue" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ff47f84a6_m4-rifle-cr.jpg", tag: "Finished Bronze", alt: "M4 battle cross memorial statue — helmet, rifle, boots" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c0b8156f5_soldier-kneeling-800-crr.jpg", tag: "Finished Bronze", alt: "Kneeling soldier bronze statue — Vietnam era" },
             ],
           },
           {
@@ -240,10 +223,9 @@ export default function BustsAndStatues() {
           },
           {
             label: "Soldier Saluting — Front & Back View",
-            caption: "Life-size modern soldier in full tactical gear, saluting — shown front and back to illustrate the full 360° sculpting detail that goes into every statue.",
+            caption: "Life-size modern soldier in full tactical gear, saluting — showing full 360° sculpting detail. Front and back captured in one composite photograph.",
             steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f860ddcd4_bronze-front-back-statue.jpg", tag: "Finished Bronze", alt: "Soldier statue front and back view" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ec72f3757_bronze-front-back-statue-cr.jpg", tag: "Finished Bronze", alt: "Soldier statue cropped detail" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f860ddcd4_bronze-front-back-statue.jpg", tag: "Finished Bronze", alt: "Modern soldier saluting — front and back view showing full 360° sculpting detail" },
             ],
           },
           {

@@ -228,10 +228,9 @@ export default function ThreeDReliefPlaques() {
           },
           {
             label: "Dr Pepper Museum — Double Portrait Co-Founders Plaque",
-            caption: "Two subjects sculpted in a single bas-relief composition. Shown here: the finished bronze plaque and the no-border variant.",
+            caption: "Two subjects sculpted in a single bas-relief composition — W.W. 'Foots' Clements and Wilton A. Lanning, Jr., Co-Founders 1988.",
             steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3e7b0f81_drpepper-440.jpg", tag: "Finished Bronze", alt: "Dr Pepper Museum Co-Founders bronze plaque" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82a1a4020_drpepper-440-no-border.jpg", tag: "Finished Bronze", alt: "Dr Pepper plaque no border variant" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3e7b0f81_drpepper-440.jpg", tag: "Finished Bronze", alt: "Dr Pepper Museum & Free Enterprise Institute Co-Founders double portrait plaque" },
             ],
           },
           {
