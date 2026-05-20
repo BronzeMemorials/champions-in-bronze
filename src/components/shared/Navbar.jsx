@@ -73,15 +73,15 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="bg-white backdrop-blur-xl border-b border-white shadow-sm">
-        <div className="max-w-screen-2xl mx-auto flex items-center justify-between gap-8 h-20 px-8 sm:px-12 md:px-16 lg:px-20">
+        <div className="max-w-screen-2xl mx-auto flex items-center justify-between gap-4 h-14 sm:h-16 lg:h-20 px-4 sm:px-8 md:px-12 lg:px-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0 min-w-fit">
-            <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-16 h-16 object-contain flex-shrink-0 self-center" />
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/313d53a94_ChatGPTImageMay14202609_54_24AM.png" alt="Champions in Bronze" className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 object-contain flex-shrink-0" />
             <div className="flex flex-col leading-none">
-              <span className="font-serif text-2xl text-parchment tracking-wide">
+              <span className="font-serif text-base sm:text-lg lg:text-2xl text-parchment tracking-wide whitespace-nowrap">
                 Champions <span style={{color: '#C9A84C'}}>in Bronze</span>
               </span>
-              <span className="font-sans text-xs text-parchment/40 tracking-[0.15em] uppercase mt-0.5">Powered By Bronze Memorials</span>
+              <span className="hidden sm:block font-sans text-xs text-parchment/40 tracking-[0.12em] uppercase mt-0.5">Powered By Bronze Memorials</span>
             </div>
           </Link>
 
@@ -102,7 +102,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile toggle */}
-          <div className="flex items-center gap-4 flex-shrink-0 min-w-fit">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
             <Link
               to="/request-concept-design"
               className="hidden md:inline-block text-white px-4 py-2 font-sans text-sm uppercase tracking-[0.08em] font-semibold transition-all duration-300 whitespace-nowrap"
@@ -110,7 +110,10 @@ export default function Navbar() {
             >
               Request Design
             </Link>
-            <button onClick={() => setOpen(!open)} className="xl:hidden text-black hover:text-black">
+            <a href="tel:7723090412" className="hidden sm:inline-flex xl:hidden items-center gap-1.5 text-black font-sans text-xs font-bold uppercase tracking-wider whitespace-nowrap border border-gray-300 px-3 py-1.5">
+              Call Us
+            </a>
+            <button onClick={() => setOpen(!open)} className="xl:hidden text-black p-1">
               {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -126,31 +129,37 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="xl:hidden bg-white border-b border-bronze/20 overflow-hidden"
           >
-            <nav className="flex flex-col px-8 sm:px-12 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
+            <nav className="flex flex-col px-4 sm:px-8 py-4 space-y-0.5 max-h-[80vh] overflow-y-auto">
               <button
                 onClick={() => setMobileSection(mobileSection === "products" ? null : "products")}
-                className="flex items-center justify-between font-sans text-lg uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black"
+                className="flex items-center justify-between font-sans text-sm uppercase tracking-[0.12em] py-3 border-b border-gray-200 text-black font-bold"
               >
                 Products <ChevronDown className={`w-4 h-4 transition-transform ${mobileSection === "products" ? "rotate-180" : ""}`} />
               </button>
               {mobileSection === "products" && (Array.isArray(productLinks) ? productLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="pl-4 font-sans text-base uppercase tracking-[0.1em] py-2 text-black hover:text-gold">
+                  className="pl-4 font-sans text-sm uppercase tracking-[0.08em] py-2.5 text-gray-600 border-b border-gray-100 hover:text-yellow-700">
                   {link.label}
                 </Link>
               ))}
 
               {(Array.isArray(navLinks) ? navLinks : []).map((link) => (
                 <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
-                  className="font-sans text-lg uppercase tracking-[0.15em] py-3 border-b border-bronze/10 text-black hover:text-gold">
+                  className="font-sans text-sm font-bold uppercase tracking-[0.12em] py-3 border-b border-gray-200 text-black hover:text-yellow-700">
                   {link.label}
                 </Link>
               ))}
 
-              <Link to="/request-concept-design" onClick={() => setOpen(false)}
-                className="bg-bronze hover:bg-gold text-parchment px-6 py-4 font-sans text-lg uppercase tracking-[0.15em] font-semibold text-center mt-4 transition-colors">
-                Request Concept Design
-              </Link>
+              <div className="pt-3 space-y-2">
+                <Link to="/request-concept-design" onClick={() => setOpen(false)}
+                  className="block text-white px-6 py-3 font-sans text-sm uppercase tracking-[0.12em] font-semibold text-center transition-colors"
+                  style={{background: "#1e3a8a"}}>
+                  Request Concept Design
+                </Link>
+                <a href="tel:7723090412" className="block text-center border-2 border-gray-300 py-3 font-sans text-sm uppercase tracking-[0.12em] font-bold text-black">
+                  Call 772-309-0412
+                </a>
+              </div>
             </nav>
           </motion.div>
         )}
