@@ -181,7 +181,7 @@ Bronze Plaques
               "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
-                  <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
+                  <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg" alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               )}
             </div>
