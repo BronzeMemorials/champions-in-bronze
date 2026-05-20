@@ -178,8 +178,8 @@ export default function HallOfFamePage() {
               "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/aa70bdc43_8a2c7636-4bb2-4d4b-b20a-fa780c9d8d59.png"].
               map((url, i) =>
-              <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
-                  <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
+              <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow bg-gray-100">
+                  <img src={url} alt="Hall of Fame bronze plaque" className={`w-full h-full ${url.includes('aa70bdc43') ? 'object-contain' : 'object-cover'}`} loading="lazy" />
                 </div>
               )}
             </div>
