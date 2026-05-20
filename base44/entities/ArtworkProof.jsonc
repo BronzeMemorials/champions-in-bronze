@@ -48,7 +48,7 @@
     },
     "ai_description": {
       "type": "string",
-      "description": "AI-generated description of the artwork and its significance"
+      "description": "AI-generated description of the artwork"
     },
     "ai_context": {
       "type": "string",
@@ -60,7 +60,27 @@
     },
     "ai_accent_color": {
       "type": "string",
-      "description": "Suggested accent color for the landing page (hex)"
+      "description": "Suggested accent color hex for the landing page"
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "SEO page title (max 60 chars)"
+    },
+    "seo_description": {
+      "type": "string",
+      "description": "SEO meta description (max 155 chars)"
+    },
+    "og_description": {
+      "type": "string",
+      "description": "Open Graph description for social sharing"
+    },
+    "schema_name": {
+      "type": "string",
+      "description": "Name of person/team/occasion being recognized"
+    },
+    "schema_description": {
+      "type": "string",
+      "description": "Structured data description of the bronze piece"
     },
     "change_notes": {
       "type": "string",
@@ -72,7 +92,7 @@
     },
     "sent_at": {
       "type": "string",
-      "description": "ISO timestamp when the link was sent to the customer"
+      "description": "ISO timestamp when the link was sent"
     },
     "responded_at": {
       "type": "string",
