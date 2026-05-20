@@ -15,7 +15,7 @@ const SPORTS_PLAQUES = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Football Hall of Fame", desc: "Football #18 jersey with running back & Hall of Fame crest — full 3D relief", cta: "Immortalize Your Football Legend" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield", cta: "Start Your Baseball Legacy" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest", cta: "Honor Your Soccer Champion" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield", cta: "Celebrate Her Legacy in Bronze" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/aa70bdc43_8a2c7636-4bb2-4d4b-b20a-fa780c9d8d59.png", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield", cta: "Celebrate Her Legacy in Bronze" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels", cta: "Begin the Hall of Fame Journey" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg", label: "Golf Hall of Fame", desc: "Golfer silhouette on course with Hall of Fame shield & CB ring", cta: "Honor a Golf Legend Today" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ecf761fd8_IMG_1445.jpg", label: "Baseball Jersey Plaque", desc: "Raymond #72 jersey with catcher, stadium & championship ring", cta: "Create Your Custom Jersey Plaque" }];
@@ -176,7 +176,7 @@ export default function HallOfFamePage() {
               "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg"].
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/aa70bdc43_8a2c7636-4bb2-4d4b-b20a-fa780c9d8d59.png"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
                   <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
