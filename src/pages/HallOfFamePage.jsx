@@ -26,38 +26,39 @@ const BOXING_PLAQUES = [
 ];
 
 const INSTITUTIONAL = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/5bf816b28_95F91176-9214-4C6E-9E07-C8A0C5729B70.png", label: "Folsom Field — Colorado Buffaloes", desc: "Aerial stadium bronze relief — architectural landmark plaque" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/21ba8abbb_1A74E1E5-FBBE-4985-B495-629E12ACE53F.png", label: "Volney C. Ashford Stadium", desc: "Coach portrait with stadium relief — College Football Hall of Famer" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/edcca70fb_420FA2B8-7869-4B3D-8DD1-141EAA6CED7F.png", label: "Peter 'Magic' Drakos", desc: "Home plate portrait plaque — baseball memorial in bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e2544f1e5_5A4799E5-4305-4837-8127-4D64CDA9C083.png", label: "University of Arkansas at Pine Bluff", desc: "Institutional bronze signage — architectural identification plaque" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/b1bd5d877_A36CAD0F-9174-4537-ACB3-920546444A1D.png", label: "Cincinnati Cyclones", desc: "Dimensional team logo plaque — backlit bronze relief" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02178ed4c_D12B6A40-5DD3-4D3E-8FB6-E4E73664D056.png", label: "Wild Band of Razorbacks — Arkansas", desc: "Historical narrative plaque with team mascot — 1964 championship" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png", label: "Folsom Field — Colorado Buffaloes", desc: "Aerial stadium bronze relief — architectural landmark plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e2544f1e5_5A4799E5-4305-4837-8127-4D64CDA9C083.png", label: "Volney C. Ashford Stadium", desc: "Coach portrait with stadium relief — College Football Hall of Famer" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/21ba8abbb_1A74E1E5-FBBE-4985-B495-629E12ACE53F.png", label: "Cincinnati Cyclones", desc: "Dimensional team logo plaque — backlit bronze relief" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/5bf816b28_95F91176-9214-4C6E-9E07-C8A0C5729B70.png", label: "Wild Band of Razorbacks — Arkansas", desc: "Historical narrative plaque with team mascot — 1964 championship" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/319f68c6c_8EDB86A3-0823-4A9F-B2C0-A3EC13DAD290.png", label: "University of Arkansas at Pine Bluff", desc: "Institutional bronze identification sign — architectural entrance plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/b1bd5d877_A36CAD0F-9174-4537-ACB3-920546444A1D.png", label: "Michigan State University College of Law", desc: "Detroit College of Law / MSU Law bronze seal · 1891" },
 ];
 
 const SEALS = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/319f68c6c_8EDB86A3-0823-4A9F-B2C0-A3EC13DAD290.png", label: "Pennsylvania State University Seal", desc: "Precision-cast university seal · 1855" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2b48561be_D3F0E98F-7ED5-4B04-8DD9-F0D76C2DA8C7.png", label: "Michigan State University College of Law", desc: "Detroit College of Law / MSU Law bronze seal · 1891" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Northwest Mississippi Community College Seal", desc: "Backlit bronze college seal · 1927" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2b48561be_D3F0E98F-7ED5-4B04-8DD9-F0D76C2DA8C7.png", label: "Pennsylvania State University Seal", desc: "Precision-cast university seal · 1855" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Dave Budin — Brooklyn College", desc: "Player portrait court dedication plaque — photo-image cast in bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02178ed4c_D12B6A40-5DD3-4D3E-8FB6-E4E73664D056.png", label: "Northwest Mississippi Community College", desc: "Backlit bronze college seal · 1927" },
 ];
 
 const PHOTO_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8fe706754_IMG_1401.jpeg", label: "Dave Budin — Brooklyn College", desc: "Silver court dedication plaque with photo-image casting" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Drew Passmore Field", desc: "Photo image cast field dedication — memorial naming plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Dave Budin — Brooklyn College", desc: "Silver court dedication plaque with photo-image casting" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/edcca70fb_420FA2B8-7869-4B3D-8DD1-141EAA6CED7F.png", label: "Peter 'Magic' Drakos", desc: "Home plate portrait plaque — baseball memorial in bronze" },
 ];
 
 const MEMORIAL_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/98c46810f_IMG_1399.jpg", label: "T.J. Fleming Memorial", desc: "\"Forever a Saint\" — narrative memorial plaque cast in bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Bill Shover Field of Dreams", desc: "Diamond-shaped field dedication plaque — Salvation Army / baseball" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/98c46810f_IMG_1399.jpg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8fe706754_IMG_1401.jpeg", label: "T.J. Fleming — \"Forever a Saint\"", desc: "Narrative memorial plaque cast in bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg", label: "Drew Passmore Field", desc: "Photo image cast field dedication — memorial naming plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze" },
 ];
 
 const CHAMPIONSHIP_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/587b2767d_IMG_1393.jpg", label: "Southside Baptist Church", desc: "Baseball-shaped recognition plaque — veterans baseball sponsorship" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame Plaque", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "PIAA Division Champions — Bethel Park", desc: "Lady Blackhawks 2005 — soccer championship plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Bill Shover Field of Dreams", desc: "Diamond-shaped field dedication plaque — Salvation Army / baseball" },
 ];
 
 const faqs = [
