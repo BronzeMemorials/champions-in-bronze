@@ -26,6 +26,10 @@
       "type": "string",
       "description": "Unique token for the public approval link"
     },
+    "quickbooks_invoice_url": {
+      "type": "string",
+      "description": "QuickBooks invoice URL for payment processing"
+    },
     "status": {
       "type": "string",
       "enum": [

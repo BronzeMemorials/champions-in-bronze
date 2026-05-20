@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle, RefreshCw, Loader2, Award, Shield, Star, Clock } from "lucide-react";
+import { CheckCircle, RefreshCw, Loader2, Award, Shield, Star, Clock, ExternalLink, CreditCard, AlertTriangle } from "lucide-react";
 
 function setSEO(proof) {
   const title = proof.seo_title || `${proof.customer_name} Artwork Proof — Champions in Bronze`;
@@ -135,22 +135,65 @@ export default function ArtworkApprovalPage() {
   );
 
   if (submitted) return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center text-center px-6">
-      <div className="max-w-md">
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-6 py-16">
+      <div className="max-w-lg w-full text-center">
         {submittedAction === "approve" ? (
           <>
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
             <h2 className="text-white font-serif text-3xl mb-3">Artwork Approved!</h2>
-            <p className="text-gray-400 leading-relaxed">Thank you, {proof.customer_name}. Your approval has been received and our art team at Champions in Bronze has been notified. Your piece will move into production.</p>
-            <p className="text-yellow-500 font-serif text-lg mt-6">Champions in Bronze · Made in the USA</p>
+            <p className="text-gray-400 leading-relaxed">Thank you, {proof.customer_name}. Your approval has been received and our art team has been notified. Your piece will move straight into production.</p>
+            {proof.quickbooks_invoice_url && (
+              <div className="mt-8 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6">
+                <CreditCard className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
+                <p className="text-white font-semibold text-lg mb-1">Haven't Processed Your Invoice Yet?</p>
+                <p className="text-gray-400 text-sm mb-4">Please review and pay your invoice below to ensure production begins without delay.</p>
+                <a
+                  href={proof.quickbooks_invoice_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-black transition-all hover:scale-[1.02]"
+                  style={{ background: `linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)` }}
+                >
+                  <ExternalLink className="w-4 h-4" /> View & Pay Invoice
+                </a>
+              </div>
+            )}
+            <p className="text-yellow-500 font-serif text-lg mt-8">Champions in Bronze · Made in the USA</p>
             <p className="text-gray-600 text-sm mt-2">Questions? <a href="tel:7723090412" className="text-yellow-600 hover:underline">772-309-0412</a></p>
           </>
         ) : (
           <>
             <RefreshCw className="w-16 h-16 text-amber-500 mx-auto mb-4" />
             <h2 className="text-white font-serif text-3xl mb-3">Changes Submitted</h2>
-            <p className="text-gray-400 leading-relaxed">Thank you, {proof.customer_name}. Our art team has received your requested changes and will send you a revised proof shortly.</p>
-            <p className="text-yellow-500 font-serif text-lg mt-6">Champions in Bronze · Made in the USA</p>
+            <p className="text-gray-400 leading-relaxed">Thank you, {proof.customer_name}. We've received your requested changes.</p>
+            {proof.quickbooks_invoice_url ? (
+              <div className="mt-8 bg-amber-500/10 border border-amber-500/40 rounded-xl p-6 text-left">
+                <div className="flex items-start gap-3 mb-4">
+                  <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-amber-300 font-semibold text-base">Payment Required Before Revisions Begin</p>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-2">
+                  Since the pandemic, our art department has been outsourced. Each revision request carries an additional cost that we are unable to absorb. <strong className="text-white">We cannot submit your changes to our art team until payment has been processed.</strong>
+                </p>
+                <p className="text-gray-400 text-sm mb-5">
+                  Once your invoice is paid, we will send your requested changes to our artists immediately. You may request as many revisions as needed until the artwork is perfect — then it goes straight into production.
+                </p>
+                <p className="text-white font-semibold text-sm mb-3">Please review your invoice and process payment below:</p>
+                <a
+                  href={proof.quickbooks_invoice_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-black transition-all hover:scale-[1.02] w-full justify-center"
+                  style={{ background: `linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)` }}
+                >
+                  <ExternalLink className="w-4 h-4" /> Review & Pay Invoice
+                </a>
+                <p className="text-gray-600 text-xs text-center mt-3">Opens securely in QuickBooks</p>
+              </div>
+            ) : (
+              <p className="text-gray-400 mt-4 text-sm leading-relaxed">Our art team will review your changes. Please note that each revision may carry an additional cost — our team will be in touch.</p>
+            )}
+            <p className="text-yellow-500 font-serif text-lg mt-8">Champions in Bronze · Made in the USA</p>
             <p className="text-gray-600 text-sm mt-2">Questions? <a href="tel:7723090412" className="text-yellow-600 hover:underline">772-309-0412</a></p>
           </>
         )}
@@ -233,6 +276,29 @@ export default function ArtworkApprovalPage() {
 
           {/* Right — approval */}
           <div className="sticky top-6">
+            {/* QuickBooks Invoice Block */}
+            {proof.quickbooks_invoice_url && (
+              <div className="mb-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <CreditCard className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                  <p className="text-white font-semibold">Please Review Your Invoice</p>
+                </div>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                  Before approving or requesting changes, please review your invoice below. Note: due to outsourced art costs, <strong className="text-amber-300">payment must be processed before any revision can be sent to our art department.</strong>
+                </p>
+                <a
+                  href={proof.quickbooks_invoice_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-black text-sm transition-all hover:scale-[1.02] w-full justify-center"
+                  style={{ background: `linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)` }}
+                >
+                  <ExternalLink className="w-4 h-4" /> View Invoice in QuickBooks
+                </a>
+                <p className="text-gray-600 text-xs text-center mt-2">Opens securely in a new tab</p>
+              </div>
+            )}
+
             <p className="text-xs text-gray-500 uppercase tracking-widest mb-3">Your Response</p>
             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
               <p className="text-white font-serif text-xl mb-1">Does this look right?</p>

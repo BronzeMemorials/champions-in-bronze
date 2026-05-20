@@ -12,7 +12,7 @@ function generateToken() {
 
 export default function ArtworkProofAdmin() {
   const [step, setStep] = useState(1);
-  const [form, setForm] = useState({ customer_name: "", customer_email: "", organization: "", project_type: "" });
+  const [form, setForm] = useState({ customer_name: "", customer_email: "", organization: "", project_type: "", quickbooks_invoice_url: "" });
   const [imageUrl, setImageUrl] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [generating, setGenerating] = useState(false);
@@ -55,6 +55,7 @@ export default function ArtworkProofAdmin() {
       ...form,
       proof_image_url: imageUrl,
       token,
+      quickbooks_invoice_url: form.quickbooks_invoice_url || null,
       status: "draft",
       ai_headline: aiContent.headline,
       ai_subheadline: aiContent.subheadline,
@@ -110,7 +111,7 @@ export default function ArtworkProofAdmin() {
             <Link to="/artwork-approval-dashboard"><Button variant="outline">View Dashboard</Button></Link>
             <Button onClick={() => {
               setStep(1);
-              setForm({ customer_name: "", customer_email: "", organization: "", project_type: "" });
+              setForm({ customer_name: "", customer_email: "", organization: "", project_type: "", quickbooks_invoice_url: "" });
               setImageUrl(null);
               setAiContent(null);
               setSentProof(null);
@@ -170,6 +171,10 @@ export default function ArtworkProofAdmin() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Project Type</label>
                 <Input value={form.project_type} onChange={e => setForm(p => ({ ...p, project_type: e.target.value }))} placeholder="Bronze Plaque, Bust, Donor Wall..." />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">QuickBooks Invoice URL <span className="text-gray-400 font-normal">(optional — paste link from QuickBooks)</span></label>
+                <Input value={form.quickbooks_invoice_url || ""} onChange={e => setForm(p => ({ ...p, quickbooks_invoice_url: e.target.value }))} placeholder="https://invoice.quickbooks.com/..." />
               </div>
               <Button onClick={() => setStep(2)} disabled={!form.customer_name || !form.customer_email} className="w-full mt-2">
                 Next: Upload Proof →
