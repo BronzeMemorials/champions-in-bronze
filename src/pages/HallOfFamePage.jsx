@@ -85,7 +85,7 @@ const products = [
 
 
 function GalleryGrid({ items, columns = 4, onPlaqueClick }) {
-  const colClass = columns === 3 ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
+  const colClass = columns === 3 ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : columns === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
   return (
     <div className={`grid ${colClass} gap-4`}>
       {items.map((item, i) =>
@@ -176,7 +176,7 @@ export default function HallOfFamePage() {
               "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg"].
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
                   <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
@@ -215,7 +215,7 @@ export default function HallOfFamePage() {
               </p>
             </div>
           </FadeIn>
-          <GalleryGrid items={SPORTS_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
+          <GalleryGrid items={SPORTS_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
           <div className="text-center mt-10">
             <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-bold text-black uppercase tracking-widest text-sm" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
               Design Your Sports Hall of Fame Plaque <ArrowRight className="w-4 h-4" />
@@ -292,7 +292,7 @@ export default function HallOfFamePage() {
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Real photos permanently cast in bronze — athletes, coaches, and legends immortalized from your actual photographs.</p>
             </div>
           </FadeIn>
-          <GalleryGrid items={PHOTO_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
+          <GalleryGrid items={PHOTO_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
 
@@ -352,7 +352,7 @@ export default function HallOfFamePage() {
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Honor coaches, players, mentors, and community champions who shaped the game. Bronze lasts forever — so does their legacy.</p>
             </div>
           </FadeIn>
-          <GalleryGrid items={MEMORIAL_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
+          <GalleryGrid items={MEMORIAL_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
 
@@ -366,7 +366,7 @@ export default function HallOfFamePage() {
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Football, baseball, soccer ball, home plate, shield, diamond — custom shapes that tell the story at a glance.</p>
             </div>
           </FadeIn>
-          <GalleryGrid items={CHAMPIONSHIP_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
+          <GalleryGrid items={CHAMPIONSHIP_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
 
