@@ -10,14 +10,14 @@ import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
 const SPORTS_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Football Hall of Fame", desc: "Champions in Bronze #18 football jersey with runner & Hall of Fame crest" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg", label: "Golf Hall of Fame", desc: "Golfer silhouette on course with Hall of Fame shield & CB ring" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ecf761fd8_IMG_1445.jpg", label: "Baseball Jersey Plaque", desc: "Raymond #72 jersey with catcher, stadium & championship ring" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Football Jersey Plaque", desc: "Champions in Bronze #18 football jersey with runner & Hall of Fame" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame Plaque", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
 ];
 
 const BOXING_PLAQUES = [
@@ -43,20 +43,20 @@ const SEALS = [
 const PHOTO_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8fe706754_IMG_1401.jpeg", label: "Dave Budin — Brooklyn College", desc: "Silver basketball court dedication plaque with photo-image casting" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Drew Passmore Field", desc: "Photo image cast dedication — memorial field naming plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8fe706754_IMG_1401.jpeg", label: "Dave Budin — Brooklyn College", desc: "Silver court dedication plaque with photo-image casting" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Drew Passmore Field", desc: "Photo image cast field dedication — memorial naming plaque" },
 ];
 
 const MEMORIAL_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/98c46810f_IMG_1399.jpg", label: "T.J. Fleming Memorial", desc: "\"Forever a Saint\" — narrative memorial plaque cast in bronze" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Bill Shover Field of Dreams", desc: "Diamond-shaped field dedication plaque — Salvation Army / baseball" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
 ];
 
 const CHAMPIONSHIP_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "PIAA Division Champions — Soccer", desc: "Bethel Park Lady Blackhawks 2005 — high-relief soccer action plaque" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/587b2767d_IMG_1393.jpg", label: "Southside Baptist Church", desc: "Baseball-shaped recognition plaque — veterans baseball sponsorship" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Ross Linstrom Field", desc: "Home plate memorial — dedicated to passion and dedication in sport" },
 ];
@@ -75,12 +75,12 @@ const faqs = [
 ];
 
 const products = [
-  { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years of service, stats, and achievement text. The foundation of every Hall of Fame. Available in bronze or aluminum.", price: "From $1,200" },
-  { title: "Jersey & Action Relief Plaques", desc: "Sport-specific themed plaques featuring the inductee's jersey number, action poses, stadium backgrounds, championship rings, and Hall of Fame crests.", price: "From $1,800" },
-  { title: "Home Plate Portrait Plaques", desc: "Classic home plate shape with hand-sculpted portrait relief, career stats, and induction details. A timeless format for baseball, softball, and multi-sport halls.", price: "From $1,400" },
-  { title: "Photo ImageCast Career Retrospective", desc: "Multiple career photographs permanently cast into bronze alongside portrait relief and statistics — the ultimate career retrospective.", price: "From $2,200" },
-  { title: "University & Institutional Seals", desc: "Exact reproduction of university seals, school crests, and institutional emblems cast in museum-quality bronze with backlit display options.", price: "Custom Quote" },
-  { title: "Full Wall Installation System", desc: "Complete Hall of Fame wall system with architectural framework, unified aesthetic, sport-themed borders, and modular expansion design for future inductees.", price: "Custom Quote" },
+  { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years of service, stats, and achievement text. The foundation of every Hall of Fame. Available in bronze or aluminum." },
+  { title: "Jersey & Action Relief Plaques", desc: "Sport-specific themed plaques featuring the inductee's jersey number, action poses, stadium backgrounds, championship rings, and Hall of Fame crests." },
+  { title: "Home Plate Portrait Plaques", desc: "Classic home plate shape with hand-sculpted portrait relief, career stats, and induction details. A timeless format for baseball, softball, and multi-sport halls." },
+  { title: "Photo ImageCast Career Retrospective", desc: "Multiple career photographs permanently cast into bronze alongside portrait relief and statistics — the ultimate career retrospective." },
+  { title: "University & Institutional Seals", desc: "Exact reproduction of university seals, school crests, and institutional emblems cast in museum-quality bronze with backlit display options." },
+  { title: "Full Wall Installation System", desc: "Complete Hall of Fame wall system with architectural framework, unified aesthetic, sport-themed borders, and modular expansion design for future inductees." },
 ];
 
 function GalleryGrid({ items, columns = 4 }) {
@@ -89,12 +89,12 @@ function GalleryGrid({ items, columns = 4 }) {
     <div className={`grid ${colClass} gap-4`}>
       {items.map((item, i) => (
         <FadeIn key={i} delay={i * 0.05}>
-          <div className="group relative overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
-            <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+          <div className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gray-100 flex items-center justify-center p-2" style={{minHeight: "220px"}}>
               <img
                 src={item.url}
                 alt={item.label + " — Champions in Bronze Hall of Fame Plaque"}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-contain max-h-72 group-hover:scale-[1.02] transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -147,9 +147,9 @@ export default function HallOfFamePage() {
             <div className="flex flex-wrap gap-6">
               {[
                 { icon: Clock, text: "Artwork Proof Within The Hour" },
-                { icon: Shield, text: "100+ Year Durability" },
+                { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
                 { icon: Award, text: "Made in the USA" },
-                { icon: Star, text: "200+ Halls Installed" },
+                { icon: Star, text: "50,000+ Satisfied Customers" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-2 text-gray-600 text-xs">
                   <Icon className="w-3.5 h-3.5 text-yellow-600" />
@@ -226,7 +226,7 @@ export default function HallOfFamePage() {
             {BOXING_PLAQUES.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
-                  <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-contain bg-gray-100 p-2 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   <div className="p-5">
                     <p className="font-serif text-lg text-gray-900 font-semibold">{item.label}</p>
                     <p className="text-gray-500 text-sm mt-1">{item.desc}</p>
@@ -243,8 +243,8 @@ export default function HallOfFamePage() {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Hall of Fame Products & Pricing</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">What We Make & What It Costs</h2>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Hall of Fame Products</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Everything We Make</h2>
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Every piece custom-made in the USA. Artwork proof within the hour. No commitment to order.</p>
             </div>
           </FadeIn>
@@ -252,10 +252,7 @@ export default function HallOfFamePage() {
             {products.map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.07}>
                 <div className="border-2 border-gray-200 bg-white p-7 hover:border-yellow-500 hover:shadow-md transition-all duration-300 rounded">
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="font-serif text-lg text-gray-900 leading-tight">{p.title}</h3>
-                    <span className="text-yellow-700 font-bold text-sm whitespace-nowrap font-sans">{p.price}</span>
-                  </div>
+                  <h3 className="font-serif text-lg text-gray-900 leading-tight mb-3">{p.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.desc}</p>
                   <Link to="/request-quote" className="inline-flex items-center gap-1 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold hover:text-yellow-600 transition-colors">
                     Get a Quote <ArrowRight className="w-3 h-3" />
@@ -309,8 +306,8 @@ export default function HallOfFamePage() {
             {SEALS.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
-                  <div className="aspect-square overflow-hidden bg-gray-100">
-                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <div className="bg-gray-100 flex items-center justify-center p-3" style={{minHeight: "220px"}}>
+                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-auto object-contain max-h-64 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-4">
                     <p className="font-serif text-sm text-gray-900 font-semibold">{item.label}</p>
@@ -367,7 +364,7 @@ export default function HallOfFamePage() {
                   "Every inductee portrait created from your actual submitted photographs",
                   "Museum-quality bronze built to last 100+ years outdoors",
                   "Modular systems designed to expand annually with new inductees",
-                  "200+ Hall of Fame installations completed nationwide",
+                  "Over 50,000 satisfied customers nationwide",
                   "100% Made in the USA — no tariffs, no delays",
                   "Full installation coordination included",
                 ].map((text, i) => (
@@ -402,9 +399,9 @@ export default function HallOfFamePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { stat: "50+", label: "Years in Business", desc: "In operation since 1974" },
-              { stat: "200+", label: "Halls Installed", desc: "Pro, collegiate & secondary" },
+              { stat: "50,000+", label: "Satisfied Customers", desc: "Pro, collegiate & secondary" },
               { stat: "~1 Hour", label: "Artwork Proof", desc: "Every project, guaranteed" },
-              { stat: "100+ Yrs", label: "Durability", desc: "Outdoor-rated bronze" },
+              { stat: "100 Yrs", label: "Guaranteed Outdoors", desc: "Built to last a century outside" },
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.1}>
                 <p className="font-serif text-4xl md:text-5xl text-yellow-700">{item.stat}</p>
@@ -422,7 +419,7 @@ export default function HallOfFamePage() {
 
       <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
 
-      <QuoteForm title="Ready to Build Your Hall of Fame?" subtitle="Over 200 installations nationwide. Every inductee portrait from your actual photographs. Artwork within the hour." source="pro" />
+      <QuoteForm title="Ready to Build Your Hall of Fame?" subtitle="Over 50,000 satisfied customers. Every inductee portrait from your actual photographs. Artwork within the hour." source="pro" />
     </div>
   );
 }
