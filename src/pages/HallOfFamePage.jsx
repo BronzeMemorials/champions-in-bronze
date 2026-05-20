@@ -10,19 +10,19 @@ import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
 const SPORTS_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Football Hall of Fame", desc: "Champions in Bronze #18 football jersey with runner & Hall of Fame crest" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Football Hall of Fame", desc: "Football #18 jersey with running back & Hall of Fame crest — full 3D relief" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg", label: "Golf Hall of Fame", desc: "Golfer silhouette on course with Hall of Fame shield & CB ring" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ecf761fd8_IMG_1445.jpg", label: "Baseball Jersey Plaque", desc: "Raymond #72 jersey with catcher, stadium & championship ring" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame Plaque", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "Ross Linstrom Field Memorial", desc: "Baseball home plate shaped memorial plaque — In Memory of His Passion and Dedication, 2013" },
 ];
 
 const BOXING_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd behind them" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene in bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd behind them" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene in bronze" },
 ];
 
 const INSTITUTIONAL = [
@@ -55,10 +55,9 @@ const MEMORIAL_PLAQUES = [
 ];
 
 const CHAMPIONSHIP_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "PIAA Division Champions — Soccer", desc: "Bethel Park Lady Blackhawks 2005 — high-relief soccer action plaque" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/587b2767d_IMG_1393.jpg", label: "Southside Baptist Church", desc: "Baseball-shaped recognition plaque — veterans baseball sponsorship" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Ross Linstrom Field", desc: "Home plate memorial — dedicated to passion and dedication in sport" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame Plaque", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
 ];
 
 const faqs = [
@@ -161,9 +160,9 @@ export default function HallOfFamePage() {
           <FadeIn delay={0.2} className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
               {[
-                "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg",
-                "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
+                "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg",
+                "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg",
               ].map((url, i) => (
                 <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
@@ -378,10 +377,10 @@ export default function HallOfFamePage() {
             <FadeIn delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  "https://media.base44.com/images/public/69e6638934292a547ec97753/edcca70fb_420FA2B8-7869-4B3D-8DD1-141EAA6CED7F.png",
-                  "https://media.base44.com/images/public/69e6638934292a547ec97753/5bf816b28_95F91176-9214-4C6E-9E07-C8A0C5729B70.png",
+                  "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
+                  "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg",
+                  "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg",
                   "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png",
-                  "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg",
                 ].map((url, i) => (
                   <div key={i} className="aspect-square overflow-hidden rounded border border-gray-200 shadow">
                     <img src={url} alt="Hall of Fame bronze plaque Champions in Bronze" className="w-full h-full object-cover" loading="lazy" />
