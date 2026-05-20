@@ -335,13 +335,23 @@ export default function HallOfFamePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SEALS.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
-                  <div className="bg-gray-100 flex items-center justify-center p-3" style={{minHeight: "220px"}}>
-                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-auto object-contain max-h-64 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                <div
+                  className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
+                  onClick={() => setSelectedPlaque(item)}
+                >
+                  <div
+                    className="flex items-center justify-center p-3"
+                    style={{
+                      background: "radial-gradient(ellipse at 50% 60%, #DAA520 0%, #B8860B 30%, #7a5500 65%, #2a1a00 100%)",
+                      minHeight: "240px",
+                    }}
+                  >
+                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" style={{maxHeight: "260px"}} loading="lazy" />
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex flex-col flex-1">
                     <p className="font-serif text-sm text-gray-900 font-semibold">{item.label}</p>
-                    <p className="text-gray-500 text-xs mt-1">{item.desc}</p>
+                    <p className="text-gray-500 text-xs mt-1 flex-1">{item.desc}</p>
+                    <p className="mt-3 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold group-hover:text-yellow-600 transition-colors">→ {item.cta || "Get a Quote"}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -360,7 +370,7 @@ export default function HallOfFamePage() {
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Honor coaches, players, mentors, and community champions who shaped the game. Bronze lasts forever — so does their legacy.</p>
             </div>
           </FadeIn>
-          <GalleryGrid items={MEMORIAL_PLAQUES} columns={4} />
+          <GalleryGrid items={MEMORIAL_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
 
@@ -374,7 +384,7 @@ export default function HallOfFamePage() {
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Football, baseball, soccer ball, home plate, shield, diamond — custom shapes that tell the story at a glance.</p>
             </div>
           </FadeIn>
-          <GalleryGrid items={CHAMPIONSHIP_PLAQUES} columns={4} />
+          <GalleryGrid items={CHAMPIONSHIP_PLAQUES} columns={4} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
 
