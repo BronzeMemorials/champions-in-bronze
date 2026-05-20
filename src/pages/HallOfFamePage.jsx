@@ -94,13 +94,9 @@ function GalleryGrid({ items, columns = 4, onPlaqueClick }) {
             className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col"
             onClick={() => onPlaqueClick && onPlaqueClick(item)}
           >
-            {/* Gold backlit background for all images */}
             <div
-              className="flex items-center justify-center p-3 relative overflow-hidden"
-              style={{
-                background: "radial-gradient(ellipse at 50% 60%, #DAA520 0%, #B8860B 30%, #7a5500 65%, #2a1a00 100%)",
-                minHeight: "240px",
-              }}
+              className="flex items-center justify-center p-3 bg-gray-100"
+              style={{ minHeight: "240px" }}
             >
               <img
                 src={item.url}
@@ -247,13 +243,7 @@ export default function HallOfFamePage() {
                   className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
                   onClick={() => setSelectedPlaque(item)}
                 >
-                  <div
-                    className="flex items-center justify-center p-3"
-                    style={{
-                      background: "radial-gradient(ellipse at 50% 60%, #DAA520 0%, #B8860B 30%, #7a5500 65%, #2a1a00 100%)",
-                      minHeight: "280px",
-                    }}
-                  >
+                  <div className="flex items-center justify-center p-3 bg-gray-100" style={{ minHeight: "280px" }}>
                     <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" style={{maxHeight: "300px"}} loading="lazy" />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
@@ -339,13 +329,7 @@ export default function HallOfFamePage() {
                   className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
                   onClick={() => setSelectedPlaque(item)}
                 >
-                  <div
-                    className="flex items-center justify-center p-3"
-                    style={{
-                      background: "radial-gradient(ellipse at 50% 60%, #DAA520 0%, #B8860B 30%, #7a5500 65%, #2a1a00 100%)",
-                      minHeight: "240px",
-                    }}
-                  >
+                  <div className="flex items-center justify-center p-3 bg-gray-100" style={{ minHeight: "240px" }}>
                     <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" style={{maxHeight: "260px"}} loading="lazy" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
