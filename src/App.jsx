@@ -70,6 +70,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import PhotoGalleryAdmin from './pages/PhotoGalleryAdmin';
 import AdminLayout from './components/AdminLayout';
+import ArtworkProofAdmin from './pages/ArtworkProofAdmin';
+import ArtworkApprovalDashboard from './pages/ArtworkApprovalDashboard';
+import ArtworkApprovalPage from './pages/ArtworkApprovalPage';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -162,11 +165,16 @@ const AuthenticatedApp = () => {
         <Route path="/contact" element={<Contact />} />
       </Route>
 
+      {/* Public artwork approval page — no nav/footer */}
+      <Route path="/approval/:token" element={<ArtworkApprovalPage />} />
+
       {/* Admin routes — auth-gated, no public navbar/footer */}
       <Route element={<AdminLayout />}>
         <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
         <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
         <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
+        <Route path="/artwork-proof-admin" element={<ArtworkProofAdmin />} />
+        <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

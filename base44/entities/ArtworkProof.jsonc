@@ -1,0 +1,93 @@
+{
+  "name": "ArtworkProof",
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string",
+      "description": "Customer's full name"
+    },
+    "customer_email": {
+      "type": "string",
+      "description": "Customer's email address"
+    },
+    "organization": {
+      "type": "string",
+      "description": "Customer's organization or team name"
+    },
+    "project_type": {
+      "type": "string",
+      "description": "Type of project e.g. Bronze Plaque, Bust, Statue"
+    },
+    "proof_image_url": {
+      "type": "string",
+      "description": "URL of the uploaded artwork proof image"
+    },
+    "token": {
+      "type": "string",
+      "description": "Unique token for the public approval link"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "sent",
+        "approved",
+        "changes_requested",
+        "revised"
+      ],
+      "default": "draft",
+      "description": "Current approval status"
+    },
+    "ai_headline": {
+      "type": "string",
+      "description": "AI-generated headline for the landing page"
+    },
+    "ai_subheadline": {
+      "type": "string",
+      "description": "AI-generated subheadline"
+    },
+    "ai_description": {
+      "type": "string",
+      "description": "AI-generated description of the artwork and its significance"
+    },
+    "ai_context": {
+      "type": "string",
+      "description": "AI-generated context about the sport/athlete/occasion"
+    },
+    "ai_sport": {
+      "type": "string",
+      "description": "Sport or category detected by AI"
+    },
+    "ai_accent_color": {
+      "type": "string",
+      "description": "Suggested accent color for the landing page (hex)"
+    },
+    "change_notes": {
+      "type": "string",
+      "description": "Customer's requested changes"
+    },
+    "internal_notes": {
+      "type": "string",
+      "description": "Internal team notes about this proof"
+    },
+    "sent_at": {
+      "type": "string",
+      "description": "ISO timestamp when the link was sent to the customer"
+    },
+    "responded_at": {
+      "type": "string",
+      "description": "ISO timestamp when the customer responded"
+    },
+    "version": {
+      "type": "number",
+      "default": 1,
+      "description": "Proof version number"
+    }
+  },
+  "required": [
+    "customer_name",
+    "customer_email",
+    "proof_image_url",
+    "token"
+  ]
+}
