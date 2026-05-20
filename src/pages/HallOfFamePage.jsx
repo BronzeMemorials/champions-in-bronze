@@ -77,7 +77,6 @@ const faqs = [
 
 const products = [
 { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years of service, stats, and achievement text. The foundation of every Hall of Fame." },
-{ title: "Aluminum Hall of Fame Plaques", desc: "All the same custom relief craftsmanship — cast in aluminum for a lighter, more affordable option. Ideal for interior installations, growing programs, and budget-conscious builds." },
 { title: "Jersey & Action Relief Plaques", desc: "Sport-specific themed plaques featuring the inductee's jersey number, action poses, stadium backgrounds, championship rings, and Hall of Fame crests." },
 { title: "Home Plate Portrait Plaques", desc: "Classic home plate shape with hand-sculpted portrait relief, career stats, and induction details. A timeless format for baseball, softball, and multi-sport halls." },
 { title: "Photo ImageCast Career Retrospective", desc: "Multiple career photographs permanently cast into bronze alongside portrait relief and statistics — the ultimate career retrospective." },
