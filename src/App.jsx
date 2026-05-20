@@ -21,6 +21,7 @@ import DonorRecognition from './pages/DonorRecognition';
 import DedicationPlaques from './pages/DedicationPlaques';
 import BronzeMemorials from './pages/BronzeMemorials';
 import AlumniMemorials from './pages/AlumniMemorials';
+import AluminumPlaques from './pages/AluminumPlaques';
 
 // Sport pages
 import AllSports from './pages/AllSports';
@@ -110,6 +111,7 @@ const AuthenticatedApp = () => {
         <Route path="/dedication-plaques" element={<DedicationPlaques />} />
         <Route path="/bronze-memorials" element={<BronzeMemorials />} />
         <Route path="/alumni-memorials" element={<AlumniMemorials />} />
+        <Route path="/aluminum-plaques" element={<AluminumPlaques />} />
 
         {/* Sport pages */}
         <Route path="/all-sports" element={<AllSports />} />

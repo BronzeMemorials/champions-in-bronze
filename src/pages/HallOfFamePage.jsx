@@ -37,29 +37,23 @@ const INSTITUTIONAL = [
 
 const SEALS = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2b48561be_D3F0E98F-7ED5-4B04-8DD9-F0D76C2DA8C7.png", label: "Pennsylvania State University Seal", desc: "Precision-cast university seal · 1855", cta: "Cast Your University Seal in Bronze" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Dave Budin — Brooklyn College", desc: "Player portrait court dedication plaque — photo-image cast in bronze", cta: "Start Your Court Dedication" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02178ed4c_D12B6A40-5DD3-4D3E-8FB6-E4E73664D056.png", label: "Northwest Mississippi Community College", desc: "Backlit bronze college seal · 1927", cta: "Commission Your College Seal" }];
 
 
 const PHOTO_PLAQUES = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze", cta: "Cast a Portrait Like This" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats", cta: "Immortalize a Legend in Bronze" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Dave Budin — Brooklyn College", desc: "Silver court dedication plaque with photo-image casting", cta: "Start Your Court Dedication" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/edcca70fb_420FA2B8-7869-4B3D-8DD1-141EAA6CED7F.png", label: "Peter 'Magic' Drakos", desc: "Home plate portrait plaque — baseball memorial in bronze", cta: "Honor a Baseball Legend Today" }];
 
 
 const MEMORIAL_PLAQUES = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/98c46810f_IMG_1399.jpg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76", cta: "Honor a Coach's Legacy in Bronze" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8fe706754_IMG_1401.jpeg", label: "T.J. Fleming — \"Forever a Saint\"", desc: "Narrative memorial plaque cast in bronze", cta: "Preserve Their Memory Forever" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg", label: "Drew Passmore Field", desc: "Photo image cast field dedication — memorial naming plaque", cta: "Dedicate a Field or Facility" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze", cta: "Create a Lasting Tribute in Bronze" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "Ross Linstrom Field Memorial", desc: "Baseball home plate shaped memorial plaque — In Memory of His Passion and Dedication, 2013", cta: "Commission a Field Memorial Plaque" }];
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze", cta: "Create a Lasting Tribute in Bronze" }];
 
 
 const CHAMPIONSHIP_PLAQUES = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/587b2767d_IMG_1393.jpg", label: "Southside Baptist Church", desc: "Baseball-shaped recognition plaque — veterans baseball sponsorship", cta: "Design a Custom-Shaped Award Plaque" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute", cta: "Create a Tournament Memorial Plaque" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Bill Shover Field of Dreams", desc: "Diamond-shaped field dedication plaque — Salvation Army / baseball", cta: "Dedicate a Field in Bronze" }];
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute", cta: "Create a Tournament Memorial Plaque" }];
 
 
 const faqs = [
