@@ -142,10 +142,8 @@ export default function HallOfFamePage() {
         <div className="relative max-w-7xl mx-auto px-6 py-12 grid lg:grid-cols-2 gap-8 items-center">
           <FadeIn>
             <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-4">Champions in Bronze · Since 1974</span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 mb-6">Hall of Fame
-Bronze Plaques
-& Recognition Walls
-
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 mb-6">
+              Hall of Fame Bronze Plaques & Recognition Walls
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
               Individual inductee portraits, jersey relief plaques, home plate memorials, university seals, and complete Hall of Fame wall systems. Every portrait created from your actual photographs. Artwork proof within the hour. Made in the USA.
@@ -181,7 +179,7 @@ Bronze Plaques
               "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
-                  <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg" alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
+                  <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               )}
             </div>
