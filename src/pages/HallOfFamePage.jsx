@@ -7,14 +7,12 @@ import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 
-// All real product photos — organized by category
-const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg"; // Football #22 Hall of Fame plaque
+const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
-// Sports Hall of Fame plaques (AI-rendered style)
 const SPORTS_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Football Hall of Fame", desc: "Full 3D relief with player figure, jersey, ring & Hall of Fame crest" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest — men's" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7b39884c_IMG_1440.jpg", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg", label: "Golf Hall of Fame", desc: "Golfer silhouette on course with Hall of Fame shield & CB ring" },
@@ -22,13 +20,11 @@ const SPORTS_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Football Jersey Plaque", desc: "Champions in Bronze #18 football jersey with runner & Hall of Fame" },
 ];
 
-// Boxing / combat sports
 const BOXING_PLAQUES = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd behind them" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene in bronze" },
 ];
 
-// Real bronze plaques — institutional & university
 const INSTITUTIONAL = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/5bf816b28_95F91176-9214-4C6E-9E07-C8A0C5729B70.png", label: "Folsom Field — Colorado Buffaloes", desc: "Aerial stadium bronze relief — architectural landmark plaque" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/21ba8abbb_1A74E1E5-FBBE-4985-B495-629E12ACE53F.png", label: "Volney C. Ashford Stadium", desc: "Coach portrait with stadium relief — College Football Hall of Famer" },
@@ -38,14 +34,12 @@ const INSTITUTIONAL = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02178ed4c_D12B6A40-5DD3-4D3E-8FB6-E4E73664D056.png", label: "Wild Band of Razorbacks — Arkansas", desc: "Historical narrative plaque with team mascot — 1964 championship" },
 ];
 
-// University seals
 const SEALS = [
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/319f68c6c_8EDB86A3-0823-4A9F-B2C0-A3EC13DAD290.png", label: "Pennsylvania State University Seal", desc: "Precision-cast university seal — The Pennsylvania State University · 1855" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2b48561be_D3F0E98F-7ED5-4B04-8DD9-F0D76C2DA8C7.png", label: "Michigan State University College of Law", desc: "Detroit College of Law / MSU Law bronze seal — 1891" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Northwest Mississippi Community College Seal", desc: "Backlit bronze college seal — 1927" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/319f68c6c_8EDB86A3-0823-4A9F-B2C0-A3EC13DAD290.png", label: "Pennsylvania State University Seal", desc: "Precision-cast university seal · 1855" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2b48561be_D3F0E98F-7ED5-4B04-8DD9-F0D76C2DA8C7.png", label: "Michigan State University College of Law", desc: "Detroit College of Law / MSU Law bronze seal · 1891" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2fc825874_80D0FA19-643C-40C6-823A-126BF14722B3.png", label: "Northwest Mississippi Community College Seal", desc: "Backlit bronze college seal · 1927" },
 ];
 
-// Real photo-image cast plaques
 const PHOTO_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze" },
@@ -53,15 +47,13 @@ const PHOTO_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/336251898_IMG_1400.jpg", label: "Drew Passmore Field", desc: "Photo image cast dedication — memorial field naming plaque" },
 ];
 
-// Memorial plaques
 const MEMORIAL_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/98c46810f_IMG_1399.jpg", label: "T.J. Fleming Memorial", desc: "\"Forever a Saint\" — narrative memorial plaque cast in bronze" },
-  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/367d75e3c_IMG_1397.jpeg", label: "Bill Shover Field of Dreams", desc: "Diamond-shaped field dedication plaque — Salvation Army / baseball" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Kade Meyer Baseball Memorial", desc: "Home plate honor plaque for young athlete — cast in warm bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg", label: "Coach Gary 'Bubba' DiOrio", desc: "Football-shaped memorial plaque with photo cast — Coach #76" },
 ];
 
-// Championship & award plaques
 const CHAMPIONSHIP_PLAQUES = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/39d2bb4cd_IMG_1395.jpg", label: "PIAA Division Champions — Soccer", desc: "Bethel Park Lady Blackhawks 2005 — high-relief soccer action plaque" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/d032cf91d_IMG_1394.jpeg", label: "Dan Monaco Fall Classic — Soccer", desc: "Memorial soccer ball bronze plaque — PTSC community tribute" },
@@ -97,8 +89,8 @@ function GalleryGrid({ items, columns = 4 }) {
     <div className={`grid ${colClass} gap-4`}>
       {items.map((item, i) => (
         <FadeIn key={i} delay={i * 0.05}>
-          <div className="group relative overflow-hidden rounded-sm border border-yellow-900/20 bg-stone-950 hover:border-yellow-600/50 transition-all duration-300 shadow-lg hover:shadow-yellow-900/20 hover:shadow-xl">
-            <div className="aspect-[4/3] overflow-hidden">
+          <div className="group relative overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
+            <div className="aspect-[4/3] overflow-hidden bg-gray-100">
               <img
                 src={item.url}
                 alt={item.label + " — Champions in Bronze Hall of Fame Plaque"}
@@ -106,9 +98,9 @@ function GalleryGrid({ items, columns = 4 }) {
                 loading="lazy"
               />
             </div>
-            <div className="p-4">
-              <p className="font-serif text-sm text-yellow-500 font-semibold leading-tight">{item.label}</p>
-              <p className="text-stone-400 text-xs mt-1 leading-relaxed">{item.desc}</p>
+            <div className="p-4 bg-white">
+              <p className="font-serif text-sm text-gray-900 font-semibold leading-tight">{item.label}</p>
+              <p className="text-gray-500 text-xs mt-1 leading-relaxed">{item.desc}</p>
             </div>
           </div>
         </FadeIn>
@@ -128,27 +120,27 @@ export default function HallOfFamePage() {
       />
 
       {/* HERO */}
-      <section className="relative min-h-[80vh] flex items-center bg-stone-950 overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-center bg-gray-50 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMG} alt="Hall of Fame bronze plaque — Champions in Bronze" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-transparent" />
+          <img src={HERO_IMG} alt="Hall of Fame bronze plaque — Champions in Bronze" className="w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
           <FadeIn>
-            <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-4">Champions in Bronze · Since 1974</span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
+            <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-4">Champions in Bronze · Since 1974</span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 mb-6">
               Hall of Fame<br />
-              <span className="text-yellow-500">Bronze Plaques</span><br />
+              <span className="text-yellow-700">Bronze Plaques</span><br />
               & Recognition Systems
             </h1>
-            <p className="text-stone-300 text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
               Individual inductee portraits, jersey relief plaques, home plate memorials, university seals, and complete Hall of Fame wall systems. Every portrait created from your actual photographs. Artwork proof within the hour. Made in the USA.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all hover:scale-[1.02]" style={{background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)"}}>
                 Start Your Hall of Fame <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:7723090412" className="inline-flex items-center gap-2 px-8 py-4 border border-yellow-600/50 text-yellow-500 font-sans font-semibold uppercase tracking-widest text-sm hover:border-yellow-500 transition-colors">
+              <a href="tel:7723090412" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-50 transition-colors">
                 <Phone className="w-4 h-4" /> 772-309-0412
               </a>
             </div>
@@ -159,9 +151,9 @@ export default function HallOfFamePage() {
                 { icon: Award, text: "Made in the USA" },
                 { icon: Star, text: "200+ Halls Installed" },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-2 text-stone-400 text-xs">
+                <div key={text} className="flex items-center gap-2 text-gray-600 text-xs">
                   <Icon className="w-3.5 h-3.5 text-yellow-600" />
-                  <span>{text}</span>
+                  <span className="font-semibold">{text}</span>
                 </div>
               ))}
             </div>
@@ -174,7 +166,7 @@ export default function HallOfFamePage() {
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg",
               ].map((url, i) => (
-                <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-yellow-900/30">
+                <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow">
                   <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               ))}
@@ -185,8 +177,8 @@ export default function HallOfFamePage() {
 
       <TrustBadges />
 
-      {/* PROOF CTA */}
-      <div className="bg-yellow-50 border-y-2 border-yellow-400/30 py-6 px-6 text-center">
+      {/* PROOF CTA BANNER */}
+      <div className="bg-yellow-50 border-y-2 border-yellow-300 py-6 px-6 text-center">
         <p className="font-serif text-xl md:text-2xl text-gray-900 mb-1">Get Your Free Artwork Proof — <span className="text-yellow-700">Within The Hour</span></p>
         <p className="text-gray-600 text-sm mb-4">No commitment required. See exactly what your Hall of Fame plaque will look like before you order.</p>
         <div className="flex flex-wrap gap-3 justify-center">
@@ -200,13 +192,13 @@ export default function HallOfFamePage() {
       </div>
 
       {/* SPORTS HALL OF FAME PLAQUES */}
-      <section className="py-20 bg-stone-950">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Sport-Specific Hall of Fame Plaques</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">Every Sport. Every Inductee.</h2>
-              <p className="text-stone-400 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Sport-Specific Hall of Fame Plaques</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Every Sport. Every Inductee.</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
                 Football, baseball, basketball, soccer, golf, boxing, and more — each plaque custom-designed around the sport, the athlete, and the moment being honored.
               </p>
             </div>
@@ -220,24 +212,24 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* BOXING / COMBAT */}
-      <section className="py-16 bg-stone-900">
+      {/* BOXING */}
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-10">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Combat Sports</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-white">Boxing & Combat Sports Hall of Fame</h2>
-              <p className="text-stone-400 mt-3 max-w-xl mx-auto text-sm">High-drama bronze relief scenes that capture the raw power and glory of combat sports.</p>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Combat Sports</span>
+              <h2 className="font-serif text-3xl md:text-4xl text-gray-900">Boxing & Combat Sports Hall of Fame</h2>
+              <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm">High-drama bronze relief scenes that capture the raw power and glory of combat sports.</p>
             </div>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {BOXING_PLAQUES.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="group relative overflow-hidden rounded-sm border border-yellow-900/20 hover:border-yellow-600/50 transition-all duration-300 shadow-lg">
+                <div className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
                   <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-                  <div className="p-5 bg-stone-950">
-                    <p className="font-serif text-lg text-yellow-500">{item.label}</p>
-                    <p className="text-stone-400 text-sm mt-1">{item.desc}</p>
+                  <div className="p-5">
+                    <p className="font-serif text-lg text-gray-900 font-semibold">{item.label}</p>
+                    <p className="text-gray-500 text-sm mt-1">{item.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -259,7 +251,7 @@ export default function HallOfFamePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.07}>
-                <div className="border-2 border-yellow-400/20 bg-stone-50 p-7 hover:border-yellow-500/50 hover:bg-white transition-all duration-300 rounded-sm shadow-sm hover:shadow-md">
+                <div className="border-2 border-gray-200 bg-white p-7 hover:border-yellow-500 hover:shadow-md transition-all duration-300 rounded">
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <h3 className="font-serif text-lg text-gray-900 leading-tight">{p.title}</h3>
                     <span className="text-yellow-700 font-bold text-sm whitespace-nowrap font-sans">{p.price}</span>
@@ -275,21 +267,21 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* REAL PORTRAIT PLAQUES — Photo ImageCast */}
-      <section className="py-20 bg-stone-950">
+      {/* PORTRAIT PLAQUES */}
+      <section className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Actual Completed Projects</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">Portrait & Photo-Image Cast Plaques</h2>
-              <p className="text-stone-400 mt-4 max-w-2xl mx-auto">Real photos permanently cast in bronze — athletes, coaches, and legends immortalized from your actual photographs.</p>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Actual Completed Projects</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Portrait & Photo-Image Cast Plaques</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Real photos permanently cast in bronze — athletes, coaches, and legends immortalized from your actual photographs.</p>
             </div>
           </FadeIn>
           <GalleryGrid items={PHOTO_PLAQUES} columns={4} />
         </div>
       </section>
 
-      {/* INSTITUTIONAL & UNIVERSITY */}
+      {/* INSTITUTIONAL */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -304,7 +296,7 @@ export default function HallOfFamePage() {
       </section>
 
       {/* SEALS */}
-      <section className="py-16 bg-stone-100">
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-10">
@@ -316,8 +308,8 @@ export default function HallOfFamePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SEALS.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="group overflow-hidden rounded border border-yellow-400/20 bg-white hover:border-yellow-500/50 transition-all duration-300 shadow hover:shadow-lg">
-                  <div className="aspect-square overflow-hidden">
+                <div className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300">
+                  <div className="aspect-square overflow-hidden bg-gray-100">
                     <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                   </div>
                   <div className="p-4">
@@ -331,22 +323,22 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* MEMORIAL PLAQUES */}
-      <section className="py-20 bg-stone-950">
+      {/* MEMORIALS */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Dedications · Memorials · Legacy Plaques</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">Memorial & Dedication Plaques</h2>
-              <p className="text-stone-400 mt-4 max-w-2xl mx-auto">Honor coaches, players, mentors, and community champions who shaped the game. Bronze lasts forever — so does their legacy.</p>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Dedications · Memorials · Legacy Plaques</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Memorial & Dedication Plaques</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Honor coaches, players, mentors, and community champions who shaped the game. Bronze lasts forever — so does their legacy.</p>
             </div>
           </FadeIn>
           <GalleryGrid items={MEMORIAL_PLAQUES} columns={4} />
         </div>
       </section>
 
-      {/* CHAMPIONSHIP PLAQUES */}
-      <section className="py-20 bg-white">
+      {/* CHAMPIONSHIP */}
+      <section className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
@@ -359,29 +351,29 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* WHY US — Sales section */}
-      <section className="py-20 bg-stone-950">
+      {/* WHY US */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-4">Why Champions in Bronze</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">The Nation's Premier Hall of Fame Bronze Specialists</h2>
-              <p className="text-stone-300 leading-relaxed mb-8">
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-4">Why Champions in Bronze</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-6">The Nation's Premier Hall of Fame Bronze Specialists</h2>
+              <p className="text-gray-600 leading-relaxed mb-8">
                 For over 50 years, we've built Hall of Fames for NFL stadiums, NCAA athletic programs, high school gymnasiums, and everything in between. Our proprietary Photo ImageCasting process captures exact likenesses from your photographs — no generic faces, no guesswork.
               </p>
               <div className="space-y-4">
                 {[
-                  { text: "Artwork proof delivered within the hour — no commitment required" },
-                  { text: "Every inductee portrait created from your actual submitted photographs" },
-                  { text: "Museum-quality bronze built to last 100+ years outdoors" },
-                  { text: "Modular systems designed to expand annually with new inductees" },
-                  { text: "200+ Hall of Fame installations completed nationwide" },
-                  { text: "100% Made in the USA — no tariffs, no delays" },
-                  { text: "Full installation coordination included" },
-                ].map((item, i) => (
+                  "Artwork proof delivered within the hour — no commitment required",
+                  "Every inductee portrait created from your actual submitted photographs",
+                  "Museum-quality bronze built to last 100+ years outdoors",
+                  "Modular systems designed to expand annually with new inductees",
+                  "200+ Hall of Fame installations completed nationwide",
+                  "100% Made in the USA — no tariffs, no delays",
+                  "Full installation coordination included",
+                ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-stone-300 text-sm leading-relaxed">{item.text}</p>
+                    <CheckCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-gray-700 text-sm leading-relaxed">{text}</p>
                   </div>
                 ))}
               </div>
@@ -394,7 +386,7 @@ export default function HallOfFamePage() {
                   "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png",
                   "https://media.base44.com/images/public/69e6638934292a547ec97753/d5ef8feaa_IMG_1402.jpg",
                 ].map((url, i) => (
-                  <div key={i} className="aspect-square overflow-hidden rounded border border-yellow-900/30">
+                  <div key={i} className="aspect-square overflow-hidden rounded border border-gray-200 shadow">
                     <img src={url} alt="Hall of Fame bronze plaque Champions in Bronze" className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
@@ -404,8 +396,8 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-yellow-50 border-y-2 border-yellow-400/30">
+      {/* STATS */}
+      <section className="py-16 bg-yellow-50 border-y-2 border-yellow-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
