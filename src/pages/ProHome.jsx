@@ -4,7 +4,6 @@ import FadeIn from "../components/shared/FadeIn";
 import TrustBadges from "../components/shared/TrustBadges";
 import SectionHeading from "../components/shared/SectionHeading";
 import SEOHead from "../components/shared/SEOHead";
-import JsonLdSchema from "../components/shared/JsonLdSchema";
 import { usePhotoLikeness } from "../hooks/usePhotoLikeness";
 
 const localBusinessSchema = {
@@ -258,8 +257,7 @@ export default function ProHome() {
         description="America's premier bronze recognition manufacturer. Hall of Fame plaques, photo image cast plaques, donor recognition walls, championship bronze plaques, and athlete busts for universities, stadiums, and professional athletic organizations. Artwork proof within the hour. Made in USA."
         canonical="/"
         ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png" />
-      <JsonLdSchema schema={localBusinessSchema} />
-      <JsonLdSchema schema={faqSchema} />
+      
       
 
       {/* ── HERO ── */}
