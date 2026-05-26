@@ -173,7 +173,7 @@ export default function HallOfFamePage() {
               "https://media.base44.com/images/public/69e6638934292a547ec97753/0b8503384_FEMALESOCCERNUM10.png"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow bg-gray-100">
-                  <img src={url} alt="Hall of Fame bronze plaque" className={`w-full h-full ${url.includes('aa70bdc43') ? 'object-contain' : 'object-cover'}`} loading="lazy" />
+                  <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-full object-contain" loading="lazy" />
                 </div>
               )}
             </div>
