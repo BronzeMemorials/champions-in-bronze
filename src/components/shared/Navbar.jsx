@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useQuoteModal } from "@/lib/QuoteModalContext";
 
 const productLinks = [
   { label: "Photo Image Cast Plaques", to: "/photo-image-casting-plaques" },
@@ -61,6 +62,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState(null);
   const location = useLocation();
+  const { openQuoteModal } = useQuoteModal();
 
   const navLinks = [
     { label: "Plaques", to: "/3d-bas-relief-plaques" },
@@ -103,13 +105,13 @@ export default function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-            <Link
-              to="/request-concept-design"
+            <button
+              onClick={openQuoteModal}
               className="hidden md:inline-block text-white px-4 py-2 font-sans text-sm uppercase tracking-[0.08em] font-semibold transition-all duration-300 whitespace-nowrap"
               style={{background: "#1e3a8a", boxShadow: "0 2px 8px rgba(30,58,138,0.3)"}}
             >
               Request Design
-            </Link>
+            </button>
             <a href="tel:7723090412" className="hidden sm:inline-flex xl:hidden items-center gap-1.5 text-black font-sans text-xs font-bold uppercase tracking-wider whitespace-nowrap border border-gray-300 px-3 py-1.5">
               Call Us
             </a>
@@ -151,11 +153,11 @@ export default function Navbar() {
               ))}
 
               <div className="pt-3 space-y-2">
-                <Link to="/request-concept-design" onClick={() => setOpen(false)}
-                  className="block text-white px-6 py-3 font-sans text-sm uppercase tracking-[0.12em] font-semibold text-center transition-colors"
+                <button onClick={() => { setOpen(false); openQuoteModal(); }}
+                  className="block w-full text-white px-6 py-3 font-sans text-sm uppercase tracking-[0.12em] font-semibold text-center transition-colors"
                   style={{background: "#1e3a8a"}}>
                   Request Concept Design
-                </Link>
+                </button>
                 <a href="tel:7723090412" className="block text-center border-2 border-gray-300 py-3 font-sans text-sm uppercase tracking-[0.12em] font-bold text-black">
                   Call 772-309-0412
                 </a>

@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Layout from './components/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
+import { QuoteModalProvider } from './lib/QuoteModalContext';
 
 // Main pages
 import ProHome from './pages/ProHome';
@@ -189,9 +190,11 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
-          <ErrorBoundary>
-            <AuthenticatedApp />
-          </ErrorBoundary>
+          <QuoteModalProvider>
+            <ErrorBoundary>
+              <AuthenticatedApp />
+            </ErrorBoundary>
+          </QuoteModalProvider>
         </Router>
         <Toaster />
       </QueryClientProvider>
