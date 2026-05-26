@@ -41,6 +41,11 @@ const SEALS = [
 
 
 const PHOTO_PLAQUES = [
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/bdefded46_ChatGPTImageMay26202602_42_22PM.png", label: "Brandon Raymond — Hall of Fame Boxer", desc: "WBC Super Welterweight Champion with career highlights and championship honors cast in bronze", cta: "Honor a Boxing Legend" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/65fa9625c_PORTRAITSOCCER.png", label: "Alex Morgan — Hall of Fame Forward", desc: "FIFA World Player of the Year with career stats and Olympic honors in bronze relief", cta: "Immortalize a Soccer Star" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ea8025f43_PORTRAITBASKETBALL.png", label: "Alexander Cole — Hall of Fame Forward", desc: "NBA All-Star with championship and accolade details cast in bronze", cta: "Honor a Basketball Legend" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/b48455b3e_PORTRAITBASEBALL12.png", label: "Jim Savage — Hall of Fame Pitcher", desc: "Cy Young Award winner with career accomplishments and no-hitters immortalized in bronze", cta: "Cast a Pitcher's Legacy" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/738d1540f_PORTRAITFOOTBALL21.png", label: "Lucas Hayes — Hall of Fame Quarterback", desc: "Elite quarterback with career passing records and single-season highlights in bronze", cta: "Honor a Football Legend" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Nick Giaquinto — Sacred Heart University", desc: "Home plate portrait plaque — 29 years of service honored in bronze", cta: "Cast a Portrait Like This" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Dan Wilson — Seattle Mariners", desc: "Home plate Hall of Fame plaque with photo-cast portrait & career stats", cta: "Immortalize a Legend in Bronze" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/edcca70fb_420FA2B8-7869-4B3D-8DD1-141EAA6CED7F.png", label: "Peter 'Magic' Drakos", desc: "Home plate portrait plaque — baseball memorial in bronze", cta: "Honor a Baseball Legend Today" }];

@@ -179,6 +179,49 @@ export default function ThreeDReliefPlaques() {
       {/* STL 3D Interactive Gallery */}
       {stlModels.length > 0 && <STLGallery models={stlModels} />}
 
+      {/* Portrait Hall of Fame Plaques */}
+      <section className="py-28 border-t border-bronze/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="mb-10 text-center">
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Hall of Fame Portraits</span>
+              <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Champion Portrait Plaques</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">Legendary athletes immortalized with career statistics, championship honors, and Hall of Fame recognition cast in museum-quality bronze.</p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/bdefded46_ChatGPTImageMay26202602_42_22PM.png", label: "Brandon Raymond", desc: "Boxing Champion" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/65fa9625c_PORTRAITSOCCER.png", label: "Alex Morgan", desc: "Soccer Legend" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ea8025f43_PORTRAITBASKETBALL.png", label: "Alexander Cole", desc: "Basketball Star" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/b48455b3e_PORTRAITBASEBALL12.png", label: "Jim Savage", desc: "Baseball Pitcher" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/738d1540f_PORTRAITFOOTBALL21.png", label: "Lucas Hayes", desc: "Football QB" },
+            ].map((item, i) => (
+              <FadeIn key={item.label} delay={i * 0.08}>
+                <div className="group overflow-hidden rounded-sm border border-bronze/20 hover:border-gold transition-all duration-300">
+                  <div className="aspect-[4/5] overflow-hidden bg-secondary/20 flex items-center justify-center">
+                    <img src={item.url} alt={`${item.label} — ${item.desc} Hall of Fame bronze plaque`} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-3 text-center">
+                    <p className="font-serif text-sm text-parchment font-semibold">{item.label}</p>
+                    <p className="text-parchment/50 text-xs mt-1">{item.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={0.3}>
+            <div className="mt-10 text-center">
+              <Link to="/hall-of-fame" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-3 font-sans text-xs uppercase tracking-[0.15em] transition-colors duration-200 rounded-sm">
+                View Hall of Fame Gallery <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <ProcessGallery
