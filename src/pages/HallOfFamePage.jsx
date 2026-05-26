@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Shield, Award, Star, Clock, CheckCircle } from "lucide-react";
 import TrustBadges from "../components/shared/TrustBadges";
@@ -8,6 +8,8 @@ import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import PlaqueQuoteModal from "../components/shared/PlaqueQuoteModal";
+import GLBGallery from "../components/shared/GLBGallery";
+import { base44 } from "@/api/base44Client";
 
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
@@ -116,6 +118,13 @@ function GalleryGrid({ items, columns = 4, onPlaqueClick }) {
 
 export default function HallOfFamePage() {
   const [selectedPlaque, setSelectedPlaque] = useState(null);
+  const [glbModels, setGlbModels] = useState([]);
+
+  useEffect(() => {
+    base44.entities.Product3DModel.filter({ page: "hall_of_fame", is_active: true })
+      .then((results) => setGlbModels(Array.isArray(results) ? results : []))
+      .catch(() => setGlbModels([]));
+  }, []);
 
   return (
     <div className="bg-white text-gray-900">
@@ -277,20 +286,23 @@ export default function HallOfFamePage() {
       </section>
 
       {/* PORTRAIT PLAQUES */}
-      <section className="py-12 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn>
-            <div className="text-center mb-8">
-              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Actual Completed Projects</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Portrait & Photo-Image Cast Plaques</h2>
-              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Real photos permanently cast in bronze — athletes, coaches, and legends immortalized from your actual photographs.</p>
-            </div>
-          </FadeIn>
-          <GalleryGrid items={PHOTO_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
-        </div>
-      </section>
+       <section className="py-12 bg-gray-50 border-y border-gray-200">
+         <div className="max-w-7xl mx-auto px-6">
+           <FadeIn>
+             <div className="text-center mb-8">
+               <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Actual Completed Projects</span>
+               <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Portrait 3D Bas Relief Plaques</h2>
+               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Real photos permanently cast in bronze — athletes, coaches, and legends immortalized from your actual photographs.</p>
+             </div>
+           </FadeIn>
+           <GalleryGrid items={PHOTO_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
+         </div>
+       </section>
 
-      {/* INSTITUTIONAL */}
+       {/* 3D GLB GALLERY */}
+       {glbModels.length > 0 && <GLBGallery models={glbModels} />}
+
+       {/* INSTITUTIONAL */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
