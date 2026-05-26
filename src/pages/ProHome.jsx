@@ -871,8 +871,8 @@ to Live Forever</h1>
                   alt="Complete Hall of Fame bronze plaque wall installation — university athletic facility" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-bronze/90 p-6 rounded-sm hidden md:block">
-                  <p className="font-serif text-3xl text-parchment">500+</p>
-                  <p className="font-sans text-base text-parchment/60 uppercase tracking-widest mt-1">Institutional Installations</p>
+                  <p className="font-serif text-3xl text-parchment">50,000+</p>
+                  <p className="font-sans text-base text-parchment/60 uppercase tracking-widest mt-1">Satisfied Customers</p>
                 </div>
               </div>
             </FadeIn>
