@@ -57,16 +57,11 @@ const CHAMPIONSHIP_PLAQUES = [
 
 
 const faqs = [
-{ question: "Can you build a complete Hall of Fame wall system?", answer: "Yes. We design and fabricate complete Hall of Fame installations from concept to installation — individual inductee plaques, connecting wall panels, name bars, sport-themed borders, and modular systems that expand year after year as new inductees are added. We have installed over 200 Hall of Fame systems nationwide." },
-{ question: "How are inductee likenesses captured?", answer: "From photographs you provide. Every inductee portrait — whether 3D relief sculpture or Photo ImageCasting — is created from your actual submitted photographs. No generic likenesses. No artist interpretations. We capture the real person from their real photo." },
-{ question: "What sports do you make Hall of Fame plaques for?", answer: "Every sport. Football, basketball, baseball, soccer, golf, boxing, wrestling, swimming, lacrosse, track & field, softball, volleyball, tennis, and more. We also make Hall of Fame plaques for coaches, administrators, donors, and program contributors." },
-{ question: "What information is typically included on each plaque?", answer: "Standard Hall of Fame plaques include a portrait relief, inductee name, sport/position, years of service, career highlights, and induction year. Custom elements like team logos, championship rings, statistical records, and sport-themed relief backgrounds are also available." },
-{ question: "Can new inductees be added over time?", answer: "Yes — and we design for it. Our modular Hall of Fame systems have defined space and connection points for future inductees. Simply call us when you have a new induction class and we'll match the existing style exactly." },
-{ question: "What shapes are available for Hall of Fame plaques?", answer: "We offer traditional rectangular, home plate, shield, round/medallion, football-shaped, soccer ball, baseball-shaped, diamond, and fully custom architectural shapes. The plaque shape itself can be part of the storytelling." },
-{ question: "How long does it take?", answer: "You receive an artwork proof within the hour of your request. Production typically runs 4–6 weeks from approval. Rush options are available for induction ceremonies with tight deadlines." },
-{ question: "Can you renovate an existing Hall of Fame?", answer: "Yes. We specialize in both new installations and renovation of existing Hall of Fame environments — updating outdated wood or acrylic displays to museum-quality bronze standards that will last 100+ years." },
-{ question: "Do you make university seals and institutional signage?", answer: "Yes. We cast exact university seals, institutional logos, and architectural identification signs in bronze. We have produced seals for Pennsylvania State University, MSU College of Law, University of Arkansas, Northwest Mississippi Community College, and many others." },
-{ question: "How much does a Hall of Fame plaque cost?", answer: "Individual inductee plaques typically start around $1,200–$2,500. Full wall systems and complete Hall of Fame installations vary based on scope, number of inductees, and architectural complexity. We'll provide an exact quote within the hour — no commitment required." }];
+{ question: "How are inductee likenesses captured?", answer: "From your actual photos. Every portrait—whether relief or Photo ImageCast—is created from submitted photographs. No generic faces, no artist interpretations." },
+{ question: "Can you build a complete recognition wall?", answer: "Yes. We design modular Hall of Fame walls with individual plaques, connecting panels, sport-themed borders, and space for future inductees. Over 200 installations nationwide." },
+{ question: "What sports do you make plaques for?", answer: "Every sport — football, basketball, baseball, soccer, golf, boxing, wrestling, swimming, lacrosse, track & field, and more. Also coaches, administrators, and donors." },
+{ question: "How long does production take?", answer: "Artwork proof within the hour. Production typically 4–6 weeks from approval. Rush options available for tight deadlines." },
+{ question: "How much do plaques cost?", answer: "Individual inductee plaques start around $1,200–$2,500. Complete walls vary by scope. Exact quote within the hour—no commitment required." }];
 
 
 const products = [
