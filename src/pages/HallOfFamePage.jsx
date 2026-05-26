@@ -61,7 +61,7 @@ const faqs = [
 { question: "Can you build a complete recognition wall?", answer: "Yes. We design modular Hall of Fame walls with individual plaques, connecting panels, sport-themed borders, and space for future inductees. Over 200 installations nationwide." },
 { question: "What sports do you make plaques for?", answer: "Every sport — football, basketball, baseball, soccer, golf, boxing, wrestling, swimming, lacrosse, track & field, and more. Also coaches, administrators, and donors." },
 { question: "How long does production take?", answer: "Artwork proof within the hour. Production typically 4–6 weeks from approval. Rush options available for tight deadlines." },
-{ question: "How much do plaques cost?", answer: "Individual inductee plaques start around $1,200–$2,500. Complete walls vary by scope. Exact quote within the hour—no commitment required." }];
+{ question: "What shapes are available?", answer: "Rectangular, home plate, shield, medallion, football-shaped, soccer ball, baseball-shaped, diamond, and custom architectural shapes." }];
 
 
 const products = [
