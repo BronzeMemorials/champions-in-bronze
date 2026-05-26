@@ -12,11 +12,11 @@ import PlaqueQuoteModal from "../components/shared/PlaqueQuoteModal";
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
 const SPORTS_PLAQUES = [
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg", label: "Football Hall of Fame", desc: "Football #18 jersey with running back & Hall of Fame crest — full 3D relief", cta: "Immortalize Your Football Legend" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield", cta: "Start Your Baseball Legacy" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2488a7ab8_FOOTBALLCHAMPION18.png", label: "Football Hall of Fame", desc: "Football #18 jersey with running back & Hall of Fame crest — full 3D relief", cta: "Immortalize Your Football Legend" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/4c058dd72_BASEBALLCHAMPION34.png", label: "Baseball Hall of Fame", desc: "Jersey #34, batter stance, stadium background & Hall of Fame shield", cta: "Start Your Baseball Legacy" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg", label: "Soccer Hall of Fame", desc: "Player relief with World Cup trophy & Hall of Fame crest", cta: "Honor Your Soccer Champion" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/0b8503384_FEMALESOCCERNUM10.png", label: "Women's Soccer Hall of Fame", desc: "Women's soccer relief with trophy & Hall of Fame shield", cta: "Celebrate Her Legacy in Bronze" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels", cta: "Begin the Hall of Fame Journey" },
+{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/692740c9e_BASKETBALLCHAMPION27.png", label: "Women's Basketball Hall of Fame", desc: "Player dunking — #23 with Hall of Fame crest & laurels", cta: "Begin the Hall of Fame Journey" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg", label: "Golf Hall of Fame", desc: "Golfer silhouette on course with Hall of Fame shield & CB ring", cta: "Honor a Golf Legend Today" },
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/ecf761fd8_IMG_1445.jpg", label: "Baseball Jersey Plaque", desc: "Raymond #72 jersey with catcher, stadium & championship ring", cta: "Create Your Custom Jersey Plaque" }];
 
@@ -167,9 +167,9 @@ export default function HallOfFamePage() {
           <FadeIn delay={0.2} className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
               {[
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/8c6702318_IMG_1442.jpg",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/f65843cab_IMG_1437.jpg",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/2488a7ab8_FOOTBALLCHAMPION18.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/4c058dd72_BASEBALLCHAMPION34.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/692740c9e_BASKETBALLCHAMPION27.png",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/0b8503384_FEMALESOCCERNUM10.png"].
               map((url, i) =>
               <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow bg-gray-100">
@@ -394,7 +394,7 @@ export default function HallOfFamePage() {
             <FadeIn delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                "https://media.base44.com/images/public/69e6638934292a547ec97753/56441d28c_IMG_1443.jpg",
+                "https://media.base44.com/images/public/69e6638934292a547ec97753/2488a7ab8_FOOTBALLCHAMPION18.png",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/0c3e0c00e_IMG_1441.jpg",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/8578c8425_IMG_1436.jpg",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png"].
