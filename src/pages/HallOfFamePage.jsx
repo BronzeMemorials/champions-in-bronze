@@ -57,7 +57,7 @@ const CHAMPIONSHIP_PLAQUES = [
 
 
 const faqs = [
-{ question: "How are inductee likenesses captured?", answer: "From your actual photos. Every portrait—whether relief or Photo ImageCast—is created from submitted photographs. No generic faces, no artist interpretations." },
+{ question: "How are inductee likenesses captured?", answer: "Every portrait created from your actual photos—no generic faces, no artist interpretations." },
 { question: "Can you build a complete recognition wall?", answer: "Yes. We design modular Hall of Fame walls with individual plaques, connecting panels, sport-themed borders, and space for future inductees. Over 200 installations nationwide." },
 { question: "What sports do you make plaques for?", answer: "Every sport — football, basketball, baseball, soccer, golf, boxing, wrestling, swimming, lacrosse, track & field, and more. Also coaches, administrators, and donors." },
 { question: "How long does production take?", answer: "Artwork proof within the hour. Production typically 4–6 weeks from approval. Rush options available for tight deadlines." },
