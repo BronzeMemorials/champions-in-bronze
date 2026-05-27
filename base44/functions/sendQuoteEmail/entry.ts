@@ -5,6 +5,8 @@ Deno.serve(async (req) => {
     const base44 = createClientFromRequest(req);
     const { name, email, phone, organization, description, project_type, who_for, budget_range, timeline, file_urls } = await req.json();
 
+    const { accessToken } = await base44.asServiceRole.connectors.getConnection('outlook');
+
     const html = `
       <h2 style="font-family:Arial,sans-serif;">New Quote Request — Champions in Bronze</h2>
       <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
@@ -21,22 +23,27 @@ Deno.serve(async (req) => {
       </table>
     `;
 
-    const res = await fetch('https://api.resend.com/emails', {
+    const res = await fetch('https://graph.microsoft.com/v1.0/me/sendMail', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
+        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Champions in Bronze <onboarding@resend.dev>',
-        to: ['info@championsinbronze.com'],
-        subject: `New Quote Request from ${name}`,
-        html,
+        message: {
+          subject: `New Quote Request from ${name}`,
+          body: { contentType: 'HTML', content: html },
+          toRecipients: [{ emailAddress: { address: 'info@championsinbronze.com' } }],
+          replyTo: [{ emailAddress: { address: email, name } }],
+        },
+        saveToSentItems: false,
       }),
     });
 
-    const data = await res.json();
-    if (!res.ok) throw new Error(JSON.stringify(data));
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`Graph API error: ${res.status} ${text}`);
+    }
 
     return Response.json({ success: true });
   } catch (error) {
