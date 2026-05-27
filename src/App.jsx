@@ -164,6 +164,7 @@ const AuthenticatedApp = () => {
         <Route path="/3d-bas-relief-plaques" element={<ThreeDReliefPlaques />} />
         <Route path="/photo-image-casting-plaques" element={<PhotoImageCast />} />
         <Route path="/materials-finishes" element={<MaterialsFinishes />} />
+        <Route path="/glb-video-admin" element={<GLBVideoAdmin />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -179,7 +180,6 @@ const AuthenticatedApp = () => {
         <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
         <Route path="/artwork-proof-admin" element={<ArtworkProofAdmin />} />
         <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
-        <Route path="/glb-video-admin" element={<GLBVideoAdmin />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

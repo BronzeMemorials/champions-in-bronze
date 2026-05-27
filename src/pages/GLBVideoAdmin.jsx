@@ -1,9 +1,46 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { base44 } from "@/api/base44Client";
 import * as THREE from "three";
-import { Upload, Video, Save, CheckCircle, Loader2, Play, RotateCcw, Trash2 } from "lucide-react";
+import { Upload, Video, Save, CheckCircle, Loader2, RotateCcw, Trash2, Lock } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import FadeIn from "@/components/shared/FadeIn";
+
+const PASSCODE = "cib2024";
+
+function PasscodeGate({ onUnlock }) {
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input === PASSCODE) { onUnlock(); }
+    else { setError(true); setInput(""); setTimeout(() => setError(false), 1500); }
+  };
+  return (
+    <div className="min-h-screen bg-obsidian flex items-center justify-center px-6">
+      <div className="w-full max-w-sm border border-bronze/20 bg-secondary/10 p-8 rounded-sm text-center space-y-6">
+        <Lock className="w-10 h-10 text-bronze/60 mx-auto" />
+        <div>
+          <h1 className="font-serif text-2xl text-parchment">3D Video Publisher</h1>
+          <p className="text-parchment/40 text-sm mt-2 font-sans">Enter the passcode to continue</p>
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <Input
+            type="password"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Passcode"
+            autoFocus
+            className={`bg-obsidian border-bronze/30 text-parchment placeholder:text-parchment/25 focus:border-gold h-11 text-center tracking-widest ${error ? "border-red-500/60" : ""}`}
+          />
+          {error && <p className="text-red-400 text-xs font-sans">Incorrect passcode</p>}
+          <button type="submit" className="w-full bg-bronze hover:bg-gold text-obsidian py-2.5 font-sans text-sm uppercase tracking-[0.15em] font-semibold transition-all rounded-sm">
+            Unlock
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
 
 const PAGES = [
   { value: "hall_of_fame", label: "Hall of Fame" },
@@ -81,6 +118,9 @@ function loadGLBFromUrl(url) {
 }
 
 export default function GLBVideoAdmin() {
+  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem("glb_admin_unlocked") === "1");
+  const handleUnlock = () => { sessionStorage.setItem("glb_admin_unlocked", "1"); setUnlocked(true); };
+
   const mountRef = useRef(null);
   const rendererRef = useRef(null);
   const animRef = useRef(null);
@@ -303,6 +343,8 @@ export default function GLBVideoAdmin() {
     setLabel("");
     while (pivotRef.current?.children.length) pivotRef.current.remove(pivotRef.current.children[0]);
   };
+
+  if (!unlocked) return <PasscodeGate onUnlock={handleUnlock} />;
 
   return (
     <div className="bg-obsidian text-parchment min-h-screen pt-24 pb-20">
