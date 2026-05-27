@@ -5,7 +5,7 @@ Deno.serve(async (req) => {
     const base44 = createClientFromRequest(req);
     const { name, email, phone, organization, description, project_type, who_for, budget_range, timeline, file_urls } = await req.json();
 
-    const { accessToken } = await base44.asServiceRole.connectors.getConnection('outlook');
+    const { accessToken } = await base44.asServiceRole.connectors.getConnection('gmail');
 
     const html = `
       <h2 style="font-family:Arial,sans-serif;">New Quote Request — Champions in Bronze</h2>
@@ -23,26 +23,37 @@ Deno.serve(async (req) => {
       </table>
     `;
 
-    const res = await fetch('https://graph.microsoft.com/v1.0/me/sendMail', {
+    const subject = `New Quote Request from ${name}`;
+    const to = 'info@championsinbronze.com';
+
+    // Build RFC 2822 message
+    const messageParts = [
+      `To: ${to}`,
+      `Reply-To: ${name} <${email}>`,
+      `Subject: ${subject}`,
+      `MIME-Version: 1.0`,
+      `Content-Type: text/html; charset=UTF-8`,
+      ``,
+      html,
+    ];
+    const rawMessage = messageParts.join('\r\n');
+    const encodedMessage = btoa(unescape(encodeURIComponent(rawMessage)))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+
+    const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        message: {
-          subject: `New Quote Request from ${name}`,
-          body: { contentType: 'HTML', content: html },
-          toRecipients: [{ emailAddress: { address: 'info@championsinbronze.com' } }],
-          replyTo: [{ emailAddress: { address: email, name } }],
-        },
-        saveToSentItems: false,
-      }),
+      body: JSON.stringify({ raw: encodedMessage }),
     });
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Graph API error: ${res.status} ${text}`);
+      throw new Error(`Gmail API error: ${res.status} ${text}`);
     }
 
     return Response.json({ success: true });
