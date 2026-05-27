@@ -84,26 +84,43 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     }
   };
 
+  const isBase44 = window.location.hostname.includes('base44') || window.location.hostname.includes('localhost');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      let file_urls = [];
-      for (const file of files) {
-        try {
-          const result = await base44.integrations.Core.UploadFile({ file });
-          file_urls.push(result.file_url);
-        } catch (uploadErr) {
-          console.error('File upload failed, continuing without file:', uploadErr);
+      if (isBase44) {
+        // Base44 hosted — use SDK
+        let file_urls = [];
+        for (const file of files) {
+          try {
+            const result = await base44.integrations.Core.UploadFile({ file });
+            file_urls.push(result.file_url);
+          } catch (uploadErr) {
+            console.error('File upload failed, continuing without file:', uploadErr);
+          }
         }
-      }
-      const quoteData = { ...form, file_urls, source_domain: source };
-      await base44.entities.QuoteRequest.create(quoteData);
-      await trackConversion();
-      try {
-        await base44.functions.invoke('sendQuoteEmail', quoteData);
-      } catch (emailErr) {
-        console.error('Email send failed:', emailErr);
+        const quoteData = { ...form, file_urls, source_domain: source };
+        await base44.entities.QuoteRequest.create(quoteData);
+        await trackConversion();
+        try {
+          await base44.functions.invoke('sendQuoteEmail', quoteData);
+        } catch (emailErr) {
+          console.error('Email send failed:', emailErr);
+        }
+      } else {
+        // cPanel hosted — use PHP endpoint
+        const formData = new FormData();
+        formData.append('name', form.name);
+        formData.append('email', form.email);
+        formData.append('phone', form.phone);
+        formData.append('description', form.description);
+        files.forEach((file) => formData.append('files[]', file));
+
+        const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Submission failed');
       }
       setSubmitted(true);
     } catch (err) {
