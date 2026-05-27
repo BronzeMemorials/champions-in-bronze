@@ -300,7 +300,7 @@ export default function HallOfFamePage() {
        </section>
 
        {/* 3D GLB GALLERY */}
-       {glbModels.length > 0 && <GLBGallery models={glbModels} />}
+       {glbModels.length > 0 && <GLBGallery models={glbModels} light={true} />}
 
        {/* INSTITUTIONAL */}
       <section className="py-12 bg-white">
