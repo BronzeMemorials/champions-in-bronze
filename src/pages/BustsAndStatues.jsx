@@ -5,7 +5,7 @@ import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
-import GLBGallery from "../components/shared/GLBGallery";
+import VideoModelGallery from "../components/shared/VideoModelGallery";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
@@ -99,8 +99,8 @@ export default function BustsAndStatues() {
         </div>
       </section>
 
-      {/* 3D Gallery */}
-      {models.length > 0 && <GLBGallery models={models} />}
+      {/* 360° Video Gallery */}
+      {models.length > 0 && <VideoModelGallery models={models} />}
 
       {/* Emotional Pull Quote */}
       <section className="py-20 bg-stone-100">

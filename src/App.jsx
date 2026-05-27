@@ -74,6 +74,7 @@ import PhotoGalleryAdmin from './pages/PhotoGalleryAdmin';
 import AdminLayout from './components/AdminLayout';
 import ArtworkProofAdmin from './pages/ArtworkProofAdmin';
 import ArtworkApprovalDashboard from './pages/ArtworkApprovalDashboard';
+import GLBVideoAdmin from './pages/GLBVideoAdmin';
 import ArtworkApprovalPage from './pages/ArtworkApprovalPage';
 
 const AuthenticatedApp = () => {
@@ -178,6 +179,7 @@ const AuthenticatedApp = () => {
         <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
         <Route path="/artwork-proof-admin" element={<ArtworkProofAdmin />} />
         <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
+        <Route path="/glb-video-admin" element={<GLBVideoAdmin />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

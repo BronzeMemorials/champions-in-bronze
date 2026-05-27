@@ -15,6 +15,10 @@
       "type": "string",
       "description": "URL of the uploaded GLB file"
     },
+    "video_url": {
+      "type": "string",
+      "description": "URL of the 360 spin video recorded from the GLB"
+    },
     "page": {
       "type": "string",
       "enum": [

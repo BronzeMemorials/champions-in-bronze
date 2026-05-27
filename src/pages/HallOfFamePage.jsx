@@ -8,7 +8,7 @@ import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import PlaqueQuoteModal from "../components/shared/PlaqueQuoteModal";
-import GLBGallery from "../components/shared/GLBGallery";
+import VideoModelGallery from "../components/shared/VideoModelGallery";
 import { base44 } from "@/api/base44Client";
 
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
@@ -299,8 +299,8 @@ export default function HallOfFamePage() {
          </div>
        </section>
 
-       {/* 3D GLB GALLERY */}
-       {glbModels.length > 0 && <GLBGallery models={glbModels} light={true} />}
+       {/* 360° VIDEO GALLERY */}
+       {glbModels.length > 0 && <VideoModelGallery models={glbModels} />}
 
        {/* INSTITUTIONAL */}
       <section className="py-12 bg-white">
