@@ -3,7 +3,7 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 Deno.serve(async (req) => {
   try {
     const base44 = createClientFromRequest(req);
-    const { name, email, phone, organization, description, project_type, who_for, budget_range, timeline, file_urls } = await req.json();
+    const { name, email, phone, description, file_urls } = await req.json();
 
     const html = `
       <h2 style="font-family:Arial,sans-serif;">New Quote Request — Champions in Bronze</h2>
@@ -11,12 +11,7 @@ Deno.serve(async (req) => {
         ${row('Name', name)}
         ${row('Email', email)}
         ${row('Phone', phone)}
-        ${row('Organization', organization)}
-        ${row('Who For', who_for)}
-        ${row('Project Type', project_type)}
-        ${row('Budget Range', budget_range)}
-        ${row('Timeline', timeline)}
-        ${row('Description', description)}
+        ${row('Notes', description)}
         ${row('Attachments', file_urls && file_urls.length > 0 ? file_urls.map((u, i) => `<a href="${u}">File ${i + 1}</a>`).join(', ') : 'None')}
       </table>
     `;
