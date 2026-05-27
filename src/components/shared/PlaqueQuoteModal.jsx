@@ -23,15 +23,20 @@ export default function PlaqueQuoteModal({ plaque, onClose }) {
         description: `Interested in: ${plaque.label}\n\nAdditional notes: ${form.description}`,
         source_domain: "pro",
       };
+      const currentPage = window.location.pathname;
+
       if (isBase44) {
-        await base44.entities.QuoteRequest.create(quoteData);
-        try { await base44.functions.invoke("sendQuoteEmail", quoteData); } catch {}
+        const fullData = { ...quoteData, reference_image: plaque.url, source_page: currentPage };
+        await base44.entities.QuoteRequest.create(fullData);
+        try { await base44.functions.invoke("sendQuoteEmail", fullData); } catch {}
       } else {
         const formData = new FormData();
         formData.append('name', form.name);
         formData.append('email', form.email);
         formData.append('phone', form.phone);
         formData.append('description', quoteData.description);
+        formData.append('source_page', currentPage);
+        formData.append('reference_image', plaque.url);
         const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Submission failed');

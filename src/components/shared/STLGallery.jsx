@@ -2,6 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import { X, Maximize2, ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import FadeIn from "./FadeIn";
+import { useQuoteModal } from "@/lib/QuoteModalContext";
 
 const STLViewerLazy = lazy(() => import("./STLViewer"));
 
@@ -64,6 +65,11 @@ function ReliefCard({ model, onView }) {
 }
 
 function STLModal({ model, onClose }) {
+  const { openQuoteModal } = useQuoteModal();
+  const handleRequestQuote = () => {
+    onClose();
+    openQuoteModal({ sourcePage: window.location.pathname, referenceImage: model.preview_image || undefined });
+  };
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-parchment/95 backdrop-blur-sm p-4">
       <div className="w-full max-w-4xl">
@@ -88,14 +94,14 @@ function STLModal({ model, onClose }) {
         </Suspense>
 
         <div className="mt-4 grid sm:grid-cols-3 gap-3">
-          <Link to="/request-concept-design"
+          <button onClick={handleRequestQuote}
             className="bg-bronze hover:bg-gold text-obsidian px-4 py-3 font-sans text-xs uppercase tracking-widest text-center transition-all duration-300">
             Request Quote
-          </Link>
-          <Link to="/request-concept-design"
+          </button>
+          <button onClick={handleRequestQuote}
             className="border border-bronze/40 hover:border-bronze bg-obsidian text-parchment hover:text-parchment px-4 py-3 font-sans text-xs uppercase tracking-widest text-center transition-all duration-300">
             Request Similar Design
-          </Link>
+          </button>
           <div className="border border-bronze/20 bg-obsidian px-4 py-3 flex items-center justify-center gap-2 text-parchment/50">
             <Clock className="w-3.5 h-3.5" />
             <span className="font-sans text-xs">4–8 Week Lead Time</span>

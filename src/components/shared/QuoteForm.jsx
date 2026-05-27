@@ -64,7 +64,7 @@ function ReviewCarousel() {
   );
 }
 
-export default function QuoteForm({ title = "Request Concept Design", subtitle, source = "pro" }) {
+export default function QuoteForm({ title = "Request Concept Design", subtitle, source = "pro", referenceImage, sourcePage }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", description: "" });
   const [files, setFiles] = useState([]);
   const [submitting, setSubmitting] = useState(false);
@@ -91,6 +91,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
     e.preventDefault();
     setSubmitting(true);
     try {
+      const currentPage = sourcePage || window.location.pathname;
+
       if (isCPanel) {
         // cPanel hosted — use PHP endpoint
         const formData = new FormData();
@@ -98,6 +100,8 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         formData.append('email', form.email);
         formData.append('phone', form.phone);
         formData.append('description', form.description);
+        formData.append('source_page', currentPage);
+        if (referenceImage) formData.append('reference_image', referenceImage);
         files.forEach((file) => formData.append('files[]', file));
 
         const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
@@ -114,7 +118,7 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
             console.error('File upload failed, continuing without file:', uploadErr);
           }
         }
-        const quoteData = { ...form, file_urls, source_domain: source };
+        const quoteData = { ...form, file_urls, source_domain: source, source_page: currentPage, reference_image: referenceImage };
         await base44.entities.QuoteRequest.create(quoteData);
         await trackConversion();
         try {

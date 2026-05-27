@@ -3,7 +3,7 @@ import { X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import QuoteForm from "./QuoteForm";
 
-export default function QuoteModal({ open, onClose }) {
+export default function QuoteModal({ open, onClose, referenceImage, sourcePage }) {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -36,7 +36,7 @@ export default function QuoteModal({ open, onClose }) {
             >
               <X className="w-5 h-5 text-gray-700" />
             </button>
-            <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
+            <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" referenceImage={referenceImage} sourcePage={sourcePage} />
           </motion.div>
         </motion.div>
       )}

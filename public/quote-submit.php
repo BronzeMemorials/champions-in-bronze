@@ -18,10 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-$name        = htmlspecialchars(trim($_POST['name'] ?? ''));
-$email       = htmlspecialchars(trim($_POST['email'] ?? ''));
-$phone       = htmlspecialchars(trim($_POST['phone'] ?? ''));
-$description = htmlspecialchars(trim($_POST['description'] ?? ''));
+$name            = htmlspecialchars(trim($_POST['name'] ?? ''));
+$email           = htmlspecialchars(trim($_POST['email'] ?? ''));
+$phone           = htmlspecialchars(trim($_POST['phone'] ?? ''));
+$description     = htmlspecialchars(trim($_POST['description'] ?? ''));
+$source_page     = htmlspecialchars(trim($_POST['source_page'] ?? ''));
+$reference_image = trim($_POST['reference_image'] ?? '');
 
 if (empty($name) || empty($email)) {
     http_response_code(400);
@@ -41,14 +43,21 @@ $cc        = 'GSA@Bronzememorials.net';
 $subject   = "New Quote Request from $name";
 
 // Build HTML body
+$img_html = '';
+if (!empty($reference_image)) {
+    $img_html = "<div style='margin:16px 0;'><p style='font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#555;margin-bottom:6px;'>Reference Image:</p><img src='$reference_image' alt='Reference' style='max-width:400px;max-height:300px;border:1px solid #ddd;' /></div>";
+}
+
 $body = "
-<h2>New Quote Request — Champions in Bronze</h2>
+<h2 style='font-family:Arial,sans-serif;'>New Quote Request — Champions in Bronze</h2>
 <table style='border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;'>
   <tr><td style='padding:8px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;width:160px;'>Name</td><td style='padding:8px;border:1px solid #ddd;'>$name</td></tr>
   <tr><td style='padding:8px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;'>Email</td><td style='padding:8px;border:1px solid #ddd;'>$email</td></tr>
   <tr><td style='padding:8px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;'>Phone</td><td style='padding:8px;border:1px solid #ddd;'>$phone</td></tr>
   <tr><td style='padding:8px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;'>Notes</td><td style='padding:8px;border:1px solid #ddd;'>$description</td></tr>
+  <tr><td style='padding:8px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;'>Page</td><td style='padding:8px;border:1px solid #ddd;'>$source_page</td></tr>
 </table>
+$img_html
 ";
 
 // Handle file attachments — save to temp

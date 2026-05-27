@@ -3,7 +3,11 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 Deno.serve(async (req) => {
   try {
     const base44 = createClientFromRequest(req);
-    const { name, email, phone, description, file_urls } = await req.json();
+    const { name, email, phone, description, file_urls, source_page, reference_image } = await req.json();
+
+    const imgHtml = reference_image
+      ? `<div style="margin:16px 0;"><p style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#555;margin-bottom:6px;">Reference Image:</p><img src="${reference_image}" alt="Reference" style="max-width:400px;max-height:300px;border:1px solid #ddd;" /></div>`
+      : '';
 
     const html = `
       <h2 style="font-family:Arial,sans-serif;">New Quote Request — Champions in Bronze</h2>
@@ -12,8 +16,10 @@ Deno.serve(async (req) => {
         ${row('Email', email)}
         ${row('Phone', phone)}
         ${row('Notes', description)}
+        ${row('Page', source_page || '—')}
         ${row('Attachments', file_urls && file_urls.length > 0 ? file_urls.map((u, i) => `<a href="${u}">File ${i + 1}</a>`).join(', ') : 'None')}
       </table>
+      ${imgHtml}
     `;
 
     const { accessToken } = await base44.asServiceRole.connectors.getConnection('gmail');
