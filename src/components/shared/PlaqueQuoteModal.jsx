@@ -12,20 +12,36 @@ export default function PlaqueQuoteModal({ plaque, onClose }) {
 
   if (!plaque) return null;
 
+  const isBase44 = window.location.hostname.includes('base44') || window.location.hostname.includes('localhost');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    const quoteData = {
-      ...form,
-      description: `Interested in: ${plaque.label}\n\nAdditional notes: ${form.description}`,
-      source_domain: "pro",
-    };
-    await base44.entities.QuoteRequest.create(quoteData);
     try {
-      await base44.functions.invoke("sendQuoteEmail", quoteData);
-    } catch {}
-    setSubmitting(false);
-    setSubmitted(true);
+      const quoteData = {
+        ...form,
+        description: `Interested in: ${plaque.label}\n\nAdditional notes: ${form.description}`,
+        source_domain: "pro",
+      };
+      if (isBase44) {
+        await base44.entities.QuoteRequest.create(quoteData);
+        try { await base44.functions.invoke("sendQuoteEmail", quoteData); } catch {}
+      } else {
+        const formData = new FormData();
+        formData.append('name', form.name);
+        formData.append('email', form.email);
+        formData.append('phone', form.phone);
+        formData.append('description', quoteData.description);
+        const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Submission failed');
+      }
+      setSubmitted(true);
+    } catch (err) {
+      alert('Something went wrong. Please call us at 772-309-0412 or try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
