@@ -1,6 +1,6 @@
 <?php
 // quote-submit.php — upload this to your cPanel server root
-// Receives quote form data + file attachments and emails info@championsinbronze.com
+// Uses PHPMailer via Composer autoload OR falls back to manual SMTP socket
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
@@ -29,10 +29,16 @@ if (empty($name) || empty($email)) {
     exit();
 }
 
-$to      = 'info@championsinbronze.com';
-$cc      = 'GSA@Bronzememorials.net';
-$from    = 'info@championsinbronze.com';
-$subject = "New Quote Request from $name";
+// SMTP config
+$smtp_host = 'mail.bronzememorials.net';
+$smtp_port = 465;
+$smtp_user = 'info@championsinbronze.com';
+$smtp_pass = 'Chuckie850#';
+$from_name = 'Champions in Bronze';
+$from_addr = 'info@championsinbronze.com';
+$to        = 'info@championsinbronze.com';
+$cc        = 'GSA@Bronzememorials.net';
+$subject   = "New Quote Request from $name";
 
 // Build HTML body
 $body = "
@@ -45,16 +51,15 @@ $body = "
 </table>
 ";
 
-// Handle file attachments
+// Handle file attachments — save to temp
 $attachments = [];
 if (!empty($_FILES['files'])) {
-    $uploadDir = sys_get_temp_dir() . '/';
     $fileCount = count($_FILES['files']['name']);
     for ($i = 0; $i < $fileCount; $i++) {
         if ($_FILES['files']['error'][$i] === UPLOAD_ERR_OK) {
             $tmpName  = $_FILES['files']['tmp_name'][$i];
             $origName = basename($_FILES['files']['name'][$i]);
-            $destPath = $uploadDir . uniqid() . '_' . $origName;
+            $destPath = sys_get_temp_dir() . '/' . uniqid() . '_' . $origName;
             if (move_uploaded_file($tmpName, $destPath)) {
                 $attachments[] = ['path' => $destPath, 'name' => $origName];
             }
@@ -62,38 +67,107 @@ if (!empty($_FILES['files'])) {
     }
 }
 
-// Build MIME email with attachments
-$boundary = md5(time());
+// Try PHPMailer if available (via Composer)
+$phpmailerPath = __DIR__ . '/vendor/autoload.php';
+if (file_exists($phpmailerPath)) {
+    require $phpmailerPath;
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host       = $smtp_host;
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $smtp_user;
+        $mail->Password   = $smtp_pass;
+        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = $smtp_port;
 
-$headers  = "From: Champions in Bronze <$from>\r\n";
-$headers .= "Reply-To: $name <$email>\r\n";
-$headers .= "Cc: $cc\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+        $mail->setFrom($from_addr, $from_name);
+        $mail->addAddress($to);
+        $mail->addCC($cc);
+        $mail->addReplyTo($email, $name);
 
-$message  = "--$boundary\r\n";
-$message .= "Content-Type: text/html; charset=UTF-8\r\n\r\n";
-$message .= $body . "\r\n";
+        foreach ($attachments as $att) {
+            $mail->addAttachment($att['path'], $att['name']);
+        }
 
-foreach ($attachments as $att) {
-    $fileData = file_get_contents($att['path']);
-    $encoded  = chunk_split(base64_encode($fileData));
-    $mimeType = mime_content_type($att['path']) ?: 'application/octet-stream';
-    $message .= "--$boundary\r\n";
-    $message .= "Content-Type: $mimeType; name=\"{$att['name']}\"\r\n";
-    $message .= "Content-Disposition: attachment; filename=\"{$att['name']}\"\r\n";
-    $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
-    $message .= $encoded . "\r\n";
-    unlink($att['path']); // clean up temp file
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
+
+        $mail->send();
+        foreach ($attachments as $att) { @unlink($att['path']); }
+        echo json_encode(['success' => true]);
+    } catch (Exception $e) {
+        foreach ($attachments as $att) { @unlink($att['path']); }
+        http_response_code(500);
+        echo json_encode(['error' => $mail->ErrorInfo]);
+    }
+    exit();
 }
 
-$message .= "--$boundary--";
+// Fallback: raw SMTP over SSL socket (no PHPMailer needed)
+function smtp_send($host, $port, $user, $pass, $from_addr, $from_name, $to, $cc, $reply_to, $reply_name, $subject, $body, $attachments) {
+    $boundary = md5(uniqid(time()));
 
-$sent = mail($to, $subject, $message, $headers);
+    // Build MIME message
+    $msg  = "From: $from_name <$from_addr>\r\n";
+    $msg .= "To: $to\r\n";
+    $msg .= "Cc: $cc\r\n";
+    $msg .= "Reply-To: $reply_name <$reply_to>\r\n";
+    $msg .= "Subject: $subject\r\n";
+    $msg .= "MIME-Version: 1.0\r\n";
+    $msg .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n\r\n";
+    $msg .= "--$boundary\r\n";
+    $msg .= "Content-Type: text/html; charset=UTF-8\r\n\r\n";
+    $msg .= $body . "\r\n";
 
-if ($sent) {
+    foreach ($attachments as $att) {
+        $fileData = file_get_contents($att['path']);
+        $encoded  = chunk_split(base64_encode($fileData));
+        $mimeType = mime_content_type($att['path']) ?: 'application/octet-stream';
+        $msg .= "--$boundary\r\n";
+        $msg .= "Content-Type: $mimeType; name=\"{$att['name']}\"\r\n";
+        $msg .= "Content-Disposition: attachment; filename=\"{$att['name']}\"\r\n";
+        $msg .= "Content-Transfer-Encoding: base64\r\n\r\n";
+        $msg .= $encoded . "\r\n";
+    }
+    $msg .= "--$boundary--\r\n";
+
+    // Connect via SSL
+    $ctx = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]]);
+    $sock = stream_socket_client("ssl://$host:$port", $errno, $errstr, 30, STREAM_CLIENT_CONNECT, $ctx);
+    if (!$sock) return "Cannot connect: $errstr ($errno)";
+
+    function smtp_get($sock) { $r = ''; while ($l = fgets($sock, 512)) { $r .= $l; if (substr($l,3,1)==' ') break; } return $r; }
+    function smtp_cmd($sock, $cmd) { fwrite($sock, "$cmd\r\n"); return smtp_get($sock); }
+
+    smtp_get($sock); // greeting
+    smtp_cmd($sock, "EHLO championsinbronze.com");
+    smtp_cmd($sock, "AUTH LOGIN");
+    smtp_cmd($sock, base64_encode($user));
+    $r = smtp_cmd($sock, base64_encode($pass));
+    if (strpos($r, '235') === false) { fclose($sock); return "Auth failed: $r"; }
+
+    smtp_cmd($sock, "MAIL FROM:<$from_addr>");
+    smtp_cmd($sock, "RCPT TO:<$to>");
+    smtp_cmd($sock, "RCPT TO:<$cc>");
+    smtp_cmd($sock, "DATA");
+    fwrite($sock, $msg . "\r\n.\r\n");
+    $r = smtp_get($sock);
+    smtp_cmd($sock, "QUIT");
+    fclose($sock);
+
+    foreach ($attachments as $att) { @unlink($att['path']); }
+
+    if (strpos($r, '250') !== false) return true;
+    return "Send failed: $r";
+}
+
+$result = smtp_send($smtp_host, $smtp_port, $smtp_user, $smtp_pass, $from_addr, $from_name, $to, $cc, $email, $name, $subject, $body, $attachments);
+
+if ($result === true) {
     echo json_encode(['success' => true]);
 } else {
     http_response_code(500);
-    echo json_encode(['error' => 'Failed to send email. Check your server mail config.']);
+    echo json_encode(['error' => $result]);
 }
