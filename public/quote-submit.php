@@ -31,6 +31,7 @@ if (empty($name) || empty($email)) {
 
 $to      = 'info@championsinbronze.com';
 $cc      = 'GSA@Bronzememorials.net';
+$from    = 'info@championsinbronze.com';
 $subject = "New Quote Request from $name";
 
 // Build HTML body
@@ -64,7 +65,7 @@ if (!empty($_FILES['files'])) {
 // Build MIME email with attachments
 $boundary = md5(time());
 
-$headers  = "From: Champions in Bronze <noreply@championsinbronze.com>\r\n";
+$headers  = "From: Champions in Bronze <$from>\r\n";
 $headers .= "Reply-To: $name <$email>\r\n";
 $headers .= "Cc: $cc\r\n";
 $headers .= "MIME-Version: 1.0\r\n";

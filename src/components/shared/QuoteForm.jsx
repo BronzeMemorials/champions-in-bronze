@@ -85,12 +85,25 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   };
 
   const isBase44 = window.location.hostname.includes('base44') || window.location.hostname.includes('localhost');
+  const isCPanel = window.location.hostname.includes('championsinbronze.com');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      if (isBase44) {
+      if (isCPanel) {
+        // cPanel hosted — use PHP endpoint
+        const formData = new FormData();
+        formData.append('name', form.name);
+        formData.append('email', form.email);
+        formData.append('phone', form.phone);
+        formData.append('description', form.description);
+        files.forEach((file) => formData.append('files[]', file));
+
+        const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Submission failed');
+      } else if (isBase44) {
         // Base44 hosted — use SDK
         let file_urls = [];
         for (const file of files) {
@@ -109,18 +122,6 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
         } catch (emailErr) {
           console.error('Email send failed:', emailErr);
         }
-      } else {
-        // cPanel hosted — use PHP endpoint
-        const formData = new FormData();
-        formData.append('name', form.name);
-        formData.append('email', form.email);
-        formData.append('phone', form.phone);
-        formData.append('description', form.description);
-        files.forEach((file) => formData.append('files[]', file));
-
-        const res = await fetch('/quote-submit.php', { method: 'POST', body: formData });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Submission failed');
       }
       setSubmitted(true);
     } catch (err) {
