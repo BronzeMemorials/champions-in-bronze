@@ -5,7 +5,7 @@ import { Upload, Video, Save, CheckCircle, Loader2, RotateCcw, Trash2, Lock } fr
 import { Input } from "@/components/ui/input";
 import FadeIn from "@/components/shared/FadeIn";
 
-const PASSCODE = "cib2024";
+const PASSCODE = "34388D72CDC98821";
 
 function PasscodeGate({ onUnlock }) {
   const [input, setInput] = useState("");
