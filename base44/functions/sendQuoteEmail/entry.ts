@@ -21,24 +21,38 @@ Deno.serve(async (req) => {
       </table>
     `;
 
-    const res = await fetch('https://api.resend.com/emails', {
+    const { accessToken } = await base44.asServiceRole.connectors.getConnection('gmail');
+
+    const subject = `New Quote Request from ${name}`;
+    const to = 'info@championsinbronze.com';
+
+    const messageParts = [
+      `To: ${to}`,
+      `Reply-To: ${name} <${email}>`,
+      `Subject: ${subject}`,
+      `MIME-Version: 1.0`,
+      `Content-Type: text/html; charset=UTF-8`,
+      ``,
+      html,
+    ];
+    const rawMessage = messageParts.join('\r\n');
+    const encodedMessage = btoa(unescape(encodeURIComponent(rawMessage)))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+
+    const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
+        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        from: 'Champions in Bronze <onboarding@resend.dev>',
-        to: ['info@championsinbronze.com'],
-        reply_to: email,
-        subject: `New Quote Request from ${name}`,
-        html,
-      }),
+      body: JSON.stringify({ raw: encodedMessage }),
     });
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Resend API error: ${res.status} ${text}`);
+      throw new Error(`Gmail API error: ${res.status} ${text}`);
     }
 
     return Response.json({ success: true });
