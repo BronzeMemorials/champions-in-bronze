@@ -28,6 +28,7 @@ Deno.serve(async (req) => {
 
     const messageParts = [
       `To: ${to}`,
+      `Cc: GSA@Bronzememorials.net`,
       `Reply-To: ${name} <${email}>`,
       `Subject: ${subject}`,
       `MIME-Version: 1.0`,
