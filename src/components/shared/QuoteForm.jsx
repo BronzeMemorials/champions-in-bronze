@@ -87,21 +87,31 @@ export default function QuoteForm({ title = "Request Concept Design", subtitle, 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    let file_urls = [];
-    for (const file of files) {
-      const result = await base44.integrations.Core.UploadFile({ file });
-      file_urls.push(result.file_url);
-    }
-    const quoteData = { ...form, file_urls, source_domain: source };
-    await base44.entities.QuoteRequest.create(quoteData);
-    await trackConversion();
     try {
-      await base44.functions.invoke('sendQuoteEmail', quoteData);
-    } catch (e) {
-      console.error('Email send failed:', e);
+      let file_urls = [];
+      for (const file of files) {
+        try {
+          const result = await base44.integrations.Core.UploadFile({ file });
+          file_urls.push(result.file_url);
+        } catch (uploadErr) {
+          console.error('File upload failed, continuing without file:', uploadErr);
+        }
+      }
+      const quoteData = { ...form, file_urls, source_domain: source };
+      await base44.entities.QuoteRequest.create(quoteData);
+      await trackConversion();
+      try {
+        await base44.functions.invoke('sendQuoteEmail', quoteData);
+      } catch (emailErr) {
+        console.error('Email send failed:', emailErr);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Quote submission failed:', err);
+      alert('Something went wrong submitting your request. Please call us at 772-309-0412 or try again.');
+    } finally {
+      setSubmitting(false);
     }
-    setSubmitting(false);
-    setSubmitted(true);
   };
 
   const labelClass = "text-base text-black uppercase tracking-wider font-sans mb-2 block font-semibold";
