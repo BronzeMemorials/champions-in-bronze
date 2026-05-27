@@ -5,8 +5,6 @@ Deno.serve(async (req) => {
     const base44 = createClientFromRequest(req);
     const { name, email, phone, organization, description, project_type, who_for, budget_range, timeline, file_urls } = await req.json();
 
-    const { accessToken } = await base44.asServiceRole.connectors.getConnection('gmail');
-
     const html = `
       <h2 style="font-family:Arial,sans-serif;">New Quote Request — Champions in Bronze</h2>
       <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
@@ -23,37 +21,24 @@ Deno.serve(async (req) => {
       </table>
     `;
 
-    const subject = `New Quote Request from ${name}`;
-    const to = 'info@championsinbronze.com';
-
-    // Build RFC 2822 message
-    const messageParts = [
-      `To: ${to}`,
-      `Reply-To: ${name} <${email}>`,
-      `Subject: ${subject}`,
-      `MIME-Version: 1.0`,
-      `Content-Type: text/html; charset=UTF-8`,
-      ``,
-      html,
-    ];
-    const rawMessage = messageParts.join('\r\n');
-    const encodedMessage = btoa(unescape(encodeURIComponent(rawMessage)))
-      .replace(/\+/g, '-')
-      .replace(/\//g, '_')
-      .replace(/=+$/, '');
-
-    const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+    const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${accessToken}`,
+        'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ raw: encodedMessage }),
+      body: JSON.stringify({
+        from: 'Champions in Bronze <onboarding@resend.dev>',
+        to: ['info@championsinbronze.com'],
+        reply_to: email,
+        subject: `New Quote Request from ${name}`,
+        html,
+      }),
     });
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Gmail API error: ${res.status} ${text}`);
+      throw new Error(`Resend API error: ${res.status} ${text}`);
     }
 
     return Response.json({ success: true });
