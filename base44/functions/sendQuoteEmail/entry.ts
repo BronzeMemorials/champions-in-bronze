@@ -5,8 +5,6 @@ Deno.serve(async (req) => {
     const base44 = createClientFromRequest(req);
     const { name, email, phone, organization, description, project_type, who_for, budget_range, timeline, file_urls } = await req.json();
 
-    const { accessToken } = await base44.asServiceRole.connectors.getConnection('outlook');
-
     const bodyLines = [
       `<h2>New Quote Request</h2>`,
       `<table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">`,
@@ -25,33 +23,12 @@ Deno.serve(async (req) => {
       `</table>`,
     ].join('');
 
-    const message = {
-      message: {
-        subject: `New Quote Request from ${name}`,
-        body: {
-          contentType: 'HTML',
-          content: bodyLines,
-        },
-        toRecipients: [
-          { emailAddress: { address: 'info@championsinbronze.com' } },
-        ],
-      },
-      saveToSentItems: true,
-    };
-
-    const res = await fetch('https://graph.microsoft.com/v1.0/me/sendMail', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(message),
+    await base44.asServiceRole.integrations.Core.SendEmail({
+      to: 'info@championsinbronze.com',
+      from_name: 'Champions in Bronze Website',
+      subject: `New Quote Request from ${name}`,
+      body: bodyLines,
     });
-
-    if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`Graph API error: ${res.status} ${text}`);
-    }
 
     return Response.json({ success: true });
   } catch (error) {
