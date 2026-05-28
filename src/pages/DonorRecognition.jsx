@@ -43,7 +43,7 @@ const faqs = [
   { question: "What types of facilities do you serve?", answer: "We serve NFL and NCAA stadiums, university athletic departments, high school facilities, hospitals, museums, libraries, performing arts centers, and corporate campuses. Any institution with a donor recognition program benefits from permanent bronze." },
   { question: "How long does a full donor wall installation take?", answer: "Design and fabrication runs 8–16 weeks for full wall systems. Individual donor plaques can be produced in 15–30 days. We offer rush production when deadlines require it." },
   { question: "Do you handle installation?", answer: "Yes. We coordinate professional installation nationwide. Our team handles anchoring, mounting, and final placement — your staff doesn't need to do anything except approve the final product." },
-  { question: "What bronze alloys do you use?", answer: "We cast in silicon bronze — the same alloy used in fine art and museum sculpture. It's rated 200+ years outdoors, develops a beautiful natural patina, and polishes to a brilliant warm gold. The highest quality available, period." },
+  { question: "What bronze alloys do you use?", answer: "We cast in bronze — the same alloy used in fine art and museum sculpture. It's rated 200+ years outdoors, develops a beautiful natural patina, and polishes to a brilliant warm gold. The highest quality available, period." },
 ];
 
 const wallTypes = [
@@ -272,7 +272,7 @@ export default function DonorRecognition() {
               </div>
 
               <div className="text-center py-4 bg-gray-50 border-t border-gray-200">
-                <p className="text-gray-400 font-sans text-xs uppercase tracking-widest">Every plaque above is individually cast in museum-quality silicon bronze · Champions in Bronze · Since 1974</p>
+                <p className="text-gray-400 font-sans text-xs uppercase tracking-widest">Every plaque above is individually cast in museum-quality bronze · Champions in Bronze · Since 1974</p>
               </div>
             </div>
           </FadeIn>
@@ -493,7 +493,7 @@ export default function DonorRecognition() {
 
       <QuoteForm
         title="Ready to Honor the Donors Who Made It Possible?"
-        subtitle="Over 50,000 satisfied customers. 200-year silicon bronze. Artwork proof within the hour. 100% Made in the USA."
+        subtitle="Over 50,000 satisfied customers. 200-year bronze. Artwork proof within the hour. 100% Made in the USA."
         source="pro"
       />
     </div>

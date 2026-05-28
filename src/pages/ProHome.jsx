@@ -34,7 +34,7 @@ const localBusinessSchema = {
 };
 
 const faqSchemaItems = [
-{ q: "What types of bronze plaques do you produce?", a: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
+{ q: "What types of bronze plaques do you produce?", a: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in bronze or aluminum, custom-sized for your installation." },
 { q: "How does your photo image casting process work?", a: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
 { q: "What is the typical lead time for plaques?", a: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
 { q: "Do you handle complete Hall of Fame installations?", a: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
@@ -175,7 +175,7 @@ const bustTypes = [
 {
   label: "Championship Bust",
   img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png",
-  alt: "Championship bronze bust — silicon bronze, museum quality"
+  alt: "Championship bronze bust — bronze, museum quality"
 },
 {
   label: "Stadium Donor Bust",
@@ -217,7 +217,7 @@ const footballPositions = [
 
 
 const faqs = [
-{ question: "What types of bronze plaques do you produce?", answer: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in silicon bronze or aluminum, custom-sized for your installation." },
+{ question: "What types of bronze plaques do you produce?", answer: "We produce the full spectrum of athletic recognition plaques: 3D bas-relief plaques, photo image cast plaques, Hall of Fame plaques, championship plaques, donor recognition plaques, retired jersey displays, stadium dedication plaques, and memorial plaques. Every format is available in bronze or aluminum, custom-sized for your installation." },
 { question: "How does your photo image casting process work?", answer: "Our proprietary Photo ImageCasting process permanently embeds actual photographs — not drawings — into bronze or aluminum. We use your submitted photos as the master; the finished plaque contains your exact image cast in metal. No in-person sessions required. Artwork proof within 48 hours." },
 { question: "What is the typical lead time for plaques?", answer: "Digital artwork proof within the hour. Physical production is 15–30 days for standard plaques, 6–10 weeks for large Hall of Fame series and donor wall systems. Rush 5-day service available on select sizes." },
 { question: "Do you handle complete Hall of Fame installations?", answer: "Yes. We are a full-service Hall of Fame manufacturer — from initial concept and layout design through fabrication, crating, and on-site installation. We coordinate directly with your facility management team." },
@@ -391,7 +391,7 @@ to Live Forever</h1>
               {[
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Championship Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in silicon bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" }].
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
@@ -523,7 +523,7 @@ to Live Forever</h1>
               {[
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in silicon bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" }].
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
@@ -755,7 +755,7 @@ to Live Forever</h1>
               <div className="mb-6">
                 <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 06</span>
                 <h3 className="font-serif text-3xl text-parchment mt-1">Hockey</h3>
-                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in silicon bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Hockey is about grit, sacrifice, and brotherhood. Champions in Bronze captures that spirit in bronze — arena-entrance statues, locker room Hall of Fame plaques, championship recognition, and donor walls that honor every player and supporter who made the program what it is.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[

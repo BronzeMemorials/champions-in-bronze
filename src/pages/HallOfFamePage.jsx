@@ -75,7 +75,7 @@ const bustTypes = [
 { label: "Standard Hall of Fame Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/496d05ff8_99F60C02-07FA-4E6B-A2F7-A1DF3368DE0E.png", alt: "Standard Hall of Fame bronze bust — sculpted from athlete photograph" },
 { label: "Athlete Portrait Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1daa60284_ECEF0D5E-181D-4F24-8FD8-994D7F9B3730.png", alt: "Custom athlete portrait bronze bust — exact likeness from photographs" },
 { label: "Coach Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d41d4287_0804D2D5-A521-470D-9D6D-8E45E69BA991.png", alt: "Coach portrait bronze bust — sculpted from photographs for Hall of Fame" },
-{ label: "Championship Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", alt: "Championship bronze bust — silicon bronze, museum quality" },
+{ label: "Championship Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", alt: "Championship bronze bust — bronze, museum quality" },
 { label: "Stadium Donor Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/580dca88d_BA78C4BD-B3AA-4B99-9EE6-70D7AC769604.png", alt: "Stadium donor recognition bronze bust" },
 { label: "Historic Athlete Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b1801f52_A48B1FB3-444D-4741-AE40-D4E863E0F068.png", alt: "Historic athlete bronze bust — created from archival photographs" }];
 

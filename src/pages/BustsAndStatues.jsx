@@ -196,7 +196,7 @@ export default function BustsAndStatues() {
           },
           {
             label: "Firefighter Memorial Statues",
-            caption: "Life-size and 72-inch firefighter memorial statues in silicon bronze. Same sculpture shown in two patina options — dark bronze and warm gold — demonstrating how finish color transforms the aesthetic.",
+            caption: "Life-size and 72-inch firefighter memorial statues in bronze. Same sculpture shown in two patina options — dark bronze and warm gold — demonstrating how finish color transforms the aesthetic.",
             steps: [
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", tag: "Finished Bronze", alt: "Firefighter 72-inch kneeling with axe statue" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a736e67f3_table-top-firefighter-dark.jpg", tag: "Dark Patina", alt: "Kneeling firefighter — dark bronze patina" },
@@ -205,7 +205,7 @@ export default function BustsAndStatues() {
           },
           {
             label: "Firefighter Helmet — Custom Bronze Sculpture",
-            caption: "Life-size replica bronze firefighter helmet — 'Captain 46, Houston' — cast in silicon bronze with warm patina. Custom text and insignia cast in permanently.",
+            caption: "Life-size replica bronze firefighter helmet — 'Captain 46, Houston' — cast in bronze with warm patina. Custom text and insignia cast in permanently.",
             steps: [
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/7c64e41ff_firefighter-helmet.jpg", tag: "Finished Bronze", alt: "Firefighter helmet bronze sculpture" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/0bb44a23f_firefighter-helmet-cr.jpg", tag: "Finished Bronze", alt: "Firefighter helmet cropped view" },
@@ -222,7 +222,7 @@ export default function BustsAndStatues() {
           },
           {
             label: "Service Dog — Polychrome Bronze Sculpture",
-            caption: "Full-color polychrome bronze German Shepherd service dog — realistic fur texture and coloring achieved through multi-layer patina application over silicon bronze casting.",
+            caption: "Full-color polychrome bronze German Shepherd service dog — realistic fur texture and coloring achieved through multi-layer patina application over bronze casting.",
             steps: [
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d6b4c5020_service-dog.jpg", tag: "Finished Bronze", alt: "Service dog bronze sculpture" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5f116da28_service-dogs.jpg", tag: "Finished Bronze", alt: "Service dog bronze sculpture angle 2" },

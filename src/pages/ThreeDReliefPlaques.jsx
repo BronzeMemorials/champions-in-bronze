@@ -22,15 +22,15 @@ const img6 = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9
 const sports = ["All Sports", "Football", "Basketball", "Baseball", "Hockey", "Soccer", "Lacrosse", "Golf"];
 
 const gallery = [
-  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Silicon Bronze · 18×24″", alt: "3D bas-relief football quarterback action bronze plaque — NFL silicon bronze 18x24" },
+  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Silicon Bronze · 18×24″", alt: "3D bas-relief football quarterback action bronze plaque — NFL bronze 18x24" },
   { sport: "Football", img: img2, title: "Championship Scene", sub: "NCAA · Bronze Patina · 24×30″", alt: "3D bas-relief NCAA football championship scene bronze plaque — 24x30" },
   { sport: "Basketball", img: img3, title: "MVP Portrait Plaque", sub: "NBA · Dark Bronze · 16×20″", alt: "3D bas-relief basketball MVP Hall of Fame portrait bronze plaque — NBA dark bronze 16x20" },
   { sport: "Basketball", img: img4, title: "Retirement Honor", sub: "NCAA · Aluminum · 20×24″", alt: "3D bas-relief basketball retirement honor plaque — NCAA aluminum 20x24" },
   { sport: "Baseball", img: img5, title: "Home Plate Relief", sub: "MLB · Bronze Cast · Custom shape", alt: "3D bas-relief baseball home plate shape bronze plaque — MLB custom cast" },
   { sport: "Hockey", img: img6, title: "Stanley Cup Scene", sub: "NHL · Bronze · 24×30″", alt: "3D bas-relief hockey Stanley Cup championship scene bronze plaque — NHL 24x30" },
-  { sport: "Soccer", img: img1, title: "Championship Trophy", sub: "MLS · Bronze · 18×24″", alt: "3D bas-relief soccer championship bronze plaque — MLS silicon bronze 18x24" },
+  { sport: "Soccer", img: img1, title: "Championship Trophy", sub: "MLS · Bronze · 18×24″", alt: "3D bas-relief soccer championship bronze plaque — MLS bronze 18x24" },
   { sport: "Lacrosse", img: img2, title: "All-American Portrait", sub: "NCAA · Aluminum · 16×20″", alt: "3D bas-relief lacrosse All-American portrait plaque — NCAA aluminum 16x20" },
-  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Silicon Bronze · 18×24″", alt: "3D bas-relief golf tournament champion bronze plaque — PGA silicon bronze 18x24" },
+  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Silicon Bronze · 18×24″", alt: "3D bas-relief golf tournament champion bronze plaque — PGA bronze 18x24" },
 ];
 
 const faqs = [
@@ -57,7 +57,7 @@ export default function ThreeDReliefPlaques() {
     <div className="bg-obsidian text-parchment">
       <SEOHead
         title="3D Bas-Relief Bronze Plaques — Hand-Sculpted from Athlete Photographs | Champions in Bronze"
-        description="3D bas-relief bronze plaques hand-sculpted from your actual athlete photographs. Hall of Fame portrait plaques, championship scenes, and retired jersey displays in silicon bronze or aluminum. Every sport. Artwork proof within 48 hours."
+        description="3D bas-relief bronze plaques hand-sculpted from your actual athlete photographs. Hall of Fame portrait plaques, championship scenes, and retired jersey displays in bronze or aluminum. Every sport. Artwork proof within 48 hours."
         canonical="/3d-relief-plaques"
         ogImage="https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png"
       />
@@ -98,7 +98,7 @@ export default function ThreeDReliefPlaques() {
             <div className="mb-10">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Browse by Sport</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">3D Relief Plaque Gallery</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Every sport. Every position. Every moment worth preserving forever. Browse our gallery of sculptural 3D bas-relief bronze plaques — each one created from actual athlete photographs and cast in museum-quality silicon bronze or aluminum for Hall of Fame walls, championship displays, and retired number ceremonies.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Every sport. Every position. Every moment worth preserving forever. Browse our gallery of sculptural 3D bas-relief bronze plaques — each one created from actual athlete photographs and cast in museum-quality bronze or aluminum for Hall of Fame walls, championship displays, and retired number ceremonies.</p>
             </div>
           </FadeIn>
 

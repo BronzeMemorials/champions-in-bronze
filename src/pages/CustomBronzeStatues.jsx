@@ -69,7 +69,7 @@ export default function CustomBronzeStatues() {
               <ul className="mt-8 space-y-3 border-l border-bronze/30 pl-6">
                 {[
                   "Sculpted from high-resolution photographs — no in-person sessions required",
-                  "Silicon bronze or aluminum — indoor and outdoor rated",
+                  "Bronze or aluminum — indoor and outdoor rated",
                   "24\" tabletop through 10-foot+ heroic scale",
                   "Custom pose design — any sport, any moment",
                   "48-hour digital proof before any physical work begins",
