@@ -99,6 +99,35 @@ const SAMPLE_DONORS = [
   "Dr. Linda Carmichael", "Class of 1960 Legacy", "The Ellison Family", "Patrick & Mary O'Brien",
 ];
 
+const BOOSTER_DONORS = [
+  "Mitchell Booster Club", "Coach Ray Harmon '78", "The Donovan Family", "Varsity Club 1991",
+  "Tom & Sheila Krauss", "Stadium Fund Committee", "Frank & Donna Bello", "Eagles Booster Alliance",
+  "The Pruitt Family", "Gridiron Club 2005", "Dave & Linda Norris", "Coach Pete Aldrich Fund",
+  "Touchdown Club 1988", "The Reinhart Family", "Booster President 2019", "Blue & Gold Society",
+  "The Callahan Family", "Spirit Squad Foundation", "Ron & Mary Galloway", "Varsity Club 2015",
+  "The Ostrowski Fund", "Athletic Parents Assn.", "Jack & Carol Henning", "Booster Hall 2008",
+  "The Nakamura Family", "Field House Committee", "Steve & Betsy Vogel", "Pigskin Club 1976",
+  "The Lundberg Family", "Champions' Circle 2022", "Tim & Kathy Olafsson", "Blue Ribbon Boosters",
+];
+
+const ALUMNI_DONORS = [
+  "Class of 1965 — 60th Reunion Gift", "Class of 1970 — Golden Anniversary",
+  "Class of 1975 — Legacy Endowment", "Class of 1980 — Building Fund",
+  "Margaret & Paul Dunmore '68", "Senator J. Whitfield '72", "Dr. Anita Reyes '81",
+  "The Hartley-Brown Foundation", "John P. Calloway III '77", "Class of 1985 — 40 Years",
+  "Dr. Samuel & Iris Goldberg '69", "Class of 1990 — Annual Fund",
+  "The Beaumont Alumni Trust", "Class of 1995 — 30 Years",
+  "William T. Ashby Jr. '83", "Class of 2000 — Millennium Gift",
+  "The O'Sullivan Family '74", "Class of 2005 — 20 Years",
+  "Dean Emerita Carla Rhodes '66", "Alumni Leadership Circle",
+  "Class of 2010 — Decade Fund", "Thomas & Eva Winslow '88",
+  "The Pryce Alumni Society", "Class of 2015 — First Gen Fund",
+  "Dr. Victor Pennington '91", "Class of 2020 — COVID Legacy",
+  "Alumni Athletic Council", "The Whitfield-Park Foundation",
+  "Class of 1960 — Centennial", "Patricia H. Drummond '79",
+  "The Dunbar Alumni Guild", "Class of 2025 — Future Fund",
+];
+
 export default function DonorRecognition() {
   return (
     <div className="bg-white text-gray-900">
@@ -323,6 +352,172 @@ export default function DonorRecognition() {
             <div className="text-center mt-8">
               <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-bold text-black uppercase tracking-widest text-sm" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
                 Get Your Wall Designed Like This <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* BOOSTER CLUB WALL */}
+      <section className="py-16 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Booster Club Recognition</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Honor Every Booster. In Bronze. Forever.</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
+                Booster clubs are the lifeblood of athletic programs. A permanent bronze wall recognizing your club members — by tier, by year, by level — is the single most powerful tool for retaining and growing booster participation.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div style={{
+              border: "2px solid #8B6914",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%232e1c0a'/%3E%3Cpath d='M5 8 Q8 4 12 7 Q16 10 13 14 Q10 18 6 15 Q2 12 5 8Z' fill='%23251408' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M33 18 Q37 14 41 18 Q45 22 41 27 Q37 32 33 27 Q29 22 33 18Z' fill='%23291508' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M8 36 Q12 32 16 36 Q20 40 16 45 Q12 50 8 45 Q4 40 8 36Z' fill='%232a1608' stroke='%23200e05' stroke-width='0.5'/%3E%3C/svg%3E")`,
+              backgroundSize: "60px 60px",
+              padding: "2px",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3), inset 0 0 30px rgba(0,0,0,0.7)"
+            }}>
+              <div style={{
+                border: "1px solid #8B6914",
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%232e1c0a'/%3E%3Cpath d='M5 8 Q8 4 12 7 Q16 10 13 14 Q10 18 6 15 Q2 12 5 8Z' fill='%23251408' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M33 18 Q37 14 41 18 Q45 22 41 27 Q37 32 33 27 Q29 22 33 18Z' fill='%23291508' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M8 36 Q12 32 16 36 Q20 40 16 45 Q12 50 8 45 Q4 40 8 36Z' fill='%232a1608' stroke='%23200e05' stroke-width='0.5'/%3E%3C/svg%3E")`,
+                backgroundSize: "60px 60px",
+                padding: "24px"
+              }}>
+                <div className="text-center mb-6">
+                  <p className="font-serif tracking-widest uppercase" style={{ fontSize: "1.6rem", color: "#DAA520", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 12px rgba(218,165,32,0.4)", letterSpacing: "0.25em" }}>Booster Club Wall of Honor</p>
+                  <p className="font-sans uppercase mt-1" style={{ fontSize: "0.65rem", color: "#B8860B", letterSpacing: "0.35em", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>Champions Circle · Cast in Bronze</p>
+                </div>
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.75rem", color: "#DAA520", letterSpacing: "0.3em", textShadow: "0 1px 3px rgba(0,0,0,0.8)" }}>— Champions Circle —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {BOOSTER_DONORS.slice(0, 4).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "10px 20px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.15), 0 2px 6px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1.5 top-1/2 -translate-y-1/2"><div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} /></div>
+                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2"><div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} /></div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.8rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                        <p className="font-sans text-center uppercase mt-1" style={{ fontSize: "0.55rem", color: "#B8860B", letterSpacing: "0.2em" }}>Champions Circle</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.7rem", color: "#DAA520", letterSpacing: "0.3em" }}>— Varsity Level Boosters —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {BOOSTER_DONORS.slice(4, 16).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "8px 14px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.12), 0 2px 4px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2"><div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2"><div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.7rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.65rem", color: "#DAA520", letterSpacing: "0.3em" }}>— Club Members & Supporters —</p>
+                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1.5">
+                    {BOOSTER_DONORS.slice(16).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #7a5c10", background: "#4a3510", padding: "6px 10px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.08), 0 1px 2px rgba(0,0,0,0.3)" }}>
+                        <div className="absolute left-0.5 top-1/2 -translate-y-1/2"><div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <div className="absolute right-0.5 top-1/2 -translate-y-1/2"><div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <p className="font-serif text-center truncate" style={{ fontSize: "0.55rem", color: "#C8960C", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center mt-6 pt-4" style={{ borderTop: "1px solid #5a4010" }}>
+                  <p className="font-sans uppercase" style={{ fontSize: "0.55rem", color: "#7a6020", letterSpacing: "0.25em" }}>Every plaque individually cast in museum-quality bronze · Champions in Bronze · Since 1974</p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-8">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-bold text-black uppercase tracking-widest text-sm" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
+                Design Your Booster Club Wall <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ALUMNI RECOGNITION WALL */}
+      <section className="py-16 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Alumni Recognition</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Class Reunions. Legacy Gifts. Immortalized in Bronze.</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
+                From class reunion giving campaigns to major legacy gifts — alumni recognition walls organized by class year and giving tier create a permanent, visible record of generational loyalty that inspires future graduates to give.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div style={{
+              border: "2px solid #8B6914",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%232e1c0a'/%3E%3Cpath d='M5 8 Q8 4 12 7 Q16 10 13 14 Q10 18 6 15 Q2 12 5 8Z' fill='%23251408' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M33 18 Q37 14 41 18 Q45 22 41 27 Q37 32 33 27 Q29 22 33 18Z' fill='%23291508' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M8 36 Q12 32 16 36 Q20 40 16 45 Q12 50 8 45 Q4 40 8 36Z' fill='%232a1608' stroke='%23200e05' stroke-width='0.5'/%3E%3C/svg%3E")`,
+              backgroundSize: "60px 60px",
+              padding: "2px",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3), inset 0 0 30px rgba(0,0,0,0.7)"
+            }}>
+              <div style={{
+                border: "1px solid #8B6914",
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%232e1c0a'/%3E%3Cpath d='M5 8 Q8 4 12 7 Q16 10 13 14 Q10 18 6 15 Q2 12 5 8Z' fill='%23251408' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M33 18 Q37 14 41 18 Q45 22 41 27 Q37 32 33 27 Q29 22 33 18Z' fill='%23291508' stroke='%23200e05' stroke-width='0.5'/%3E%3Cpath d='M8 36 Q12 32 16 36 Q20 40 16 45 Q12 50 8 45 Q4 40 8 36Z' fill='%232a1608' stroke='%23200e05' stroke-width='0.5'/%3E%3C/svg%3E")`,
+                backgroundSize: "60px 60px",
+                padding: "24px"
+              }}>
+                <div className="text-center mb-6">
+                  <p className="font-serif tracking-widest uppercase" style={{ fontSize: "1.6rem", color: "#DAA520", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 12px rgba(218,165,32,0.4)", letterSpacing: "0.25em" }}>Alumni Legacy Wall</p>
+                  <p className="font-sans uppercase mt-1" style={{ fontSize: "0.65rem", color: "#B8860B", letterSpacing: "0.35em", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>Class Giving · Leadership Gifts · Endowments</p>
+                </div>
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.75rem", color: "#DAA520", letterSpacing: "0.3em" }}>— Legacy Society & Named Endowments —</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {ALUMNI_DONORS.slice(0, 4).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "12px 24px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.15), 0 2px 6px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1.5 top-1/2 -translate-y-1/2"><div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} /></div>
+                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2"><div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} /></div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.85rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                        <p className="font-sans text-center uppercase mt-1" style={{ fontSize: "0.55rem", color: "#B8860B", letterSpacing: "0.2em" }}>Legacy Society</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.7rem", color: "#DAA520", letterSpacing: "0.3em" }}>— Leadership Donors & Distinguished Alumni —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {ALUMNI_DONORS.slice(4, 16).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "8px 14px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.12), 0 2px 4px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2"><div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2"><div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.7rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.65rem", color: "#DAA520", letterSpacing: "0.3em" }}>— Annual Fund & Class Gifts —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
+                    {ALUMNI_DONORS.slice(16).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #7a5c10", background: "#4a3510", padding: "6px 12px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.08), 0 1px 2px rgba(0,0,0,0.3)" }}>
+                        <div className="absolute left-0.5 top-1/2 -translate-y-1/2"><div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <div className="absolute right-0.5 top-1/2 -translate-y-1/2"><div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} /></div>
+                        <p className="font-serif text-center truncate" style={{ fontSize: "0.6rem", color: "#C8960C", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center mt-6 pt-4" style={{ borderTop: "1px solid #5a4010" }}>
+                  <p className="font-sans uppercase" style={{ fontSize: "0.55rem", color: "#7a6020", letterSpacing: "0.25em" }}>Every plaque individually cast in museum-quality bronze · Champions in Bronze · Since 1974</p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-8">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-bold text-black uppercase tracking-widest text-sm" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
+                Design Your Alumni Recognition Wall <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </FadeIn>
