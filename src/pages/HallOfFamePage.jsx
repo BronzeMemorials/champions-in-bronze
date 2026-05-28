@@ -496,10 +496,6 @@ export default function HallOfFamePage() {
 
       <TestimonialCarousel />
 
-      <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your Hall of Fame project. No commitment required. Museum-quality proof delivered fast." source="pro" />
-
-      <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
-
       {/* BUSTS */}
       <section className="py-16 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
@@ -581,6 +577,10 @@ export default function HallOfFamePage() {
           </FadeIn>
         </div>
       </section>
+
+      <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your Hall of Fame project. No commitment required. Museum-quality proof delivered fast." source="pro" />
+
+      <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
 
       <QuoteForm title="Ready to Build Your Hall of Fame?" subtitle="Over 50,000 satisfied customers. Every inductee portrait from your actual photographs. Artwork within the hour." source="pro" />
     </div>);
