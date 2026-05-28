@@ -15,7 +15,7 @@ const faqs = [
   { question: "How large can a custom bronze statue be?", answer: "We produce statues from 24\" portrait scale to 10-foot+ heroic monuments. Life-size (approximately 6 feet for a standing figure) is the most popular for stadium and campus installations." },
   { question: "How accurate is the athlete's likeness?", answer: "Exact. Our master sculptors use photogrammetric techniques to replicate every facial feature, athletic build, and signature pose from the photos you provide. Family members consistently describe the result as 'uncanny.'" },
   { question: "What is the lead time for a full statue?", answer: "Digital sculpt proof within 48 hours. Full production through casting and patina typically takes 16–28 weeks depending on size and complexity." },
-  { question: "Can statues be installed outdoors?", answer: "Yes. Our silicon bronze statues are specifically engineered for outdoor environments and rated for 200+ year durability. We coordinate all structural and installation engineering." },
+  { question: "Can statues be installed outdoors?", answer: "Yes. Our bronze statues are specifically engineered for outdoor environments and rated for 200+ year durability. We coordinate all structural and installation engineering." },
 ];
 
 const positions = [

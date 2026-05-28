@@ -56,7 +56,7 @@ const sharedFaqs = [
   { question: "Is the athlete's exact likeness captured?", answer: "Yes. We sculpt every relief and bust from the photographs you submit — not a generic athlete figure. Your player's actual face, build, and expression are captured feature by feature. No in-person sessions needed." },
   { question: "What products are available for this sport?", answer: "3D bas relief action plaques, portrait busts, championship plaques, Hall of Fame inductee displays, Photo ImageCasting multi-photo collages, donor recognition plaques, and retired jersey/number displays." },
   { question: "How fast is turnaround?", answer: "Artwork proof within 48 hours. Standard plaques ship in 15–30 days. Busts and statues take 16–24 weeks depending on size." },
-  { question: "What materials do you recommend for outdoor installation?", answer: "Silicon bronze is the traditional standard — warm amber patina, museum quality, rated 200+ years outdoors. Aluminum is lighter and lower cost, ideal for indoor applications." },
+  { question: "What materials do you recommend for outdoor installation?", answer: "Bronze is the traditional standard — warm amber patina, museum quality, rated 200+ years outdoors. Aluminum is lighter and lower cost, ideal for indoor applications." },
 ];
 
 /**

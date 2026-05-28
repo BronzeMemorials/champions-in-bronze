@@ -49,13 +49,13 @@ const pillars = [
   { icon: Trophy, title: "Honor The Champions", desc: "Bronze statues, Hall of Fame displays, and championship installations that permanently celebrate the athletes and coaches who built the program." },
   { icon: Heart, title: "Inspire Recruits & Future Athletes", desc: "The facilities that win recruiting battles are the ones that feel legendary. A bronze legacy environment signals to recruits: this program is elite." },
   { icon: Users, title: "Recognize Donors & Build Culture", desc: "Naming-rights walls and donor recognition environments that close major gifts and create lifelong institutional loyalty." },
-  { icon: Shield, title: "Preserve History Permanently", desc: "Silicon bronze rated for 200+ years outdoors. Your championship moments, your legends, your tradition — preserved forever." },
+  { icon: Shield, title: "Preserve History Permanently", desc: "Rated for 200+ years outdoors. Your championship moments, your legends, your tradition — preserved forever." },
   { icon: Star, title: "Elevate Prestige & Identity", desc: "The most respected programs in the country have one thing in common: facilities that feel like hallowed ground. We build that." },
 ];
 
 const stats = [
   { stat: "200+", label: "Stadium & Arena Installations", desc: "NFL, NCAA, and professional facilities across all 50 states." },
-  { stat: "200yrs", label: "Outdoor Durability Rating", desc: "Silicon bronze engineered to outlast every athlete it honors." },
+  { stat: "200yrs", label: "Outdoor Durability Rating", desc: "Engineered to outlast every athlete it honors." },
   { stat: "1 hr", label: "Artwork Proof Turnaround", desc: "Every project receives a museum-quality proof within the hour." },
 ];
 
@@ -63,7 +63,7 @@ const faqs = [
   { question: "What types of stadium installations do you create?", answer: "We create the full range of bronze recognition environments for athletic facilities: life-size and heroic-scale athlete statues, Hall of Fame corridor displays, donor recognition walls, championship plaques, commemorative game markers, retired number displays, and architectural bronze lettering. We handle everything from a single plaque to a full multi-zone legacy environment." },
   { question: "What structural considerations are required for stadium statues?", answer: "All outdoor stadium statues include full structural engineering — custom base design, seismic anchoring, wind load calculations, and corrosion-resistant mounting hardware. We coordinate directly with your facility engineering team." },
   { question: "How long does a stadium legacy project take?", answer: "Artwork proofs are delivered within the hour. Plaques and wall components are typically completed in 6–10 weeks. Full statue commissions range from 6–18 months depending on scope. We meet athletic department deadlines — homecoming installations, stadium openings, and ceremony unveilings." },
-  { question: "How long do outdoor bronze installations last?", answer: "Silicon bronze properly installed and maintained is rated 200+ years outdoors. We provide detailed care instructions and offer ongoing maintenance support to ensure your installation looks exceptional for generations." },
+  { question: "How long do outdoor bronze installations last?", answer: "Bronze properly installed and maintained is rated 200+ years outdoors. We provide detailed care instructions and offer ongoing maintenance support to ensure your installation looks exceptional for generations." },
   { question: "Can you match existing bronze on our property?", answer: "Yes. Our patina artists can match virtually any existing bronze patina — from classic green verdigris to dark brown or warm amber. We provide patina samples before finalizing." },
   { question: "Do you handle the full installation?", answer: "Yes. We manage all logistics — delivery, crane coordination if needed, structural installation, and final patina touch-up. Most plaque installations are completed in 1 day. Large statue installations are 1–3 days." },
 ];
