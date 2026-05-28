@@ -71,6 +71,59 @@ const faqs = [
 { question: "What shapes are available?", answer: "Rectangular, home plate, shield, medallion, football-shaped, soccer ball, baseball-shaped, diamond, and custom architectural shapes." }];
 
 
+const bustTypes = [
+{ label: "Standard Hall of Fame Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e7e3d4658_1E91D5BC-3065-45C0-97D6-B3B73A69B147.png", alt: "Standard Hall of Fame bronze bust — sculpted from athlete photograph" },
+{ label: "Athlete Portrait Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/44848d9d9_482FCAAE-ECB5-4353-8F76-83047C14293B.png", alt: "Custom athlete portrait bronze bust — exact likeness from photographs" },
+{ label: "Coach Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/876a41f00_97391964-07D6-489A-9205-582199971031.png", alt: "Coach portrait bronze bust — sculpted from photographs for Hall of Fame" },
+{ label: "Championship Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/39c3cd6df_7478CDCB-3379-4806-A3C1-5217AE403299.png", alt: "Championship bronze bust — silicon bronze, museum quality" },
+{ label: "Stadium Donor Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d3d24d314_AC0C6CDC-7A7A-4F16-9390-AD1C7E1A0EF3.png", alt: "Stadium donor recognition bronze bust" },
+{ label: "Historic Athlete Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2066bf5b0_086E8FF7-8735-486A-8AD4-7F4FC37F21EE.png", alt: "Historic athlete bronze bust — created from archival photographs" }];
+
+const soccerPositions = [
+{ position: "Forward Kick Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png" },
+{ position: "Goal Celebration Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/aceb82ef5_8C52F27A-8EA2-4D4F-AF16-D02E1C58BFD8.png" }];
+
+const hockeyPositions = [
+{ position: "Goalie", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png" },
+{ position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/18d3f95a4_86AED4DB-6DE3-443F-B6D5-9A1ECB6B5D65.png" },
+{ position: "Defenseman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b9032e0d_B9A32438-CA2C-4E28-8952-22DB0925B681.png" }];
+
+const baseballPositions = [
+{ position: "Pitcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b27459035_F3B8712D-DC41-4B43-8236-36BD93C004B6.png" },
+{ position: "Batter", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e991eeb20_D6CEFC45-7442-4F85-B951-76E2404E7719.png" },
+{ position: "Catcher", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9354cdeae_6A6BF141-0B16-4BAA-B2A6-B4AB5070E20B.png" }];
+
+const basketballPositions = [
+{ position: "Guard", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/61a13fc21_0D8CBDF0-E92C-4C8C-BB56-78829096663D.png" },
+{ position: "Forward", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/147740e3b_4CA5A3D0-6148-4652-9EB3-BCF3DAE9DEC7.png" },
+{ position: "Center Dunk Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/020f34d62_5E076DD7-856B-4C90-A8C7-3BD2336FD64F.png" }];
+
+const footballPositions = [
+{ position: "Quarterback", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1d6975353_D2D956EF-C9FD-46EA-9075-C55DEEFA131F.png" },
+{ position: "Receiver", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9b8441874_FCBF2923-CF61-4AE0-B720-2DF6F527DF5E.png" },
+{ position: "Lineman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png" },
+{ position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png" }];
+
+function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
+  return (
+    <div className={`grid grid-cols-2 ${cols} gap-4 md:gap-6`}>
+      {positions.map((item, i) =>
+      <FadeIn key={item.position} delay={i * 0.08}>
+          <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
+            <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+              <img src={item.img} alt={`Bronze ${sport} ${item.position} statue — life-size athletic sculpture`}
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div className="p-4 text-center border-t border-gray-100">
+              <p className="font-serif text-base text-gray-900">{item.position}</p>
+              <p className="text-gray-400 font-sans text-xs uppercase tracking-widest mt-1">{sport}</p>
+            </div>
+          </div>
+        </FadeIn>
+      )}
+    </div>);
+}
+
 const products = [
 { title: "Individual Inductee Plaque", desc: "3D relief portrait + name, years of service, stats, and achievement text. The foundation of every Hall of Fame." },
 { title: "Jersey & Action Relief Plaques", desc: "Sport-specific themed plaques featuring the inductee's jersey number, action poses, stadium backgrounds, championship rings, and Hall of Fame crests." },
@@ -446,6 +499,88 @@ export default function HallOfFamePage() {
       <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your Hall of Fame project. No commitment required. Museum-quality proof delivered fast." source="pro" />
 
       <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
+
+      {/* BUSTS */}
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Preserve Legacy For Generations</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-white">Hall of Fame Bronze Busts</h2>
+              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-base">Immortalize Hall of Fame inductees in museum-quality bronze — each bust created from your exact photographs using advanced sculptural technology. No in-person sessions required.</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {bustTypes.map((item, i) =>
+            <FadeIn key={item.label} delay={i * 0.08}>
+                <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-700 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
+                  <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+                    <img src={item.img} alt={item.alt || item.label} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4 text-center border-t border-gray-200">
+                    <p className="font-serif text-base text-gray-900">{item.label}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            )}
+          </div>
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10 flex flex-wrap justify-center gap-4">
+              <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
+                View All Bronze Busts <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-400 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-900/20 transition-colors">
+                Request Bust Quote
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* STATUES */}
+      <section className="py-16 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Honor Sacrifice. Celebrate Champions.</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-white">Bronze Statues — Exact Likeness from Your Photograph</h2>
+              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-base">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks — sculpted from your actual photographs.</p>
+            </div>
+          </FadeIn>
+
+          <div className="mb-12">
+            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Football</p></FadeIn>
+            <SportGrid positions={footballPositions} sport="Football" cols="lg:grid-cols-4" />
+          </div>
+          <div className="mb-12">
+            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Soccer</p></FadeIn>
+            <SportGrid positions={soccerPositions} sport="Soccer" cols="lg:grid-cols-2" />
+          </div>
+          <div className="mb-12">
+            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Hockey</p></FadeIn>
+            <SportGrid positions={hockeyPositions} sport="Hockey" />
+          </div>
+          <div className="mb-12">
+            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Baseball</p></FadeIn>
+            <SportGrid positions={baseballPositions} sport="Baseball" />
+          </div>
+          <div className="mb-10">
+            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Basketball</p></FadeIn>
+            <SportGrid positions={basketballPositions} sport="Basketball" />
+          </div>
+
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-4 flex flex-wrap justify-center gap-4">
+              <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
+                View All Bronze Statues <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link to="/all-sports" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-400 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-900/20 transition-colors">
+                Browse All Sports <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
 
       <QuoteForm title="Ready to Build Your Hall of Fame?" subtitle="Over 50,000 satisfied customers. Every inductee portrait from your actual photographs. Artwork within the hour." source="pro" />
     </div>);
