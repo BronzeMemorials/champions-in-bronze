@@ -22,7 +22,7 @@ const img6 = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9
 const sports = ["All Sports", "Football", "Basketball", "Baseball", "Hockey", "Soccer", "Lacrosse", "Golf"];
 
 const gallery = [
-  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Silicon Bronze · 18×24″", alt: "3D bas-relief football quarterback action bronze plaque — NFL bronze 18x24" },
+  { sport: "Football", img: img1, title: "QB Action Relief", sub: "NFL · Bronze · 18×24″", alt: "3D bas-relief football quarterback action bronze plaque — NFL bronze 18x24" },
   { sport: "Football", img: img2, title: "Championship Scene", sub: "NCAA · Bronze Patina · 24×30″", alt: "3D bas-relief NCAA football championship scene bronze plaque — 24x30" },
   { sport: "Basketball", img: img3, title: "MVP Portrait Plaque", sub: "NBA · Dark Bronze · 16×20″", alt: "3D bas-relief basketball MVP Hall of Fame portrait bronze plaque — NBA dark bronze 16x20" },
   { sport: "Basketball", img: img4, title: "Retirement Honor", sub: "NCAA · Aluminum · 20×24″", alt: "3D bas-relief basketball retirement honor plaque — NCAA aluminum 20x24" },
@@ -30,7 +30,7 @@ const gallery = [
   { sport: "Hockey", img: img6, title: "Stanley Cup Scene", sub: "NHL · Bronze · 24×30″", alt: "3D bas-relief hockey Stanley Cup championship scene bronze plaque — NHL 24x30" },
   { sport: "Soccer", img: img1, title: "Championship Trophy", sub: "MLS · Bronze · 18×24″", alt: "3D bas-relief soccer championship bronze plaque — MLS bronze 18x24" },
   { sport: "Lacrosse", img: img2, title: "All-American Portrait", sub: "NCAA · Aluminum · 16×20″", alt: "3D bas-relief lacrosse All-American portrait plaque — NCAA aluminum 16x20" },
-  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Silicon Bronze · 18×24″", alt: "3D bas-relief golf tournament champion bronze plaque — PGA bronze 18x24" },
+  { sport: "Golf", img: img3, title: "Tournament Champion", sub: "PGA · Bronze · 18×24″", alt: "3D bas-relief golf tournament champion bronze plaque — PGA bronze 18x24" },
 ];
 
 const faqs = [
@@ -39,7 +39,7 @@ const faqs = [
   { question: "What sports and shapes are available?", answer: "Every sport. We create sport-shaped plaques including home plate, pennant, jersey outline, basketball, football, puck, and any custom architectural form. We also offer standard rectangular, oval, and arched formats." },
   { question: "What is the price range?", answer: "Every project is custom-quoted based on size, material, and complexity. Request a quote and we'll deliver a full proposal and artwork proof within the hour — no commitment required." },
   { question: "How fast is turnaround?", answer: "Digital artwork proof within 48 hours. Physical production is 15–30 days for standard plaques. Rush 5-day service available on select sizes." },
-  { question: "Indoor vs outdoor?", answer: "Both. Silicon bronze is fully outdoor-rated for 100+ years. Aluminum is ideal for indoor and is significantly lighter. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
+  { question: "Indoor vs outdoor?", answer: "Both. Bronze is fully outdoor-rated for 100+ years. Aluminum is ideal for indoor and is significantly lighter. We recommend bronze for permanent outdoor installations and aluminum for interior walls." },
 ];
 
 export default function ThreeDReliefPlaques() {
@@ -153,7 +153,7 @@ export default function ThreeDReliefPlaques() {
           <FadeIn>
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl text-parchment">Available Formats & Specs</h2>
-              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">Silicon bronze or aluminum. Any size. Any shape — including home plate, pennant, jersey silhouette, and custom architectural forms. Designed to expand annually for Hall of Fame programs that add inductees every year.</p>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">Bronze or aluminum. Any size. Any shape — including home plate, pennant, jersey silhouette, and custom architectural forms. Designed to expand annually for Hall of Fame programs that add inductees every year.</p>
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -161,8 +161,8 @@ export default function ThreeDReliefPlaques() {
               {[
                 { size: "12 × 18″", material: "Bronze or Aluminum", relief: "Single portrait" },
                 { size: "16 × 20″", material: "Bronze or Aluminum", relief: "Portrait + stats panel" },
-                { size: "18 × 24″", material: "Silicon Bronze", relief: "Action scene" },
-                { size: "24 × 30″", material: "Silicon Bronze", relief: "Multi-figure / championship" },
+                { size: "18 × 24″", material: "Bronze", relief: "Action scene" },
+                { size: "24 × 30″", material: "Bronze", relief: "Multi-figure / championship" },
                 { size: "Custom", material: "Any alloy", relief: "Any composition" },
               ].map((row, i) => (
                 <div key={row.size} className={`grid grid-cols-3 gap-4 px-6 py-4 text-sm border-b border-bronze/10 last:border-0 ${i === 0 ? "bg-bronze/10 font-semibold text-parchment/80" : "text-parchment/60"}`}>

@@ -20,7 +20,7 @@ const faqs = [
   { question: "Do you need the athlete present for sculpting?", answer: "No. Every bust and statue is created entirely from photographs you provide. Our master sculptors recreate exact likeness — expression, bone structure, muscle definition — from high-resolution photos alone. No in-person sessions required, ever." },
   { question: "How accurate is the likeness from photos?", answer: "Extremely accurate. We specialize in true photographic replication — your exact facial structure, expression, and presence. Not an artistic interpretation. Clients regularly describe the result as 'uncanny' and 'emotionally overwhelming.'" },
   { question: "What is the size range?", answer: "We produce busts from tabletop 12-inch scale to heroic 9-foot+ full statues. Most commission requests are life-size (approximately 6 feet for a standing figure) or 1/2-life heroic busts. All sizes available." },
-  { question: "Bronze vs. aluminum — which should I choose?", answer: "Silicon bronze is the traditional museum choice — rich amber warmth, exceptional detail retention, 200-year proven outdoor longevity. Aluminum is significantly lighter and lower cost, ideal for indoor installations and budget-conscious programs. Both are beautiful." },
+  { question: "Bronze vs. aluminum — which should I choose?", answer: "Bronze is the traditional museum choice — rich amber warmth, exceptional detail retention, 200-year proven outdoor longevity. Aluminum is significantly lighter and lower cost, ideal for indoor installations and budget-conscious programs. Both are beautiful." },
   { question: "What is the typical lead time?", answer: "Artwork and 3D digital sculpt proof within 48 hours. Full-scale clay sculpting through cast and patina typically takes 16–24 weeks depending on size and complexity. Rush options available." },
   { question: "Can you create a bust from an old photograph?", answer: "Yes. We regularly work with historical photographs, including black-and-white and low-resolution archival images. Our sculptors are trained in photogrammetric reconstruction and historical reference research." },
 ];
@@ -129,9 +129,9 @@ export default function BustsAndStatues() {
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", title: "Firefighter Memorial Statue", sub: "Silicon bronze · 72-inch · Memorial installation" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/8bf520da9_figherfighter-72-inches.png", title: "Firefighter Memorial Statue", sub: "Bronze · 72-inch · Memorial installation" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ce2eda476_firefighter-72-inches.jpg", title: "Kneeling Firefighter", sub: "Bronze · Life-size · First responder memorial" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/bfca59864_vietnam-soldier.jpg", title: "Vietnam Soldier Statue", sub: "Silicon bronze · Life-size · Veterans memorial" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/bfca59864_vietnam-soldier.jpg", title: "Vietnam Soldier Statue", sub: "Bronze · Life-size · Veterans memorial" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">

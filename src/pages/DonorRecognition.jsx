@@ -75,7 +75,7 @@ const wallTypes = [
 
 const whyUs = [
   { icon: Clock, title: "Artwork Proof Within The Hour", desc: "Submit your donor list and we deliver a full digital proof of your wall design within the hour — no commitment required." },
-  { icon: Shield, title: "200-Year Silicon Bronze", desc: "We cast in the same alloy used in fine art and museum sculpture. Your donor wall will outlast every person in this generation." },
+  { icon: Shield, title: "200-Year Museum-Grade Bronze", desc: "We cast in the same alloy used in fine art and museum sculpture. Your donor wall will outlast every person in this generation." },
   { icon: Award, title: "50+ Years of Institutional Work", desc: "NFL stadiums, NCAA programs, Ivy League universities, hospitals, libraries — we've installed donor walls everywhere." },
   { icon: Star, title: "50,000+ Satisfied Customers", desc: "The most trusted name in institutional bronze recognition in the United States." },
   { icon: Users, title: "Modular Expansion System", desc: "Every wall is designed to grow. Add new donors, new tiers, new phases every year — seamlessly." },
@@ -134,7 +134,7 @@ export default function DonorRecognition() {
             <div className="flex flex-wrap gap-6">
               {[
                 { icon: Clock, text: "Wall Design Proof Within The Hour" },
-                { icon: Shield, text: "Silicon Bronze — 200 Years Outdoors" },
+                { icon: Shield, text: "200 Years Outdoors — Museum-Grade Bronze" },
                 { icon: Award, text: "50+ Years of Institutional Work" },
                 { icon: Star, text: "50,000+ Satisfied Customers" },
               ].map(({ icon: Icon, text }) => (
@@ -185,7 +185,7 @@ export default function DonorRecognition() {
             {[
               { stat: "40%+", label: "Avg Donor Increase", desc: "Athletic programs see dramatic alumni giving growth after installation" },
               { stat: "200+", label: "Plaques Per Wall", desc: "Single installations can recognize hundreds of donors at once" },
-              { stat: "200 Yrs", label: "Silicon Bronze Rated", desc: "The same alloy used in fine art and museum sculpture" },
+              { stat: "200 Yrs", label: "Museum-Grade Bronze", desc: "The same alloy used in fine art and museum sculpture" },
               { stat: "1 Hour", label: "Design Proof", desc: "We deliver your wall concept within the hour, no commitment" },
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.1}>
@@ -427,7 +427,7 @@ export default function DonorRecognition() {
             {[
               { step: "01", title: "Submit Your Donor List", desc: "Send us your donor names, giving levels, and any photos or logos. That's all we need to get started." },
               { step: "02", title: "Receive Your Artwork Proof — Within The Hour", desc: "Our design team produces a full digital mockup of your wall within the hour. See exactly what it will look like in bronze before you commit." },
-              { step: "03", title: "Approve & We Begin Casting", desc: "Once you approve the design, we pour and cast every plaque in our American foundry. Silicon bronze, hand-finished to perfection." },
+              { step: "03", title: "Approve & We Begin Casting", desc: "Once you approve the design, we pour and cast every plaque in our American foundry. Museum-grade bronze, hand-finished to perfection." },
               { step: "04", title: "Delivery & Professional Installation", desc: "We ship or coordinate professional installation nationwide. Your wall is mounted, leveled, and ready for your unveiling event." },
             ].map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.1}>
