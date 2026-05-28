@@ -120,8 +120,8 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayProducts.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
-                <Link to={item.to} className="group relative aspect-[4/3] overflow-hidden rounded-sm block">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Link to={item.to} className="group relative overflow-hidden rounded-sm block">
+                  <img src={item.img} alt={item.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment group-hover:text-gold transition-colors">{item.title}</h3>
@@ -187,8 +187,8 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
             {bustTypes.map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-                  <div className="aspect-[3/4] overflow-hidden bg-gray-100">
-                    <img src={item.img} alt={item.label} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <div className="bg-gray-100 p-2">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-gray-200">
                     <p className="font-serif text-base text-gray-900">{item.label}</p>
@@ -225,8 +225,8 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
               {statuesBySport[sport].map((item, i) => (
                 <FadeIn key={item.position} delay={i * 0.08}>
                   <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-                    <div className="aspect-[3/4] overflow-hidden bg-white">
-                      <img src={item.img} alt={`Bronze ${sport} ${item.position} statue`} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                    <div className="bg-white p-2">
+                      <img src={item.img} alt={`Bronze ${sport} ${item.position} statue`} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div className="p-4 text-center border-t border-gray-100">
                       <p className="font-serif text-base text-gray-900">{item.position}</p>

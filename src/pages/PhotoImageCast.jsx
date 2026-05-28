@@ -86,8 +86,8 @@ export default function PhotoImageCast() {
               </div>
             </FadeIn>
             <FadeIn>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-                <img src={img1} alt="Photo ImageCasting bronze plaque — real photographs permanently cast in museum-quality bronze" className="w-full h-full object-cover" />
+              <div className="relative overflow-hidden rounded-sm">
+                <img src={img1} alt="Photo ImageCasting bronze plaque — real photographs permanently cast in museum-quality bronze" className="w-full h-auto object-contain" />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">Photo ImageCasting™</span>
@@ -142,8 +142,8 @@ export default function PhotoImageCast() {
               { img: img3, title: "Building Dedication", desc: "Photo history of the facility, founding donors, and inaugural events — cast for the lobby wall.", alt: "Building dedication Photo ImageCast bronze plaque for stadium or arena" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
-                <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.alt || item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="group relative overflow-hidden rounded-sm">
+                  <img src={item.img} alt={item.alt || item.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>

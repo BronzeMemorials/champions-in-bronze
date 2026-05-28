@@ -63,8 +63,8 @@ export default function BustsAndStatues() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={img1} alt="Custom bronze bust sculpted from photograph — exact likeness, no in-person sessions" loading="lazy" className="w-full h-full object-cover" />
+              <div className="rounded-sm overflow-hidden">
+                <img src={img1} alt="Custom bronze bust sculpted from photograph — exact likeness, no in-person sessions" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -135,8 +135,8 @@ export default function BustsAndStatues() {
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/bfca59864_vietnam-soldier.jpg", title: "Vietnam Soldier Statue", sub: "Bronze · Life-size · Veterans memorial" },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
-                <div className="group relative aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                <div className="group relative overflow-hidden rounded-sm">
+                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
                   <div className="absolute bottom-0 p-6">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>

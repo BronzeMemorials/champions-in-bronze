@@ -127,8 +127,8 @@ export default function StadiumBronzeStatues() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img src={statueImg} alt="Stadium bronze legacy" loading="lazy" className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-sm">
+                <img src={statueImg} alt="Stadium bronze legacy" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -168,8 +168,8 @@ export default function StadiumBronzeStatues() {
           <div className="grid md:grid-cols-2 gap-6">
             {offerings.map((p, i) => (
               <FadeIn key={p.to} delay={i * 0.1}>
-                <Link to={p.to} className="group relative aspect-[16/10] overflow-hidden block rounded-sm">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Link to={p.to} className="group relative overflow-hidden block rounded-sm">
+                  <img src={p.image} alt={p.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.15em] px-3 py-1">{p.label}</span>
@@ -260,8 +260,8 @@ export default function StadiumBronzeStatues() {
               </Link>
             </FadeIn>
             <FadeIn>
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img src={donorImg} alt="Stadium donor recognition wall" loading="lazy" className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-sm">
+                <img src={donorImg} alt="Stadium donor recognition wall" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
           </div>

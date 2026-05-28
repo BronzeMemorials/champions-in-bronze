@@ -55,8 +55,8 @@ export default function CustomBronzeStatues() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={heroImg} alt="Custom bronze athlete statue" loading="lazy" className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-sm">
+                <img src={heroImg} alt="Custom bronze athlete statue" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -107,13 +107,13 @@ export default function CustomBronzeStatues() {
           {/* Statue Gallery */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <FadeIn>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={goalieImg} alt="Hockey goalie bronze statue" loading="lazy" className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-sm">
+                <img src={goalieImg} alt="Hockey goalie bronze statue" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={guardImg} alt="Basketball guard bronze statue" loading="lazy" className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-sm">
+                <img src={guardImg} alt="Basketball guard bronze statue" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </FadeIn>
           </div>

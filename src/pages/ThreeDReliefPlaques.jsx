@@ -123,8 +123,8 @@ export default function ThreeDReliefPlaques() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((item, i) => (
               <FadeIn key={`${item.sport}-${item.title}`} delay={i * 0.07}>
-                <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
-                  <img src={item.img} alt={item.alt || item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="group relative overflow-hidden rounded-sm">
+                  <img src={item.img} alt={item.alt || item.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
                   <div className="absolute top-3 left-3">
                     <span className="bg-gold/20 border border-gold/40 text-gold text-xs font-sans uppercase tracking-[0.12em] px-2 py-0.5">{item.sport}</span>
@@ -201,8 +201,8 @@ export default function ThreeDReliefPlaques() {
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group overflow-hidden rounded-sm border border-bronze/20 hover:border-gold transition-all duration-300">
-                  <div className="aspect-[4/5] overflow-hidden bg-secondary/20 flex items-center justify-center">
-                    <img src={item.url} alt={`${item.label} — ${item.desc} Hall of Fame bronze plaque`} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                  <div className="bg-secondary/20 flex items-center justify-center p-2">
+                    <img src={item.url} alt={`${item.label} — ${item.desc} Hall of Fame bronze plaque`} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-3 text-center">
                     <p className="font-serif text-sm text-parchment font-semibold">{item.label}</p>
