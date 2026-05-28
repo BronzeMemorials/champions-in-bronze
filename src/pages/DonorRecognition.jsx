@@ -213,8 +213,14 @@ export default function DonorRecognition() {
 
           {/* Architectural bronze wall — oxidized bronze aesthetic */}
           <FadeIn delay={0.1}>
-            {/* Outer wall border — single line bronze */}
-            <div style={{ border: "2px solid #8B6914", background: "#2a1f0a", padding: "2px", boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3)" }}>
+            {/* Outer wall border — single line bronze with leatherette background */}
+            <div style={{ 
+              border: "2px solid #8B6914", 
+              background: "linear-gradient(135deg, #3a2a1a 0%, #4a3a2a 25%, #3a2a1a 50%, #4a3a2a 75%, #3a2a1a 100%), linear-gradient(45deg, transparent 30%, rgba(139, 105, 20, 0.1) 30%, rgba(139, 105, 20, 0.1) 70%, transparent 70%), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px)",
+              backgroundSize: "100% 100%, 100% 100%, 4px 4px",
+              padding: "2px", 
+              boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3), inset 0 0 20px rgba(0,0,0,0.6)" 
+            }}>
               {/* Inner inset border */}
               <div style={{ border: "1px solid #8B6914", background: "#3d2e0f", padding: "24px" }}>
 
@@ -230,14 +236,12 @@ export default function DonorRecognition() {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {SAMPLE_DONORS.slice(0, 6).map((name, i) => (
                       <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "10px 20px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.15), 0 2px 6px rgba(0,0,0,0.4)" }}>
-                        {/* Screw holes left */}
-                        <div className="absolute left-1.5 top-1/2 -translate-y-1/2 flex flex-col gap-3">
-                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                        {/* Screw hole left */}
+                        <div className="absolute left-1.5 top-1/2 -translate-y-1/2">
                           <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
                         </div>
-                        {/* Screw holes right */}
-                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2 flex flex-col gap-3">
-                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                        {/* Screw hole right */}
+                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2">
                           <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
                         </div>
                         <p className="font-serif text-center" style={{ fontSize: "0.8rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8), 0 0 6px rgba(218,165,32,0.25)", lineHeight: 1.3 }}>{name}</p>
@@ -253,12 +257,10 @@ export default function DonorRecognition() {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {SAMPLE_DONORS.slice(6, 18).map((name, i) => (
                       <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "8px 14px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.12), 0 2px 4px rgba(0,0,0,0.4)" }}>
-                        <div className="absolute left-1 top-1/2 -translate-y-1/2 flex flex-col gap-2">
-                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2">
                           <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
                         </div>
-                        <div className="absolute right-1 top-1/2 -translate-y-1/2 flex flex-col gap-2">
-                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2">
                           <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
                         </div>
                         <p className="font-serif text-center" style={{ fontSize: "0.7rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8), 0 0 5px rgba(218,165,32,0.2)", lineHeight: 1.3 }}>{name}</p>
@@ -273,12 +275,10 @@ export default function DonorRecognition() {
                   <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1.5">
                     {SAMPLE_DONORS.slice(18, 36).map((name, i) => (
                       <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "6px 12px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.1), 0 1px 3px rgba(0,0,0,0.4)" }}>
-                        <div className="absolute left-1 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
-                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2">
                           <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
                         </div>
-                        <div className="absolute right-1 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
-                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2">
                           <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
                         </div>
                         <p className="font-serif text-center" style={{ fontSize: "0.6rem", color: "#DAA520", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
@@ -293,12 +293,10 @@ export default function DonorRecognition() {
                   <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
                     {SAMPLE_DONORS.slice(12).map((name, i) => (
                       <div key={i} className="relative" style={{ border: "1px solid #7a5c10", background: "#4a3510", padding: "5px 10px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.08), 0 1px 2px rgba(0,0,0,0.3)" }}>
-                        <div className="absolute left-0.5 top-1/2 -translate-y-1/2 flex flex-col gap-1">
-                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        <div className="absolute left-0.5 top-1/2 -translate-y-1/2">
                           <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
                         </div>
-                        <div className="absolute right-0.5 top-1/2 -translate-y-1/2 flex flex-col gap-1">
-                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        <div className="absolute right-0.5 top-1/2 -translate-y-1/2">
                           <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
                         </div>
                         <p className="font-serif text-center truncate" style={{ fontSize: "0.55rem", color: "#C8960C", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
