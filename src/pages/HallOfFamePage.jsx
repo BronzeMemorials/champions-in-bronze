@@ -110,7 +110,7 @@ function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
       {positions.map((item, i) =>
       <FadeIn key={item.position} delay={i * 0.08}>
           <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-            <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+            <div className="aspect-[3/4] overflow-hidden bg-white">
               <img src={item.img} alt={`Bronze ${sport} ${item.position} statue — life-size athletic sculpture`}
             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             </div>
