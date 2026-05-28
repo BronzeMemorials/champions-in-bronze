@@ -3,6 +3,7 @@ import { ArrowRight, Phone, CheckCircle, Shield, Award, Clock, Users, Star, Buil
 import SEOHead from "../components/shared/SEOHead";
 import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
@@ -530,6 +531,7 @@ export default function DonorRecognition() {
         source="pro"
       />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} title="Donor Recognition Wall FAQ" />
 
       <QuoteForm

@@ -5,6 +5,7 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
@@ -94,6 +95,7 @@ export default function CollegeAthleticRecognition() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Elevate Your Athletic Program" subtitle="Tell us about your program. We'll design a bronze recognition plan within 48 hours." source="pro" />
     </div>

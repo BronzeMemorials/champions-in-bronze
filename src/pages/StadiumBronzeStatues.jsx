@@ -6,6 +6,7 @@ import SEOHead from "../components/shared/SEOHead";
 import SocialProofBar from "../components/shared/SocialProofBar";
 import QuoteForm from "../components/shared/QuoteForm";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png";
 const donorImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png";
@@ -321,6 +322,7 @@ export default function StadiumBronzeStatues() {
         </div>
       </section>
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm
         title="Build A Stadium Worth Remembering"

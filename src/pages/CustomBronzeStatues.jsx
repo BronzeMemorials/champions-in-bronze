@@ -5,6 +5,7 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png";
@@ -161,6 +162,7 @@ export default function CustomBronzeStatues() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission Your Bronze Statue" subtitle="Upload athlete photos and project details. Digital sculpt proof within 48 hours." source="pro" />
     </div>

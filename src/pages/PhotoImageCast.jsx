@@ -4,6 +4,7 @@ import SEOHead from "../components/shared/SEOHead";
 import ProductHero from "../components/shared/ProductHero";
 import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
 
@@ -157,6 +158,7 @@ export default function PhotoImageCast() {
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} title="Photo ImageCasting FAQ" />
       <QuoteForm
         title="Start Your Photo ImageCasting Plaque"

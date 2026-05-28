@@ -7,6 +7,7 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import STLGallery from "../components/shared/STLGallery";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
 import ProcessGallery from "../components/shared/ProcessGallery";
@@ -313,6 +314,7 @@ export default function ThreeDReliefPlaques() {
         ]}
       />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Get Your Instant Price" subtitle="Upload photos or a project brief. Artwork proof within 48 hours. We don't miss deadlines." source="pro" />
     </div>

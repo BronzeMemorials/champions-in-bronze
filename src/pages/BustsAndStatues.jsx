@@ -7,6 +7,7 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FadeIn from "../components/shared/FadeIn";
 import VideoModelGallery from "../components/shared/VideoModelGallery";
 import FAQSection from "../components/shared/FAQSection";
+import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
 import ProcessGallery from "../components/shared/ProcessGallery";
@@ -269,6 +270,7 @@ export default function BustsAndStatues() {
         ]}
       />
 
+      <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
     </div>
