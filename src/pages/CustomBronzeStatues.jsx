@@ -7,7 +7,7 @@ import SEOHead from "../components/shared/SEOHead";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 
-const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
+const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png";
 const goalieImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f91a2af55_0BB7CEA4-F96D-4C51-BADB-946A7C8080BB.png";
 const guardImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png";
 
