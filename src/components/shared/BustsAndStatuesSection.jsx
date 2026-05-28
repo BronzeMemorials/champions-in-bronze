@@ -13,13 +13,13 @@ const bustTypes = [
 
 const statues = [
   { position: "Quarterback", sport: "Football", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png" },
-  { position: "Running Back", sport: "Football", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png" },
-  { position: "Forward", sport: "Basketball", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/147740e3b_4CA5A3D0-6148-4652-9EB3-BCF3DAE9DEC7.png" },
+  { position: "Running Back", sport: "Football", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4ca137199_football01.png" },
+  { position: "Forward", sport: "Basketball", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/544558f12_basketball33.png" },
   { position: "Pitcher", sport: "Baseball", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ae8cf7957_ChatGPTImageMay28202608_44_52AM.png" },
-  { position: "Forward Kick", sport: "Soccer", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png" },
-  { position: "Goalie", sport: "Hockey", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png" },
-  { position: "Lineman", sport: "Football", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png" },
-  { position: "Batter", sport: "Baseball", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e991eeb20_D6CEFC45-7442-4F85-B951-76E2404E7719.png" },
+  { position: "Forward Kick", sport: "Soccer", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/be21ffeac_soccerkick.png" },
+  { position: "Goalie", sport: "Hockey", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/145c4c55d_hockey30.png" },
+  { position: "Lineman", sport: "Football", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/016aef07b_football78.png" },
+  { position: "Batter", sport: "Baseball", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c558a13c0_batterbatter.png" },
 ];
 
 export default function BustsAndStatuesSection() {
