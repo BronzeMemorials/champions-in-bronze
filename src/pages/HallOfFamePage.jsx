@@ -501,19 +501,19 @@ export default function HallOfFamePage() {
       <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
 
       {/* BUSTS */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-10">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Preserve Legacy For Generations</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">Hall of Fame Bronze Busts</h2>
-              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-base">Immortalize Hall of Fame inductees in museum-quality bronze — each bust created from your exact photographs using advanced sculptural technology. No in-person sessions required.</p>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Preserve Legacy For Generations</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Hall of Fame Bronze Busts</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base">Immortalize Hall of Fame inductees in museum-quality bronze — each bust created from your exact photographs using advanced sculptural technology. No in-person sessions required.</p>
             </div>
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {bustTypes.map((item, i) =>
             <FadeIn key={item.label} delay={i * 0.08}>
-                <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-700 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
+                <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
                   <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                     <img src={item.img} alt={item.alt || item.label} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   </div>
@@ -529,7 +529,7 @@ export default function HallOfFamePage() {
               <Link to="/bronze-athlete-busts" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
                 View All Bronze Busts <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-400 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-900/20 transition-colors">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-50 transition-colors">
                 Request Bust Quote
               </Link>
             </div>
@@ -538,34 +538,34 @@ export default function HallOfFamePage() {
       </section>
 
       {/* STATUES */}
-      <section className="py-16 bg-gray-800">
+      <section className="py-16 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-10">
-              <span className="text-yellow-500 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Honor Sacrifice. Celebrate Champions.</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">Bronze Statues — Exact Likeness from Your Photograph</h2>
-              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-base">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks — sculpted from your actual photographs.</p>
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Honor Sacrifice. Celebrate Champions.</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Bronze Statues — Exact Likeness from Your Photograph</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base">Life-size and heroic-scale bronze statues for stadium entrances, arena lobbies, and campus landmarks — sculpted from your actual photographs.</p>
             </div>
           </FadeIn>
 
           <div className="mb-12">
-            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Football</p></FadeIn>
+            <FadeIn><p className="font-serif text-2xl text-yellow-700 mb-6">Football</p></FadeIn>
             <SportGrid positions={footballPositions} sport="Football" cols="lg:grid-cols-4" />
           </div>
           <div className="mb-12">
-            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Soccer</p></FadeIn>
+            <FadeIn><p className="font-serif text-2xl text-yellow-700 mb-6">Soccer</p></FadeIn>
             <SportGrid positions={soccerPositions} sport="Soccer" cols="lg:grid-cols-2" />
           </div>
           <div className="mb-12">
-            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Hockey</p></FadeIn>
+            <FadeIn><p className="font-serif text-2xl text-yellow-700 mb-6">Hockey</p></FadeIn>
             <SportGrid positions={hockeyPositions} sport="Hockey" />
           </div>
           <div className="mb-12">
-            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Baseball</p></FadeIn>
+            <FadeIn><p className="font-serif text-2xl text-yellow-700 mb-6">Baseball</p></FadeIn>
             <SportGrid positions={baseballPositions} sport="Baseball" />
           </div>
           <div className="mb-10">
-            <FadeIn><p className="font-serif text-2xl text-yellow-500 mb-6">Basketball</p></FadeIn>
+            <FadeIn><p className="font-serif text-2xl text-yellow-700 mb-6">Basketball</p></FadeIn>
             <SportGrid positions={basketballPositions} sport="Basketball" />
           </div>
 
@@ -574,7 +574,7 @@ export default function HallOfFamePage() {
               <Link to="/custom-bronze-athlete-statues" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
                 View All Bronze Statues <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/all-sports" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-400 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-900/20 transition-colors">
+              <Link to="/all-sports" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-50 transition-colors">
                 Browse All Sports <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
