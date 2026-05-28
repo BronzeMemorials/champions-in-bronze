@@ -211,68 +211,106 @@ export default function DonorRecognition() {
             </div>
           </FadeIn>
 
-          {/* Architectural bronze wall header */}
+          {/* Architectural bronze wall — oxidized bronze aesthetic */}
           <FadeIn delay={0.1}>
-            <div className="border-4 border-yellow-600 bg-white shadow-2xl overflow-hidden">
-              {/* Wall title bar */}
-              <div className="text-center py-6 px-4" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)" }}>
-                <p className="font-serif text-2xl md:text-3xl text-black tracking-widest uppercase">Champions Wall of Honor</p>
-                <p className="font-sans text-xs uppercase tracking-[0.3em] text-black/70 mt-1">Founding Donors · Established in Bronze</p>
-              </div>
+            {/* Outer wall border — single line bronze */}
+            <div style={{ border: "2px solid #8B6914", background: "#2a1f0a", padding: "2px", boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3)" }}>
+              {/* Inner inset border */}
+              <div style={{ border: "1px solid #8B6914", background: "#3d2e0f", padding: "24px" }}>
 
-              {/* Tier: Founding Patron */}
-              <div className="bg-amber-50 border-b-2 border-yellow-400 px-6 py-4">
-                <p className="font-serif text-sm text-yellow-800 uppercase tracking-[0.3em] text-center mb-4 border-b border-yellow-300 pb-2">— Founding Patrons —</p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {SAMPLE_DONORS.slice(0, 6).map((name, i) => (
-                    <div key={i} className="border-2 border-yellow-500 bg-white px-4 py-3 text-center shadow-sm">
-                      <p className="font-serif text-sm text-gray-900 leading-tight">{name}</p>
-                      <p className="font-sans text-xs text-yellow-700 uppercase tracking-widest mt-1">Founding Patron</p>
-                    </div>
-                  ))}
+                {/* Wall title */}
+                <div className="text-center mb-6">
+                  <p className="font-serif tracking-widest uppercase" style={{ fontSize: "1.6rem", color: "#DAA520", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 12px rgba(218,165,32,0.4)", letterSpacing: "0.25em" }}>Champions Wall of Honor</p>
+                  <p className="font-sans uppercase mt-1" style={{ fontSize: "0.65rem", color: "#B8860B", letterSpacing: "0.35em", textShadow: "0 1px 2px rgba(0,0,0,0.6)" }}>Founding Donors · Established in Bronze</p>
                 </div>
-              </div>
 
-              {/* Tier: Gold */}
-              <div className="bg-yellow-50 border-b border-yellow-200 px-6 py-4">
-                <p className="font-serif text-sm text-yellow-700 uppercase tracking-[0.3em] text-center mb-4 border-b border-yellow-200 pb-2">— Gold Donors —</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                  {SAMPLE_DONORS.slice(6, 18).map((name, i) => (
-                    <div key={i} className="border border-yellow-400 bg-white px-3 py-2.5 text-center">
-                      <p className="font-serif text-xs text-gray-900 leading-tight">{name}</p>
-                      <p className="font-sans text-xs text-yellow-600 uppercase tracking-widest mt-0.5">Gold</p>
-                    </div>
-                  ))}
+                {/* Tier: Founding Patron */}
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.75rem", color: "#DAA520", letterSpacing: "0.3em", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 8px rgba(218,165,32,0.3)" }}>— Founding Patrons —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {SAMPLE_DONORS.slice(0, 6).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "10px 20px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.15), 0 2px 6px rgba(0,0,0,0.4)" }}>
+                        {/* Screw holes left */}
+                        <div className="absolute left-1.5 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                        </div>
+                        {/* Screw holes right */}
+                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                          <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)" }} />
+                        </div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.8rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8), 0 0 6px rgba(218,165,32,0.25)", lineHeight: 1.3 }}>{name}</p>
+                        <p className="font-sans text-center uppercase mt-1" style={{ fontSize: "0.55rem", color: "#B8860B", letterSpacing: "0.2em", textShadow: "0 1px 1px rgba(0,0,0,0.6)" }}>Founding Patron</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Tier: Silver */}
-              <div className="bg-gray-50 border-b border-gray-200 px-6 py-4">
-                <p className="font-serif text-sm text-gray-600 uppercase tracking-[0.3em] text-center mb-4 border-b border-gray-200 pb-2">— Silver Donors —</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                  {SAMPLE_DONORS.slice(18, 36).map((name, i) => (
-                    <div key={i} className="border border-gray-300 bg-white px-2 py-2 text-center">
-                      <p className="font-serif text-xs text-gray-800 leading-tight">{name}</p>
-                      <p className="font-sans text-xs text-gray-500 uppercase tracking-widest mt-0.5">Silver</p>
-                    </div>
-                  ))}
+                {/* Tier: Gold */}
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.7rem", color: "#DAA520", letterSpacing: "0.3em", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 8px rgba(218,165,32,0.3)" }}>— Gold Donors —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {SAMPLE_DONORS.slice(6, 18).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "8px 14px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.12), 0 2px 4px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2 flex flex-col gap-2">
+                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                        </div>
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2 flex flex-col gap-2">
+                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                          <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508", boxShadow: "inset 0 1px 1px rgba(0,0,0,0.6)" }} />
+                        </div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.7rem", color: "#DAA520", textShadow: "0 1px 2px rgba(0,0,0,0.8), 0 0 5px rgba(218,165,32,0.2)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Tier: Bronze / Friends */}
-              <div className="bg-white px-6 py-4">
-                <p className="font-serif text-sm text-amber-800 uppercase tracking-[0.3em] text-center mb-4 border-b border-gray-100 pb-2">— Bronze Donors & Friends —</p>
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1.5">
-                  {SAMPLE_DONORS.slice(12).map((name, i) => (
-                    <div key={i} className="border border-amber-200 bg-amber-50 px-2 py-1.5 text-center">
-                      <p className="font-serif text-xs text-gray-700 leading-tight truncate">{name}</p>
-                    </div>
-                  ))}
+                {/* Tier: Silver */}
+                <div className="mb-6">
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.65rem", color: "#DAA520", letterSpacing: "0.3em", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 8px rgba(218,165,32,0.3)" }}>— Silver Donors —</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1.5">
+                    {SAMPLE_DONORS.slice(18, 36).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #8B6914", background: "#4a3510", padding: "6px 12px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.1), 0 1px 3px rgba(0,0,0,0.4)" }}>
+                        <div className="absolute left-1 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
+                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        </div>
+                        <div className="absolute right-1 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
+                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                          <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        </div>
+                        <p className="font-serif text-center" style={{ fontSize: "0.6rem", color: "#DAA520", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div className="text-center py-4 bg-gray-50 border-t border-gray-200">
-                <p className="text-gray-400 font-sans text-xs uppercase tracking-widest">Every plaque above is individually cast in museum-quality bronze · Champions in Bronze · Since 1974</p>
+                {/* Tier: Bronze / Friends */}
+                <div>
+                  <p className="font-serif text-center mb-4 uppercase" style={{ fontSize: "0.6rem", color: "#DAA520", letterSpacing: "0.3em", textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 0 8px rgba(218,165,32,0.3)" }}>— Bronze Donors & Friends —</p>
+                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
+                    {SAMPLE_DONORS.slice(12).map((name, i) => (
+                      <div key={i} className="relative" style={{ border: "1px solid #7a5c10", background: "#4a3510", padding: "5px 10px", boxShadow: "inset 0 1px 0 rgba(218,165,32,0.08), 0 1px 2px rgba(0,0,0,0.3)" }}>
+                        <div className="absolute left-0.5 top-1/2 -translate-y-1/2 flex flex-col gap-1">
+                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        </div>
+                        <div className="absolute right-0.5 top-1/2 -translate-y-1/2 flex flex-col gap-1">
+                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                          <div style={{ width: "3px", height: "3px", borderRadius: "50%", background: "radial-gradient(circle at 35% 35%, #c8a045, #5a3d10)", border: "1px solid #3a2508" }} />
+                        </div>
+                        <p className="font-serif text-center truncate" style={{ fontSize: "0.55rem", color: "#C8960C", textShadow: "0 1px 1px rgba(0,0,0,0.8)", lineHeight: 1.3 }}>{name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-center mt-6 pt-4" style={{ borderTop: "1px solid #5a4010" }}>
+                  <p className="font-sans uppercase" style={{ fontSize: "0.55rem", color: "#7a6020", letterSpacing: "0.25em" }}>Every plaque above is individually cast in museum-quality bronze · Champions in Bronze · Since 1974</p>
+                </div>
+
               </div>
             </div>
           </FadeIn>
