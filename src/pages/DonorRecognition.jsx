@@ -154,8 +154,8 @@ export default function DonorRecognition() {
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg",
               ].map((url, i) => (
-                <div key={i} className="aspect-[4/3] rounded overflow-hidden border border-gray-200 shadow bg-gray-100">
-                  <img src={url} alt="Bronze donor recognition plaque" className="w-full h-full object-cover" loading="lazy" />
+                <div key={i} className="rounded border border-gray-200 shadow bg-gray-100 flex items-center justify-center p-2">
+                  <img src={url} alt="Bronze donor recognition plaque" className="w-full h-auto object-contain" loading="lazy" />
                 </div>
               ))}
             </div>
@@ -345,8 +345,8 @@ export default function DonorRecognition() {
             {wallTypes.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="group flex flex-col overflow-hidden border-2 border-gray-200 hover:border-yellow-500 transition-all duration-300 shadow-sm hover:shadow-lg bg-white">
-                  <div className="aspect-[16/9] overflow-hidden bg-gray-100">
-                    <img src={item.img} alt={item.title + " — Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" loading="lazy" />
+                  <div className="bg-gray-50 flex items-center justify-center p-3">
+                    <img src={item.img} alt={item.title + " — Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-3">
