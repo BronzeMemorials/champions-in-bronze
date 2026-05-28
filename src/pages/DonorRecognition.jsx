@@ -215,14 +215,19 @@ export default function DonorRecognition() {
           <FadeIn delay={0.1}>
             {/* Outer wall border — single line bronze with leatherette background */}
             <div style={{ 
-              border: "2px solid #8B6914", 
-              background: "linear-gradient(135deg, #3a2a1a 0%, #4a3a2a 25%, #3a2a1a 50%, #4a3a2a 75%, #3a2a1a 100%), linear-gradient(45deg, transparent 30%, rgba(139, 105, 20, 0.1) 30%, rgba(139, 105, 20, 0.1) 70%, transparent 70%), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px)",
-              backgroundSize: "100% 100%, 100% 100%, 4px 4px",
+              border: "2px solid #8B6914",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='8' height='8' fill='%23332010'/%3E%3Ccircle cx='2' cy='2' r='1.2' fill='%23251608' opacity='0.7'/%3E%3Ccircle cx='6' cy='6' r='1.2' fill='%23251608' opacity='0.7'/%3E%3Ccircle cx='2' cy='6' r='0.8' fill='%234a2e14' opacity='0.5'/%3E%3Ccircle cx='6' cy='2' r='0.8' fill='%234a2e14' opacity='0.5'/%3E%3C/svg%3E")`,
+              backgroundSize: "8px 8px",
               padding: "2px", 
-              boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3), inset 0 0 20px rgba(0,0,0,0.6)" 
+              boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(218,165,32,0.3), inset 0 0 30px rgba(0,0,0,0.7)" 
             }}>
               {/* Inner inset border */}
-              <div style={{ border: "1px solid #8B6914", background: "#3d2e0f", padding: "24px" }}>
+              <div style={{ 
+                border: "1px solid #8B6914", 
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='8' height='8' fill='%23332010'/%3E%3Ccircle cx='2' cy='2' r='1.2' fill='%23251608' opacity='0.7'/%3E%3Ccircle cx='6' cy='6' r='1.2' fill='%23251608' opacity='0.7'/%3E%3Ccircle cx='2' cy='6' r='0.8' fill='%234a2e14' opacity='0.5'/%3E%3Ccircle cx='6' cy='2' r='0.8' fill='%234a2e14' opacity='0.5'/%3E%3C/svg%3E")`,
+                backgroundSize: "8px 8px",
+                padding: "24px" 
+              }}>
 
                 {/* Wall title */}
                 <div className="text-center mb-6">
