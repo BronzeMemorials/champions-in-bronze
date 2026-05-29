@@ -181,6 +181,12 @@ export default function HallOfFamePage() {
 
   return (
     <div className="bg-white text-gray-900">
+      {/* PHONE BAR */}
+      <div className="bg-[#1e3a5f] text-white text-center py-2 px-4">
+        <a href="tel:7723090412" className="font-sans font-black text-base md:text-lg tracking-widest text-white hover:text-yellow-300 transition-colors">
+          📞 <span className="font-black text-xl md:text-2xl">772-309-0412</span> — Call Now for a Direct Answer
+        </a>
+      </div>
       <PlaqueQuoteModal plaque={selectedPlaque} onClose={() => setSelectedPlaque(null)} />
       <SEOHead
         title="Hall of Fame Bronze Plaques & Recognition Systems | Champions in Bronze"
@@ -231,8 +237,8 @@ export default function HallOfFamePage() {
               {[
               "https://media.base44.com/images/public/69e6638934292a547ec97753/2488a7ab8_FOOTBALLCHAMPION18.png",
               "https://media.base44.com/images/public/69e6638934292a547ec97753/4c058dd72_BASEBALLCHAMPION34.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/692740c9e_BASKETBALLCHAMPION27.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/0b8503384_FEMALESOCCERNUM10.png"].
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/65fa9625c_PORTRAITSOCCER.png"].
               map((url, i) =>
               <div key={i} className="rounded border border-gray-200 shadow bg-gray-100 p-1">
                   <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-auto object-contain" loading="lazy" />
