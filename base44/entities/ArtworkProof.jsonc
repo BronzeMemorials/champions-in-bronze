@@ -121,14 +121,12 @@
       }
     },
     "read": {
+      "token": "{{request.token}}",
       "$or": [
         {
           "user_condition": {
             "role": "admin"
           }
-        },
-        {
-          "data.token": "{{query.token}}"
         }
       ]
     },
