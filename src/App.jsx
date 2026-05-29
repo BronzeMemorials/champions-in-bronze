@@ -77,6 +77,33 @@ import ArtworkApprovalDashboard from './pages/ArtworkApprovalDashboard';
 import GLBVideoAdmin from './pages/GLBVideoAdmin';
 import ArtworkApprovalPage from './pages/ArtworkApprovalPage';
 
+// Keyword landing pages (new)
+import Statues from './pages/Statues';
+import UniversityBronzePlaques from './pages/UniversityBronzePlaques';
+import WomenBasketballPlaque from './pages/WomenBasketballPlaque';
+import Stadiums from './pages/Stadiums';
+import TrackAndField from './pages/TrackAndField';
+import MensBasketball from './pages/MensBasketball';
+import Coach from './pages/Coach';
+import Custom from './pages/Custom';
+import Gifts from './pages/Gifts';
+import Booster from './pages/Booster';
+import LockerRoom from './pages/LockerRoom';
+import TrainingFacility from './pages/TrainingFacility';
+import Arena from './pages/Arena';
+import Aluminum from './pages/Aluminum';
+import Softball from './pages/Softball';
+import AthleticRecognition from './pages/AthleticRecognition';
+import PhotoPlaque from './pages/PhotoPlaque';
+import Balls from './pages/Balls';
+import ChampionshipPlaques from './pages/ChampionshipPlaques';
+import ThreeDPlaque from './pages/ThreeDPlaque';
+import Alumni from './pages/Alumni';
+import Busts from './pages/Busts';
+import DonorWalls from './pages/DonorWalls';
+import Signage from './pages/Signage';
+import Jersey from './pages/Jersey';
+
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
 
@@ -168,6 +195,33 @@ const AuthenticatedApp = () => {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Keyword landing pages */}
+        <Route path="/statues" element={<Statues />} />
+        <Route path="/university-bronze-plaques" element={<UniversityBronzePlaques />} />
+        <Route path="/women-basketball-plaque" element={<WomenBasketballPlaque />} />
+        <Route path="/stadiums" element={<Stadiums />} />
+        <Route path="/track-and-field" element={<TrackAndField />} />
+        <Route path="/mens-basketball" element={<MensBasketball />} />
+        <Route path="/coach" element={<Coach />} />
+        <Route path="/custom" element={<Custom />} />
+        <Route path="/gifts" element={<Gifts />} />
+        <Route path="/booster" element={<Booster />} />
+        <Route path="/locker-room" element={<LockerRoom />} />
+        <Route path="/training-facility" element={<TrainingFacility />} />
+        <Route path="/arena" element={<Arena />} />
+        <Route path="/aluminum" element={<Aluminum />} />
+        <Route path="/softball" element={<Softball />} />
+        <Route path="/athletic-recognition" element={<AthleticRecognition />} />
+        <Route path="/photo-plaque" element={<PhotoPlaque />} />
+        <Route path="/balls" element={<Balls />} />
+        <Route path="/championship-plaques" element={<ChampionshipPlaques />} />
+        <Route path="/3d-plaque" element={<ThreeDPlaque />} />
+        <Route path="/alumni" element={<Alumni />} />
+        <Route path="/busts" element={<Busts />} />
+        <Route path="/donor-walls" element={<DonorWalls />} />
+        <Route path="/signage" element={<Signage />} />
+        <Route path="/jersey" element={<Jersey />} />
       </Route>
 
       {/* Public artwork approval page — no nav/footer */}
