@@ -214,8 +214,8 @@ export default function HallOfFamePage() {
               <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all hover:scale-[1.02]" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)" }}>
                 Start Your Hall of Fame <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:7723090412" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-semibold uppercase tracking-widest text-sm hover:bg-yellow-50 transition-colors">
-                <Phone className="w-4 h-4" /> 772-309-0412
+              <a href="tel:7723090412" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-black uppercase tracking-widest text-xl hover:bg-yellow-50 transition-colors">
+                <Phone className="w-5 h-5" /> 772-309-0412
               </a>
             </div>
             <div className="flex flex-wrap gap-6">
@@ -235,23 +235,48 @@ export default function HallOfFamePage() {
           <FadeIn delay={0.2} className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
               {[
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/02dd920ee_FOOTBALL18.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/6a09b4726_BASEBALL34.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png"].
-              map((url, i) =>
-              <div key={i} className="rounded border border-gray-200 shadow bg-gray-100 p-1">
-                  <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-auto object-contain" loading="lazy" />
-                </div>
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02dd920ee_FOOTBALL18.png", label: "Football Hall of Fame Plaque", link: "/football" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a09b4726_BASEBALL34.png", label: "Baseball Hall of Fame Plaque", link: "/baseball" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png", label: "Basketball Hall of Fame Plaque", link: "/basketball" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png", label: "Soccer Hall of Fame Plaque", link: "/soccer" },
+              ].map((item, i) =>
+              <Link key={i} to={item.link} className="group rounded border border-gray-200 shadow bg-white p-1 hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col">
+                  <img src={item.url} alt={item.label} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <p className="text-center text-yellow-700 font-sans text-xs font-bold uppercase tracking-widest py-2 group-hover:text-yellow-600">→ {item.label}</p>
+                </Link>
               )}
             </div>
           </FadeIn>
         </div>
       </section>
 
+      {/* BUSTS & STATUES PREVIEW */}
+      <section className="py-10 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-center font-sans text-xs uppercase tracking-[0.3em] text-yellow-700 font-bold mb-6">Bronze Busts & Life-Size Statues</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/496d05ff8_99F60C02-07FA-4E6B-A2F7-A1DF3368DE0E.png", label: "Hall of Fame Bust", link: "/bronze-athlete-busts" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1daa60284_ECEF0D5E-181D-4F24-8FD8-994D7F9B3730.png", label: "Athlete Portrait Bust", link: "/bronze-athlete-busts" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Football Statue", link: "/football" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png", label: "Basketball Statue", link: "/basketball" },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <Link to={item.link} className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+                  <div className="bg-white p-2 flex-1">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-300" />
+                  </div>
+                  <p className="text-center text-yellow-700 font-sans text-xs font-bold uppercase tracking-widest py-2 border-t border-gray-100 group-hover:text-yellow-600">→ {item.label}</p>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TrustBadges />
-
-
 
       {/* SPORTS HALL OF FAME PLAQUES */}
       <section className="py-12 bg-white">
