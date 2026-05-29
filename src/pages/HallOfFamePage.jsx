@@ -235,10 +235,10 @@ export default function HallOfFamePage() {
           <FadeIn delay={0.2} className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
               {[
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/2488a7ab8_FOOTBALLCHAMPION18.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/4c058dd72_BASEBALLCHAMPION34.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png",
-              "https://media.base44.com/images/public/69e6638934292a547ec97753/65fa9625c_PORTRAITSOCCER.png"].
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/02dd920ee_FOOTBALL18.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/6a09b4726_BASEBALL34.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png",
+              "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png"].
               map((url, i) =>
               <div key={i} className="rounded border border-gray-200 shadow bg-gray-100 p-1">
                   <img src={url} alt="Hall of Fame bronze plaque" className="w-full h-auto object-contain" loading="lazy" />
