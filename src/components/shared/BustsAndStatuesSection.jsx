@@ -39,8 +39,8 @@ export default function BustsAndStatuesSection() {
             {bustTypes.map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-                  <div className="bg-gray-50 flex items-center justify-center p-2">
-                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                  <div className="overflow-hidden">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-gray-200">
                     <p className="font-serif text-base text-gray-900">{item.label}</p>
@@ -76,8 +76,8 @@ export default function BustsAndStatuesSection() {
             {statues.map((item, i) => (
               <FadeIn key={item.position + item.sport} delay={i * 0.06}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-                  <div className="bg-white flex items-center justify-center p-2">
-                    <img src={item.img} alt={`Bronze ${item.sport} ${item.position} statue`} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                  <div className="overflow-hidden">
+                    <img src={item.img} alt={`Bronze ${item.sport} ${item.position} statue`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-gray-100">
                     <p className="font-serif text-base text-gray-900">{item.position}</p>

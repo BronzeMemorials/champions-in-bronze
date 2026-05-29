@@ -105,15 +105,15 @@ const footballPositions = [
 { position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f3d7c4a9e_RUNNINGBACK_LIGHT.png" }];
 
 function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
-  return (
-    <div className={`grid grid-cols-2 ${cols} gap-4 md:gap-6`}>
-      {positions.map((item, i) =>
-      <FadeIn key={item.position} delay={i * 0.08}>
-          <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-            <div className="bg-white p-2">
-              <img src={item.img} alt={`Bronze ${sport} ${item.position} statue — life-size athletic sculpture`}
-            className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
-            </div>
+   return (
+     <div className={`grid grid-cols-2 ${cols} gap-4 md:gap-6`}>
+       {positions.map((item, i) =>
+       <FadeIn key={item.position} delay={i * 0.08}>
+           <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
+             <div className="overflow-hidden">
+               <img src={item.img} alt={`Bronze ${sport} ${item.position} statue — life-size athletic sculpture`}
+             className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
+             </div>
             <div className="p-4 text-center border-t border-gray-100">
               <p className="font-serif text-base text-gray-900">{item.position}</p>
               <p className="text-gray-400 font-sans text-xs uppercase tracking-widest mt-1">{sport}</p>
@@ -239,8 +239,8 @@ export default function HallOfFamePage() {
               { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png", label: "Basketball Plaques", link: "/basketball" },
               { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png", label: "Soccer Plaques", link: "/soccer" },
               ].map((item, i) =>
-              <Link key={i} to={item.link} className="group rounded border border-gray-200 shadow bg-white p-1 hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col">
-                  <img src={item.url} alt={item.label} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+              <Link key={i} to={item.link} className="group rounded border border-gray-200 shadow bg-white hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+                  <img src={item.url} alt={item.label} className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
                   <p className="text-center text-yellow-700 font-sans text-xs font-bold uppercase tracking-widest py-2 group-hover:text-yellow-600">→ {item.label}</p>
                 </Link>
               )}
@@ -264,8 +264,8 @@ export default function HallOfFamePage() {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <Link to={item.link} className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
-                  <div className="bg-white p-2 flex-1">
-                    <img src={item.img} alt={item.label} className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-300" />
+                  <div className="flex-1 overflow-hidden">
+                    <img src={item.img} alt={item.label} className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-300" />
                   </div>
                   <p className="text-center text-yellow-700 font-sans text-xs font-bold uppercase tracking-widest py-2 border-t border-gray-100 group-hover:text-yellow-600">→ {item.label}</p>
                 </Link>
@@ -530,8 +530,8 @@ export default function HallOfFamePage() {
             {bustTypes.map((item, i) =>
             <FadeIn key={item.label} delay={i * 0.08}>
                 <div className="group relative overflow-hidden rounded-sm bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all duration-300">
-                  <div className="bg-gray-100 p-2">
-                    <img src={item.img} alt={item.alt || item.label} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                  <div className="overflow-hidden">
+                    <img src={item.img} alt={item.alt || item.label} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-4 text-center border-t border-gray-200">
                     <p className="font-serif text-base text-gray-900">{item.label}</p>
