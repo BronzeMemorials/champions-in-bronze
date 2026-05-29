@@ -80,8 +80,8 @@ const bustTypes = [
 { label: "Historic Athlete Bust", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b1801f52_A48B1FB3-444D-4741-AE40-D4E863E0F068.png", alt: "Historic athlete bronze bust — created from archival photographs" }];
 
 const soccerPositions = [
-{ position: "Forward Kick Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png" },
-{ position: "Goal Celebration Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/aceb82ef5_8C52F27A-8EA2-4D4F-AF16-D02E1C58BFD8.png" }];
+{ position: "Forward Kick Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cfc15c6d8_SOCCERKICK_LIGHT.png" },
+{ position: "Goal Celebration Pose", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e8f0b25a2_SOCCERCELEBRATION_LIGHT.png" }];
 
 const hockeyPositions = [
 { position: "Goalie", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png" },
@@ -101,8 +101,8 @@ const basketballPositions = [
 const footballPositions = [
 { position: "Quarterback", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png" },
 { position: "Passing Stance", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/d4cc26079_ChatGPTImageMay28202608_47_38AM.png" },
-{ position: "Lineman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/9d6be36e2_E381DDD7-91BC-4FD3-A999-05CCFF675570.png" },
-{ position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1bff77f0c_650A3449-F5F7-4EC2-8D17-D57C866CB4B5.png" }];
+{ position: "Lineman", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a1b9f2e1c_LINEMAN_LIGHT.png" },
+{ position: "Running Back", img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f3d7c4a9e_RUNNINGBACK_LIGHT.png" }];
 
 function SportGrid({ positions, sport, cols = "lg:grid-cols-3" }) {
   return (
