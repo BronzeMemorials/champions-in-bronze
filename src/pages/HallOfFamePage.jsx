@@ -134,40 +134,39 @@ const products = [
 
 
 function GalleryGrid({ items, columns = 4, onPlaqueClick }) {
-  const colClass = columns === 3 ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : columns === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
-  return (
-    <div className={`grid ${colClass} gap-4`}>
-      {items.map((item, i) =>
-      <FadeIn key={i} delay={i * 0.05}>
-          <div
-          className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col"
-          onClick={() => onPlaqueClick && onPlaqueClick(item)}>
-          
-            <div
-            className="flex items-center justify-center p-3 bg-gray-100"
-            style={{ minHeight: "240px" }}>
-            
-              <img
-              src={item.url}
-              alt={item.label + " — Champions in Bronze Hall of Fame Plaque"}
-              className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500"
-              style={{ maxHeight: "260px" }}
-              loading="lazy" />
-            
-            </div>
-            <div className="p-4 bg-white flex flex-col flex-1">
-              <p className="font-serif text-sm text-gray-900 font-semibold leading-tight">{item.label}</p>
-              <p className="text-gray-500 text-xs mt-1 leading-relaxed flex-1">{item.desc}</p>
-              <p className="mt-3 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold group-hover:text-yellow-600 transition-colors">
-                → {item.cta || "Get a Quote"}
-              </p>
-            </div>
-          </div>
-        </FadeIn>
-      )}
-    </div>);
+   const colClass = columns === 3 ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : columns === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
+   return (
+     <div className={`grid ${colClass} gap-4`}>
+       {items.map((item, i) =>
+       <FadeIn key={i} delay={i * 0.05}>
+           <div
+           className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col overflow-hidden"
+           onClick={() => onPlaqueClick && onPlaqueClick(item)}>
 
-}
+             <div
+             className="flex items-center justify-center bg-white w-full"
+             style={{ minHeight: "280px" }}>
+
+               <img
+               src={item.url}
+               alt={item.label + " — Champions in Bronze Hall of Fame Plaque"}
+               className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+               loading="lazy" />
+
+             </div>
+             <div className="p-4 bg-white flex flex-col flex-1">
+               <p className="font-serif text-sm text-gray-900 font-semibold leading-tight">{item.label}</p>
+               <p className="text-gray-500 text-xs mt-1 leading-relaxed flex-1">{item.desc}</p>
+               <p className="mt-3 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold group-hover:text-yellow-600 transition-colors">
+                 → {item.cta || "Get a Quote"}
+               </p>
+             </div>
+           </div>
+         </FadeIn>
+       )}
+     </div>);
+
+ }
 
 export default function HallOfFamePage() {
   const [selectedPlaque, setSelectedPlaque] = useState(null);
@@ -317,9 +316,9 @@ export default function HallOfFamePage() {
                 <div
                 className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
                 onClick={() => setSelectedPlaque(item)}>
-                
-                  <div className="flex items-center justify-center p-3 bg-gray-100" style={{ minHeight: "280px" }}>
-                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" style={{ maxHeight: "300px" }} loading="lazy" />
+
+                  <div className="flex items-center justify-center bg-white w-full" style={{ minHeight: "320px" }}>
+                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
                     <p className="font-serif text-lg text-gray-900 font-semibold">{item.label}</p>
@@ -406,9 +405,9 @@ export default function HallOfFamePage() {
                 <div
                 className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
                 onClick={() => setSelectedPlaque(item)}>
-                
-                  <div className="flex items-center justify-center p-3 bg-gray-100" style={{ minHeight: "240px" }}>
-                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" style={{ maxHeight: "260px" }} loading="lazy" />
+
+                  <div className="flex items-center justify-center bg-white w-full" style={{ minHeight: "280px" }}>
+                    <img src={item.url} alt={item.label + " — bronze seal Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
                     <p className="font-serif text-sm text-gray-900 font-semibold">{item.label}</p>
