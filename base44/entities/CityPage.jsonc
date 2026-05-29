@@ -1,0 +1,27 @@
+{
+  "name": "CityPage",
+  "type": "object",
+  "properties": {
+    "state_slug": {
+      "type": "string",
+      "description": "State URL slug e.g. 'texas'"
+    },
+    "city_slug": {
+      "type": "string",
+      "description": "City URL slug e.g. 'austin'"
+    },
+    "content": {
+      "type": "string",
+      "description": "JSON string of AI-generated page content"
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "ISO timestamp when content was generated"
+    }
+  },
+  "required": [
+    "state_slug",
+    "city_slug",
+    "content"
+  ]
+}

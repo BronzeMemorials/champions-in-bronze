@@ -72,6 +72,24 @@ export default function CityLandingPage() {
     setLoading(true);
     setContent(null);
 
+    // Check cache first
+    base44.entities.CityPage.filter({ state_slug: state, city_slug: city }, "-created_date", 1)
+      .then((results) => {
+        if (results && results.length > 0) {
+          try {
+            const cached = JSON.parse(results[0].content);
+            setContent(cached);
+            setLoading(false);
+            return;
+          } catch (e) {
+            // bad cache, regenerate
+          }
+        }
+        generateContent();
+      })
+      .catch(() => generateContent());
+
+    function generateContent() {
     base44.integrations.Core.InvokeLLM({
       model: "claude_sonnet_4_6",
       prompt: `You are a professional copywriter for Champions In Bronze, the nation's premier sports recognition bronze company (since 1974). 
@@ -182,7 +200,19 @@ For "faqs": create exactly 18 FAQs covering Hall of Fame plaques, donor walls, b
           }
         }
       }
-    }).then(setContent).catch(() => setContent(null)).finally(() => setLoading(false));
+    }).then((result) => {
+        setContent(result);
+        // Save to cache entity
+        base44.entities.CityPage.create({
+          state_slug: state,
+          city_slug: city,
+          content: JSON.stringify(result),
+          generated_at: new Date().toISOString(),
+        }).catch(() => {}); // silent fail if cache save fails
+      })
+      .catch(() => setContent(null))
+      .finally(() => setLoading(false));
+    } // end generateContent
   }, [city, state]);
 
   if (loading) {
