@@ -144,8 +144,7 @@ function GalleryGrid({ items, columns = 4, onPlaqueClick }) {
            onClick={() => onPlaqueClick && onPlaqueClick(item)}>
 
              <div
-             className="flex items-center justify-center bg-white w-full"
-             style={{ minHeight: "280px" }}>
+             className="overflow-hidden w-full">
 
                <img
                src={item.url}
@@ -317,8 +316,8 @@ export default function HallOfFamePage() {
                 className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
                 onClick={() => setSelectedPlaque(item)}>
 
-                  <div className="flex items-center justify-center bg-white w-full" style={{ minHeight: "320px" }}>
-                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                  <div className="overflow-hidden w-full">
+                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
                     <p className="font-serif text-lg text-gray-900 font-semibold">{item.label}</p>
@@ -484,8 +483,8 @@ export default function HallOfFamePage() {
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/64fa5882c_GOLFCHAMPION.png",
                 "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png"].
                 map((url, i) =>
-                <div key={i} className="rounded border border-gray-200 shadow p-1 bg-white">
-                    <img src={url} alt="Hall of Fame bronze plaque Champions in Bronze" className="w-full h-auto object-contain" loading="lazy" />
+                <div key={i} className="rounded border border-gray-200 shadow overflow-hidden bg-white">
+                    <img src={url} alt="Hall of Fame bronze plaque Champions in Bronze" className="w-full h-auto object-cover" loading="lazy" />
                   </div>
                 )}
               </div>
