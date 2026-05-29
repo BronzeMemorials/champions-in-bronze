@@ -76,6 +76,7 @@ import ArtworkProofAdmin from './pages/ArtworkProofAdmin';
 import ArtworkApprovalDashboard from './pages/ArtworkApprovalDashboard';
 import GLBVideoAdmin from './pages/GLBVideoAdmin';
 import ArtworkApprovalPage from './pages/ArtworkApprovalPage';
+import CityLandingPage from './pages/CityLandingPage';
 
 // Keyword landing pages (new)
 import Statues from './pages/Statues';
@@ -223,6 +224,10 @@ const AuthenticatedApp = () => {
         <Route path="/signage" element={<Signage />} />
         <Route path="/jersey" element={<Jersey />} />
       </Route>
+
+      {/* Dynamic city SEO landing pages */}
+      <Route path="/:state/:city/" element={<CityLandingPage />} />
+      <Route path="/:state/:city" element={<CityLandingPage />} />
 
       {/* Public artwork approval page — no nav/footer */}
       <Route path="/approval/:token" element={<ArtworkApprovalPage />} />
