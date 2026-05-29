@@ -245,19 +245,7 @@ export default function HallOfFamePage() {
 
       <TrustBadges />
 
-      {/* PROOF CTA BANNER */}
-      <div className="bg-yellow-50 border-y-2 border-yellow-300 py-6 px-6 text-center">
-        <p className="font-serif text-xl md:text-2xl text-gray-900 mb-1">Get Your Free Artwork Proof — <span className="text-yellow-700">Within The Hour</span></p>
-        <p className="text-gray-600 text-sm mb-4">No commitment required. See exactly what your Hall of Fame plaque will look like before you order.</p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Link to="/request-quote" className="inline-flex items-center gap-2 px-6 py-3 font-bold text-black text-sm uppercase tracking-widest" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #B8860B 100%)" }}>
-            Request Free Proof <ArrowRight className="w-4 h-4" />
-          </Link>
-          <a href="tel:7723090412" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-yellow-600 text-yellow-800 font-bold text-sm uppercase tracking-widest hover:bg-yellow-100 transition-colors">
-            <Phone className="w-4 h-4" /> Call Now: 772-309-0412
-          </a>
-        </div>
-      </div>
+
 
       {/* SPORTS HALL OF FAME PLAQUES */}
       <section className="py-12 bg-white">
@@ -265,10 +253,12 @@ export default function HallOfFamePage() {
           <FadeIn>
             <div className="text-center mb-8">
               <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Sport-Specific Hall of Fame Plaques</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Every Sport. Every Inductee.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl text-navy-900" style={{ color: "#1e3a5f" }}>Your Sport. Your Image.</h2>
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
-                Football, baseball, basketball, soccer, golf, boxing, and more — each plaque custom-designed around the sport, the athlete, and the moment being honored.
+                Football, baseball, basketball, soccer, golf, boxing, and more — each plaque custom designed around your sport, your image, and the moment being immortalized and honored forever.
               </p>
+              <p className="mt-3 font-sans text-sm font-semibold text-gray-700">Football · Men's &amp; Women's Basketball · Baseball · Softball · Soccer · Volleyball</p>
+              <p className="mt-1 font-sans text-sm font-semibold text-gray-700">Donor Walls · Hall of Fame · Retired Jerseys · Athletic Recognition</p>
             </div>
           </FadeIn>
           <GalleryGrid items={SPORTS_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
