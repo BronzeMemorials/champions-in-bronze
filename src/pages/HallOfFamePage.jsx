@@ -235,10 +235,10 @@ export default function HallOfFamePage() {
           <FadeIn delay={0.2} className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
               {[
-              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02dd920ee_FOOTBALL18.png", label: "Football Hall of Fame Plaque", link: "/football" },
-              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a09b4726_BASEBALL34.png", label: "Baseball Hall of Fame Plaque", link: "/baseball" },
-              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png", label: "Basketball Hall of Fame Plaque", link: "/basketball" },
-              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png", label: "Soccer Hall of Fame Plaque", link: "/soccer" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/02dd920ee_FOOTBALL18.png", label: "Football Plaques", link: "/football" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a09b4726_BASEBALL34.png", label: "Baseball Plaques", link: "/baseball" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/47ca72da5_BASKETBALL27.png", label: "Basketball Plaques", link: "/basketball" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/2524c7a13_SOCCER10.png", label: "Soccer Plaques", link: "/soccer" },
               ].map((item, i) =>
               <Link key={i} to={item.link} className="group rounded border border-gray-200 shadow bg-white p-1 hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col">
                   <img src={item.url} alt={item.label} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
