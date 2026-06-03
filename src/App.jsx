@@ -234,7 +234,7 @@ const AuthenticatedApp = () => {
       <Route path="/approval/:token" element={<ArtworkApprovalPage />} />
 
       {/* Admin routes — auth-gated, no public navbar/footer */}
-      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to={`/login?next=${encodeURIComponent(window.location.pathname)}`} replace />} />}>
         <Route element={<AdminLayout />}>
           <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
           <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />

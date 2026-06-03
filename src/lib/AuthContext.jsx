@@ -117,19 +117,17 @@ export const AuthProvider = ({ children }) => {
   const logout = (shouldRedirect = true) => {
     setUser(null);
     setIsAuthenticated(false);
-    
+    // Clear token from storage directly to avoid SDK redirect to base44.app
+    localStorage.removeItem('base44_access_token');
+    localStorage.removeItem('token');
     if (shouldRedirect) {
-      // Use the SDK's logout method which handles token cleanup and redirect
-      base44.auth.logout(window.location.href);
-    } else {
-      // Just remove the token without redirect
-      base44.auth.logout();
+      window.location.href = '/login';
     }
   };
 
   const navigateToLogin = () => {
-    // Use the SDK's redirectToLogin method
-    base44.auth.redirectToLogin(window.location.href);
+    // Stay on custom domain — do not use SDK's redirectToLogin (goes to base44.app)
+    window.location.href = '/login';
   };
 
   return (
