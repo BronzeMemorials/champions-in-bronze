@@ -5,9 +5,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ProtectedRoute from '@/components/ProtectedRoute';
 import Layout from './components/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
 import { QuoteModalProvider } from './lib/QuoteModalContext';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 // Main pages
 import ProHome from './pages/ProHome';
@@ -106,7 +111,7 @@ import Signage from './pages/Signage';
 import Jersey from './pages/Jersey';
 
 const AuthenticatedApp = () => {
-  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const { isLoadingAuth, isLoadingPublicSettings, authError } = useAuth();
 
   if (isLoadingPublicSettings || isLoadingAuth) {
     return (
@@ -116,17 +121,17 @@ const AuthenticatedApp = () => {
     );
   }
 
-  if (authError) {
-    if (authError.type === 'user_not_registered') {
-      return <UserNotRegisteredError />;
-    } else if (authError.type === 'auth_required') {
-      navigateToLogin();
-      return null;
-    }
+  if (authError?.type === 'user_not_registered') {
+    return <UserNotRegisteredError />;
   }
 
   return (
     <Routes>
+      {/* Auth routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route element={<Layout />}>
         {/* Homepages */}
         <Route path="/" element={<ProHome />} />
@@ -233,12 +238,14 @@ const AuthenticatedApp = () => {
       <Route path="/approval/:token" element={<ArtworkApprovalPage />} />
 
       {/* Admin routes — auth-gated, no public navbar/footer */}
-      <Route element={<AdminLayout />}>
-        <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
-        <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
-        <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
-        <Route path="/artwork-proof-admin" element={<ArtworkProofAdmin />} />
-        <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
+        <Route element={<AdminLayout />}>
+          <Route path="/photo-gallery-admin" element={<PhotoGalleryAdmin />} />
+          <Route path="/relief-model-admin" element={<ReliefModelAdmin />} />
+          <Route path="/ab-test-dashboard" element={<ABTestDashboard />} />
+          <Route path="/artwork-proof-admin" element={<ArtworkProofAdmin />} />
+          <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
+        </Route>
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
