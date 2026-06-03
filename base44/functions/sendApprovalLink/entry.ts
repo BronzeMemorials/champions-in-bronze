@@ -34,10 +34,22 @@ Deno.serve(async (req) => {
       `
     });
 
-    await base44.asServiceRole.entities.ArtworkProof.update(proof_id, {
-      status: 'sent',
-      sent_at: new Date().toISOString()
-    });
+    // Find by token if direct ID lookup fails (handles timing/RLS edge cases)
+    try {
+      await base44.asServiceRole.entities.ArtworkProof.update(proof_id, {
+        status: 'sent',
+        sent_at: new Date().toISOString()
+      });
+    } catch (updateErr) {
+      // Fallback: look up by token
+      const proofs = await base44.asServiceRole.entities.ArtworkProof.filter({ token });
+      if (proofs && proofs.length > 0) {
+        await base44.asServiceRole.entities.ArtworkProof.update(proofs[0].id, {
+          status: 'sent',
+          sent_at: new Date().toISOString()
+        });
+      }
+    }
 
     return Response.json({ success: true });
   } catch (error) {
