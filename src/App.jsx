@@ -230,10 +230,6 @@ const AuthenticatedApp = () => {
         <Route path="/jersey" element={<Jersey />} />
       </Route>
 
-      {/* Dynamic city SEO landing pages */}
-      <Route path="/:state/:city/" element={<CityLandingPage />} />
-      <Route path="/:state/:city" element={<CityLandingPage />} />
-
       {/* Public artwork approval page — no nav/footer */}
       <Route path="/approval/:token" element={<ArtworkApprovalPage />} />
 
@@ -247,6 +243,10 @@ const AuthenticatedApp = () => {
           <Route path="/artwork-approval-dashboard" element={<ArtworkApprovalDashboard />} />
         </Route>
       </Route>
+
+      {/* Dynamic city SEO landing pages — must be last to avoid swallowing named routes */}
+      <Route path="/:state/:city/" element={<CityLandingPage />} />
+      <Route path="/:state/:city" element={<CityLandingPage />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>
