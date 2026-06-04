@@ -190,7 +190,7 @@ export default function HallOfFamePage() {
       
 
       {/* HERO */}
-      <section className="relative min-h-[60vh] flex items-center bg-gray-50 overflow-hidden">
+      <section className="relative bg-gray-50 overflow-hidden">
         <div className="absolute inset-0">
           <img src={HERO_IMG} alt="Hall of Fame bronze plaque — Champions in Bronze" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60" />
@@ -230,22 +230,24 @@ export default function HallOfFamePage() {
           </FadeIn>
         </div>
         {/* Trust badges — full width below both columns */}
-        <FadeIn delay={0.3}>
-          <div className="flex flex-nowrap items-center gap-4 overflow-x-auto mt-6 pb-2">
-            {[
-            { icon: Clock, text: "Artwork Proof Within The Hour" },
-            { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
-            { icon: Award, text: "Made in the USA" },
-            { icon: Star, text: "50,000+ Satisfied Customers" }].
-            map(({ icon: Icon, text }, i, arr) =>
-            <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap flex-shrink-0">
-                <Icon className="w-3.5 h-3.5 text-yellow-600 flex-shrink-0" />
-                <span className="font-semibold">{text}</span>
-                {i < arr.length - 1 && <span className="text-gray-300 ml-2">|</span>}
-              </div>
-            )}
-          </div>
-        </FadeIn>
+        <div className="relative max-w-7xl mx-auto px-6 pb-8">
+          <FadeIn delay={0.3}>
+            <div className="flex flex-nowrap items-center gap-6 overflow-x-auto">
+              {[
+              { icon: Clock, text: "Artwork Proof Within The Hour" },
+              { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
+              { icon: Award, text: "Made in the USA" },
+              { icon: Star, text: "50,000+ Satisfied Customers" }].
+              map(({ icon: Icon, text }, i, arr) =>
+              <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap flex-shrink-0">
+                  <Icon className="w-3.5 h-3.5 text-yellow-600 flex-shrink-0" />
+                  <span className="font-semibold">{text}</span>
+                  {i < arr.length - 1 && <span className="text-gray-300 ml-4">|</span>}
+                </div>
+              )}
+            </div>
+          </FadeIn>
+        </div>
       </section>
 
       <TrustBadges />
