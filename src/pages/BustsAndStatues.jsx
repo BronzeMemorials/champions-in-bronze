@@ -59,9 +59,9 @@ export default function BustsAndStatues() {
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       {/* Photo Accuracy Feature */}
-      <section className="py-28 border-t border-bronze/10">
+      <section className="py-6 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <FadeIn>
               <div className="rounded-sm overflow-hidden">
                 <img src={img1} alt="Custom bronze bust sculpted from photograph — exact likeness, no in-person sessions" loading="lazy" className="w-full h-auto object-contain" />
@@ -75,13 +75,13 @@ export default function BustsAndStatues() {
               <h2 className="font-serif text-4xl md:text-5xl leading-tight text-parchment">
                 True Replication.<br />Not Interpretation.
               </h2>
-              <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
+              <p className="mt-3 text-parchment/60 text-base leading-relaxed">
                 Champions in Bronze creates elite Hall of Fame plaques, donor recognition walls, championship displays, athlete busts, and commemorative bronze statues from your exact photograph using advanced image casting, bas-relief sculpting, and dimensional bronze technology. Each piece is designed for universities, stadiums, arenas, athletic facilities, and legacy recognition environments where lifelike detail, architectural craftsmanship, and permanent recognition are required to honor greatness for generations.
               </p>
-              <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
+              <p className="mt-3 text-parchment/60 text-base leading-relaxed">
                 Champions in Bronze transforms your exact photograph into lifelike bronze recognition through advanced image casting, bas-relief sculpting, and dimensional bronze craftsmanship — the result is a sculpture that family members recognize instantly. A lifelike bronze bust is never about the cost — it is about honoring the sacrifice, preserving the brotherhood, immortalizing the journey, and ensuring the legacy that defined their life will never be forgotten.
               </p>
-              <ul className="mt-8 space-y-3 border-l border-bronze/30 pl-6">
+              <ul className="mt-4 space-y-2 border-l border-bronze/30 pl-6">
                 {[
                   "Sculpted from your high-resolution photographs",
                   "Exact facial structure, expression, and presence",
@@ -104,7 +104,7 @@ export default function BustsAndStatues() {
       {models.length > 0 && <VideoModelGallery models={models} />}
 
       {/* Emotional Pull Quote */}
-      <section className="py-20 bg-stone-100">
+      <section className="py-6 bg-stone-100">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
             <blockquote className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-900 italic mb-6">
@@ -119,10 +119,10 @@ export default function BustsAndStatues() {
       </section>
 
       {/* Gallery */}
-      <section className="py-28">
+      <section className="py-6">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="mb-12">
+            <div className="mb-5">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Gallery</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Recent Commissions</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Legends battled, sacrificed, and rose. Now their story lives in bronze. Every commission below was created from photographs provided by the client — no in-person sessions, no generic likenesses. Every figure is the real person, captured forever.</p>
@@ -138,9 +138,9 @@ export default function BustsAndStatues() {
                 <div className="group relative overflow-hidden rounded-sm">
                   <img src={item.img} alt={item.title} loading="lazy" className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
-                  <div className="absolute bottom-0 p-6">
+                  <div className="absolute bottom-0 p-4">
                     <h3 className="font-serif text-lg text-parchment">{item.title}</h3>
-                    <p className="text-parchment/50 text-xs mt-1">{item.sub}</p>
+                    <p className="text-parchment/50 text-xs mt-0.5">{item.sub}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -150,10 +150,10 @@ export default function BustsAndStatues() {
       </section>
 
       {/* Sizes & Specs */}
-      <section className="py-20 border-t border-bronze/10 bg-secondary/20">
+      <section className="py-5 border-t border-bronze/10 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="text-center mb-12">
+            <div className="text-center mb-5">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Specifications</span>
               <h2 className="font-serif text-4xl mt-3 text-parchment">Available Formats</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">From tabletop awards to 10-foot heroic statues — every size, every format, created from your photographs. Designed for Hall of Fame walls, stadium entrances, arena lobbies, donor recognition environments, and campus landmarks.</p>
@@ -170,7 +170,7 @@ export default function BustsAndStatues() {
                   <p className="font-serif text-2xl text-gold">{spec.title}</p>
                   <p className="text-parchment/40 text-sm mt-1 font-sans uppercase tracking-wider">{spec.range}</p>
                   <p className="text-parchment/60 text-sm mt-4 leading-relaxed">{spec.desc}</p>
-                  <Link to="/request-quote" className="inline-flex items-center gap-2 mt-6 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
+                  <Link to="/request-quote" className="inline-flex items-center gap-2 mt-3 text-gold text-xs font-sans uppercase tracking-widest hover:text-parchment transition-colors">
                     Get a Quote <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>

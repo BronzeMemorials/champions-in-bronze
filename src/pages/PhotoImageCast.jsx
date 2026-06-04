@@ -54,9 +54,9 @@ export default function PhotoImageCast() {
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       {/* What Makes It Different */}
-      <section className="py-28">
+      <section className="py-6">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <FadeIn delay={0.2}>
               <div className="flex items-center gap-3 mb-4">
                 <Camera className="w-5 h-5 text-gold" />
@@ -65,13 +65,13 @@ export default function PhotoImageCast() {
               <h2 className="font-serif text-4xl md:text-5xl leading-tight text-parchment">
                 Your Real Photos.<br />Cast Into Bronze.<br />Forever.
               </h2>
-              <p className="mt-6 text-parchment/60 text-lg leading-relaxed">
+              <p className="mt-3 text-parchment/60 text-base leading-relaxed">
                 Most bronze plaques use text and generic imagery. Photo ImageCasting uses <em>your actual photographs</em> — game-winning moments, team portraits, career milestones, archival history — and permanently casts them into bronze at museum quality. When champions see their real image preserved in bronze, the emotion is overwhelming. Because the pain, sacrifice, and dedication that shaped their career are finally transformed into something permanent that future generations will recognize and remember forever.
               </p>
-              <p className="mt-4 text-parchment/60 text-lg leading-relaxed">
+              <p className="mt-3 text-parchment/60 text-base leading-relaxed">
                 No interpretation. No generalization. The exact image you provide, with dimensional depth and bronze permanence that will last longer than any photograph, print, or digital display. Crowds fade into night. Champions live on in bronze. Legacy remains.
               </p>
-              <div className="mt-10 grid grid-cols-2 gap-4">
+              <div className="mt-5 grid grid-cols-2 gap-4">
                 {[
                   { stat: "Any #", label: "Photos per Plaque" },
                   { stat: "48 hrs", label: "Proof Delivered" },
@@ -99,10 +99,10 @@ export default function PhotoImageCast() {
       </section>
 
       {/* Process */}
-      <section className="py-24 border-t border-bronze/10 bg-secondary/20">
+      <section className="py-5 border-t border-bronze/10 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="text-center mb-16">
+            <div className="text-center mb-6">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">How It Works</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Photos to Bronze in 4 Steps</h2>
             </div>
@@ -110,7 +110,7 @@ export default function PhotoImageCast() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
               <FadeIn key={step.step} delay={i * 0.1}>
-                <div className="border border-bronze/20 bg-obsidian p-8 rounded-sm h-full">
+                <div className="border border-bronze/20 bg-obsidian p-5 rounded-sm h-full">
                   <step.icon className="w-6 h-6 text-gold mb-4" />
                   <p className="font-serif text-4xl text-bronze/30">{step.step}</p>
                   <h3 className="font-serif text-xl text-parchment mt-2">{step.title}</h3>
@@ -123,10 +123,10 @@ export default function PhotoImageCast() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-28">
+      <section className="py-6">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="text-center mb-14">
+            <div className="text-center mb-5">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Perfect For</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Every Recognition Occasion</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">From a single Hall of Fame induction to an entire career retrospective wall — Photo ImageCasting is used by universities, professional sports franchises, athletic departments, and donor programs nationwide to permanently honor the athletes, coaches, and supporters who shaped their history.</p>
@@ -145,9 +145,9 @@ export default function PhotoImageCast() {
                 <div className="group relative overflow-hidden rounded-sm">
                   <img src={item.img} alt={item.alt || item.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
-                  <div className="absolute bottom-0 p-6">
-                    <h3 className="font-serif text-lg text-parchment">{item.title}</h3>
-                    <p className="text-parchment/50 text-sm mt-1">{item.desc}</p>
+                  <div className="absolute bottom-0 p-4">
+                   <h3 className="font-serif text-lg text-parchment">{item.title}</h3>
+                   <p className="text-parchment/50 text-sm mt-0.5">{item.desc}</p>
                   </div>
                 </div>
               </FadeIn>

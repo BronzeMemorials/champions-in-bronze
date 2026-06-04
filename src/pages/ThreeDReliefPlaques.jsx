@@ -78,7 +78,7 @@ export default function ThreeDReliefPlaques() {
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       {/* Photo Accuracy Callout */}
-      <section className="py-20 border-t border-bronze/10">
+      <section className="py-5 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-bronze/10 border border-bronze/30 rounded-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
             <Camera className="w-12 h-12 text-gold flex-shrink-0" />
@@ -93,18 +93,18 @@ export default function ThreeDReliefPlaques() {
       </section>
 
       {/* Sport Gallery */}
-      <section className="py-28">
+      <section className="py-6">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="mb-10">
+            <div className="mb-5">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Browse by Sport</span>
-              <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">3D Relief Plaque Gallery</h2>
+              <h2 className="font-serif text-4xl md:text-5xl mt-2 text-parchment">3D Relief Plaque Gallery</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl">Every sport. Every position. Every moment worth preserving forever. Browse our gallery of sculptural 3D bas-relief bronze plaques — each one created from actual athlete photographs and cast in museum-quality bronze or aluminum for Hall of Fame walls, championship displays, and retired number ceremonies.</p>
             </div>
           </FadeIn>
 
           {/* Sport Tabs */}
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="flex flex-wrap gap-2 mb-5">
             {sports.map((sport) => (
               <button
                 key={sport}
@@ -139,7 +139,7 @@ export default function ThreeDReliefPlaques() {
           </div>
 
           <FadeIn delay={0.2}>
-            <div className="mt-10 text-center">
+            <div className="mt-5 text-center">
               <Link to="/all-sports" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-3 font-sans text-xs uppercase tracking-[0.15em] transition-colors duration-200 rounded-sm">
                 View All Sports <ArrowRight className="w-4 h-4" />
               </Link>
@@ -149,10 +149,10 @@ export default function ThreeDReliefPlaques() {
       </section>
 
       {/* Spec Table */}
-      <section className="py-20 border-t border-bronze/10 bg-secondary/20">
+      <section className="py-5 border-t border-bronze/10 bg-secondary/20">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
-            <div className="text-center mb-12">
+            <div className="text-center mb-5">
               <h2 className="font-serif text-4xl text-parchment">Available Formats & Specs</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-xl mx-auto">Bronze or aluminum. Any size. Any shape — including home plate, pennant, jersey silhouette, and custom architectural forms. Designed to expand annually for Hall of Fame programs that add inductees every year.</p>
             </div>
@@ -181,10 +181,10 @@ export default function ThreeDReliefPlaques() {
       {stlModels.length > 0 && <STLGallery models={stlModels} />}
 
       {/* Portrait Hall of Fame Plaques */}
-      <section className="py-28 border-t border-bronze/10">
+      <section className="py-6 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
-            <div className="mb-10 text-center">
+            <div className="mb-5 text-center">
               <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Hall of Fame Portraits</span>
               <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Champion Portrait Plaques</h2>
               <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">Legendary athletes immortalized with career statistics, championship honors, and Hall of Fame recognition cast in museum-quality bronze.</p>
@@ -214,7 +214,7 @@ export default function ThreeDReliefPlaques() {
           </div>
 
           <FadeIn delay={0.3}>
-            <div className="mt-10 text-center">
+            <div className="mt-5 text-center">
               <Link to="/hall-of-fame" className="inline-flex items-center gap-2 border border-bronze/30 hover:border-gold text-parchment/60 hover:text-parchment px-8 py-3 font-sans text-xs uppercase tracking-[0.15em] transition-colors duration-200 rounded-sm">
                 View Hall of Fame Gallery <ArrowRight className="w-4 h-4" />
               </Link>
