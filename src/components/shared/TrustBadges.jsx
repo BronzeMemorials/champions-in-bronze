@@ -27,7 +27,7 @@ export default function TrustBadges() {
           <FadeIn delay={0.45}>
             <a
               href="tel:7723090412"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gold hover:border-yellow-400 transition-all duration-300 group hover:scale-105 hover:shadow-lg shrink-0"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gold hover:border-yellow-400 transition-all duration-300 group hover:scale-105 hover:shadow-lg shrink-0 outline-none focus:outline-none"
               style={{ background: "linear-gradient(135deg, #DAA520 0%, #FFD700 50%, #DAA520 100%)", boxShadow: "0 4px 14px rgba(218,165,32,0.4)" }}
             >
               <Phone className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
