@@ -212,17 +212,17 @@ export default function HallOfFamePage() {
                 <Phone className="w-5 h-5" /> 772-309-0412
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <div className="flex flex-nowrap items-center gap-4 overflow-x-auto">
               {[
               { icon: Clock, text: "Artwork Proof Within The Hour" },
               { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
               { icon: Award, text: "Made in the USA" },
               { icon: Star, text: "50,000+ Satisfied Customers" }].
               map(({ icon: Icon, text }, i, arr) =>
-              <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap">
+              <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap flex-shrink-0">
                   <Icon className="w-3.5 h-3.5 text-yellow-600 flex-shrink-0" />
                   <span className="font-semibold">{text}</span>
-                  {i < arr.length - 1 && <span className="text-gray-300 ml-4">|</span>}
+                  {i < arr.length - 1 && <span className="text-gray-300 ml-2">|</span>}
                 </div>
               )}
             </div>
