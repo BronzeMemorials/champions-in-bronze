@@ -13,7 +13,7 @@ export default function TrustBadges() {
   return (
     <div className="py-3 bg-gradient-to-r from-slate-50 via-white to-slate-50 border-y-2 border-bronze/30 shadow-md">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-nowrap justify-center items-center gap-3 lg:gap-6 overflow-x-auto">
+        <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-6">
           {badges.map((badge, i) => (
             <FadeIn key={badge.label} delay={i * 0.08}>
               <div className="flex flex-col items-center text-center min-w-[90px] px-2 py-1">
