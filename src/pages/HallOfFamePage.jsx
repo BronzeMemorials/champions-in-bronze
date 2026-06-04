@@ -244,32 +244,6 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* BUSTS & STATUES PREVIEW */}
-      <section className="py-4 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn>
-            <p className="text-center font-sans text-xs uppercase tracking-[0.3em] text-yellow-700 font-bold mb-6">Bronze Busts & Life-Size Statues</p>
-          </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/496d05ff8_99F60C02-07FA-4E6B-A2F7-A1DF3368DE0E.png", label: "Hall of Fame Bust", link: "/bronze-athlete-busts" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1daa60284_ECEF0D5E-181D-4F24-8FD8-994D7F9B3730.png", label: "Athlete Portrait Bust", link: "/bronze-athlete-busts" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Football Statue", link: "/football" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png", label: "Basketball Statue", link: "/basketball" },
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.08}>
-                <Link to={item.link} className="group rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
-                  <div className="flex-1 overflow-hidden">
-                    <img src={item.img} alt={item.label} className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-300" />
-                  </div>
-                  <p className="text-center text-yellow-700 font-sans text-xs font-bold uppercase tracking-widest py-2 border-t border-gray-100 group-hover:text-yellow-600">→ {item.label}</p>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <TrustBadges />
 
       {/* SPORTS HALL OF FAME PLAQUES */}
@@ -479,6 +453,10 @@ export default function HallOfFamePage() {
 
       <TestimonialCarousel />
 
+      <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your Hall of Fame project. No commitment required. Museum-quality proof delivered fast." source="pro" />
+
+      <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
+
       {/* BUSTS */}
       <section className="py-6 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
@@ -560,10 +538,6 @@ export default function HallOfFamePage() {
           </FadeIn>
         </div>
       </section>
-
-      <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your Hall of Fame project. No commitment required. Museum-quality proof delivered fast." source="pro" />
-
-      <FAQSection faqs={faqs} title="Hall of Fame Frequently Asked Questions" />
 
       <QuoteForm title="Ready to Build Your Hall of Fame?" subtitle="Over 50,000 satisfied customers. Every inductee portrait from your actual photographs. Artwork within the hour." source="pro" />
     </div>);
