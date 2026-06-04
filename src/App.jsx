@@ -60,7 +60,6 @@ import CapitalCampaignRecognition from './pages/CapitalCampaignRecognition';
 import CustomJerseyPlaques from './pages/CustomJerseyPlaques';
 import ReliefJerseyPlaques from './pages/ReliefJerseyPlaques';
 import BronzePaperweights from './pages/BronzePaperweights';
-import ModelViewer from './pages/ModelViewer';
 import CustomBronzeStatues from './pages/CustomBronzeStatues';
 import BronzeAthleteBusts from './pages/BronzeAthleteBusts';
 import { Navigate } from 'react-router-dom';
@@ -181,7 +180,7 @@ const AuthenticatedApp = () => {
         <Route path="/custom-jersey-plaques" element={<CustomJerseyPlaques />} />
         <Route path="/3d-relief-jersey-plaques" element={<ReliefJerseyPlaques />} />
         <Route path="/bronze-paperweights" element={<BronzePaperweights />} />
-        <Route path="/model-viewer" element={<ModelViewer />} />
+
 
         {/* New repositioned pages */}
         <Route path="/custom-bronze-athlete-statues" element={<CustomBronzeStatues />} />

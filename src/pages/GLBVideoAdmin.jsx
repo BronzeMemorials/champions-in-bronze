@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { base44 } from "@/api/base44Client";
 import * as THREE from "three";
-import { Upload, Video, Save, CheckCircle, Loader2, RotateCcw, Trash2, Lock } from "lucide-react";
+import { Upload, Video, Save, CheckCircle, Loader2, RotateCcw, Trash2, Lock, Download } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import FadeIn from "@/components/shared/FadeIn";
 
@@ -446,7 +446,16 @@ export default function GLBVideoAdmin() {
                     playsInline
                     className="w-full rounded-sm border border-bronze/20"
                   />
-                  <p className="text-parchment/40 text-xs font-sans mt-2">This is exactly what visitors will see on the website.</p>
+                  <div className="flex items-center justify-between mt-2">
+                    <p className="text-parchment/40 text-xs font-sans">This is exactly what visitors will see on the website.</p>
+                    <a
+                      href={videoPreviewUrl}
+                      download={(label || "model") + "-360.webm"}
+                      className="flex items-center gap-1.5 bg-bronze/20 hover:bg-bronze text-parchment px-3 py-1.5 font-sans text-xs uppercase tracking-widest transition-all rounded-sm"
+                    >
+                      <Download className="w-3.5 h-3.5" /> Download
+                    </a>
+                  </div>
                 </div>
               )}
 
