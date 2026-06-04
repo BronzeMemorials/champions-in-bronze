@@ -204,27 +204,13 @@ export default function HallOfFamePage() {
             <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
               Individual inductee portraits, jersey relief plaques, home plate memorials, university seals, and complete Hall of Fame wall systems. Every portrait created from your actual photographs. Artwork proof within the hour. Made in the USA.
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4">
               <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all hover:scale-[1.02]" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)" }}>
                 Start Your Hall of Fame <ArrowRight className="w-4 h-4" />
               </Link>
               <a href="tel:7723090412" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-yellow-600 text-yellow-800 font-sans font-black uppercase tracking-widest text-xl hover:bg-yellow-50 transition-colors">
                 <Phone className="w-5 h-5" /> 772-309-0412
               </a>
-            </div>
-            <div className="flex flex-nowrap items-center gap-4 overflow-x-auto">
-              {[
-              { icon: Clock, text: "Artwork Proof Within The Hour" },
-              { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
-              { icon: Award, text: "Made in the USA" },
-              { icon: Star, text: "50,000+ Satisfied Customers" }].
-              map(({ icon: Icon, text }, i, arr) =>
-              <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap flex-shrink-0">
-                  <Icon className="w-3.5 h-3.5 text-yellow-600 flex-shrink-0" />
-                  <span className="font-semibold">{text}</span>
-                  {i < arr.length - 1 && <span className="text-gray-300 ml-2">|</span>}
-                </div>
-              )}
             </div>
           </FadeIn>
           <FadeIn delay={0.2} className="hidden lg:block">
@@ -243,6 +229,23 @@ export default function HallOfFamePage() {
             </div>
           </FadeIn>
         </div>
+        {/* Trust badges — full width below both columns */}
+        <FadeIn delay={0.3}>
+          <div className="flex flex-nowrap items-center gap-4 overflow-x-auto mt-6 pb-2">
+            {[
+            { icon: Clock, text: "Artwork Proof Within The Hour" },
+            { icon: Shield, text: "Guaranteed to Last 100 Years Outdoors" },
+            { icon: Award, text: "Made in the USA" },
+            { icon: Star, text: "50,000+ Satisfied Customers" }].
+            map(({ icon: Icon, text }, i, arr) =>
+            <div key={text} className="flex items-center gap-2 text-gray-600 text-xs whitespace-nowrap flex-shrink-0">
+                <Icon className="w-3.5 h-3.5 text-yellow-600 flex-shrink-0" />
+                <span className="font-semibold">{text}</span>
+                {i < arr.length - 1 && <span className="text-gray-300 ml-2">|</span>}
+              </div>
+            )}
+          </div>
+        </FadeIn>
       </section>
 
       <TrustBadges />
