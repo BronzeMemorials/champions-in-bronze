@@ -23,10 +23,6 @@ const SPORTS_PLAQUES = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/5a737d31d_BASEBALLCHAMPION72.png", label: "Baseball Jersey Plaque", desc: "Raymond #72 jersey with catcher, stadium & championship ring", cta: "Create Your Custom Jersey Plaque" }];
 
 
-const BOXING_PLAQUES = [
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd behind them", cta: "Commission a Combat Sports Plaque" },
-{ url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene in bronze", cta: "Capture the Moment in Bronze" }];
-
 
 const INSTITUTIONAL = [
 { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/775fca918_47E80D20-855E-4F7E-BBF8-D319E64030C0.png", label: "Folsom Field — Colorado Buffaloes", desc: "Aerial stadium bronze relief — architectural landmark plaque", cta: "Get Your Stadium Plaque Quote" },
@@ -299,64 +295,6 @@ export default function HallOfFamePage() {
         </div>
       </section>
 
-      {/* BOXING */}
-      <section className="py-5 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-5xl mx-auto px-6">
-          <FadeIn>
-            <div className="text-center mb-6">
-              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-3">Combat Sports</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-gray-900">Boxing & Combat Sports Hall of Fame</h2>
-              <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm">High-drama bronze relief scenes that capture the raw power and glory of combat sports.</p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {BOXING_PLAQUES.map((item, i) =>
-            <FadeIn key={i} delay={i * 0.1}>
-                <div
-                className="group overflow-hidden rounded border border-gray-200 bg-white hover:border-yellow-500 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
-                onClick={() => setSelectedPlaque(item)}>
-
-                  <div className="overflow-hidden w-full">
-                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
-                  </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <p className="font-serif text-lg text-gray-900 font-semibold">{item.label}</p>
-                    <p className="text-gray-500 text-sm mt-1 flex-1">{item.desc}</p>
-                    <p className="mt-3 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold group-hover:text-yellow-600 transition-colors">→ {item.cta || "Get a Quote"}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCTS + PRICING */}
-      <section className="py-6 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn>
-            <div className="text-center mb-4">
-              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-2">Hall of Fame Products</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Everything We Make</h2>
-              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Every piece custom-made in the USA. Artwork proof within the hour. No commitment to order.</p>
-            </div>
-          </FadeIn>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((p, i) =>
-            <FadeIn key={p.title} delay={i * 0.07}>
-                <div className="border-2 border-gray-200 bg-white p-7 hover:border-yellow-500 hover:shadow-md transition-all duration-300 rounded">
-                  <h3 className="font-serif text-lg text-gray-900 leading-tight mb-3">{p.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.desc}</p>
-                  <Link to="/request-quote" className="inline-flex items-center gap-1 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold hover:text-yellow-600 transition-colors">
-                    Get a Quote <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </FadeIn>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* PORTRAIT PLAQUES */}
        <section className="py-6 bg-gray-50 border-y border-gray-200">
          <div className="max-w-7xl mx-auto px-6">
@@ -373,6 +311,32 @@ export default function HallOfFamePage() {
 
        {/* 360° VIDEO GALLERY */}
        <VideoModelGallery models={glbModels} />
+
+      {/* PRODUCTS + PRICING — text break after photo galleries */}
+      <section className="py-6 bg-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-4">
+              <span className="text-yellow-700 font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-2">Hall of Fame Products</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900">Everything We Make</h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Every piece custom-made in the USA. Artwork proof within the hour. No commitment to order.</p>
+            </div>
+          </FadeIn>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((p, i) =>
+            <FadeIn key={p.title} delay={i * 0.07}>
+                <div className="border-2 border-gray-200 bg-white p-5 hover:border-yellow-500 hover:shadow-md transition-all duration-300 rounded">
+                  <h3 className="font-serif text-lg text-gray-900 leading-tight mb-2">{p.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">{p.desc}</p>
+                  <Link to="/request-quote" className="inline-flex items-center gap-1 text-yellow-700 font-sans text-xs uppercase tracking-widest font-bold hover:text-yellow-600 transition-colors">
+                    Get a Quote <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              </FadeIn>
+            )}
+          </div>
+        </div>
+      </section>
 
        {/* INSTITUTIONAL */}
       <section className="py-6 bg-white">

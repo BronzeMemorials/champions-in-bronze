@@ -223,6 +223,38 @@ export default function ThreeDReliefPlaques() {
         </div>
       </section>
 
+      {/* BOXING & COMBAT SPORTS */}
+      <section className="py-8 border-t border-bronze/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-5">
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold block mb-2">Combat Sports</span>
+              <h2 className="font-serif text-3xl md:text-4xl text-parchment">Boxing & Combat Sports Relief Plaques</h2>
+              <p className="text-parchment/60 mt-3 max-w-xl mx-auto text-sm">High-drama bronze relief scenes that capture the raw power and glory of combat sports.</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/69f294441_IMG_1444.jpg", label: "Boxing — The Fight", desc: "Two fighters exchanging blows in bronze relief — stadium crowd behind them", cta: "Commission a Combat Sports Plaque" },
+              { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cbbe5eceb_IMG_1438.jpg", label: "Boxing — The Knockout", desc: "Champion standing over fallen opponent — 'Get Up!' ring scene in bronze", cta: "Capture the Moment in Bronze" }
+            ].map((item, i) =>
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="group overflow-hidden rounded-sm border border-bronze/20 bg-secondary/10 hover:border-gold transition-all duration-300 flex flex-col">
+                  <div className="overflow-hidden w-full">
+                    <img src={item.url} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-4 flex flex-col flex-1">
+                    <p className="font-serif text-lg text-parchment font-semibold">{item.label}</p>
+                    <p className="text-parchment/60 text-sm mt-1 flex-1">{item.desc}</p>
+                    <Link to="/request-quote" className="mt-3 text-gold font-sans text-xs uppercase tracking-widest font-bold hover:text-yellow-400 transition-colors">→ {item.cta}</Link>
+                  </div>
+                </div>
+              </FadeIn>
+            )}
+          </div>
+        </div>
+      </section>
+
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
 
       <ProcessGallery
