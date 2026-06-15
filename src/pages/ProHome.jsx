@@ -395,7 +395,7 @@ to Live Forever</h1>
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
-                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg" alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
@@ -848,8 +848,8 @@ to Live Forever</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                                                 SECTION 1 — BRONZE PLAQUES (DOMINANT)
-                                                              ══════════════════════════════════════════ */}
+                                                                  SECTION 1 — BRONZE PLAQUES (DOMINANT)
+                                                               ══════════════════════════════════════════ */}
       <section id="plaques" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -921,8 +921,8 @@ to Live Forever</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                                                 SECTION 2 — HALL OF FAME SYSTEMS
-                                                              ══════════════════════════════════════════ */}
+                                                                  SECTION 2 — HALL OF FAME SYSTEMS
+                                                               ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -986,8 +986,8 @@ to Live Forever</h1>
       </section>
 
       {/* ══════════════════════════════════════════
-                                                                 SECTION 3 — BUSTS (Premium Upsell)
-                                                              ══════════════════════════════════════════ */}
+                                                                  SECTION 3 — BUSTS (Premium Upsell)
+                                                               ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
@@ -1075,8 +1075,8 @@ to Live Forever</h1>
       <TestimonialCarousel />
 
       {/* ══════════════════════════════════════════
-                                                                 SECTION 4 — STATUES (Signature / Reduced)
-                                                              ══════════════════════════════════════════ */}
+                                                                  SECTION 4 — STATUES (Signature / Reduced)
+                                                               ══════════════════════════════════════════ */}
       <section className="py-28 border-t border-bronze/10 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
