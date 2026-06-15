@@ -356,9 +356,9 @@ to Live Forever</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Football Relief & Photo Cast", desc: "High-depth sculptural action figures rising from the surface with your actual photographs cast permanently into bronze.", cta: "Request Quote", to: "/request-quote" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Basketball Relief & Photo Cast", desc: "Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours.", cta: "Request Quote", to: "/request-quote" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Relief & Photo Cast", desc: "Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees and championship programs.", cta: "Request Quote", to: "/request-quote" }].
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3f591fbc5_cast-bronze-bas-relief-image-cast-football-circle.jpg", label: "Football Hall of Fame Circle Plaque", desc: "High-depth sculptural action figures rising from the surface with your actual photographs cast permanently into bronze.", cta: "Request Quote", to: "/request-quote" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg", label: "Basketball Hall of Fame Action Plaque", desc: "Figures, faces, and moments sculpted in up to 1 inch of dimensional depth. Light plays across the contours.", cta: "Request Quote", to: "/request-quote" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b24142f8b_cast-bronze-bas-relief-image-cast-plaque-baseball.jpg", label: "Baseball Hall of Fame Relief Plaque", desc: "Every viewing angle reveals something new. The ultimate tribute for Hall of Fame inductees and championship programs.", cta: "Request Quote", to: "/request-quote" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
@@ -389,9 +389,9 @@ to Live Forever</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Championship Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Hall of Fame Relief Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Athletic Recognition Plaque", desc: "Cast in bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" }].
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a129b51e_cast-bronze-bas-relief-image-cast-recognition-circle.jpg", label: "Championship Circle Relief Plaque", desc: "Athletes, moments, and championship scenes rise physically from the surface with up to 1 inch of dimensional depth.", cta: "View Championship Plaques", to: "/championship-bronze-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b1e4ad47f_cast-bronze-bas-relief-image-cast-bronze-plaque-baseball-boy.jpg", label: "Youth Athlete Hall of Fame Plaque", desc: "Every face captured from your actual photographs — not a generic figure. Hand-sculpted by master artisans.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cffa3fd54_cast-bronze-bas-relief-image-cast-bronze-plaque-baseball-boy-card.jpg", label: "Collector's Card Photo ImageCast Plaque", desc: "Cast in bronze and built to last 100+ years outdoors. The most prestigious form of athletic plaque recognition.", cta: "View All Plaques", to: "/3d-bas-relief-plaques" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
@@ -651,7 +651,7 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Football Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3f591fbc5_cast-bronze-bas-relief-image-cast-football-circle.jpg", label: "Football Hall of Fame Circle Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/496d05ff8_99F60C02-07FA-4E6B-A2F7-A1DF3368DE0E.png", label: "Football Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Football Quarterback Statue", cta: "View Football Statues", to: "/football" }].
                 map((item, i) =>
@@ -682,7 +682,7 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Basketball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg", label: "Basketball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1daa60284_ECEF0D5E-181D-4F24-8FD8-994D7F9B3730.png", label: "Basketball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png", label: "Basketball Player Statue", cta: "View Basketball Statues", to: "/basketball" }].
                 map((item, i) =>
@@ -713,9 +713,9 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Baseball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/580dca88d_BA78C4BD-B3AA-4B99-9EE6-70D7AC769604.png", label: "Baseball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/ae8cf7957_ChatGPTImageMay28202608_44_52AM.png", label: "Baseball Pitcher Statue", cta: "View Baseball Statues", to: "/baseball" }].
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b24142f8b_cast-bronze-bas-relief-image-cast-plaque-baseball.jpg", label: "Baseball Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde11c96b_cast-bronze-bas-relief-image-cast-bronze-statue-baseball-boy.jpg", label: "Baseball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cffa3fd54_cast-bronze-bas-relief-image-cast-bronze-plaque-baseball-boy-card.jpg", label: "Baseball Card Photo ImageCast", cta: "View Baseball Statues", to: "/baseball" }].
                 map((item, i) =>
                 <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
@@ -775,7 +775,7 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Soccer Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/30599141b_cast-bronze-bas-relief-image-cast-soccer-circle.jpg", label: "Soccer Hall of Fame Circle Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", label: "Soccer Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" }].
                 map((item, i) =>
@@ -824,6 +824,68 @@ to Live Forever</h1>
               <div className="mt-5">
                 <Link to="/hockey" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
                   View All Hockey Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Softball */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 07</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Softball</h3>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">Softball champions deserve recognition as powerful as their legacy. Hall of Fame portrait plaques, championship tribute displays, and custom bronze recognition for players and coaches who defined their programs.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fc1fffc70_cast-bronze-bas-relief-image-cast-softball-catcher-off-frame.jpg", label: "Softball Catcher Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/38aa9fc20_cast-bronze-bas-relief-image-cast-softball-off-frame.jpg", label: "Softball Pitcher Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d41d4287_0804D2D5-A521-470D-9D6D-8E45E69BA991.png", label: "Softball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="mt-5">
+                <Link to="/softball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Softball Bronze <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            {/* Volleyball */}
+            <FadeIn>
+              <div className="mb-6">
+                <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Sport 08</span>
+                <h3 className="font-serif text-3xl text-parchment mt-1">Volleyball</h3>
+                <p className="text-black font-sans text-xl mt-2 max-w-2xl">From collegiate Hall of Fame walls to championship commemorations — volleyball programs trust Champions in Bronze to honor the athletes, coaches, and moments that defined their programs in permanent bronze.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cc48709e7_cast-bronze-bas-relief-image-cast-volleyball-action.jpg", label: "Volleyball Hall of Fame Action Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1fb685c10_cast-bronze-bas-relief-image-cast-volleyball-circle.jpg", label: "Volleyball Circle Recognition Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", label: "Volleyball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" }].
+                map((item, i) =>
+                <div key={i} className="group flex flex-col">
+                    <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
+                      <img src={item.img} alt={item.label} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="pt-3 pb-4 border-b border-bronze/15 flex items-center justify-between">
+                      <p className="font-serif text-xl text-parchment">{item.label}</p>
+                      <Link to={item.to} className="text-bronze hover:text-gold font-sans text-base uppercase tracking-widest flex items-center gap-1 transition-colors whitespace-nowrap ml-3">{item.cta} <ArrowRight className="w-3 h-3" /></Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="mt-5">
+                <Link to="/volleyball" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                  View All Volleyball Bronze <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </FadeIn>
