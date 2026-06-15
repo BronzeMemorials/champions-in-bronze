@@ -582,6 +582,53 @@ to Live Forever</h1>
         </div>
       </section>
 
+      {/* ── RECENT WORK GALLERY ── */}
+      <section className="py-10 md:py-14 bg-white border-b border-bronze/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <FadeIn>
+            <div className="mb-6">
+              <span className="text-bronze font-sans tracking-[0.3em] uppercase text-base font-semibold">Recent Work</span>
+              <h2 className="font-serif text-3xl text-parchment mt-1">Photo Image Cast & 3D Bas-Relief Gallery</h2>
+              <p className="text-black font-sans text-base mt-2 max-w-3xl">Real artwork proofs — basketball, baseball, football, soccer, softball, and volleyball — cast in bronze from actual photographs.</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+            {[
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg", label: "Basketball Action — Hall of Fame Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3f591fbc5_cast-bronze-bas-relief-image-cast-football-circle.jpg", label: "Football Hall of Fame Circle Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b24142f8b_cast-bronze-bas-relief-image-cast-plaque-baseball.jpg", label: "Baseball Hall of Fame Relief Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a129b51e_cast-bronze-bas-relief-image-cast-recognition-circle.jpg", label: "Recognition Circle — Hall of Fame Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b1e4ad47f_cast-bronze-bas-relief-image-cast-bronze-plaque-baseball-boy.jpg", label: "Youth Baseball — 3D Bas-Relief Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cffa3fd54_cast-bronze-bas-relief-image-cast-bronze-plaque-baseball-boy-card.jpg", label: "Baseball Card Photo ImageCast Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fde11c96b_cast-bronze-bas-relief-image-cast-bronze-statue-baseball-boy.jpg", label: "Youth Baseball Bronze Bust" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/30599141b_cast-bronze-bas-relief-image-cast-soccer-circle.jpg", label: "Soccer Hall of Fame Circle Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fc1fffc70_cast-bronze-bas-relief-image-cast-softball-catcher-off-frame.jpg", label: "Softball Catcher Hall of Fame Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/38aa9fc20_cast-bronze-bas-relief-image-cast-softball-off-frame.jpg", label: "Softball Pitcher Hall of Fame Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/cc48709e7_cast-bronze-bas-relief-image-cast-volleyball-action.jpg", label: "Volleyball Hall of Fame Action Plaque" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1fb685c10_cast-bronze-bas-relief-image-cast-volleyball-circle.jpg", label: "Volleyball Circle Recognition Plaque" },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.04}>
+                <div className="group overflow-hidden border border-bronze/20 hover:border-bronze/50 transition-all duration-300 shadow-sm">
+                  <div className="aspect-square overflow-hidden bg-secondary/20">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="px-2 py-2 border-t border-bronze/10">
+                    <p className="font-sans text-[11px] text-black font-semibold leading-tight">{item.label}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <div className="mt-6">
+              <Link to="/request-quote" className="inline-flex items-center gap-2 bg-bronze hover:bg-gold text-white px-7 py-3.5 font-sans text-base uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+                Request Your Free Artwork Proof <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="Tell us about your project — we'll deliver a digital proof within the hour." source="pro" />
 
       <TrustBadges />
