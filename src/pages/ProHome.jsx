@@ -395,7 +395,7 @@ to Live Forever</h1>
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
-                    <img src="https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg" alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="pt-3 pb-4 border-b border-bronze/15 flex flex-col gap-2">
                     <div>
@@ -521,9 +521,9 @@ to Live Forever</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/90136d985_3987887D-191A-419C-B621-221DF36585E5.png", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" }].
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b24142f8b_cast-bronze-bas-relief-image-cast-plaque-baseball.jpg", label: "Retired Jersey Plaque", desc: "The number that defined a career — cast permanently in bronze. Dimensional 3D bronze jersey plaques.", cta: "View Retired Jersey Plaques", to: "/retired-jersey-displays" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a129b51e_cast-bronze-bas-relief-image-cast-recognition-circle.jpg", label: "Championship Jersey Display", desc: "For retired number ceremonies, championship tributes, and Hall of Fame installations. Available in any team colors.", cta: "View Championship Displays", to: "/championship-bronze-plaques" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Hall of Fame Jersey Plaque", desc: "Cast in bronze or aluminum with custom typography. The most visually striking way to honor a retired number.", cta: "View Hall of Fame", to: "/hall-of-fame-plaques" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
                   <div className="aspect-[4/3] overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm">
@@ -554,8 +554,8 @@ to Live Forever</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png", label: "Stadium Donor Recognition Wall", desc: "Your contribution deserves permanence. Architectural donor recognition environments that transform generosity into permanent bronze.", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Athletic Facility Donor Wall", desc: "Leadership and legacy transformed into permanent bronze recognition designed to inspire future generations.", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png", label: "Stadium Donor Recognition Wall", desc: "Your contribution deserves permanence. Architectural donor recognition environments that transform generosity into permanent bronze.", cta: "View Stadium Donor Walls", to: "/stadium-donor-walls" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/807fb8285_1EF9640F-BCCF-47C1-8ADB-FF7ACD382588.png", label: "Athletic Facility Donor Wall", desc: "Leadership and legacy transformed into permanent bronze recognition designed to inspire future generations.", cta: "View Athletic Donor Walls", to: "/athletic-donor-walls" },
               { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/a9a624b83_57AF450C-DA6C-4768-9FD6-6B877E40CB2E.png", label: "Capital Campaign Recognition Wall", desc: "Installed at universities, stadiums, athletic facilities, and capital campaigns nationwide.", cta: "View Capital Campaigns", to: "/capital-campaign-recognition" }].
               map((item, i) =>
               <div key={i} className="group flex flex-col">
@@ -697,9 +697,9 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png", label: "Women's Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg", label: "Women's Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b1801f52_A48B1FB3-444D-4741-AE40-D4E863E0F068.png", label: "Women's Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/385d62dba_ChatGPTImageMay28202608_46_07AM.png", label: "Women's Basketball Statue", cta: "View Basketball Statues", to: "/basketball" }].
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/020f34d62_5E076DD7-856B-4C90-A8C7-3BD2336FD64F.png", label: "Women's Basketball Statue", cta: "View Basketball Statues", to: "/basketball" }].
                 map((item, i) =>
                 <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
@@ -730,7 +730,7 @@ to Live Forever</h1>
                 {[
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/30599141b_cast-bronze-bas-relief-image-cast-soccer-circle.jpg", label: "Soccer Hall of Fame Circle Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", label: "Soccer Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" }].
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/f6b5763e1_0BB4AFDE-FA5D-4A01-8CB5-D9453AA9951F.png", label: "Soccer Player Statue", cta: "View Soccer Statues", to: "/soccer" }].
                 map((item, i) =>
                 <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
@@ -759,9 +759,9 @@ to Live Forever</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {[
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Hockey Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d41d4287_0804D2D5-A521-470D-9D6D-8E45E69BA991.png", label: "Hockey Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/2ef20594e_92544757-7bd9-4667-b3d0-ce1097be4314.png", label: "Hockey Player Statue", cta: "View Hockey Statues", to: "/hockey" }].
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/6a129b51e_cast-bronze-bas-relief-image-cast-recognition-circle.jpg", label: "Hockey Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/580dca88d_BA78C4BD-B3AA-4B99-9EE6-70D7AC769604.png", label: "Hockey Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" },
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/e44a376cd_CD24F754-D4D6-4C4F-9913-36FBB0C2F5D7.png", label: "Hockey Player Statue", cta: "View Hockey Statues", to: "/hockey" }].
                 map((item, i) =>
                 <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
@@ -792,7 +792,7 @@ to Live Forever</h1>
                 {[
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fc1fffc70_cast-bronze-bas-relief-image-cast-softball-catcher-off-frame.jpg", label: "Softball Catcher Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
                 { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/38aa9fc20_cast-bronze-bas-relief-image-cast-softball-off-frame.jpg", label: "Softball Pitcher Hall of Fame Plaque", cta: "View Hall of Fame Plaques", to: "/hall-of-fame-plaques" },
-                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d41d4287_0804D2D5-A521-470D-9D6D-8E45E69BA991.png", label: "Softball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" }].
+                { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b1801f52_A48B1FB3-444D-4741-AE40-D4E863E0F068.png", label: "Softball Portrait Bust", cta: "View Bronze Busts", to: "/bronze-athlete-busts" }].
                 map((item, i) =>
                 <div key={i} className="group flex flex-col">
                     <div className="overflow-hidden border border-bronze/20 group-hover:border-bronze/50 transition-all duration-300 shadow-sm bg-secondary/20">
