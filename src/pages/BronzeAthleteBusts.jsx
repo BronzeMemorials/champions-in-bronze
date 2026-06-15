@@ -47,6 +47,41 @@ export default function BronzeAthleteBusts() {
 
       <QuoteForm title="Request Your Free Artwork Proof" subtitle="Tell us about your bust project — we'll deliver a digital proof within the hour." source="pro" />
 
+      {/* Bust Gallery */}
+      <section className="py-16 border-t border-bronze/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <span className="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Gallery</span>
+              <h2 className="font-serif text-4xl md:text-5xl mt-3 text-parchment">Bronze Bust Gallery</h2>
+              <p className="text-parchment/55 font-sans text-sm mt-3 max-w-2xl mx-auto">Every bust created from your actual photographs — exact likeness, museum-quality bronze. No in-person sessions required.</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+            {[
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/496d05ff8_99F60C02-07FA-4E6B-A2F7-A1DF3368DE0E.png", label: "Standard Hall of Fame Bust", desc: "Classic shoulder bust — the Hall of Fame standard" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/1daa60284_ECEF0D5E-181D-4F24-8FD8-994D7F9B3730.png", label: "Athlete Portrait Bust", desc: "Exact likeness from photographs — no in-person session" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d41d4287_0804D2D5-A521-470D-9D6D-8E45E69BA991.png", label: "Coach Portrait Bust", desc: "Coaches, administrators, and leaders honored in bronze" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/82c049fdc_1EFEDCFE-9322-40E1-88FB-5223406FB921.png", label: "Championship Bust", desc: "Championship-era likeness sculpted for trophy rooms" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/580dca88d_BA78C4BD-B3AA-4B99-9EE6-70D7AC769604.png", label: "Stadium Donor Bust", desc: "Major donor recognition — permanent bronze portrait" },
+              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4b1801f52_A48B1FB3-444D-4741-AE40-D4E863E0F068.png", label: "Historic Athlete Bust", desc: "Created from archival photographs — any era" },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="group overflow-hidden border border-bronze/20 hover:border-gold transition-all duration-300 bg-white rounded-sm shadow-sm">
+                  <div className="bg-secondary/20 flex items-center justify-center p-2">
+                    <img src={item.img} alt={item.label + " — Champions in Bronze"} className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div className="p-4 text-center border-t border-bronze/10">
+                    <p className="font-serif text-base text-parchment font-semibold">{item.label}</p>
+                    <p className="text-parchment/50 text-xs mt-1">{item.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-28 border-t border-bronze/10 rounded-none">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>

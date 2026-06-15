@@ -20,6 +20,12 @@ const PLAQUE_GALLERY = [
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/738d1540f_PORTRAITFOOTBALL21.png", label: "Legacy Donor Commemorative Plaque", desc: "Career passing records and achievements permanently cast in bronze" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/6ac4828f3_IMG_1392.jpeg", label: "Portrait Donor Plaque", desc: "Home plate portrait — 29 years of program service honored in bronze" },
   { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/983a3990d_IMG_1396.jpeg", label: "Home Plate Donor Plaque", desc: "Photo-cast portrait & career stats — individual naming recognition" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/3f591fbc5_cast-bronze-bas-relief-image-cast-football-circle.jpg", label: "Football Circle Donor Recognition Plaque", desc: "Photo ImageCast football circle plaque — named donor recognition in bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/3a420fcb9_cast-bronze-bas-relief-image-cast-basketball-actuion.jpg", label: "Basketball Action Donor Plaque", desc: "Basketball action photo permanently cast in bronze for donor recognition" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/b24142f8b_cast-bronze-bas-relief-image-cast-plaque-baseball.jpg", label: "Baseball Hall of Fame Donor Plaque", desc: "Baseball bas-relief with photo image cast portrait for donor wall" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/30599141b_cast-bronze-bas-relief-image-cast-soccer-circle.jpg", label: "Soccer Circle Donor Plaque", desc: "Soccer circle photo cast — naming rights recognition in permanent bronze" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/fc1fffc70_cast-bronze-bas-relief-image-cast-softball-catcher-off-frame.jpg", label: "Softball Donor Recognition Plaque", desc: "Softball catcher photo image cast — individual donor portrait plaque" },
+  { url: "https://media.base44.com/images/public/69e6638934292a547ec97753/cc48709e7_cast-bronze-bas-relief-image-cast-volleyball-action.jpg", label: "Volleyball Donor Recognition Plaque", desc: "Volleyball action photo cast in bronze — donor recognition plaque" },
 ];
 
 const WALL_INSTALLS = [
