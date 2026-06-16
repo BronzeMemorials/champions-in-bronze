@@ -268,7 +268,7 @@ export default function HallOfFamePage() {
               <span className="font-sans tracking-[0.35em] uppercase text-xs font-bold block mb-1" style={{ color: "#1e3a5f" }}>Sport-Specific Hall of Fame Plaques</span>
               <p className="font-sans text-sm font-semibold text-gray-700 mb-3">Football · Men's &amp; Women's Basketball · Baseball · Softball · Soccer · Volleyball</p>
               <p className="font-sans text-sm font-semibold text-gray-700 mb-4">Donor Walls · Hall of Fame · Retired Jerseys · Athletic Recognition</p>
-              <h2 className="font-serif text-4xl md:text-5xl" style={{ color: "#1e3a5f" }}>Your Sport. Your Image.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl" style={{ color: "#1e3a5f" }}>Your Sport. Your Image. Your Legacy.</h2>
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
                 Football, baseball, basketball, soccer, golf, boxing, and more — each plaque custom designed around your sport, your image, and the moment being immortalized and honored forever.
               </p>
