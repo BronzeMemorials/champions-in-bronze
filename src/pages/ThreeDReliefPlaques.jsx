@@ -322,24 +322,6 @@ export default function ThreeDReliefPlaques() {
             ],
           },
           {
-            label: "Veterans Memorial Relief Plaques",
-            caption: "Panoramic narrative relief plaques honoring Vietnam, WWI, and WWII veterans. Multi-figure battle scene compositions with full text panels — designed for permanent outdoor memorial installations.",
-            steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/b10d7478c_Vietnam-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "Vietnam Veterans Memorial Relief Plaque" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/c16278797_WWI-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "WWI Veterans Memorial Relief Plaque" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fa624bcd9_WWII-Veterans-Modeled-Feature-36-x-24-ts.jpg", tag: "Finished Bronze", alt: "WWII Veterans Memorial Relief Plaque" },
-            ],
-          },
-          {
-            label: "Emergency Services Relief Plaques",
-            caption: "Multi-figure narrative compositions for firefighter and police service recognition. Hall of Fame grade bas-relief for public safety institutions.",
-            steps: [
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/4d72ca993_firefighter-service-plaque.jpg", tag: "Finished Bronze", alt: "Firefighter service relief plaque" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/506d7cbcb_relief-police.jpg", tag: "Finished Bronze", alt: "Police service relief plaque" },
-              { img: "https://media.base44.com/images/public/69e6638934292a547ec97753/fa624bcd9_18x24EmergencyServices.jpg", tag: "Finished Bronze", alt: "Emergency services relief plaque" },
-            ],
-          },
-          {
             label: "Portrait Bas-Relief Plaques — Institutional Gallery",
             caption: "Individual and multi-subject portrait plaques for universities, banks, fraternal organizations, and community recognition programs.",
             steps: [
