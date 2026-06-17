@@ -8,6 +8,8 @@ import ProcessTimeline from "../components/shared/ProcessTimeline";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import QuoteForm from "../components/shared/QuoteForm";
 import SectionHeading from "../components/shared/SectionHeading";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const hallImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f9ff2eea2_1FD764A1-3FE3-43F7-B620-ECD28F936C38.png";
 const donorImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5c025f1df_9D2C184B-2F6D-44F3-8F73-DA9EF4C4B828.png";
@@ -196,6 +198,10 @@ export default function CollegiateHome() {
       </section>
 
       <ProcessTimeline />
+
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
+
       <QuoteForm title="Honor The Team That Changed History" subtitle="Preserve the brotherhood for generations. Museum-quality artwork proof delivered within the hour." source="edu" />
       <TestimonialCarousel testimonials={collegiateTestimonials} />
       <QuoteForm

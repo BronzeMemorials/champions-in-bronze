@@ -3,6 +3,8 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -65,6 +67,8 @@ export default function DedicationPlaques() {
       </section>
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
       <FAQSection faqs={faqs} title="Dedication Plaque FAQ" />
       <QuoteForm title="Start Your Dedication Plaque" subtitle="Tell us about the occasion and honoree. Artwork proof within 48 hours." source="pro" />
     </div>

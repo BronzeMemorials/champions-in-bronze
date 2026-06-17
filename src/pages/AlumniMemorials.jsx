@@ -3,6 +3,8 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/502c0767b_generated_e375b9ec.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -65,6 +67,8 @@ export default function AlumniMemorials() {
       </section>
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="edu" />
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
       <FAQSection faqs={faqs} title="Alumni Recognition FAQ" />
       <QuoteForm title="Honor Your Alumni in Bronze" subtitle="Tell us about your program. Design proposal and pricing within 48 hours." source="edu" />
     </div>

@@ -4,6 +4,8 @@ import TrustBadges from "../components/shared/TrustBadges";
 import FAQSection from "../components/shared/FAQSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/5b198cd19_generated_1a12a43b.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/4262e1b6f_generated_6dae4386.png";
@@ -72,6 +74,8 @@ export default function BronzeMemorials() {
       </section>
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
       <FAQSection faqs={faqs} title="Bronze Memorial FAQ" />
       <QuoteForm title="Begin a Bronze Memorial" subtitle="Our memorial team will guide you through every step with care. Artwork proof within 48 hours." source="pro" />
     </div>

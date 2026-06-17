@@ -9,6 +9,7 @@ import SEOHead from "../components/shared/SEOHead";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import PlaqueQuoteModal from "../components/shared/PlaqueQuoteModal";
 import VideoModelGallery from "../components/shared/VideoModelGallery";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
 import { base44 } from "@/api/base44Client";
 
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
@@ -399,6 +400,9 @@ export default function HallOfFamePage() {
           <GalleryGrid items={CHAMPIONSHIP_PLAQUES} columns={2} onPlaqueClick={setSelectedPlaque} />
         </div>
       </section>
+
+      {/* WHY US */}
+      <SportPlaquesShowcase showHeading={true} />
 
       {/* WHY US */}
       <section className="py-6 bg-white">

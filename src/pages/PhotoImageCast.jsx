@@ -7,6 +7,8 @@ import FAQSection from "../components/shared/FAQSection";
 import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection";
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/f54e9ac4d_ED04FD70-945D-4463-AC78-050B841D9D0C.png";
@@ -157,6 +159,9 @@ export default function PhotoImageCast() {
       </section>
 
       <QuoteForm title="Get a Quote — Artwork Within The Hour" subtitle="No commitment required. Museum-quality artwork proof delivered fast." source="pro" />
+
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
 
       <BustsAndStatuesSection />
       <FAQSection faqs={faqs} title="Photo ImageCasting FAQ" />

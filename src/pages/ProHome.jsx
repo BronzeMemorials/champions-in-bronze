@@ -70,6 +70,8 @@ import ProcessTimeline from "../components/shared/ProcessTimeline";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import QuoteForm from "../components/shared/QuoteForm";
 import FAQSection from "../components/shared/FAQSection";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 // Hero slides — plaque & recognition first
 const heroSlides = [
@@ -1069,7 +1071,12 @@ to Live Forever</h1>
       </section>
 
       {/* PROCESS */}
+      <SportPlaquesShowcase />
+
+      {/* PROCESS */}
       <ProcessTimeline />
+
+      <BustPlaquesShowcase />
 
       {/* TESTIMONIALS */}
       <TestimonialCarousel />

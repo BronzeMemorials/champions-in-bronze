@@ -8,6 +8,8 @@ import FadeIn from "../components/shared/FadeIn";
 import SEOHead from "../components/shared/SEOHead";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
 import PlaqueQuoteModal from "../components/shared/PlaqueQuoteModal";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/41c645d41_IMG_1398.jpg";
 
@@ -173,6 +175,9 @@ export default function AluminumPlaques() {
       </section>
 
       <TestimonialCarousel />
+
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
 
       <QuoteForm title="Request Your Free Artwork Proof — Within The Hour" subtitle="Tell us about your project. No commitment required. Proof delivered fast." source="pro" />
 

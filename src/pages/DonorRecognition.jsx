@@ -7,6 +7,8 @@ import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection"
 import QuoteForm from "../components/shared/QuoteForm";
 import FadeIn from "../components/shared/FadeIn";
 import TestimonialCarousel from "../components/shared/TestimonialCarousel";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const HERO_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/ab5fbf767_generated_696960c2.png";
 
@@ -732,6 +734,8 @@ export default function DonorRecognition() {
         source="pro"
       />
 
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
       <BustsAndStatuesSection />
       <FAQSection faqs={faqs} title="Donor Recognition Wall FAQ" />
 

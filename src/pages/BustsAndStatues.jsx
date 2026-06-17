@@ -11,6 +11,8 @@ import BustsAndStatuesSection from "../components/shared/BustsAndStatuesSection"
 import QuoteForm from "../components/shared/QuoteForm";
 import { base44 } from "@/api/base44Client";
 import ProcessGallery from "../components/shared/ProcessGallery";
+import SportPlaquesShowcase from "../components/shared/SportPlaquesShowcase";
+import BustPlaquesShowcase from "../components/shared/BustPlaquesShowcase";
 
 const heroImg = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
 const img1 = "https://media.base44.com/images/public/69e6638934292a547ec97753/fde18b17d_82360375-ACAD-438B-BC4F-F588D804FAFC.png";
@@ -270,6 +272,8 @@ export default function BustsAndStatues() {
         ]}
       />
 
+      <SportPlaquesShowcase />
+      <BustPlaquesShowcase />
       <BustsAndStatuesSection />
       <FAQSection faqs={faqs} />
       <QuoteForm title="Commission Your Bust or Statue" subtitle="Upload your photos and project details. We'll deliver a digital sculpt proof within 48 hours." source="pro" />
