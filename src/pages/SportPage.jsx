@@ -62,7 +62,7 @@ const sharedFaqs = [
 /**
  * Reusable sport page — pass sport name, hero image, and custom products
  */
-export default function SportPage({ sport, league, heroImg, heroSubtitle, products }) {
+export default function SportPage({ sport, league, heroImg, heroSubtitle, products, children }) {
   const img = heroImg || imgs[0];
 
   const defaultProducts = [
@@ -249,6 +249,8 @@ export default function SportPage({ sport, league, heroImg, heroSubtitle, produc
           </div>
         </section>
       )}
+
+      {children}
 
       <FAQSection faqs={sharedFaqs} title={`${sport} Plaque & Statue FAQ`} />
       <QuoteForm title={`Start Your ${sport} Commission`} subtitle={`Upload your photos and project details. ${sport} artwork proof within 48 hours.`} source="pro" />

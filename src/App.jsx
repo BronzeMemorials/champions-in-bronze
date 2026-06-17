@@ -82,9 +82,6 @@ import GLBVideoAdmin from './pages/GLBVideoAdmin';
 import ArtworkApprovalPage from './pages/ArtworkApprovalPage';
 import CityLandingPage from './pages/CityLandingPage';
 
-// Athlete landing pages
-import JessyHuebnerPage from './pages/JessyHuebnerPage';
-
 // Keyword landing pages (new)
 import Statues from './pages/Statues';
 import UniversityBronzePlaques from './pages/UniversityBronzePlaques';
@@ -205,8 +202,6 @@ const AuthenticatedApp = () => {
         <Route path="/contact" element={<Contact />} />
 
         {/* Keyword landing pages */}
-        <Route path="/jessy-huebner" element={<JessyHuebnerPage />} />
-
         <Route path="/statues" element={<Statues />} />
         <Route path="/university-bronze-plaques" element={<UniversityBronzePlaques />} />
         <Route path="/women-basketball-plaque" element={<WomenBasketballPlaque />} />
