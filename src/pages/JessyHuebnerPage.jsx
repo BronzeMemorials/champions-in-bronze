@@ -8,7 +8,7 @@ const PLAQUE_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97
 const CHAMPION_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/b9f63bd6f_e8c50451-6842-42de-9430-cb15069e3c81.png";
 
 const stats = [
-  { label: "AJGA Rank", value: "#5", sub: "Nationally" },
+  { label: "AJGA Rank", value: "#4", sub: "Nationally" },
   { label: "WAGR Best Rank", value: "#3", sub: "World Amateur" },
   { label: "Tournament Wins", value: "11", sub: "AJGA & WAGR" },
   { label: "Top-10 Finishes", value: "16", sub: "Counting Events" },
@@ -35,7 +35,7 @@ const tournaments = [
 
 const accolades = [
   "2026 Wyndham Invitational Champion — 65-65-68 (-12)",
-  "AJGA Rank #5 Nationally (June 2026)",
+  "AJGA Rank #4 Nationally (June 2026)",
   "WAGR Best Rank #3 — World Amateur Golf Ranking",
   "11 tournament victories across AJGA & WAGR events",
   "Selected to 2025 Wyndham Cup East Team",
@@ -47,8 +47,8 @@ export default function JessyHuebnerPage() {
   return (
     <div className="bg-white text-gray-900">
       <SEOHead
-        title="Jessy Huebner — AJGA #5 · Wyndham Invitational Champion · University of Florida Commit | Champions in Bronze"
-        description="Jessy Huebner: AJGA Rank #5 nationally, 2026 Wyndham Invitational Champion, WAGR Best Rank #3, 11 tournament wins. University of Florida commit. Champion golfer immortalized in bronze. Artwork proof within the hour."
+        title="Jessy Huebner — AJGA #4 · Wyndham Invitational Champion · University of Florida Commit | Champions in Bronze"
+        description="Jessy Huebner: AJGA Rank #4 nationally, 2026 Wyndham Invitational Champion, WAGR Best Rank #3, 11 tournament wins. University of Florida commit. Champion golfer immortalized in bronze. Artwork proof within the hour."
         canonical="/jessy-huebner"
         ogImage={PLAQUE_IMG}
       />
@@ -68,7 +68,7 @@ export default function JessyHuebnerPage() {
             </h1>
             <p className="font-serif text-xl sm:text-2xl md:text-3xl text-yellow-700 mt-3">2026 Wyndham Invitational Champion</p>
             <p className="mt-5 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed font-sans">
-              AJGA Rank #5 nationally. WAGR Best Rank #3. 11 tournament victories. Verbal commitment to the University of Florida. A rising star in American golf — now immortalized in museum-quality bronze.
+              AJGA Rank #4 nationally. WAGR Best Rank #3. 11 tournament victories. Verbal commitment to the University of Florida. A rising star in American golf — now immortalized in museum-quality bronze.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 font-sans font-bold uppercase tracking-widest text-sm text-black transition-all hover:scale-[1.02]" style={{ background: "linear-gradient(135deg, #B8860B 0%, #DAA520 30%, #FFD700 50%, #DAA520 70%, #B8860B 100%)" }}>

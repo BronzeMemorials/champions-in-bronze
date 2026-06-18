@@ -8,7 +8,7 @@ const PLAQUE_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97
 const CHAMPION_IMG = "https://media.base44.com/images/public/69e6638934292a547ec97753/b9f63bd6f_e8c50451-6842-42de-9430-cb15069e3c81.png";
 
 const stats = [
-  { label: "AJGA Rank", value: "#5", sub: "Nationally" },
+  { label: "AJGA Rank", value: "#4", sub: "Nationally" },
   { label: "WAGR Best", value: "#3", sub: "World Amateur" },
   { label: "Tournament Wins", value: "11", sub: "AJGA & WAGR" },
   { label: "Wyndham Inv.", value: "Champion", sub: "65-65-68 (-12)" },
