@@ -263,14 +263,14 @@ export default function ProHome() {
       
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
+      <section className="relative min-h-[55vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src={current.img} alt="Champions in Bronze — Hall of Fame plaques, busts, and bronze statues" className="w-full h-full object-cover scale-105" />
+          <img src={current.img} alt="Champions in Bronze — Hall of Fame plaques, busts, and bronze statues" className="w-full h-full object-cover object-center scale-105" />
           <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/60 to-white/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pb-20 sm:pb-28 pt-32 sm:pt-40 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pb-12 sm:pb-16 pt-24 sm:pt-28 w-full">
           <FadeIn>
             <span className="font-sans tracking-[0.4em] uppercase text-base font-semibold block mb-5 text-[hsl(var(--foreground))] text-center">LEGACY TRIBUTES IN PLAQUES, BUSTS, & STATUES
 
